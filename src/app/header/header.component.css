@@ -1,0 +1,26 @@
+:host {
+    width: 100%;
+    background-color: #f3f3f3;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#header-image {
+    height: 100px;
+    width: 280px;
+}
+
+#header-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+#header-links li a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+}

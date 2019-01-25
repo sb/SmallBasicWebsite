@@ -1,3 +1,8 @@
-<div *ngFor="let link of links">
-    <a routerLink="{{link.route}}">{{link.name}}</a>
-</div>
+<img id="header-image" src="../../assets/smallBasic-logo.png" alt="Small Basic">
+<nav>
+    <ul id="header-links">
+        <li *ngFor="let link of links" >
+            <a routerLink="{{link.route}}" title="{{link.name}}">{{link.name}}</a>
+        </li>
+    </ul>
+</nav>
