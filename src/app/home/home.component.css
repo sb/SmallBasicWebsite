@@ -52,6 +52,27 @@
     flex-basis: 20vw;
 }
 
+#announcements ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#announcements li {
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#announcements .byline {
+    font-size: smaller;
+    display: flex;
+    justify-content: space-between;
+}
+
+#announcements .indent {
+    margin: 10px;
+}
+
 @media (max-width: 600px) {
     #content {        
         flex-wrap: wrap;

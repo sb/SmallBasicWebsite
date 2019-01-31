@@ -22,10 +22,17 @@
     <div id="announcements">
         <h1>Announcements</h1>
         <ul>
-            <li *ngFor="let announcement of announcements">
+            <li *ngFor="let announcement of announcements | slice:0:3">
                 <a href="{{announcement.link}}"><b>{{announcement.title}}</b></a>
-                {{announcement.text}}
+                <div class="indent">
+                    <div class="byline">
+                        <div>{{announcement.author}}</div>
+                        <div>{{announcement.date | date:'shortDate'}}</div>
+                    </div>
+                    {{announcement.description}}
+                </div>
             </li>
         </ul>
+        <a href="{{announcementService.smallBasicUrl}}" target="_blank">More</a>
     </div>
 </div>

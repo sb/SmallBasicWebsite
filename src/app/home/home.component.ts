@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnnouncementsService, FeedItem } from './announcements.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+    public announcements: FeedItem[] = [];
 
-  constructor() { }
+    constructor(public announcementService: AnnouncementsService) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.announcementService.getAnnouncements().then((announcements) => {
+            this.announcements = announcements;
+        });
+    }
 
 }
