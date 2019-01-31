@@ -1,3 +1,31 @@
-<p>
-  home works!
-</p>
+<div id="banner">
+    <img src="../../assets/sheldon.png" />
+    <img src="../../assets/shelly.png" />
+    <div id="banner-buttons">
+        <a href="https://download.microsoft.com/download/3/6/8/3684D9A0-C25C-4F50-96E2-2BB1DFA146E7/SmallBasic.msi" title="Download Small Basic">
+            <span><b>Download</b><br>Small Basic</span>
+        </a>
+        <a routerLink="pathtoeditor" title="Start coding online">
+            <span><b>Start</b><br>Coding Online</span>
+        </a>
+    </div>
+</div>
+<div id="content">
+    <div id="welcome">
+        Welcome to Small Basic!
+        Small Basic is the only programming language created specially to help students transition from block-based coding to text-based coding. By teaching the fundamental elements of syntax-based languages in an approachable manner, Small Basic gives students the skills and confidence to tackle more complex programming languages such as Java and C#. You can also build applications for Kinect, Lego Mindstorm, Raspberry Pi, Arduino, Oculus Rift, and more using Small Basic.
+
+        From age 7 to 107, Small Basic is one of the easiest ways to learn to code.
+
+        Featured Programs
+    </div>
+    <div id="announcements">
+        <h1>Announcements</h1>
+        <ul>
+            <li *ngFor="let announcement of announcements">
+                <a href="{{announcement.link}}"><b>{{announcement.title}}</b></a>
+                {{announcement.text}}
+            </li>
+        </ul>
+    </div>
+</div>
