@@ -5,11 +5,18 @@
 }
 
 #banner {
-    background-color: red;
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
-    padding-top: 30px;
+    padding-top: 30px;    
+    background-color: #6fa300;
+    background: linear-gradient(
+        to bottom, 
+        #6fa300 0%, 
+        #6fa300 80%, 
+        #588200 90%, 
+        #588200 100%
+    );
 }
 
 #banner img {
@@ -30,12 +37,12 @@
     flex-wrap: no-wrap;
     flex-grow: 1;
     background: linear-gradient(
-    to right, 
-    white 0%, 
-    white 50%, 
-    #f3f3f3 50%, 
-    #f3f3f3 100%
-  );
+        to right, 
+        white 0%, 
+        white 50%, 
+        #f3f3f3 50%, 
+        #f3f3f3 100%
+    );
 }
 
 #content > div {
@@ -45,6 +52,10 @@
 #welcome {
     flex-basis: 60vw;
     background-color: white;
+}
+
+#welcome h2 {
+    clear: both;
 }
 
 #announcements {

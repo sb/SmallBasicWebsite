@@ -12,15 +12,53 @@
 </div>
 <div id="content">
     <div id="welcome">
-        Welcome to Small Basic!
-        Small Basic is the only programming language created specially to help students transition from block-based coding to text-based coding. By teaching the fundamental elements of syntax-based languages in an approachable manner, Small Basic gives students the skills and confidence to tackle more complex programming languages such as Java and C#. You can also build applications for Kinect, Lego Mindstorm, Raspberry Pi, Arduino, Oculus Rift, and more using Small Basic.
+        <h1>Welcome to Small Basic!</h1>
+        <p>
+            Small Basic is the only programming language created specially to help students transition from block-based coding to text-based coding.
+            By teaching the fundamental elements of syntax-based languages in an approachable manner, Small Basic gives students the skills and confidence to tackle more
+            complex programming languages such as Java and C#. You can also build applications for Kinect, Lego Mindstorm, Raspberry Pi, Arduino, Oculus Rift, and more using Small Basic.
+        </p>
 
-        From age 7 to 107, Small Basic is one of the easiest ways to learn to code.
+        <p>
+            For ages 7 to 107, Small Basic is one of the easiest ways to learn to code.
+        </p>
 
-        Featured Programs
+        <h2>Simple</h2>
+        <img class="right-picture" src="../../assets/codeshot.png" />
+        <p>
+            Small Basic combines a friendly environment with a very simple language and a rich and engaging set of libraries to make your programs and games <b>pop</b>!
+            In a matter of few lines of code, you will be well on your way to creating your very own game!
+        </p>
+        
+        <p>
+            With smart coding hints from IntelliSense, Small Basic makes writing code a breeze.
+        </p>
+
+        <h2>Social</h2>
+        <p>
+            Share your programs with your friends and let them import your published programs and run them on their computer.
+            Using the Silverlight player, you can even post your games on your own blogs and websites and play them in the browser.
+        </p>
+
+        <h2>Gradual</h2>
+        <img class="left-picture" src="../../assets/intellisense.png" />
+        <p>
+            Learn programming concepts starting with the fundamentals and move your way up. Small Basic is based on .NET and what you learn here
+            could be easily applied to other .NET programming languages like Visual Basic. And when you graduate to Visual Basic, you can bring
+            your existing programs with you using a built-in conversion utility.
+        </p>
+
+        <h2>Why Learn to Code?</h2>
+        <img class="right-picture" src="../../assets/tetris.png" />
+        <p>
+            You might be wondering: why should I learn to code anyways? Coding is a fun way to express your imagination, creativity, and
+            logical thinking all at once! When you learn to code, you develop various skills, such as how to break down complex problems and 
+            solve them step by step. Software is the language of our world, so learning to code can really help you in the future! If you want
+            to learn more, watch this <a href="https://www.youtube.com/watch?v=nKIu9yen5nc" target="_blank">video</a>!
+        </p>
     </div>
     <div id="announcements">
-        <h1>Announcements</h1>
+        <h2>Announcements</h2>
         <ul>
             <li *ngFor="let announcement of announcements | slice:0:3">
                 <a href="{{announcement.link}}"><b>{{announcement.title}}</b></a>

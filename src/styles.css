@@ -7,3 +7,22 @@ body {
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.right-picture, .left-picture {
+    max-height: 8em;
+    max-width: 50%;
+    margin: .5em 1em;
+    box-shadow: 0 0 5px 5px lightgrey;
+}
+
+.right-picture {
+    float: right;
+}
+
+.left-picture {
+    float: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #6fa300; 
+}
