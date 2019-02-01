@@ -57,20 +57,38 @@
             to learn more, watch this <a href="https://www.youtube.com/watch?v=nKIu9yen5nc" target="_blank">video</a>!
         </p>
     </div>
-    <div id="announcements">
-        <h2>Announcements</h2>
-        <ul>
-            <li *ngFor="let announcement of announcements | slice:0:3">
-                <a href="{{announcement.link}}"><b>{{announcement.title}}</b></a>
-                <div class="indent">
-                    <div class="byline">
-                        <div>{{announcement.author}}</div>
-                        <div>{{announcement.date | date:'shortDate'}}</div>
+    <div id="sidebar">
+        <div>
+            <h2>Announcements</h2>
+            <ul>
+                <li *ngFor="let announcement of announcements | slice:0:3">
+                    <a href="{{announcement.link}}"><b>{{announcement.title}}</b></a>
+                    <div class="indent">
+                        <div class="byline">
+                            <div>{{announcement.author}}</div>
+                            <div>{{announcement.date | date:'shortDate'}}</div>
+                        </div>
+                        {{announcement.description}}
                     </div>
-                    {{announcement.description}}
-                </div>
-            </li>
-        </ul>
-        <a href="{{announcementService.smallBasicUrl}}" target="_blank">More</a>
+                </li>
+            </ul>
+            <a href="{{announcementService.smallBasicUrl}}" target="_blank">More</a>
+        </div>
+        <div>
+            <h2>Forum Posts</h2>
+            <ul>
+                <li *ngFor="let post of forumPosts | slice:0:3">
+                    <a href="{{post.link}}"><b>{{post.title}}</b></a>
+                    <div class="indent">
+                        <div class="byline">
+                            <div>{{post.author}}</div>
+                            <div>{{post.date | date:'shortDate'}}</div>
+                        </div>
+                        {{post.description}}
+                    </div>
+                </li>
+            </ul>
+            <a href="{{announcementService.forumUrl}}" target="_blank">More</a>
+        </div>
     </div>
 </div>

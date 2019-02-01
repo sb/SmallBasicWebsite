@@ -1,48 +1,6 @@
-How can I build Small Basic applications for Lego Mindstorm?
-
-
-Information about building Small Basic applications for Lego Mindstorm can be found
-<a href="https://blogs.msdn.microsoft.com/smallbasic/2015/10/18/lego-mindstorms-ev3-extension-for-small-basic-ev3-basic/" title="Mindstorm">here</a> and
-<a href="https://sites.google.com/site/ev3basic/" title="Mindstorm link">here</a>.
-
-
-
-
-
-How can I build Small Basic application for Oculus Rift?
-
-
-Information about building Small Basic applications for Oculus Rift can be found
-<a href="https://blogs.msdn.microsoft.com/smallbasic/2016/03/26/new-oculus-rift-extension-for-small-basic-oculus-sb/" title="Oculus">here</a>.
-
-
-
-
-
-How can I build Small Basic application for Arduino?
-
-
-Information about building Small Basic applications for Arduino can be found
-<a href="https://blogs.msdn.microsoft.com/smallbasic/2016/03/22/small-basic-arduino/" title="Arduino">here</a>.
-
-
-
-
-
-How can I build Small Basic application for Kinect?
-
-
-Information about building Small Basic applications for Kinect can be found
-<a href="https://blogs.msdn.microsoft.com/smallbasic/2015/10/01/small-basic-1-2-released-with-kinect-support-and-bug-fixes/" title="Kinect">here</a>.
-
-
-
-
-
-        How can I build Small Basic application for Raspberry Pi?
-
-
-        Information about building Small Basic applications for Raspberry Pi can be found
-<a href="https://blogs.msdn.microsoft.com/smallbasic/2016/07/03/small-basic-talking-to-raspberry-pi/" title="Raspberry Pi">here</a>.
-
-
+<div *ngFor="let topic of topics; index as i">
+    <h3>{{topic.subject}}</h3>
+    <div *ngFor="let resource of topic.resources">
+        <a href="{{resource.link}}" target="_blank">{{resource.description}}</a>
+    </div>
+</div>

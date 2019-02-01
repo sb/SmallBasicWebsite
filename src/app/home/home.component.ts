@@ -9,12 +9,17 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class HomeComponent implements OnInit {
     public announcements: FeedItem[] = [];
+    public forumPosts: FeedItem[] = [];
 
     constructor(public announcementService: AnnouncementsService) { }
 
     ngOnInit() {
         this.announcementService.getAnnouncements().then((announcements) => {
             this.announcements = announcements;
+        });
+
+        this.announcementService.getForumPosts().then((forumPosts) => {
+            this.forumPosts = forumPosts;
         });
     }
 

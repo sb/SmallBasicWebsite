@@ -16,8 +16,10 @@ export class FeedItem {
 })
 export class AnnouncementsService {
     public smallBasicUrl = "https://blogs.msdn.microsoft.com/smallbasic/";
+    public forumUrl = "https://social.msdn.microsoft.com/Forums/en-US/smallbasic/threads";
     private corsUrl = "https://cors-anywhere.herokuapp.com/";
     private smallBasicFeed: Promise<FeedItem[]>;
+    private forumFeed: Promise<FeedItem[]>;
 
     constructor(
         private http: HttpClient
@@ -55,16 +57,46 @@ export class AnnouncementsService {
         return this.smallBasicFeed;
     }
 
+
+    public getForumPosts(): Promise<FeedItem[]> {
+        if (!this.forumFeed) {
+            this.forumFeed = new Promise((resolve, reject) => {
+                this.http.get(this.corsUrl + this.forumUrl + "?outputAs=rss", { responseType: "text" }).subscribe((rawFeed) => {
+                    parseString(rawFeed, (err, result) => {
+                        if (err) {
+                            reject(err);
+                        } else {
+                            let parsedFeed = result.rss.channel[0].item.map((rawItem) => {
+                                let parsedItem: FeedItem = {
+                                    title: rawItem.title[0],
+                                    author: rawItem["a10:author"][0]["a10:name"][0],
+                                    description: this.truncateDescription(rawItem.description[0]),
+                                    link: rawItem.link[0],
+                                    date: Date.parse(rawItem["a10:updated"])
+                                }
+                                return parsedItem;
+                            });
+                            resolve(parsedFeed);
+                        }
+                    });
+                });
+            });
+        }
+
+        return this.forumFeed;
+    }
+
     /**
-     * Truncate the link description- par it down to 60 characters and add '...'
-     * at a word break
+     * Truncate the link description- remove (most) html, par it down to 60 characters
+     * and add '...' at a word break
      * @param desc original description
      */
     private truncateDescription(desc: string): string {
-        if (desc.length <= 63) {
-            return desc;
+        var removedHTML = desc.replace(/<\/?[^>]+(>|$)/g, "");
+        if (removedHTML.length <= 63) {
+            return removedHTML;
         } else {
-            let truncated = desc.substr(0, 60);
+            let truncated = removedHTML.substr(0, 60);
             let lastSpace = truncated.lastIndexOf(" ");
             truncated = lastSpace > 50 ? truncated.substr(0, lastSpace) : truncated;
             truncated += " ...";

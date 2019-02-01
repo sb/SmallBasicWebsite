@@ -58,30 +58,37 @@
     clear: both;
 }
 
-#announcements {
+#sidebar {
     background-color: #f3f3f3;
     flex-basis: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#announcements ul {
+#sidebar ul {
     list-style: none;
     padding-left: 0;
 }
 
-#announcements li {
+#sidebar li {
     border-bottom: 2px dashed #ccc;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
 
-#announcements .byline {
+#sidebar .byline {
     font-size: smaller;
     display: flex;
     justify-content: space-between;
 }
 
-#announcements .indent {
+#sidebar .indent {
     margin: 10px;
+}
+
+#sidebar > div > a {
+    float: right;
 }
 
 @media (max-width: 600px) {
@@ -89,7 +96,7 @@
         flex-wrap: wrap;
     }
 
-    #welcome, #announcements {
+    #welcome, #sidebar {
         flex-grow: 1;
     }
 }
