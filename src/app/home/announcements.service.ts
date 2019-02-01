@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { parseString } from 'xml2js';
 
-class FeedItem {
+export class FeedItem {
     title: string;
     author: string;
     description: string;

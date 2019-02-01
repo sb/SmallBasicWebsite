@@ -2,7 +2,7 @@
 <nav>
     <ul id="header-links">
         <li *ngFor="let link of links" >
-            <a routerLink="{{link.route}}" title="{{link.name}}">{{link.name}}</a>
+            <a mat-button routerLink="{{link.route}}" title="{{link.name}}">{{link.name}}</a>
         </li>
     </ul>
 </nav>

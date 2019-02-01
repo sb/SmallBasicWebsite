@@ -1,3 +1,13 @@
-<p>
-  faq works!
-</p>
+<div *ngFor="let faqTopic of faqTopics; index as i">
+    <h2 (click)="expandOrCollapseAll(i)">{{faqTopic.topic}}</h2>
+    <mat-expansion-panel *ngFor="let question of faqTopic.questions" [(expanded)]="question.isExpanded">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <b>{{question.question}}</b>
+            </mat-panel-title>
+            <mat-panel-description>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div [innerHtml]="question.answer"></div>
+    </mat-expansion-panel>
+</div>
