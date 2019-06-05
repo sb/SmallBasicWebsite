@@ -27,3 +27,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
     color: #6fa300; 
 }
+
+#contentWrapper {
+  background: white;
+  padding-top: 30px;
+  padding-left: 10%;
+  padding-bottom: 30px;
+  padding-right: 10%;
+  align-self: center;
+  width: 80%;
+}
