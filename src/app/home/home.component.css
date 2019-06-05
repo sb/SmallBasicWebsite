@@ -50,7 +50,7 @@
 }
 
 #welcome {
-    flex-basis: 60vw;
+    flex-basis: 50vw;
     background-color: white;
 }
 
@@ -60,7 +60,7 @@
 
 #sidebar {
     background-color: #f3f3f3;
-    flex-basis: 20vw;
+    max-width: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,11 +92,12 @@
 }
 
 @media (max-width: 600px) {
-    #content {        
-        flex-wrap: wrap;
+    #content {
+      flex-wrap: wrap;
     }
 
     #welcome, #sidebar {
         flex-grow: 1;
+        max-width: none;
     }
 }

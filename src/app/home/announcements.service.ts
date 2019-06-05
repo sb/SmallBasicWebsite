@@ -93,6 +93,7 @@ export class AnnouncementsService {
      */
     private truncateDescription(desc: string): string {
         var removedHTML = desc.replace(/<\/?[^>]+(>|$)/g, "");
+        removedHTML = removedHTML.replace(/&nbsp;/g, "");
         if (removedHTML.length <= 63) {
             return removedHTML;
         } else {
