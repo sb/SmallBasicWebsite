@@ -1,12 +1,20 @@
 <div id="banner">
-    <img src="../../assets/sheldon.png" />
-    <img src="../../assets/shelly.png" />
+    <img src="../../assets/sheldon.png" alt="turtle mascot 1"/>
+    <img src="../../assets/shelly.png" alt="turtle mascot 2"/>
     <div id="banner-buttons">
-        <a mat-raised-button color="primary" href="https://download.microsoft.com/download/3/6/8/3684D9A0-C25C-4F50-96E2-2BB1DFA146E7/SmallBasic.msi" title="Download Small Basic">
-            <span><b>Download</b><br>Small Basic</span>
+        <a mat-stroked-button href="https://download.microsoft.com/download/3/6/8/3684D9A0-C25C-4F50-96E2-2BB1DFA146E7/SmallBasic.msi" title="Download Small Basic">
+            <span class="fa fa-arrow-down" aria-hidden="true"></span>
+            <span>
+              <div class="button-headline">Download</div>
+              Small Basic
+            </span>
         </a>
-        <a mat-raised-button color="accent" routerLink="pathtoeditor" title="Start coding online">
-            <span><b>Start</b><br>Coding Online</span>
+        <a mat-stroked-button routerLink="pathtoeditor" title="Start coding online">
+            <span class="fa fa-terminal" aria-hidden="true"></span>
+            <span>
+              <div class="button-headline">Start</div>
+              Coding Online
+            </span>
         </a>
     </div>
 </div>
@@ -24,7 +32,7 @@
         </p>
 
         <h2>Simple</h2>
-        <img class="right-picture" src="../../assets/codeshot.png" />
+        <img class="right-picture" src="../../assets/codeshot.png" alt="Screenshot of Small Basic code"/>
         <p>
             Small Basic combines a friendly environment with a very simple language and a rich and engaging set of libraries to make your programs and games <b>pop</b>!
             In a matter of few lines of code, you will be well on your way to creating your very own game!
@@ -41,7 +49,7 @@
         </p>
 
         <h2>Gradual</h2>
-        <img class="left-picture" src="../../assets/intellisense.png" />
+        <img class="left-picture" src="../../assets/intellisense.png" alt="Screenshot of Small Basic IntelliSense"/>
         <p>
             Learn programming concepts starting with the fundamentals and move your way up. Small Basic is based on .NET and what you learn here
             could be easily applied to other .NET programming languages like Visual Basic. And when you graduate to Visual Basic, you can bring
@@ -49,7 +57,7 @@
         </p>
 
         <h2>Why Learn to Code?</h2>
-        <img class="right-picture" src="../../assets/tetris.png" />
+        <img class="right-picture" src="../../assets/tetris.png" alt="Screenshot of Tetris game" />
         <p>
             You might be wondering: why should I learn to code anyways? Coding is a fun way to express your imagination, creativity, and
             logical thinking all at once! When you learn to code, you develop various skills, such as how to break down complex problems and 

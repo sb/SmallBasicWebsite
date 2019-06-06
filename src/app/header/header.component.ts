@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+    // The first link here is what the image logo will link to
     public links = [
         { name: "Home", route: "/" },
         { name: "Tutorials", route: "/tutorials" },

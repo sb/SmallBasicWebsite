@@ -6,7 +6,8 @@
 
 #banner {
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
+    flex-wrap: wrap-reverse;
     justify-content: space-around;
     padding-top: 30px;    
     background-color: #6fa300;
@@ -17,6 +18,8 @@
         #588200 90%, 
         #588200 100%
     );
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 #banner img {
@@ -30,19 +33,50 @@
     align-self: center;
 }
 
+#banner #banner-buttons a {
+    border: 2px solid white;
+    color: white;
+    margin: 20px;
+    background: #00000014;
+}
+
+::ng-deep #banner .mat-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 1.5em;
+}
+
+#banner #banner-buttons .fa {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 40px;
+    margin-right: 20px;
+    border: 2px solid;
+    border-radius: inherit;
+}
+
+.button-headline {
+  font-weight: bold;
+  font-size: larger;
+}
+
+#banner #banner-buttons .fa-arrow-down {
+  text-decoration: underline;
+  border-color: transparent;
+}
+
 #content {
     background-color: white;
     display: flex;
     justify-content: center;
     flex-wrap: no-wrap;
     flex-grow: 1;
-    background: linear-gradient(
-        to right, 
-        white 0%, 
-        white 50%, 
-        #f3f3f3 50%, 
-        #f3f3f3 100%
-    );
+    background: linear-gradient( to right, white 0%, white 50%, #f3f3f3 50%, #f3f3f3 100% );
 }
 
 #content > div {

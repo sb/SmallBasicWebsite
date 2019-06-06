@@ -23,6 +23,7 @@
     "@angular/router": "~7.2.0",
     "@types/es6-promise": "^3.3.0",
     "core-js": "^2.5.4",
+    "font-awesome": "^4.7.0",
     "rxjs": "~6.3.3",
     "stream": "0.0.2",
     "timers": "^0.1.1",
