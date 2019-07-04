@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "deployUrl": "/app/",
             "outputPath": "dist/small-basic-website",
             "index": "src/index.html",
             "main": "src/main.ts",
