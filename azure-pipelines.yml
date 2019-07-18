@@ -23,7 +23,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: 'package-lock.json'
+    Contents: 'package*.json'
     TargetFolder: 'dist/small-basic-website'
 
 # Publish Artifacts
