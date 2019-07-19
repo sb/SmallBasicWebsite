@@ -23,7 +23,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: 'web.config'
+    Contents: 'Web.config'
     TargetFolder: 'dist/small-basic-website'
 
 # Publish Artifacts
