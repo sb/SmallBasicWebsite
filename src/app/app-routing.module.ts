@@ -26,7 +26,10 @@ const routes: Routes = [
     { path: "contact", component: ContactComponent },
     { path: "faq", component: FaqComponent },
     { path: "resources", component: ResourcesComponent },
-    { path: "tutorials", component: TutorialComponent, children: [
+  {
+    path: "tutorials", component: TutorialComponent, children: [
+      { path: '', pathMatch: 'full', redirectTo: 'chapter1' },
+      { path: 'chapter1', component: Chapter1Component },
       { path: 'chapter1', component: Chapter1Component },
       { path: 'chapter2', component: Chapter2Component },
       { path: 'chapter3', component: Chapter3Component },
