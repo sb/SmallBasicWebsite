@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TutorialComponent implements OnInit {
   public chapters = [
-    { link: "chapter1", title: "Chapter 1" },
+    {
+      link: "chapter1", title: "Chapter 1", sections: [
+        { link: "section1", title: "Sample section" },
+        { link: "section2", title: "Another sample" },
+      ]
+    },
     { link: "chapter2", title: "Chapter 2: Getting Started" },
-    { link: "chapter3", title: "Chapter 3: Variables" },
+    {
+      link: "chapter3", title: "Chapter 3: Variables", sections: [
+        { link: "section1", title: "Section 1" },
+        { link: "section2", title: "Also a section" },
+      ] },
     { link: "chapter4", title: "Chapter 4: Conditions and Branching" },
     { link: "chapter5", title: "Chapter 5: Loops" },
     { link: "chapter6", title: "Chapter 6: Beginning Graphics" },

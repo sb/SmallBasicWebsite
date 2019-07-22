@@ -28,6 +28,7 @@ import { Chapter10Component } from './tutorial/chapters/chapter10/chapter10.comp
 import { Chapter11Component } from './tutorial/chapters/chapter11/chapter11.component';
 import { AppendixAComponent } from './tutorial/chapters/appendixA/appendixA.component';
 import { AppendixBComponent } from './tutorial/chapters/appendixB/appendixB.component';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { AppendixBComponent } from './tutorial/chapters/appendixB/appendixB.comp
     Chapter11Component,
     AppendixAComponent,
     AppendixBComponent,
+    DocumentationComponent,
   ],
   imports: [
       BrowserModule,
