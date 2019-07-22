@@ -9,3 +9,4 @@ Live here: http://smallbasic2019.azurewebsites.net/
 3. Run these commands:
   - npm install
   - npm run ng serve
+The website is now running at localhost:4200
