@@ -1,5 +1,6 @@
 .left-nav-and-right-content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .left-nav {
