@@ -12,15 +12,33 @@ export class ParentDoc {
   name: string;
   type: DocType;
   description: string;
-  operations: ChildDoc[];
-  events: ChildDoc[];
-  properties: ChildDoc[];
+  operations: Operation[];
+  events: Event[];
+  properties: Property[];
 }
 
-export class ChildDoc {
+export class Operation {
   name: string;
-  type: DocType;
-  description: string;
+  summary: string;
+  operationSignature: string;
+  returnType: string;
+  parameters: OperationParams[];  
+}
+
+export class OperationParams {
+  name: string;
+  summary: string;
+}
+
+export class Event {
+  name: string;
+  summary: string;
+}
+
+export class Property {
+  name: string;
+  summary: string;
+  isReadOnly: boolean;
 }
 
 @Injectable({
@@ -43,8 +61,13 @@ export class DocumentationService {
       description: language + " The Turtle provides Logo-like functionality to draw shapes by manipulating the properties of a pen and drawing primitives.",
       operations: [{
         name: "Move",
-        type: DocType.Operation,
-        description: "Moves the turtle to a specified distance. If the pen is down, it will draw a line as it moves."
+        operationSignature: "Turtle.Move(distance)",
+        returnType: "Nothing",
+        parameters: [{
+          name: "distance",
+          summary: "the distance to move the turtle"
+        }],
+        summary: "Moves the turtle to a specified distance. If the pen is down, it will draw a line as it moves."
       }],
       events: [],
       properties: []
@@ -54,19 +77,24 @@ export class DocumentationService {
         description: "The GraphicsWindow provides graphics related input and output functionality. For example, using this class, it is possible to draw and fill circles and rectangles.",
         properties: [{
           name: "Top",
-          type: DocType.Property,
-          description: "Gets or sets the Top Position of the graphics window."
+          summary: "Gets or sets the Top Position of the graphics window.",
+          isReadOnly: false
+        },{
+            name: "LastKey",
+            summary: "Gets the last key that was pressed or released.",
+            isReadOnly: true
         }],
         operations: [{
-            name: "Clear",
-            type: DocType.Operation,
-            description: "Clears the window."
+          name: "Clear",
+          summary: "Clears the window.",
+          parameters: [],
+          returnType: "Nothing",
+          operationSignature: "GraphicsWindow.Clear()"
         }],
         events: [{
-            name: "KeyDown",
-            type: DocType.Event,
-            description: "Raises an event when a key is pressed down on the keyboard."
-          }]
+          name: "KeyDown",
+          summary: "Raises an event when a key is pressed down on the keyboard."
+        }]
       }];
   }
 }
