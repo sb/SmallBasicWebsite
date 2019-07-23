@@ -1,0 +1,10 @@
+.left-nav a {
+  background-repeat: no-repeat;
+  padding-left: 1.3em;
+  background-size: contain;
+  display: block;
+}
+
+.left-nav a.object {
+    background-image: url(/assets/documentation/object.png);
+}

@@ -1,5 +1,36 @@
 <div id="contentWrapper">
-  <p>
-    Documentation
-  </p>
+  <div class="left-nav-and-right-content">
+    <div class="left-nav">
+      <h3>Documentation</h3>
+      <label for="languageSelect">Language</label>
+      <select name="language" id="languageSelect">
+        <option>english</option>
+      </select>
+      <ul>
+        <li *ngFor="let doc of docs" routerLinkActive="active-link">
+          <a routerLink="/docs/{{doc.name}}" class="{{enumToClass(doc.type)}}">{{doc.name}}</a>
+          <ul class="left-nav-submenu">
+            <li *ngFor="let child of doc.children">
+              <a href="docs/{{doc.name}}#{{child.name}}">{{child.name}}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a routerLink="/docs/invalid">Invalid link for kicks</a>
+        </li>
+      </ul>
+    </div>
+    <div class="right-content">
+      <div *ngIf="currentDocIndex >= 0; else notFound">
+        <h3>{{docs[currentDocIndex].name}}</h3>
+        <div>
+          {{docs[currentDocIndex].description}}
+          <div *ngFor="let child of docs[currentDocIndex].children" id="{{child.name}}">
+            {{child.name}}: {{child.description}}
+          </div>
+        </div>
+      </div>
+      <ng-template #notFound>Documentation not found</ng-template>
+    </div>
+  </div>
 </div>

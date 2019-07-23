@@ -27,7 +27,8 @@ const routes: Routes = [
     { path: "contact", component: ContactComponent },
     { path: "faq", component: FaqComponent },
     { path: "resources", component: ResourcesComponent },
-    { path: "docs", component: DocumentationComponent },
+    { path: "docs", redirectTo: "docs/Turtle" },
+    { path: "docs/:id", component: DocumentationComponent },
   {
     path: "tutorials", component: TutorialComponent, children: [
       { path: '', pathMatch: 'full', redirectTo: 'chapter1' },
