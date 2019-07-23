@@ -11,7 +11,7 @@ export enum DocType {
 export class ParentDoc {
   name: string;
   type: DocType;
-  description: string;
+  summary: string;
   operations: Operation[];
   events: Event[];
   properties: Property[];
@@ -58,7 +58,7 @@ export class DocumentationService {
     return [{
       name: "Turtle",
       type: DocType.Object,
-      description: language + " The Turtle provides Logo-like functionality to draw shapes by manipulating the properties of a pen and drawing primitives.",
+      summary: language + " The Turtle provides Logo-like functionality to draw shapes by manipulating the properties of a pen and drawing primitives.",
       operations: [{
         name: "Move",
         operationSignature: "Turtle.Move(distance)",
@@ -74,7 +74,7 @@ export class DocumentationService {
     }, {
         name: "GraphicsWindow",
         type: DocType.Object,
-        description: "The GraphicsWindow provides graphics related input and output functionality. For example, using this class, it is possible to draw and fill circles and rectangles.",
+        summary: "The GraphicsWindow provides graphics related input and output functionality. For example, using this class, it is possible to draw and fill circles and rectangles.",
         properties: [{
           name: "Top",
           summary: "Gets or sets the Top Position of the graphics window.",
@@ -90,7 +90,22 @@ export class DocumentationService {
           parameters: [],
           returnType: "Nothing",
           operationSignature: "GraphicsWindow.Clear()"
-        }],
+        }, {
+            name: "GetColorFromRGB",
+            summary: "Constructs a color given the Red, Green and Blue values.",
+            parameters: [{
+              name: "red",
+              summary: "The red component of the Color (0-255)."
+            }, {
+              name: "green",
+              summary: "The green component of the Color (0-255)."
+            }, {
+              name: "blue",
+              summary: "The blue component of the Color (0-255)."
+            }],
+            returnType: "Returns a color that can be used to set the brush or pen color.",
+            operationSignature: "GraphicsWindow.GetColorFromRGB(red, green, blue)"
+          }],
         events: [{
           name: "KeyDown",
           summary: "Raises an event when a key is pressed down on the keyboard."

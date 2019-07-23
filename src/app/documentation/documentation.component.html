@@ -39,23 +39,37 @@
         <div class="docSubtype" *ngIf="docs[currentDocIndex].properties.length > 0">
           <h3 class="property">Properties</h3>
           <div *ngFor="let property of docs[currentDocIndex].properties" id="{{property.name}}" class="docChild">
-            <h4 class="property">{{property.name}}</h4>
-            <div class="description">{{property.summary}}</div>
+            <h4 class="property">{{docs[currentDocIndex].name}}.{{property.name}}</h4>
+            <div class="description">{{property.summary}}
+              <ng-container *ngIf="property.isReadOnly">(read-only)</ng-container>
+            </div>
           </div>
         </div>
           
         <div class="docSubtype" *ngIf="docs[currentDocIndex].operations.length > 0">
           <h3 class="operation">Operations</h3>
           <div *ngFor="let operation of docs[currentDocIndex].operations" id="{{operation.name}}" class="docChild">
-            <h4 class="operation">{{operation.name}}</h4>
-            <div class="description">{{operation.summary}}</div>
+            <h4 class="operation">{{operation.operationSignature}}</h4>
+            <div class="description">
+              {{operation.summary}}
+              <ng-container *ngIf="operation.parameters.length > 0">
+                <div class="summaryHeader">Parameters</div>
+                <div *ngFor="let param of operation.parameters" class="docChild">
+                  <b>{{param.name}}</b>: {{param.summary}}
+                </div>
+              </ng-container>
+              <div class="summaryHeader">Returns</div>
+              <div class="docChild">
+                {{operation.returnType}}
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="docSubtype" *ngIf="docs[currentDocIndex].events.length > 0">
           <h3 class="event">Events</h3>
           <div *ngFor="let event of docs[currentDocIndex].events" id="{{event.name}}" class="docChild">
-            <h4 class="event">{{event.name}}</h4>
+            <h4 class="event">{{docs[currentDocIndex].name}}.{{event.name}}</h4>
             <div class="description">{{event.summary}}</div>
           </div>
         </div>
