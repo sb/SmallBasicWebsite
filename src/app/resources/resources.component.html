@@ -1,12 +1,15 @@
 <div id="contentWrapper">
-  <img src="../../assets/coding.png" />
-  <img src="../../assets/presenting.png" />
-  <div *ngFor="let topic of topics; index as i">
-    <h3>{{topic.subject}}</h3>
-    <div *ngFor="let resource of topic.resources">
-      <a href="{{resource.link}}" target="_blank">{{resource.description}}</a>
-    </div>
-  </div>
-  <br/>
-  <app-programs></app-programs>
+  <mat-card *ngFor="let topic of topics; index as i"
+            [ngStyle]="topic.image?{'background-image': 'url('+ topic.image +
+            ')', 'background-color': 'black'} : {}">
+    <mat-card-title *ngIf="topic.subject"><h3>{{topic.subject}}</h3></mat-card-title>
+    <mat-card-content>
+      <div *ngFor="let resource of topic.resources">
+        <a href="{{resource.link}}" target="_blank">{{resource.description}}</a>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card id="featuredPrograms">
+    <app-programs></app-programs>
+  </mat-card>
 </div>

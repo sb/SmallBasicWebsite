@@ -24,6 +24,7 @@ export class ResourcesComponent implements OnInit {
                 },
             ]
       },
+      { image: "../../assets/coding.png" },
       {
            subject: "Learning & Community",
            resources: [

@@ -1,0 +1,21 @@
+#contentWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mat-card {
+  flex: 1;
+  min-height: 10em;
+  min-width: 10em;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#featuredPrograms {
+  flex-basis: 100%;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+}
