@@ -1,8 +1,17 @@
 <!--Show the basic tutorial structure on all /tutorials pages-->
 <div id="contentWrapper">
   <div *ngIf="isOnBasePage">
-    I'm on base page
-    <a routerLink="{{chapters[0].link}}">Start new tutorial</a>
+    Try out small basic with this amazing blurb supplied by someone else!
+    <mat-card>
+      <mat-card-title>Comprehensive tutorial</mat-card-title>
+      <mat-card-subtitle>Estimated time to complete: 3 hours</mat-card-subtitle>
+      <mat-card-content><a routerLink="{{chapters[0].link}}">Linkylink</a></mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Self-directed tutorial</mat-card-title>
+      <mat-card-subtitle>Estimated time to complete: forever</mat-card-subtitle>
+      <mat-card-content><a href="https://www.google.com" target="_blank">Linkylink</a></mat-card-content>
+    </mat-card>
   </div>
   <div class="left-nav-and-right-content" *ngIf="!isOnBasePage">
     <div class="left-nav">

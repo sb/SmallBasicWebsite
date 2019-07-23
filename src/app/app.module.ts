@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -64,6 +65,7 @@ import { DocumentationComponent } from './documentation/documentation.component'
       AppRoutingModule,
       MatExpansionModule,
       MatButtonModule,
+      MatCardModule,
       FormsModule
   ],
   providers: [],
