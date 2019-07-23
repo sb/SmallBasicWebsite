@@ -1,13 +1,25 @@
 <!--Show the basic tutorial structure on all /tutorials pages-->
 <div id="contentWrapper">
-  <p>
-    Tutorial Chapters
-  </p>
-  <ul>
-    <li *ngFor="let chapter of chapters">
-      <a routerLink="{{ chapter.link }}">{{ chapter.title }}</a>
-    </li>
-  </ul>
-  <!--Show the chapter output from the url -->
-  <router-outlet></router-outlet>
+  <div class="left-nav-and-right-content">
+    <div class="left-nav">
+      <h3>Table of Contents</h3>
+      <ul>
+        <li *ngFor="let chapter of chapters" routerLinkActive="active-link">
+          <a routerLink="{{chapter.link}}">{{chapter.title}}</a>
+          <ul class="left-nav-submenu">
+            <li *ngFor="let section of chapter.sections">
+              <a href="tutorials/{{chapter.link}}#{{section.link}}">{{section.title}}</a>
+            </li>
+          </ul>
+        </li>
+        <li id="api-link">
+          <a routerLink="/docs">API Reference</a>
+        </li> 
+      </ul>
+    </div>
+    <div class="right-content">
+      <!--Show the chapter output from the url -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
