@@ -33,6 +33,10 @@ export class ResourcesComponent implements OnInit {
                     link: "http://download.microsoft.com/download/9/0/6/90616372-C4BF-4628-BC82-BD709635220D/Introducing%20Small%20Basic.pdf"
                 },
                 {
+                     description: "API reference",
+                     link: "/docs"
+                },
+                {
                      description: "eBooks",
                      link: "http://social.technet.microsoft.com/wiki/contents/articles/16386.small-basic-e-books.aspx"
                 },

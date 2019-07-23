@@ -5,7 +5,12 @@
     <mat-card-title *ngIf="topic.subject"><h3>{{topic.subject}}</h3></mat-card-title>
     <mat-card-content>
       <div *ngFor="let resource of topic.resources">
-        <a href="{{resource.link}}" target="_blank">{{resource.description}}</a>
+        <ng-container *ngIf="resource.link.startsWith('/'); else external">          
+          <a routerLink="{{resource.link}}">{{resource.description}}</a>
+        </ng-container>
+        <ng-template #external>
+          <a href="{{resource.link}}" target="_blank">{{resource.description}}</a>
+        </ng-template>
       </div>
     </mat-card-content>
   </mat-card>
