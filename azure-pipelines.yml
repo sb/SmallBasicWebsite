@@ -18,9 +18,12 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm ci
-    ng build --prod
-    ng test --browsers ChromeHeadless
+    ng build --prod    
   displayName: 'npm install and build'
+
+- script: |
+    ng test --browsers ChromeHeadless --watch=false --code-coverage  
+  displayName: 'Run unti test'
 
 - task: CopyFiles@2
   inputs:
