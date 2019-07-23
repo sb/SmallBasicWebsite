@@ -11,17 +11,17 @@
           <a routerLink="/docs/{{doc.name}}" class="{{enumToClass(doc.type)}}">{{doc.name}}</a>
           <ul class="left-nav-submenu">
             <li *ngFor="let property of doc.properties">
-              <a href="docs/{{doc.name}}#{{property.name}}" class="{{enumToClass(property.type)}}">
+              <a href="docs/{{doc.name}}#{{property.name}}" class="property">
                 {{property.name}}
               </a>
             </li>
             <li *ngFor="let operation of doc.operations">
-              <a href="docs/{{doc.name}}#{{operation.name}}" class="{{enumToClass(operation.type)}}">
+              <a href="docs/{{doc.name}}#{{operation.name}}" class="operation">
                 {{operation.name}}
               </a>
             </li>
             <li *ngFor="let event of doc.events">
-              <a href="docs/{{doc.name}}#{{event.name}}" class="{{enumToClass(event.type)}}">
+              <a href="docs/{{doc.name}}#{{event.name}}" class="event">
                 {{event.name}}
               </a>
             </li>
@@ -33,30 +33,30 @@
       <div *ngIf="currentDocIndex >= 0; else notFound">
         <h3 class="{{enumToClass(docs[currentDocIndex].type)}}">{{docs[currentDocIndex].name}}</h3>
         <div class="description">
-          {{docs[currentDocIndex].description}}
+          {{docs[currentDocIndex].summary}}
         </div>
 
         <div class="docSubtype" *ngIf="docs[currentDocIndex].properties.length > 0">
           <h3 class="property">Properties</h3>
           <div *ngFor="let property of docs[currentDocIndex].properties" id="{{property.name}}" class="docChild">
-            <h4 class="{{enumToClass(property.type)}}">{{property.name}}</h4>
-            <div class="description">{{property.description}}</div>
+            <h4 class="property">{{property.name}}</h4>
+            <div class="description">{{property.summary}}</div>
           </div>
         </div>
           
         <div class="docSubtype" *ngIf="docs[currentDocIndex].operations.length > 0">
           <h3 class="operation">Operations</h3>
           <div *ngFor="let operation of docs[currentDocIndex].operations" id="{{operation.name}}" class="docChild">
-            <h4 class="{{enumToClass(operation.type)}}">{{operation.name}}</h4>
-            <div class="description">{{operation.description}}</div>
+            <h4 class="operation">{{operation.name}}</h4>
+            <div class="description">{{operation.summary}}</div>
           </div>
         </div>
 
         <div class="docSubtype" *ngIf="docs[currentDocIndex].events.length > 0">
           <h3 class="event">Events</h3>
           <div *ngFor="let event of docs[currentDocIndex].events" id="{{event.name}}" class="docChild">
-            <h4 class="{{enumToClass(event.type)}}">{{event.name}}</h4>
-            <div class="description">{{event.description}}</div>
+            <h4 class="event">{{event.name}}</h4>
+            <div class="description">{{event.summary}}</div>
           </div>
         </div>
       </div>
