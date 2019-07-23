@@ -13,6 +13,7 @@ import { FaqComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { HeaderComponent } from './header/header.component';
+import { ProgramsComponent } from './programs/programs.component';
 
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { Chapter1Component } from './tutorial/chapters/chapter1/chapter1.component';
@@ -37,6 +38,7 @@ import { AppendixBComponent } from './tutorial/chapters/appendixB/appendixB.comp
     ContactComponent,
     ResourcesComponent,
     HeaderComponent,
+    ProgramsComponent,
     TutorialComponent,
     Chapter1Component,
     Chapter2Component,

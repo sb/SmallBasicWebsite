@@ -1,0 +1,44 @@
+div {
+  background-color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.prog-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  background-color: #3977ad;
+  border: 1px solid;
+  border-color: #357ebd;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+}
+
+.row {
+  margin: 10px 0;
+}
+
+.col {
+  width: 33.33333333%;
+  display: block;
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
