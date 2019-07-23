@@ -18,8 +18,12 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm ci
-    ng build --prod
+    ng build --prod    
   displayName: 'npm install and build'
+
+- script: |
+    ng test --browsers ChromeHeadless --watch=false --code-coverage  
+  displayName: 'Run unit test'
 
 - task: CopyFiles@2
   inputs:

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatButtonModule } from '@angular/material/button';
 
 class FaqTopic {
     topic: string;
@@ -36,7 +34,7 @@ export class FaqComponent implements OnInit {
                 {
                     question: "Why another Basic language?",
                     answer: "<p>The BASIC language family is a group of general purpose, easy to use programming languages. There are more than 230 different documented variations of the BASIC language. The principles " +
-                    "of BASIC emphasize simplicity and approachability – a strong framework for an introductory language such as Small Basic.</p>",
+                    "of BASIC emphasize simplicity and approachability â€“ a strong framework for an introductory language such as Small Basic.</p>",
                     isExpanded: false
                 },
                 {
