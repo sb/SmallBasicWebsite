@@ -19,7 +19,7 @@ steps:
     npm install -g @angular/cli
     npm ci
     ng build --prod
-    ng test
+    ng test --browsers ChromeHeadless
   displayName: 'npm install and build'
 
 - task: CopyFiles@2

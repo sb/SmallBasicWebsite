@@ -1,12 +1,15 @@
-import { TestBed } from '@angular/core/testing';
-
+import { HttpClient } from '@angular/common/http';
 import { AnnouncementsService } from './announcements.service';
 
+let service: AnnouncementsService;
+let httpClient: HttpClient;
+
 describe('AnnouncementsService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(() => {
+    service = new AnnouncementsService(httpClient);
+  });
 
   it('should be created', () => {
-    const service: AnnouncementsService = TestBed.get(AnnouncementsService);
     expect(service).toBeTruthy();
   });
 });

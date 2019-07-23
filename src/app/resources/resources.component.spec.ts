@@ -20,6 +20,9 @@ describe('ResourcesComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = TestBed.createComponent(ResourcesComponent);
+    const app = fixture.debugElement.componentInstance;
+    fixture.detectChanges();
+    expect(app).toBeTruthy();
   });
 });
