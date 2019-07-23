@@ -23,7 +23,7 @@ steps:
 
 - script: |
     ng test --browsers ChromeHeadless --watch=false --code-coverage  
-  displayName: 'Run unti test'
+  displayName: 'Run unit test'
 
 - task: CopyFiles@2
   inputs:
