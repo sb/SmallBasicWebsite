@@ -1,5 +1,6 @@
 .left-nav-and-right-content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .left-nav {
@@ -14,11 +15,12 @@
 
 .left-nav > ul {
   list-style: none;
-  padding-left: 10px;
   margin-top: 0;
+  padding-left: 0;
 }
 
 .left-nav > ul > li {
+  padding-left: 10px;
   margin: 5px 0 5px 0;
 }
 
@@ -33,7 +35,10 @@
 }
 
 .left-nav li.active-link {
-  color: #689800;
+  color: #567d00;
+  background: #f8f8f8;
+  border-left: 5px solid #567d00;
+  padding-left: 5px !important;
 }
 
 .left-nav li.active-link .left-nav-submenu {
