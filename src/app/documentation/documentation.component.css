@@ -4,7 +4,6 @@
 .object, .event, .operation, .property {
   background-repeat: no-repeat;
   padding-left: 1.3em;
-  background-size: contain;
   display: block;
 }
 
@@ -18,6 +17,7 @@
 
 .operation {
   background-image: url(/assets/documentation/operation.png);
+  word-break: break-all;
 }
 
 .property {
@@ -36,14 +36,18 @@ h3,h4 {
 .docSubtype {
   padding: 10px;
   border-top: 1px solid #689800;
-  margin: 5px;
+  margin: 15px;
 }
 
 .docChild {
-  padding: 5px;
-  margin-left: 15px;
+  margin: 2px 0 0 15px;
 }
 
 .description {
-  padding-left: 1.3em;
+  padding-left: 2em;
+}
+
+.summaryHeader {
+  font-weight: bold;
+  margin-top: 5px;
 }
