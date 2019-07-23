@@ -33,7 +33,6 @@ const routes: Routes = [
     { path: "docs/:id", component: DocumentationComponent },
     {
       path: "tutorials", component: TutorialComponent, children: [
-        { path: '', pathMatch: 'full', redirectTo: 'chapter1' },
         { path: 'chapter1', component: Chapter1Component },
         { path: 'chapter1', component: Chapter1Component },
         { path: 'chapter2', component: Chapter2Component },
