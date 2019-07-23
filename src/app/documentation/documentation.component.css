@@ -1,0 +1,50 @@
+.object, .event, .operation, .property {
+  background-repeat: no-repeat;
+  padding-left: 1.3em;
+  display: block;
+}
+
+.object {
+    background-image: url(/assets/documentation/object.png);
+}
+
+.event {
+    background-image: url(/assets/documentation/event.png);
+}
+
+.operation {
+  background-image: url(/assets/documentation/operation.png);
+  word-break: break-all;
+}
+
+.property {
+  background-image: url(/assets/documentation/property.png);
+}
+
+.left-nav li.active-link .left-nav-submenu {
+  list-style: none;
+  padding-left: 25px;
+}
+
+h3,h4 {
+  margin: 0;
+}
+
+.docSubtype {
+  padding: 10px;
+  border-top: 1px solid #689800;
+  margin: 15px;
+}
+
+.docChild {
+  margin: 2px 0 0 15px;
+}
+
+.description {
+  padding-left: 2em;
+}
+
+.summaryHeader {
+  font-weight: bold;
+  margin-top: 5px;
+}
