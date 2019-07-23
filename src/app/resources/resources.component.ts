@@ -24,12 +24,17 @@ export class ResourcesComponent implements OnInit {
                 },
             ]
       },
+      { image: "../../assets/coding.png" },
       {
            subject: "Learning & Community",
            resources: [
                 {
                     description: "Tutorial",
                     link: "http://download.microsoft.com/download/9/0/6/90616372-C4BF-4628-BC82-BD709635220D/Introducing%20Small%20Basic.pdf"
+                },
+                {
+                     description: "API reference",
+                     link: "/docs"
                 },
                 {
                      description: "eBooks",

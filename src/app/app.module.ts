@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
@@ -66,6 +67,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
       AppRoutingModule,
       MatExpansionModule,
       MatButtonModule,
+      MatCardModule,
       FormsModule
   ],
   providers: [],
