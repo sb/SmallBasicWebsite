@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DocumentationService, Documentation } from './documentation.service';
+import { DocumentationService, Documentation, DocType } from './documentation.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-documentation',
@@ -7,12 +8,25 @@ import { DocumentationService, Documentation } from './documentation.service';
   styleUrls: ['./documentation.component.css']
 })
 export class DocumentationComponent implements OnInit {
-  private docs: Documentation[] = [];
+  public docs: Documentation[] = [];
+  public currentDocIndex: number;
 
-  constructor() { }
-
-  ngOnInit() {
-    this.docs = DocumentationService.getDocumentation("en");
+  constructor(private route: ActivatedRoute) {
   }
 
+  ngOnInit() {
+    // Get all the documentation for the selected language
+    this.docs = DocumentationService.getDocumentation("en");
+
+    // Subscribe to route changes to get the current item being viewed
+    this.route.params.subscribe(() => {
+      this.currentDocIndex = this.docs.findIndex((doc) => {
+        return doc.name == this.route.snapshot.params['id'];
+      });
+    });
+  }
+
+  public enumToClass(enumVal: DocType): string {
+    return DocType[enumVal].toLowerCase();
+  }
 }

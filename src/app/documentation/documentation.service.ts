@@ -1,16 +1,23 @@
-import { Injectable, PACKAGE_ROOT_URL } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+export enum DocType {
+  Object,
+  Property,
+  Operation,
+  Event,
+  Keyword
+}
 
 export class Documentation {
   name: string;
-  type: string;
+  type: DocType;
   description: string;
   children: Documentation[]
 }
 
+@Injectable({
+  providedIn: 'root'
+})
 export class DocumentationService {
 
   constructor() { }
@@ -19,11 +26,11 @@ export class DocumentationService {
   public static getDocumentation(language: string): Documentation[] {
     return [{
       name: "Turtle",
-      type: "Object",
+      type: DocType.Object,
       description: "Is a turtle",
       children: [{
         name: "Move",
-        type: "Operation",
+        type: DocType.Operation,
         description: "Moves turtle",
         children: []
       }]
