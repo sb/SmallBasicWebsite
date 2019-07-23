@@ -1,3 +1,230 @@
-<p>
-  chapter 7
-</p>
+<div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
+  <h2>Chapter 7: Fun With Shapes</h2>
+  <div
+    class="table-of-contents"
+    style="background-color:#eee; border:1px; padding:10px; display:inline-block; max-width:450px"
+  >
+    <h3 class="title" style="border-bottom:medium none; padding-top:0">
+      Table of Contents
+    </h3>
+    <div class="hierarchy-list-header"></div>
+    <ul class="hierarchy-list" style="margin:0; padding:11px">
+      <li class="hierarchy-item"><a href="#Rectangalore">Rectangalore</a></li>
+      <li class="hierarchy-item"><a href="#Circtacular">Circtacular</a></li>
+      <li class="hierarchy-item"><a href="#Randomize">Randomize</a></li>
+      <li class="hierarchy-item"><a href="#Fractals">Fractals</a></li>
+    </ul>
+    <div class="hierarchy-list-footer"></div>
+  </div>
+  <br />
+  <br />
+  <p>
+    We’re going to have some fun in this chapter with whatever we’ve learned so
+    far. This chapter contains samples that show some interesting ways of
+    combining all that you’ve learned so far to create some cool looking
+    programs.
+  </p>
+  <h3><a name="Rectangalore"></a>Rectangalore</h3>
+  <p style="margin-bottom: 20px;">
+    Here we draw multiple rectangles in a loop, with increasing size.
+  </p>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.BackgroundColor = &quot;Black&quot;
+GraphicsWindow.PenColor = &quot;LightBlue&quot;
+GraphicsWindow.Width = 200
+GraphicsWindow.Height = 200
+
+For i = 1 To 100 Step 5
+GraphicsWindow.DrawRectangle(100 - i, 100 - i, i * 2, i * 2)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 7.1 - Rectangalore"
+        alt="Figure 7.1 - Rectangalore"
+        src="http://i.msdn.microsoft.com/gg605125.Rectangalore(en-us,MSDN.10).jpg"
+        width="160"
+        height="174"
+      /><br />
+      <strong>Figure 7.1 - Rectangalore</strong>
+    </p>
+    <h3><a name="Circtacular"></a>Circtacular</h3>
+    <p style="margin-bottom: 20px;">
+      A variant of the previous program, draws circles instead of squares.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.BackgroundColor = &quot;Black&quot;
+GraphicsWindow.PenColor = &quot;LightGreen&quot;
+GraphicsWindow.Width = 200
+GraphicsWindow.Height = 200
+
+For i = 1 To 100 Step 5
+GraphicsWindow.DrawEllipse(100 - i, 100 - i, i * 2, i * 2)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 7.2 – Circtacular"
+        alt="Figure 7.2 - Circtacular"
+        src="http://i.msdn.microsoft.com/gg605125.Circtacular(en-us,MSDN.10).jpg"
+        width="160"
+        height="174"
+      /><br />
+      <strong>Figure 7.2 - Circtacular</strong>
+    </p>
+    <h3><a name="Randomize"></a>Randomize</h3>
+    <p style="margin-bottom: 20px;">
+      This program uses the operation GraphicsWindow.<em>GetRandomColor</em> to
+      set random colors for the brush and then uses Math.<em
+        >GetRandomNumber</em
+      >
+      to set the x and y co-ordinates for the circles. These two operations can
+      be combined in interesting ways to create interesting programs that give
+      different results each time they are run.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.BackgroundColor = &quot;Black&quot;
+For i = 1 To 1000
+GraphicsWindow.BrushColor = GraphicsWindow.GetRandomColor()
+x = Math.GetRandomNumber(640)
+y = Math.GetRandomNumber(480)
+GraphicsWindow.FillEllipse(x, y, 10, 10)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 7.3 – Randomize"
+        alt="Figure 7.3 - Randomize"
+        src="http://i.msdn.microsoft.com/gg605125.Randomize(en-us,MSDN.10).jpg"
+        width="465"
+        height="350"
+      /><br />
+      <strong>Figure 7.3 - Randomize</strong>
+    </p>
+    <h3><a name="Fractals"></a>Fractals</h3>
+    <p style="margin-bottom: 20px;">
+      The following program draws a simple triangle fractal using random
+      numbers. A fractal is a geometric shape that can be subdivided into parts,
+      each of which resembles the parent shape accurately. In this case, the
+      program draws hundreds of triangles each of which resembles its parent
+      triangle. And since the program runs for a few seconds, you can actually
+      see the triangles forming slowly from mere dots. The logic itself is
+      somewhat hard to describe and I’ll leave it as an exercise for you to
+      explore.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.BackgroundColor = &quot;Black&quot;
+x = 100
+y = 100
+
+For i = 1 To 100000
+r = Math.GetRandomNumber(3)
+ux = 150
+uy = 30
+If (r = 1) then
+ux = 30
+uy = 1000
+EndIf
+
+If (r = 2) Then
+ux = 1000
+uy = 1000
+EndIf
+
+x = (x &#43; ux) / 2
+y = (y &#43; uy) / 2 
+
+GraphicsWindow.SetPixel(x, y, &quot;LightGreen&quot;)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 7.4 - Triangle Fractal"
+        alt="Figure 7.4 - Triangle Fractal"
+        src="http://i.msdn.microsoft.com/gg605125.Triangle_Fractal(en-us,MSDN.10).jpg"
+        width="465"
+        height="350"
+      /><br />
+      <strong>Figure 7.4 - Triangle Fractal</strong>
+    </p>
+    <p style="margin-bottom: 20px;">
+      If you want to really see the dots slowly forming the fractal, you can
+      introduce a delay in the loop by using the
+      <strong>Program.</strong><em>Delay</em> operation. This operation takes in
+      a number that specifies in milliseconds, how long to delay. Here’s the
+      modified program, with the modified line in bold.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.BackgroundColor = &quot;Black&quot;
+x = 100
+y = 100
+
+For i = 1 To 100000
+r = Math.GetRandomNumber(3)
+ux = 150
+uy = 30
+If (r = 1) then
+ux = 30
+uy = 1000
+EndIf
+
+If (r = 2) Then
+ux = 1000
+uy = 1000
+EndIf
+
+x = (x &#43; ux) / 2
+y = (y &#43; uy) / 2
+
+GraphicsWindow.SetPixel(x, y, &quot;LightGreen&quot;)
+Program.Delay(2)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      Increasing the delay will make the program slower. Experiment with the
+      numbers to see what’s best for your taste.
+    </p>
+    <p style="margin-bottom: 30px;">
+      Another modification you can make to this program is to replace the
+      following line:
+    </p>
+    <div class="CodeHighlighter">
+      <pre><code class="visual basic">GraphicsWindow.SetPixel(x, y, &quot;LightGreen&quot;)</code></pre>
+    </div>
+    <p style="margin-top: 20px;">with</p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">color = GraphicsWindow.GetRandomColor()
+GraphicsWindow.SetPixel(x, y, color)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p>
+      This change will make the program draw the pixels of the triangle using
+      random colors.
+    </p>
+  </div>
+
+  <div>
+    <a style="float: left;" href="/tutorials/chapter6" title="Previous Chapter"
+      >Previous Chapter: Graphics</a
+    >
+    <a style="float: right;" href="/tutorials/chapter8" title="Next Chapter"
+      >Next Chapter: Turtle</a
+    >
+  </div>
+</div>

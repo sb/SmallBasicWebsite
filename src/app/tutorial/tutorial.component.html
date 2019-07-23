@@ -1,11 +1,11 @@
 <!--Show the basic tutorial structure on all /tutorials pages-->
 <div id="contentWrapper">
   <p>
-    tutorial works!
+    Tutorial Chapters
   </p>
   <ul>
     <li *ngFor="let chapter of chapters">
-      <a routerLink="{{chapter.link}}">{{chapter.title}}</a>
+      <a routerLink="{{ chapter.link }}">{{ chapter.title }}</a>
     </li>
   </ul>
   <!--Show the chapter output from the url -->

@@ -1,3 +1,242 @@
-<p>
-  chapter 11
-</p>
+<div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
+  <h2>Chapter 11: Events</h2>
+  <div
+    class="table-of-contents"
+    style="background-color: #eee; border: 1px; padding: 10px; display: inline-block; max-width: 450px"
+  >
+    <h3 class="title" style="border-bottom: medium none; padding-top: 0">
+      Table of Contents
+    </h3>
+    <div class="hierarchy-list-header"></div>
+    <ul class="hierarchy-list" style="margin: 0; padding: 11px">
+      <li class="hierarchy-item">
+        <a href="#How_are_events_useful">How are events useful?</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Handling_multiple_events">Handling multiple events</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#A_paint_program">A paint program</a>
+      </li>
+    </ul>
+    <div class="hierarchy-list-footer"></div>
+  </div>
+  <br />
+  <br />
+  In the first two chapters, we introduced objects that have
+  <em>Properties</em> and <em>Operations</em>. In addition to properties and
+  operations, some objects have what are called <strong><em>Events</em></strong
+  >. Events are like signals that are raised, for example, in response to user
+  actions, like moving the mouse or clicking it. In some sense events are the
+  opposite of operations. In the case of operation, you as a programmer call
+  <p>
+    it to make the computer do something; whereas in the case of events, the
+    computer lets you know when something interesting has happened.
+  </p>
+  <h3><a name="How_are_events_useful"></a>How are events useful?</h3>
+  <p>
+    Events are central to introducing interactivity in a program. If you want to
+    allow a user to interact with your program, events are what you’ll use. Say,
+    you’re writing a Tic-Tac-Toe game. You’ll want to allow the user to choose
+    his/her play, right? That’s where events come in - you receive user input
+    from within your program using events. If this seems hard to grasp, don’t
+    worry, we’ll take a look at a very simple example that will help you
+    understand what events are and how they can be used.
+  </p>
+  <p style="margin-bottom: 20px;">
+    Below is a very simple program that has just one statement and one
+    subroutine. The subroutine uses the
+    <em>ShowMessage</em> operation on the GraphicsWindow object to display a
+    message box to the user.
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.MouseDown = OnMouseDown
+
+Sub OnMouseDown
+GraphicsWindow.ShowMessage(&quot;You Clicked.&quot;, &quot;Hello&quot;)
+EndSub</code></pre>
+  </div>
+
+  <p class="BostonPostCard" style="margin-top: 10px;">
+    The interesting part to note in the program above is the line where we
+    assign the subroutine name to the
+    <strong>MouseDown</strong> event of GraphicsWindow object. You’ll notice
+    that MouseDown looks very much like a property – except that instead of
+    assigning some value, we’re assigning the subroutine <em>OnMouseDown</em> to
+    it. That’s what is special about events – when the event happens, the
+    subroutine is called automatically. In this case, the subroutine
+    <em>OnMouseDown</em> is called every time the user clicks using the mouse,
+    on the GraphicsWindow. Go ahead, run the program and try it out. Anytime you
+    click on the GraphicsWindow with your mouse, you’ll see a message box just
+    like the one shown in the picture below.
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <img
+      title="Figure 11.1 - Response to an event"
+      alt="Figure 11.1 - Response to an event"
+      src="http://i.msdn.microsoft.com/gg605168.Response_to_an_event(en-us,MSDN.10).jpg"
+      width="115"
+      height="113"
+    />
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <strong>Figure 11.1 - Response to an event</strong>
+  </p>
+  <p class="BostonPostCard">
+    This kind of event handling is very powerful and allows for very creative
+    and interesting programs. Programs written in this fashion are often called
+    event-driven programs.
+  </p>
+  <p class="BostonPostCard" style="margin-bottom: 20px;">
+    You can modify the <em>OnMouseDown</em> subroutine to do other things than
+    popup a message box. For instance, like in the program below, you can draw
+    big blue dots where the user clicks the mouse.
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.BrushColor = &quot;Blue&quot;
+GraphicsWindow.MouseDown = OnMouseDown
+
+Sub OnMouseDown
+x = GraphicsWindow.MouseX - 10
+y = GraphicsWindow.MouseY - 10
+GraphicsWindow.FillEllipse(x, y, 20, 20)
+EndSub</code></pre>
+  </div>
+
+  <p class="BostonPostCard" style="text-align: center; margin-top: 10px;">
+    <img
+      title="Figure 11.2 - Handling Mouse Down Event"
+      alt="Figure 11.2 - Handling Mouse Down Event"
+      src="http://i.msdn.microsoft.com/gg605168.Handling_Mouse_Down_Event(en-us,MSDN.10).jpg"
+      width="465"
+      height="350"
+    />
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <strong>Figure 11.2 - Handling Mouse Down Event</strong>
+  </p>
+  <p class="BostonPostCard">
+    Notice that in the program above, we used <em>MouseX</em> and
+    <em>MouseY</em> to get the mouse co-ordinates. We then use this to draw a
+    circle using the mouse co-ordinates as the center of the circle.
+  </p>
+  <h3 class="BostonPostCard">
+    <a name="Handling_multiple_events"></a>Handling multiple events
+  </h3>
+  <p class="BostonPostCard">
+    There are really no limits to how many events you want to handle. You can
+    even have one subroutine handle multiple events. However, you can handle an
+    event only once. If you try to assign two subroutines to the same event, the
+    second one wins.
+  </p>
+  <p class="BostonPostCard" style="margin-bottom: 20px;">
+    To illustrate this, let’s take the previous example and add a subroutine
+    that handles key presses. Also, let’s make this new subroutine change the
+    color of the brush, so that when you click your mouse, you’ll get a
+    different colored dot.
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.BrushColor = &quot;Blue&quot;
+GraphicsWindow.MouseDown = OnMouseDown
+GraphicsWindow.KeyDown = OnKeyDown
+
+Sub OnKeyDown
+GraphicsWindow.BrushColor = GraphicsWindow.GetRandomColor()
+EndSub
+
+Sub OnMouseDown
+x = GraphicsWindow.MouseX - 10
+y = GraphicsWindow.MouseY - 10
+GraphicsWindow.FillEllipse(x, y, 20, 20)
+EndSub</code></pre>
+  </div>
+
+  <p class="BostonPostCard" style="text-align: center; margin-top: 10px;">
+    <img
+      title="Figure 11.3 - Handling multiple events"
+      alt="Figure 11.3 - Handling multiple events"
+      src="http://i.msdn.microsoft.com/gg605168.Handling_multiple_events(en-us,MSDN.10).jpg"
+      width="465"
+      height="350"
+    />
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <strong>Figure 11.3 - Handling multiple events</strong>
+  </p>
+  <p class="BostonPostCard">
+    If you ran this program and clicked on the window, you’ll get a blue dot.
+    Now, if you press any key once and click again, you’ll get a different
+    colored dot. What’s happening when you press a key is that the subroutine
+    <em>OnKeyDown</em> gets executed which changes the brush color to a random
+    color. After that when you click the mouse, a circle is drawn using the
+    newly set color – giving the random color dots.
+  </p>
+  <h3 class="BostonPostCard"><a name="A_paint_program"></a>A paint program</h3>
+  <p class="BostonPostCard" style="margin-bottom: 20px;">
+    Armed with events and subroutines, we can now write a program that lets
+    users draw on the window. It’s surprisingly easy to write such a program,
+    provided we break down the problem into smaller bits. As a first step, let’s
+    write a program that will allow users to move the mouse anywhere on the
+    graphics window, leaving a trail wherever they move the mouse.
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.MouseMove = OnMouseMove
+
+Sub OnMouseMove
+x = GraphicsWindow.MouseX
+y = GraphicsWindow.MouseY
+GraphicsWindow.DrawLine(prevX, prevY, x, y)
+prevX = x
+prevY = y
+EndSub</code></pre>
+  </div>
+
+  <p class="BostonPostCard" style="margin-top: 10px;">
+    However, when you run this program, the first line always starts from the
+    top left edge of the window (0, 0). We can fix this problem by handling the
+    <em>MouseDown</em> event and capture the <em>prevX</em> and
+    <em>prevY</em> values when that event comes.<em> </em>
+  </p>
+  <p class="BostonPostCard" style="margin-bottom: 20px;">
+    Also, we really only need the trail when the user has the mouse button down.
+    Other times, we shouldn’t draw the line. In order to get this behavior,
+    we’ll use the
+    <em>IsLeftButtonDown</em> property on the <strong>Mouse</strong> object.
+    This property tells whether the Left button is being held down or not. If
+    this value is true, then we’ll draw the line, if not we’ll skip the line.
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.MouseMove = OnMouseMove
+GraphicsWindow.MouseDown = OnMouseDown
+
+Sub OnMouseDown
+prevX = GraphicsWindow.MouseX
+prevY = GraphicsWindow.MouseY
+EndSub
+
+Sub OnMouseMove
+x = GraphicsWindow.MouseX
+y = GraphicsWindow.MouseY
+If (Mouse.IsLeftButtonDown) Then
+GraphicsWindow.DrawLine(prevX, prevY, x, y)
+EndIf
+prevX = x
+prevY = y
+EndSub</code></pre>
+  </div>
+
+  <p>&nbsp;</p>
+  <div>
+    <a style="float: left;" href="/tutorials/chapter10" title="Previous Chapter"
+      >Previous Chapter: Arrays</a
+    >
+    <a style="float: right;" href="/tutorials/appendixA" title="Appendix"
+      >Appendix: Samples</a
+    >
+  </div>
+</div>

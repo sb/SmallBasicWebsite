@@ -1,3 +1,340 @@
-<p>
-  chapter 8
-</p>
+<div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
+  <h2>Chapter 8: Turtle Graphics</h2>
+  <div
+    class="table-of-contents"
+    style="background-color:#eee; border:1px; padding:10px; display:inline-block; max-width:450px"
+  >
+    <h3 class="title" style="border-bottom:medium none; padding-top:0">
+      Table of Contents
+    </h3>
+    <div class="hierarchy-list-header"></div>
+    <ul class="hierarchy-list" style="margin:0; padding:11px">
+      <li class="hierarchy-item"><a href="#Logo">Logo</a></li>
+      <li class="hierarchy-item"><a href="#The_Turtle">The Turtle</a></li>
+      <li class="hierarchy-item">
+        <a href="#Moving_and_Drawing">Moving and Drawing</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Drawing_a_Square">Drawing a Square</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Changing_Colors">Changing Colors</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Drawing_more_complex_shapes">Drawing more complex shapes</a>
+      </li>
+      <li class="hierarchy-item"><a href="#Moving_Around">Moving Around</a></li>
+      <li class="hierarchy-item">
+        <a href="#Position_Turtle">Position Turtle</a>
+      </li>
+    </ul>
+    <div class="hierarchy-list-footer"></div>
+  </div>
+  &nbsp;<br />
+  &nbsp;<br />
+  <div class="BostonPostCard">
+    <h3><a name="Logo"></a>Logo</h3>
+    <p>
+      In the 1970s, there was a very simple but powerful programming language,
+      called Logo that was used by a few researchers. This was until someone
+      added what is called “Turtle Graphics” to the language and made available
+      a “Turtle” that was visible on the screen and responded to commands like
+      <em>Move Forward, Turn Right, Turn Left,</em> etc. Using the Turtle,
+      people were able to draw interesting shapes on the screen. This made the
+      language immediately accessible and appealing to people of all ages, and
+      was largely responsible for its wild popularity in the 1980s.
+    </p>
+    <p>
+      Small Basic comes with a <strong>Turtle</strong> object with many commands
+      that can be called from within Small Basic programs. In this chapter,
+      we’ll use the Turtle to draw graphics on the screen.
+    </p>
+  </div>
+  <div class="BostonPostCard">
+    <h3><a name="The_Turtle"></a>The Turtle</h3>
+    <p style="margin-bottom: 30px;">
+      To begin with, we need to make the Turtle visible on the screen. This can
+      be achieved by a simple one line program.
+    </p>
+    <div class="CodeHighlighter">
+      <pre><code class="visual basic">Turtle.Show()</code></pre>
+    </div>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-top: 10px;">
+      When you run this program you’ll notice a white window, just like the one
+      we saw in the previous chapter, except this one has a Turtle in the
+      center. It is this Turtle that is going to follow our instructions and
+      draw whatever we ask it to.
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 8.1 - Turtle is visible"
+        alt="Figure 8.1 - Turtle is visible"
+        src="http://i.msdn.microsoft.com/gg605166.Turtle_is_visible(en-us,MSDN.10).jpg"
+        width="465"
+        height="350"
+      /><br />
+      <strong>Figure 8.1 - Turtle is visible</strong>
+    </p>
+    <h3><a name="Moving_and_Drawing"></a>Moving and Drawing</h3>
+    <p style="margin-bottom: 30px;">
+      One of the instructions that the Turtle understands is
+      <strong>Move</strong>. This operation takes a number as input. This number
+      tells the Turtle how far to move. Say, in the example below, we’ll ask the
+      Turtle to move 100 pixels.
+    </p>
+    <div class="CodeHighlighter">
+      <pre><code class="visual basic">Turtle.Move(100)</code></pre>
+    </div>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-top: 10px;">
+      When you run this program, you can actually see the turtle move slowly a
+      100 pixels upwards. As it moves, you’ll also notice it drawing a line
+      behind it. When the Turtle has finished moving, the result will look
+      something like the figure below.
+    </p>
+    <p>
+      <strong>Note</strong>: When using operations on the Turtle, it is not
+      necessary to call Show(). The Turtle will be automatically made visible
+      whenever any Turtle operation is performed.
+    </p>
+    <h3><a name="Drawing_a_Square"></a>Drawing a Square</h3>
+    <p style="margin-bottom: 20px;">
+      A square has four sides, two vertical and two horizontal. In order to draw
+      a square we need to be able to make the Turtle draw a line, turn right and
+      draw another line and continue this until all four sides are finished. If
+      we translated this to a program, here’s how it would look.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">Turtle.Move(100)
+Turtle.TurnRight()
+Turtle.Move(100)
+Turtle.TurnRight()
+Turtle.Move(100)
+Turtle.TurnRight()
+Turtle.Move(100)
+Turtle.TurnRight()</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      When you run this program, you can see the Turtle drawing a square, one
+      line at a time, and the result looks like the figure below.
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 8.2 - Turtle drawing a square"
+        alt="Figure 8.2 - Turtle drawing a square"
+        src="http://i.msdn.microsoft.com/gg605166.Turtle_drawing_a_square(en-us,MSDN.10).jpg"
+        width="465"
+        height="350"
+      /><br />
+      <strong>Figure 8.2 - Turtle drawing a square</strong>
+    </p>
+    <p style="margin-bottom: 20px;">
+      It will be interesting to note that we’re issuing the same two
+      instructions over and over – four times precisely. And we’ve already
+      learnt that such repetitive commands can be executed using loops. So, if
+      we take the program above and modify it to use the
+      <strong>For..EndFor</strong> loop, we’ll end up with a much simpler
+      program.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">For i = 1 To 4
+Turtle.Move(100)
+Turtle.TurnRight()
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <h3 style="margin-top: 10px;">
+      <a name="Changing_Colors"></a>Changing Colors
+    </h3>
+    <p style="margin-bottom: 20px;">
+      The Turtle draws on the exact same GraphicsWindow that we saw in the
+      previous chapter. This means that all the operations that we learned in
+      the previous chapter are still valid here. For instance, the following
+      program will draw the square with each side in a different color.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">For i = 1 To 4
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+Turtle.Move(100)
+Turtle.TurnRight()
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 8.3 - Changing Colors"
+        alt="Figure 8.3 - Changing Colors"
+        src="http://i.msdn.microsoft.com/gg605166.Changing_Colors(en-us,MSDN.10).jpg"
+        width="465"
+        height="350"
+      /><br />
+      <strong>Figure 8.3 - Changing Colors</strong>
+    </p>
+    <h3>
+      <a name="Drawing_more_complex_shapes"></a>Drawing more complex shapes
+    </h3>
+    <p style="margin-bottom: 20px;">
+      The Turtle, in addition to the <strong>TurnRight</strong> and
+      <strong>TurnLeft</strong> operations, has a
+      <strong>Turn</strong> operation. This operation takes one input which
+      specifies the angle of rotation. Using this operation, it is possible to
+      draw any sided polygon. The following program draws a hexagon (a six-sided
+      polygon).
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">For i = 1 To 6
+Turtle.Move(100)
+Turtle.Turn(60)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px; margin-bottom: 20px;">
+      Try this program out to see if it really draws a hexagon. Observe that
+      since the angle between the sides is 60 degrees, we use
+      <strong>Turn(60)</strong>. For such a polygon, whose sides are all equal,
+      the angle between the sides can be easily obtained by dividing 360 by the
+      number of sides. Armed with this information and using variables, we can
+      write a pretty generic program that can draw any sided polygon.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">sides = 12
+
+length = 400 / sides
+angle = 360 / sides
+
+For i = 1 To sides
+Turtle.Move(length)
+Turtle.Turn(angle)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      Using this program, you can draw any polygon by just modifying the
+      <strong>sides</strong> variable. Putting 4 here would give us the Square
+      we started with. Putting a sufficiently large value, say 50 would make the
+      result indistinguishable from a circle.
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 8.4 - Drawing a 12 sided polygon"
+        alt="Figure 8.4 - Drawing a 12 sided polygon"
+        src="http://i.msdn.microsoft.com/gg605166.Drawing_a_12_sided_polygon(en-us,MSDN.10).jpg"
+        width="465"
+        height="350"
+      /><br />
+      <strong>Figure 8.4 - Drawing a 12 sided polygon</strong>
+    </p>
+    <p style="margin-bottom: 20px;">
+      Using the technique we just learned, we can make the Turtle draw multiple
+      circles each time with a little shift resulting in an interesting output.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">sides = 50
+length = 400 / sides
+angle = 360 / sides
+
+Turtle.Speed = 9
+
+For j = 1 To 20
+For i = 1 To sides
+Turtle.Move(length)
+Turtle.Turn(angle)
+EndFor
+Turtle.Turn(18)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      The program above has two <strong>For..EndFor</strong> loops, one within
+      the other. The inner loop (<em>i = 1 to sides</em>) is similar to the
+      polygon program and is responsible for drawing a circle. The outer loop
+      (<em>j = 1 to 20</em>) is responsible for turning the Turtle by a small
+      bit for every circle that is drawn. This tells the Turtle to draw 20
+      circles. When put together, this program results in a very interesting
+      pattern, like the one shown below.
+    </p>
+    <p>
+      <strong>Note</strong>: In the program above, we have made the Turtle go
+      faster by setting the Speed to 9. You can set this property to any value
+      between 1 and 10 to make the Turtle go as fast as you want.
+    </p>
+    <h3><a name="Moving_Around"></a>Moving Around</h3>
+    <p style="margin-bottom: 20px;">
+      You can make the turtle not draw by calling the
+      <strong>PenUp</strong> operation. This allows you to move the turtle to
+      anywhere on the screen without drawing a line. Calling
+      <strong>PenDown</strong> will make the turtle draw again. This can be used
+      to get some interesting effects, like say, dotted lines. Here’s a program
+      that uses this to draw a dotted line polygon.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">sides = 6
+
+length = 400 / sides
+angle = 360 / sides
+
+For i = 1 To sides
+For j = 1 To 6
+Turtle.Move(length / 12)
+Turtle.PenUp()
+Turtle.Move(length / 12)
+Turtle.PenDown()
+EndFor
+Turtle.Turn(angle)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      Again, this program has two loops. The inner loop draws a single dotted
+      line, while the outer loop specifies how many lines to draw. In our
+      example, we used 6 for the
+      <strong>sides</strong> variable and hence we got a dotted line hexagon, as
+      below.
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 8.5 - Using PenUp and PenDown"
+        alt="Figure 8.5 - Using PenUp and PenDown"
+        src="http://i.msdn.microsoft.com/gg605166.Using_PenUp_and_PenDown(en-us,MSDN.10).jpg"
+        width="465"
+        height="350"
+      /><br />
+      <strong>Figure 8.5 - Using PenUp and PenDown</strong>
+    </p>
+  </div>
+  <div class="BostonPostCard">
+    <h3><a name="Position_Turtle"></a>Position Turtle</h3>
+    <p>You can use X and Y to position Turtle.</p>
+    <p style="margin-bottom: 20px;">
+      <strong>Note</strong>: if you set Turtle.X = 0 and Turtle.Y = 0, the
+      location will be top left corner of the screen. You can always get
+      Turtle's position by calling Turtle.X and Turtle.Y.
+    </p>
+  </div>
+  <div>
+    <a style="float: left;" href="/tutorials/chapter7" title="Previous Chapter"
+      >Previous Chapter: Shapes</a
+    >
+    <a style="float: right;" href="/tutorials/chapter9" title="Next Chapter"
+      >Next Chapter: Subroutines</a
+    >
+  </div>
+</div>
