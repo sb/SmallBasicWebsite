@@ -66,37 +66,43 @@
         </p>
     </div>
     <div id="sidebar">
-        <div>
-            <h2>Announcements</h2>
-            <ul>
-                <li *ngFor="let announcement of announcements | slice:0:3">
-                    <a href="{{announcement.link}}"><b>{{announcement.title}}</b></a>
-                    <div class="indent">
-                        <div class="byline">
-                            <div>{{announcement.author}}</div>
-                            <div>{{announcement.date | date:'shortDate'}}</div>
-                        </div>
-                        {{announcement.description}}
-                    </div>
-                </li>
-            </ul>
-            <a href="{{announcementService.smallBasicUrl}}" target="_blank">More</a>
-        </div>
-        <div>
-            <h2>Forum Posts</h2>
-            <ul>
-                <li *ngFor="let post of forumPosts | slice:0:3">
-                    <a href="{{post.link}}"><b>{{post.title}}</b></a>
-                    <div class="indent">
-                        <div class="byline">
-                            <div>{{post.author}}</div>
-                            <div>{{post.date | date:'shortDate'}}</div>
-                        </div>
-                        {{post.description}}
-                    </div>
-                </li>
-            </ul>
-            <a href="{{announcementService.forumUrl}}" target="_blank">More</a>
-        </div>
+      <div id="socMedia">
+        <a href="https://www.facebook.com/groups/smallbasic/" target="_blank" alt="Link to Small Basic Facebook page" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/Small_Basic" target="_blank" alt="Link to Small Basic Twitter page" class="fa fa-twitter"></a>
+        <a href="https://www.youtube.com/channel/UCu725C2we0oPgrRbWVLWjkw" target="_blank" alt="Link to Small Basic YouTube page" class="fa fa-youtube"></a>
+        <a href="https://social.msdn.microsoft.com/Forums/en-US/home?forum=smallbasic" target="_blank" alt="Link to Microsoft Developer Network Small Basic forum" class="fa fa-windows"></a>
+      </div>
+      <div>
+        <h2>Announcements</h2>
+        <ul>
+          <li *ngFor="let announcement of announcements | slice:0:3">
+            <a href="{{announcement.link}}"><b>{{announcement.title}}</b></a>
+            <div class="indent">
+              <div class="byline">
+                <div>{{announcement.author}}</div>
+                <div>{{announcement.date | date:'shortDate'}}</div>
+              </div>
+              {{announcement.description}}
+            </div>
+          </li>
+        </ul>
+        <a href="{{announcementService.smallBasicUrl}}" target="_blank">More</a>
+      </div>
+      <div>
+        <h2>Forum Posts</h2>
+        <ul>
+          <li *ngFor="let post of forumPosts | slice:0:3">
+            <a href="{{post.link}}"><b>{{post.title}}</b></a>
+            <div class="indent">
+              <div class="byline">
+                <div>{{post.author}}</div>
+                <div>{{post.date | date:'shortDate'}}</div>
+              </div>
+              {{post.description}}
+            </div>
+          </li>
+        </ul>
+        <a href="{{announcementService.forumUrl}}" target="_blank">More</a>
+      </div>
     </div>
 </div>
