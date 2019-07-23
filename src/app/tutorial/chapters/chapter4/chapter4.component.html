@@ -1,3 +1,319 @@
-<p>
-  chapter 4
-</p>
+<div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
+  <h2 class="title">Chapter 4: Conditions and Branching</h2>
+  <div
+    class="table-of-contents"
+    style="background-color:#eee; border:1px; padding:10px; display:inline-block; max-width:450px"
+  >
+    <h3 class="title" style="border-bottom:medium none; padding-top:0">
+      Table of Contents
+    </h3>
+    <div class="hierarchy-list-header"></div>
+    <ul class="hierarchy-list" style="margin:0; padding:11px">
+      <li class="hierarchy-item"><a href="#If">If</a></li>
+      <li class="hierarchy-item"><a href="#Else">Else</a></li>
+      <li class="hierarchy-item"><a href="#Indentation">Indentation</a></li>
+      <li class="hierarchy-item"><a href="#Even_or_Odd">Even or Odd</a></li>
+      <li class="hierarchy-item"><a href="#Branching">Branching</a></li>
+      <li class="hierarchy-item">
+        <a href="#Endless_execution">Endless execution</a>
+      </li>
+    </ul>
+    <div class="hierarchy-list-footer"></div>
+  </div>
+  <br />
+  <div class="BostonPostCard">
+    <h3 style="margin-bottom: 20px;"><a name="If"></a>If</h3>
+    <p style="margin-bottom: 20px;">
+      Going back to our first program, wouldn’t it be cool that instead of
+      saying the general
+      <em>Hello World</em>, we could say <em>Good Morning World,</em> or
+      <em>Good Evening World</em> depending on the time of the day? For our next
+      program, we’ll make the computer say <em>Good Morning World</em> if the
+      time is earlier than 12PM; and <em>Good Evening</em> if the time is later
+      than 12PM.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">If (Clock.Hour &lt; 12) Then
+TextWindow.WriteLine(&quot;Good Morning World&quot;)
+EndIf
+If (Clock.Hour &gt;= 12) Then
+TextWindow.WriteLine(&quot;Good Evening World&quot;)
+EndIf</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      Depending on when you run the program you’ll see either of the following
+      outputs:
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 4.1 - Good Morning World"
+        alt="Figure 4.1 - Good Morning World"
+        align="middle"
+        src="http://i.msdn.microsoft.com/gg604915.Figure14(en-us,MSDN.10).jpg"
+        width="491"
+        height="119"
+        style="vertical-align: middle;"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 4.1 - Good Morning World</strong>
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 4.2 - Good Evening World"
+        alt="Figure 4.2 - Good Evening World"
+        align="middle"
+        src="http://i.msdn.microsoft.com/gg604915.Figure15(en-us,MSDN.10).jpg"
+        width="491"
+        height="119"
+        style="vertical-align: middle;"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 4.2 - Good Evening World</strong>
+    </p>
+    <p>
+      Let’s analyze the first three lines of the program. You’d have already
+      figured out that this line tells the computer that if the Clock.Hour is
+      lesser than 12, print out “Good Morning World.” The words
+      <strong>If</strong>, <strong>Then</strong> and <strong>EndIf</strong> are
+      special words that are understood by the computer when the program is run.
+      The word <strong>If</strong> is always followed by a condition, which in
+      this case is (<strong>Clock.Hour &lt; 12)</strong>. Remember that the
+      parentheses are necessary for the computer to understand your intentions.
+      The condition is followed by <strong>then</strong> and the actual
+      operation to execute. And after the operation comes
+      <strong>EndIf</strong>. This tells the computer that the conditional
+      execution is over.
+    </p>
+    <p>
+      <strong>Note</strong>: In Small Basic, you can use the Clock object to
+      access the current date and time. It also provides you a bunch of
+      properties that allow you to get the current Day, Month, Year, Hour,
+      Minutes, Seconds separately.
+    </p>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-bottom: 20px;">
+      Between the <strong>then</strong> and the <strong>EndIf</strong>, there
+      could be more than one operation and the computer will execute them all if
+      the condition is valid. For example, you could write something like this:
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">If (Clock.Hour &lt; 12) Then
+TextWindow.Write(&quot;Good Morning. &quot;)
+TextWindow.WriteLine(&quot;How was breakfast?&quot;)
+EndIf</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <h3 style="margin-top: 10px;"><a name="Else"></a>Else</h3>
+    <p>
+      In the program at the start of this chapter, you might have noticed that
+      the second condition is kind of redundant. The
+      <strong>Clock.Hour</strong> value could either be less than 12 or not. We
+      didn’t really have to do the second check. At times like this, we can
+      shorten the two <strong>if..then..endif</strong> statements to be just one
+      by using a new word, <strong>else</strong>.
+    </p>
+    <p style="margin-bottom: 20px;">
+      If we were to rewrite that program using <strong>else</strong>, this is
+      how it will look:
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">If (Clock.Hour &lt; 12) Then
+TextWindow.WriteLine(&quot;Good Morning World&quot;)
+Else
+TextWindow.WriteLine(&quot;Good Evening World&quot;)
+EndIf</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      And this program will do exactly the same as the other one, which brings
+      us to a very important lesson in computer programming:
+    </p>
+    <p>
+      <strong><em>&quot;</em></strong
+      ><em
+        >In programming, there usually are many ways of doing the same thing.
+        Sometimes one way makes more sense than the other way. The choice is
+        left to the programmer. As you write more programs and get more
+        experienced, you’ll start to notice these different techniques and their
+        advantages and disadvantages.</em
+      ><strong><em>&quot;</em></strong>
+    </p>
+    <h3><a name="Indentation"></a>Indentation</h3>
+    <p>
+      In all the examples you can see how the statements between
+      <em>If, Else</em> and <em>EndIf</em> are indented. This indentation is not
+      necessary. The computer will understand the program just fine without
+      them. However, they help us see and understand the structure of the
+      program easier. Hence, it’s usually considered as a good practice to
+      indent the statements between such blocks.
+    </p>
+    <h3><a name="Even_or_Odd"></a>Even or Odd</h3>
+    <p style="margin-bottom: 20px;">
+      Now that we have the <strong>If..Then..Else..EndIf</strong> statement in
+      our bag of tricks, let’s write out a program that, given a number, will
+      say if it’s even or odd.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;Enter a number: &quot;)
+num = TextWindow.ReadNumber()
+remainder = Math.Remainder(num, 2)
+If (remainder = 0) Then
+TextWindow.WriteLine(&quot;The number is Even&quot;)
+Else
+TextWindow.WriteLine(&quot;The number is Odd&quot;)
+EndIf</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      And when you run this program, you’ll see an output like:
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 4.3 - Even or Odd"
+        alt="Figure 4.3 - Even or Odd"
+        align="middle"
+        src="http://i.msdn.microsoft.com/gg604915.Figure16(en-us,MSDN.10).jpg"
+        width="491"
+        height="119"
+        style="vertical-align: middle;"
+      />
+    </p>
+    <p style="text-align: center;"><strong>Figure 4.3 - Even or Odd</strong></p>
+    <p>
+      In this program, we’ve introduced another new useful operation,
+      <strong>Math.Remainder</strong>. And yes, as you already might have
+      figured out, <strong>Math.Remainder</strong> will divide the first number
+      by the second number and then give back the remainder.
+    </p>
+    <h3><a name="Branching"></a>Branching</h3>
+    <p style="margin-bottom: 20px;">
+      Remember, in the second chapter you learned that the computer processes a
+      program one statement at a time, in order from the top to bottom. However,
+      there’s a special statement that can make the computer jump to another
+      statement out of order. Let’s take a look at the next program.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">i = 1
+start:
+TextWindow.WriteLine(i)
+i = i &#43; 1
+If (i &lt; 25) Then
+Goto start
+EndIf</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 4.4 - Using Goto"
+        alt="Figure 4.5 - Using Goto"
+        align="middle"
+        src="http://i.msdn.microsoft.com/gg604915.Figure17(en-us,MSDN.10).jpg"
+        width="491"
+        height="257"
+        style="vertical-align: middle;"
+      />
+    </p>
+    <p style="text-align: center;"><strong>Figure 4.4 - Using Goto</strong></p>
+    <p style="margin-bottom: 30px;">
+      In the program above, we assigned a value of 1 to the variable
+      <strong>i</strong>. And then we added a new statement which ends in a
+      colon (:)
+    </p>
+    <div class="CodeHighlighter">
+      <pre><code class="visual basic">start:</code></pre>
+    </div>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-top: 10px;">
+      This is called a <em>label</em>. Labels are like bookmarks that the
+      computer understands. You can name the bookmark anything and you can add
+      as many labels as you want in your program, as long as they are all
+      uniquely named.
+    </p>
+    <p style="margin-bottom: 30px;">Another interesting statement here is:</p>
+    <div class="CodeHighlighter">
+      <pre><code class="visual basic">i = i &#43; 1</code></pre>
+    </div>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-top: 10px;">
+      This just tells the computer to add 1 to the variable
+      <strong>i</strong> and assign it back to <strong>i</strong>. So if the
+      value of <strong>i</strong> was 1 before this statement, it will be 2
+      after this statement is run.
+    </p>
+    <p style="margin-bottom: 20px;">And finally,</p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">If (i &lt; 25) Then
+Goto start
+EndIf</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      This is the part that tells the computer that if the value of
+      <strong>i</strong> is less than 25, start executing statements from the
+      bookmark <strong>start</strong>.
+    </p>
+    <h3><a name="Endless_execution"></a>Endless execution</h3>
+    <p style="margin-bottom: 20px;">
+      Using the <strong>Goto</strong> statement you can make the computer repeat
+      something any number of times. For example, you can take the Even or Odd
+      program and modify it like below, and the program will run for ever. You
+      can stop the program by clicking on the Close (X) button on the top right
+      corner of the window.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">begin:
+TextWindow.Write(&quot;Enter a number: &quot;)
+num = TextWindow.ReadNumber()
+remainder = Math.Remainder(num, 2)
+If (remainder = 0) Then
+TextWindow.WriteLine(&quot;The number is Even&quot;)
+Else
+TextWindow.WriteLine(&quot;The number is Odd&quot;)
+EndIf
+Goto begin</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 4.5 - Even or Odd running endlessly"
+        alt="Figure 4.6 - Even or Odd running endlessly"
+        align="middle"
+        src="http://i.msdn.microsoft.com/gg604915.Figure18(en-us,MSDN.10).jpg"
+        width="491"
+        height="154"
+        style="vertical-align: middle;"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 4.5 - Even or Odd running endlessly</strong>
+    </p>
+  </div>
+  <div>
+    <a style="float: left;" href="/tutorials/chapter3" title="Previous Chapter"
+      >Previous Chapter: Variables</a
+    >
+    <a style="float: right;" href="/tutorials/chapter5" title="Next Chapter"
+      >Next Chapter: Loops</a
+    >
+  </div>
+</div>

@@ -1,3 +1,360 @@
-<p>
-  chapter 6
-</p>
+<div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
+  <h2>Chapter 6: Beginning Graphics</h2>
+  <div
+    class="table-of-contents"
+    style="background-color: #eee; border: 1px; padding: 10px; display: inline-block; max-width: 450px"
+  >
+    <h3 class="title" style="border-bottom: medium none; padding-top: 0">
+      Table of Contents
+    </h3>
+    <div class="hierarchy-list-header"></div>
+    <ul class="hierarchy-list" style="margin: 0; padding: 11px">
+      <li class="hierarchy-item">
+        <a href="#Introducing_GraphicsWindow">Introducing GraphicsWindow</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Setting_up_the_Graphics_Window"
+          >Setting up the Graphics Window</a
+        >
+      </li>
+      <li class="hierarchy-item"><a href="#Drawing_Lines">Drawing Lines</a></li>
+      <li class="hierarchy-item">
+        <a href="#Drawing_and_Filling_Shapes">Drawing and Filling Shapes</a>
+      </li>
+    </ul>
+    <div class="hierarchy-list-footer"></div>
+  </div>
+  <br />
+  <br />
+  <p>
+    So far in all our examples, we’ve used the TextWindow to explain the
+    fundamentals of the Small Basic language. However, Small Basic comes with a
+    powerful set of Graphics capabilities that we’ll start exploring in this
+    chapter.
+  </p>
+  <h3><a name="Introducing_GraphicsWindow"></a>Introducing GraphicsWindow</h3>
+  <p style="margin-bottom: 30px;">
+    Just like we had TextWindow that allowed us to work with Text and Numbers,
+    Small Basic also provides a
+    <strong>GraphicsWindow</strong> that we can use to draw things. Let’s begin
+    by displaying the GraphicsWindow.
+  </p>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.Show()</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-top: 10px;">
+      When you run this program, you’ll notice that instead of the usual black
+      text window, you get a white Window like the one shown below. There’s
+      nothing much to do on this window yet. But this will be the base window on
+      which we’ll work on in this chapter. You can close this window by clicking
+      on the ‘X’ button on the top right corner.
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 6.1 - An empty Graphics Window"
+        alt="Figure 6.1 - An empty Graphics Window"
+        align="center"
+        src="http://i.msdn.microsoft.com/gg593772.Figure23(en-us,MSDN.10).jpg"
+        width="465"
+        height="350"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 6.1 - An empty Graphics Window</strong>
+    </p>
+    <h3>
+      <a name="Setting_up_the_Graphics_Window"></a>Setting up the Graphics
+      Window
+    </h3>
+    <p style="margin-bottom: 20px;">
+      The graphics window allows you to customize its appearance to your desire.
+      You can change the title, the background and its size. Let’s go ahead and
+      modify it a bit, just to get familiar with the window.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.BackgroundColor = &quot;SteelBlue&quot;
+GraphicsWindow.Title = &quot;My Graphics Window&quot;
+GraphicsWindow.Width = 320
+GraphicsWindow.Height = 200
+GraphicsWindow.Show()</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      Here’s how the customized graphics window looks. You can change the
+      background color to one of the many values listed in Appendix B. Play with
+      these properties to see how you can modify the window’s appearance.
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 6.2 - A Custom Graphics Window"
+        alt="Figure 6.2 - A Custom Graphics Window"
+        src="http://i.msdn.microsoft.com/gg593772.Figure24(en-us,MSDN.10).jpg"
+        width="246"
+        height="174"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 6.2 - A Custom Graphics Window</strong>
+    </p>
+    <h3><a name="Drawing_Lines"></a>Drawing Lines</h3>
+    <p style="margin-bottom: 20px;">
+      Once we have the GraphicsWindow up, we can draw shapes, text and even
+      pictures on it. Let’s start by drawing some simple shapes. Here’s a
+      program that draws a couple lines on the Graphics Window.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.Width = 200
+GraphicsWindow.Height = 200
+GraphicsWindow.DrawLine(10, 10, 100, 100)
+GraphicsWindow.DrawLine(10, 100, 100, 10)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 6.3 – CrissCross"
+        alt="Figure 6.3 - CrissCross"
+        src="http://i.msdn.microsoft.com/gg593772.Figure25(en-us,MSDN.10).jpg"
+        width="160"
+        height="174"
+      />
+    </p>
+    <p style="text-align: center;"><strong>Figure 6.3 - CrissCross</strong></p>
+    <p>
+      The first two lines of the program setup the window and the next two lines
+      draw the crisscross lines. The first two numbers that follow
+      <em>DrawLine</em> specify the starting x and y co-ordinates and the other
+      two specify the ending x and y co-ordinates. The interesting thing with
+      computer graphics is that the co-ordinates (0, 0) start at the top left
+      corner of the window. In effect, in the co-ordinate space the window is
+      considered to be on the 2<sup>nd</sup> quadrant.
+    </p>
+    <p>
+      <strong>Note</strong>: Instead of using names for colors you can use the
+      web color notation (#RRGGBB). For example, #FF0000 denotes Red, #FFFF00
+      for Yellow, and so on. We’ll learn more about colors in
+      <a href="/tutorials/chapter7" title="Colors">Colors</a>
+    </p>
+  </div>
+  <div class="BostonPostCard">
+    <p style="text-align: center;">
+      <img
+        title="Figure 6.4 - The co-ordinate map"
+        alt="Figure 6.4 - The co-ordinate map"
+        src="http://i.msdn.microsoft.com/gg593772.Figure26(en-us,MSDN.10).jpg"
+        width="148"
+        height="148"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 6.4 - The co-ordinate map</strong>
+    </p>
+    <p style="margin-bottom: 20px;">
+      If we go back to the line program, it’s interesting to note that Small
+      Basic allows you to modify the properties of the line, such as the color
+      and its thickness. First, let’s modify the color of the lines as shown in
+      the program below.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.Width = 200
+GraphicsWindow.Height = 200
+GraphicsWindow.PenColor = &quot;Green&quot;
+GraphicsWindow.DrawLine(10, 10, 100, 100)
+GraphicsWindow.PenColor = &quot;Gold&quot;
+GraphicsWindow.DrawLine(10, 100, 100, 10)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 6.5 - Changing Line Color"
+        alt="Figure 6.5 - Changing Line Color"
+        src="http://i.msdn.microsoft.com/gg593772.Figure27(en-us,MSDN.10).jpg"
+        width="160"
+        height="174"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 6.5 - Changing Line Color</strong>
+    </p>
+    <p style="margin-bottom: 20px;">
+      Now, let’s modify the size too. In the program below, we change the line
+      width to be 10, instead of the default which is 1.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.Width = 200
+GraphicsWindow.Height = 200
+GraphicsWindow.PenWidth = 10
+GraphicsWindow.PenColor = &quot;Green&quot;
+GraphicsWindow.DrawLine(10, 10, 100, 100)
+GraphicsWindow.PenColor = &quot;Gold&quot;
+GraphicsWindow.DrawLine(10, 100, 100, 10)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 6.6 - Thick Colorful Lines"
+        alt="Figure 6.6 - Thick Colorful Lines"
+        src="http://i.msdn.microsoft.com/gg593772.Figure28(en-us,MSDN.10).jpg"
+        width="160"
+        height="174"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 6.6 - Thick Colorful Lines</strong>
+    </p>
+    <p>
+      <em>PenWidth</em> and <em>PenColor</em> modify the pen with which these
+      lines are drawn. They not only affect lines but also any shape that is
+      drawn after the properties are updated.
+    </p>
+    <p style="margin-bottom: 20px;">
+      By using the looping statements we learned in the previous chapters, we
+      can easily write a program that draws multiple lines with increasing pen
+      thickness.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.BackgroundColor = &quot;Black&quot;
+GraphicsWindow.Width = 200
+GraphicsWindow.Height = 160
+GraphicsWindow.PenColor = &quot;Blue&quot;
+
+For i = 1 To 10
+GraphicsWindow.PenWidth = i
+GraphicsWindow.DrawLine(20, i * 15, 180, i * 15)
+endfor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 6.7 - Multiple Pen Widths"
+        alt="Figure 6.7 - Multiple Pen Widths"
+        src="http://i.msdn.microsoft.com/gg593772.Figure29(en-us,MSDN.10).jpg"
+        width="160"
+        height="145"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 6.7 - Multiple Pen Widths</strong>
+    </p>
+    <p>
+      The interesting part of this program is the loop, where we increase the
+      <em>PenWidth</em> every time the loop is run and then draw a new line
+      under the old one.
+    </p>
+    <h3><a name="Drawing_and_Filling_Shapes"></a>Drawing and Filling Shapes</h3>
+    <p style="margin-bottom: 20px;">
+      When it comes to drawing shapes, there are usually two types of operations
+      for every shape. They are
+      <em>Draw</em> operations and <em>Fill</em> operations. Draw operations
+      draw the outline of the shape using a pen, and Fill operations paint the
+      shape using a brush. For example in the program below, there are two
+      rectangles, one that is drawn using the Red pen and one that’s filled
+      using the Green Brush.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.Width = 400
+GraphicsWindow.Height = 300
+
+GraphicsWindow.PenColor = &quot;Red&quot;
+GraphicsWindow.DrawRectangle(20, 20, 300, 60)
+
+GraphicsWindow.BrushColor = &quot;Green&quot;
+GraphicsWindow.FillRectangle(60, 100, 300, 60)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 6.8 - Drawing and Filling"
+        alt="Figure 6.8 - Drawing and Filling"
+        align="center"
+        src="http://i.msdn.microsoft.com/gg593772.Figure30(en-us,MSDN.10).jpg"
+        width="304"
+        height="246"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 6.8 - Drawing and Filling</strong>
+    </p>
+    <p>
+      To draw or fill a rectangle, you need four numbers. The first two numbers
+      represent the X and Y co-ordinates for the top left corner of the
+      rectangle. The third number specifies the width of the rectangle while the
+      fourth specifies its height. In fact, the same applies for drawing and
+      filling ellipses, as shown in the program below.
+    </p>
+    <p style="margin-bottom: 20px;">&nbsp;</p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.Width = 400
+GraphicsWindow.Height = 300
+
+GraphicsWindow.PenColor = &quot;Red&quot;
+GraphicsWindow.DrawEllipse(20, 20, 300, 60)
+
+GraphicsWindow.BrushColor = &quot;Green&quot;
+GraphicsWindow.FillEllipse(60, 100, 300, 60)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 6.9 - Drawing and Filling Ellipses"
+        alt="Figure 6.9 - Drawing and Filling Ellipses"
+        src="http://i.msdn.microsoft.com/gg593772.Figure31(en-us,MSDN.10).jpg"
+        width="304"
+        height="246"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 6.9 - Drawing and Filling Ellipses</strong>
+    </p>
+    <p style="margin-bottom: 20px;">
+      Ellipses are just a general case of circles. If you want to draw circles,
+      you would have to specify the same width and height.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.Width = 400
+GraphicsWindow.Height = 300
+
+GraphicsWindow.PenColor = &quot;Red&quot;
+GraphicsWindow.DrawEllipse(20, 20, 100, 100)
+
+GraphicsWindow.BrushColor = &quot;Green&quot;
+GraphicsWindow.FillEllipse(100, 100, 100, 100)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 6.10 – Circles"
+        alt="Figure 6.10 - Circles"
+        src="http://i.msdn.microsoft.com/gg593772.Figure32(en-us,MSDN.10).jpg"
+        width="304"
+        height="246"
+      />
+    </p>
+    <p style="text-align: center;"><strong>Figure 6.10 - Circles</strong></p>
+  </div>
+
+  <div>
+    <a style="float: left;" href="/tutorials/chapter5" title="Previous Chapter"
+      >Previous Chapter: Loops</a
+    >
+    <a style="float: right;" href="/tutorials/chapter7" title="Next Chapter"
+      >Next Chapter: Shapes</a
+    >
+  </div>
+</div>
