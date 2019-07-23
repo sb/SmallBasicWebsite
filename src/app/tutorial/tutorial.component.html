@@ -1,6 +1,10 @@
 <!--Show the basic tutorial structure on all /tutorials pages-->
 <div id="contentWrapper">
-  <div class="left-nav-and-right-content">
+  <div *ngIf="isOnBasePage">
+    I'm on base page
+    <a routerLink="{{chapters[0].link}}">Start new tutorial</a>
+  </div>
+  <div class="left-nav-and-right-content" *ngIf="!isOnBasePage">
     <div class="left-nav">
       <h3>Table of Contents</h3>
       <ul>
@@ -14,7 +18,7 @@
         </li>
         <li id="api-link">
           <a routerLink="/docs">API Reference</a>
-        </li> 
+        </li>
       </ul>
     </div>
     <div class="right-content">
