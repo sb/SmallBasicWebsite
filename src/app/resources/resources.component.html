@@ -1,6 +1,8 @@
 <div id="contentWrapper">
+  <img src="https://gxcuf89792.i.lithium.com/t5/image/serverpage/image-id/109051i2A78B35CB68D1681/image-size/large?v=1.0&px=999" height="250" width="250" />
+  <img src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/74696i2F48EFC6E06CD612" height="250" width="250" />
   <div *ngFor="let topic of topics; index as i">
-    <h3>{{topic.subject}}</h3>
+    <h3>{{topic.subject}}</h3> 
     <div *ngFor="let resource of topic.resources">
       <a href="{{resource.link}}" target="_blank">{{resource.description}}</a>
     </div>
