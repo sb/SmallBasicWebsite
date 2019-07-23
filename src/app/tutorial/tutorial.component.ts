@@ -31,8 +31,7 @@ export class TutorialComponent implements OnInit {
     { link: "appendixB", title: "Appendix B: Colors" },
   ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

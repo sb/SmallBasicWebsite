@@ -1,3 +1,406 @@
-<p>
-  chapter 10
-</p>
+<div class="container mrg-top20 sb-main-container" style="margin-bottom:50px">
+  <h2 class="title">Chapter 10. Arrays</h2>
+  <div
+    class="table-of-contents"
+    style="background-color:#eee; border:1px; padding:10px; display:inline-block; max-width:450px"
+  >
+    <h3 class="title" style="border-bottom:medium none; padding-top:0">
+      Table of Contents
+    </h3>
+    <div class="hierarchy-list-header"></div>
+    <ul class="hierarchy-list" style="margin:0; padding:11px">
+      <li class="hierarchy-item">
+        <a href="#Review_Variables">Review Variables</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#What_is_an_array">What is an array?</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Indexing_an_array">Indexing an array</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#More_than_one_dimension">More than one dimension</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Using_Arrays_to_represent_grids"
+          >Using Arrays to represent grids</a
+        >
+      </li>
+    </ul>
+    <div class="hierarchy-list-footer"></div>
+  </div>
+  <h3><a name="Review_Variables"></a>Review Variables</h3>
+  <p>
+    By now you must be well versed with how to use variables – after all you
+    have come this far and you’re still having fun, right?
+  </p>
+  <p style="margin-bottom: 20px;">
+    Let’s for a moment, revisit the first program we wrote with variables:
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;Enter your Name: &quot;)
+name = TextWindow.Read()
+TextWindow.WriteLine(&quot;Hello &quot; &#43; name)</code></pre>
+  </div>
+
+  <p class="BostonPostCard">
+    In this program, we received and stored the name of the user in a variable
+    called
+    <strong>name</strong>. Then later we said “Hello” to the user. Now, let’s
+    say there is more than one user – say, there are 5 users. How would we store
+    all their names? One way of doing this is:
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;User1, enter name: &quot;)
+name1 = TextWindow.Read()
+TextWindow.Write(&quot;User2, enter name: &quot;)
+name2 = TextWindow.Read()
+TextWindow.Write(&quot;User3, enter name: &quot;)
+name3 = TextWindow.Read()
+TextWindow.Write(&quot;User4, enter name: &quot;)
+name4 = TextWindow.Read()
+TextWindow.Write(&quot;User5, enter name: &quot;)
+name5 = TextWindow.Read()
+
+TextWindow.Write(&quot;Hello &quot;)
+TextWindow.Write(name1 &#43; &quot;, &quot;)
+TextWindow.Write(name2 &#43; &quot;, &quot;)
+TextWindow.Write(name3 &#43; &quot;, &quot;)
+TextWindow.Write(name4 &#43; &quot;, &quot;)
+TextWindow.WriteLine(name5)</code></pre>
+  </div>
+
+  <p class="BostonPostCard">
+    When you run this you’ll get the following result:
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <img
+      title="Figure 10.1 - Not using arrays"
+      alt="Figure 10.1 - Not using arrays"
+      src="http://i.msdn.microsoft.com/gg605124.Not_using_arrays(en-us,MSDN.10).jpg"
+      width="491"
+      height="138"
+    />
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <strong>Figure 10.1 - Not using arrays</strong>
+  </p>
+  <p class="BostonPostCard">
+    Clearly there must be a better way to write such a simple program, right?
+    Especially since the computer is really good at doing repetitive tasks, why
+    should we bother with writing the same code over and over for every new
+    user? The trick here is to store and retrieve more than one user’s name
+    using the same variable. If we can do that then we can use a
+    <strong>For</strong> loop we learned in earlier chapters. This is where
+    arrays come to our help.
+  </p>
+  <h3 class="BostonPostCard">
+    <a name="What_is_an_array"></a>What is an array?
+  </h3>
+  <p class="BostonPostCard">
+    An array is a special kind of variable which can hold more than one value at
+    a time. Basically, what it means is that instead of having to create
+    <strong>name1, name2, name3, name4</strong> and <strong>name5</strong> in
+    order to store five user names, we could just use <strong>name</strong> to
+    store all five users’ name. The way we store multiple values is by use of
+    this thing called “index.” For example,
+    <strong>name[1], name[2], name[3], name[4]</strong> and
+    <strong>name[5]</strong> can all store a value each. The numbers 1, 2, 3, 4
+    and 5 are called <em>indices</em> for the array.
+  </p>
+  <p class="BostonPostCard">
+    Even though the <strong>name[1]</strong>, <strong>name[2]</strong>,
+    <strong>name[3]</strong>, <strong>name[4]</strong> and
+    <strong>name[5]</strong> all look like they are different variables, they’re
+    in reality all just one variable. And what’s the advantage of this, you may
+    ask. The best part of storing values in an array is that you can specify the
+    index using another variable – which allows us to easily access arrays
+    inside loops.
+  </p>
+  <p class="BostonPostCard" style="margin-bottom: 20px;">
+    Now, let’s look at how we can put our new knowledge to use by rewriting our
+    previous program with arrays.
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">For i = 1 To 5
+TextWindow.Write(&quot;User&quot; &#43; i &#43; &quot;, enter name: &quot;)
+<strong>name[i] = TextWindow.Read()</strong>
+EndFor
+
+TextWindow.Write(&quot;Hello &quot;)
+For i = 1 To 5
+<strong>TextWindow.Write(name[i] &#43; &quot;, &quot;)</strong>
+EndFor
+TextWindow.WriteLine(&quot;&quot;)</code></pre>
+  </div>
+
+  <p class="BostonPostCard" style="margin-top: 10px;">
+    Much easier to read, isn’t it? Notice the two bolded lines. The first one
+    stores a value in the array and the second one reads it from the array. The
+    value you store in
+    <strong>name[1]</strong> will not be affected by what you store in
+    <strong>name[2]</strong>. Hence for most purposes you can treat
+    <strong>name[1]</strong> and <strong>name[2]</strong> as two different
+    variables with the same identity.
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <img
+      title="Figure 10.2 - Using arrays"
+      alt="Figure 10.2 - Using arrays"
+      src="http://i.msdn.microsoft.com/gg605124.Using_arrays(en-us,MSDN.10).jpg"
+      width="628"
+      height="209"
+    />
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <strong>Figure 10.2 - Using arrays</strong>
+  </p>
+  <p class="BostonPostCard" style="margin-bottom: 20px;">
+    The above program gives almost the exact same result as the one without
+    arrays, except for the comma at the end of
+    <em>Mantis</em>. We can fix that by rewriting the printing loop as:
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;Hello &quot;)
+For i = 1 To 5
+TextWindow.Write(name[i])
+If i &lt; 5 Then
+TextWindow.Write(&quot;, &quot;)
+EndIf
+EndFor
+TextWindow.WriteLine(&quot;&quot;)</code></pre>
+  </div>
+  <p class="BostonPostCard" style="margin-top: 10px;">
+    Here's a visual representation of the <strong>name[]</strong> array, and how
+    the different names get stored in it. Because of this storage, when
+    <strong>name[1]</strong> was accessed for example, the name Shifu got
+    outputted.
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <img
+      title="Figure 10.3 - Array visualization"
+      alt="Figure 10.3 - Array visualization"
+      src="/Content/images/arrays-visual.png"
+      width="200"
+    />
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <strong>Figure 10.3 - Array visualization</strong>
+  </p>
+  <h3 class="BostonPostCard" style="margin-top: 10px;">
+    <a name="Indexing_an_array"></a>Indexing an array
+  </h3>
+  <p class="BostonPostCard" style="margin-bottom: 20px;">
+    In our previous program you saw that we used numbers as indices to store and
+    retrieve values from the array. It turns out that the indices are not
+    restricted to just numbers and in practice it’s very useful to use textual
+    indices too. For example, in the following program, we ask and store various
+    pieces of information about a user and then print out the info that the user
+    asks for.
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;Enter name: &quot;)
+user[&quot;name&quot;] = TextWindow.Read()
+TextWindow.Write(&quot;Enter age: &quot;)
+user[&quot;age&quot;] = TextWindow.Read()
+TextWindow.Write(&quot;Enter city: &quot;)
+user[&quot;city&quot;] = TextWindow.Read()
+TextWindow.Write(&quot;Enter zip: &quot;)
+user[&quot;zip&quot;] = TextWindow.Read()
+
+TextWindow.Write(&quot;What info do you want? &quot;)
+index = TextWindow.Read()
+TextWindow.WriteLine(index &#43; &quot; = &quot; &#43; user[index])</code></pre>
+  </div>
+
+  <p class="BostonPostCard" style="text-align: center; margin-top: 10px;">
+    <img
+      title="Figure 10.4 - Using non-numeric indices"
+      alt="Figure 10.4 - Using non-numeric indices"
+      src="http://i.msdn.microsoft.com/gg605124.Using_non-numeric_indices(en-us,MSDN.10).jpg"
+      width="491"
+      height="129"
+    />
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <strong>Figure 10.4 - Using non-numeric indices</strong>
+  </p>
+  <h3 class="BostonPostCard">
+    <a name="More_than_one_dimension"></a>More than one dimension
+  </h3>
+  <p class="BostonPostCard">
+    Let’s say you want to store the name and phone number of all your friends
+    and then be able to lookup on their phone numbers whenever you need – kinda
+    like a phonebook. How would we go about writing such a program?
+  </p>
+  <p class="BostonPostCard">
+    In this case, there are two sets of indices (also known as the array’s
+    dimension) involved. Assume we identify each friend by their nick name. This
+    becomes our first index in the array. Once we use the first index to get our
+    friend variable, the second of indices, name and phone number would help us
+    get to the actual name and phone number of that friend.
+  </p>
+  <p class="BostonPostCard">
+    <strong>Note</strong>: Array indices are not case sensitive. Just like
+    regular variables, array indices match don’t have to match the precise
+    capitalization.
+  </p>
+  <div class="BostonPostCard">
+    <p style="margin-bottom: 20px;">
+      The way we store this data would be like this:
+    </p>
+  </div>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">friends[&quot;Rob&quot;][&quot;Name&quot;] = &quot;Robert&quot;
+friends[&quot;Rob&quot;][&quot;Phone&quot;] = &quot;555-6789&quot;
+
+friends[&quot;VJ&quot;][&quot;Name&quot;] = &quot;Vijaye&quot;
+friends[&quot;VJ&quot;][&quot;Phone&quot;] = &quot;555-4567&quot;
+
+friends[&quot;Ash&quot;][&quot;Name&quot;] = &quot;Ashley&quot;
+friends[&quot;Ash&quot;][&quot;Phone&quot;] = &quot;555-2345&quot;</code></pre>
+  </div>
+
+  <p class="BostonPostCard" style="margin-top: 10px;">
+    Since we have two indices on the same array,
+    <strong>friends</strong>, this array is called a two dimensional array.
+  </p>
+  <p class="BostonPostCard" style="margin-bottom: 20px;">
+    Once we have set this program up, we can then take as input the nickname of
+    a friend and then print out the information we have stored about them.
+    Here’s the full program that does that:
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">friends[&quot;Rob&quot;][&quot;Name&quot;] = &quot;Robert&quot;
+friends[&quot;Rob&quot;][&quot;Phone&quot;] = &quot;555-6789&quot;
+
+friends[&quot;VJ&quot;][&quot;Name&quot;] = &quot;Vijaye&quot;
+friends[&quot;VJ&quot;][&quot;Phone&quot;] = &quot;555-4567&quot;
+
+friends[&quot;Ash&quot;][&quot;Name&quot;] = &quot;Ashley&quot;
+friends[&quot;Ash&quot;][&quot;Phone&quot;] = &quot;555-2345&quot;
+
+TextWindow.Write(&quot;Enter the nickname: &quot;)
+nickname = TextWindow.Read()
+
+TextWindow.WriteLine(&quot;Name: &quot; &#43; friends[nickname][&quot;Name&quot;])
+TextWindow.WriteLine(&quot;Phone: &quot; &#43; friends[nickname][&quot;Phone&quot;])</code></pre>
+  </div>
+
+  <p class="BostonPostCard">&nbsp;</p>
+  <p class="BostonPostCard" style="text-align: center; margin-top: 10px;">
+    <img
+      title="Figure 10.5 - A simple phone book"
+      alt="Figure 10.5 - A simple phone book"
+      src="http://i.msdn.microsoft.com/gg605124.A_simple_phone_book(en-us,MSDN.10).jpg"
+      width="491"
+      height="129"
+    />
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <strong>Figure 10.5- A simple phone book</strong>
+  </p>
+  <p class="BostonPostCard" style="margin-top: 10px;">
+    Here is a visual representation of the <strong>friends</strong> array. The
+    data is stored so that when <strong>friends["Rob"]["Phone"]</strong> is
+    accessed, 555-6789 is returned. If you trace through the diagram, first
+    going to the row that stores data for the nickname Rob, and then go over to
+    the column that stores the Phone numbers data, you can see this value.
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <img
+      title="Figure 10.6 - Multi-dimensional array visualization"
+      alt="Figure 10.6 - Multi-dimensional array visualization"
+      src="/Content/images/mdarray-visual.png"
+      width="300"
+    />
+  </p>
+
+  <p class="BostonPostCard" style="text-align: center;">
+    <strong>Figure 10.6- Multi-dimensional array visualization</strong>
+  </p>
+  <h3 class="BostonPostCard">
+    <a name="Using_Arrays_to_represent_grids"></a>Using Arrays to represent
+    grids
+  </h3>
+  <p class="BostonPostCard" style="margin-bottom: 20px;">
+    A very common use of multi-dimensional arrays is to represent grids/tables.
+    Grids have rows and columns, which can fit nicely into a two dimensional
+    array. A simple program that lays out boxes in a grid is given below:
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">rows = 8
+columns = 8
+size = 40
+
+For r = 1 To rows
+For c = 1 To columns
+GraphicsWindow.BrushColor = GraphicsWindow.GetRandomColor()
+boxes[r][c] = Shapes.AddRectangle(size, size)
+Shapes.Move(boxes[r][c], c * size, r * size)
+EndFor
+EndFor</code></pre>
+  </div>
+
+  <p class="BostonPostCard" style="margin-top: 10px;">
+    This program adds rectangles and positions them to form an 8x8 grid. In
+    addition to laying these boxes, it also stores these boxes in an array.
+    Doing so makes it easy for us to keep track of these boxes and use them
+    again when we need them.
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <img
+      title="Figure 10.7- Laying out boxes in a grid"
+      alt="Figure 10.7 - Laying out boxes in a grid"
+      src="http://i.msdn.microsoft.com/gg605124.Laying_out_boxes_in_a_grid(en-us,MSDN.10).jpg"
+      width="465"
+      height="350"
+    />
+  </p>
+  <p class="BostonPostCard" style="text-align: center;">
+    <strong>Figure 10.7 - Laying out boxes in a grid</strong>
+  </p>
+  <p class="BostonPostCard" style="margin-bottom: 20px;">
+    For example, adding the following code to the end of the previous program
+    would make these boxes animate to the top left corner.
+  </p>
+
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">For r = 1 To rows
+For c = 1 To columns
+Shapes.Animate(boxes[r][c], 0, 0, 1000)
+Program.Delay(300)
+EndFor
+EndFor</code></pre>
+  </div>
+
+  <p class="BostonPostCard">&nbsp;</p>
+  <p class="BostonPostCard" style="text-align: center; margin-top: 10px;">
+    <img
+      title="Figure 10.8 - Keeping track of boxes in the grid"
+      alt="Figure 10.8 - Keeping track of boxes in the grid"
+      src="http://i.msdn.microsoft.com/gg605124.Keeping_track_of_boxes_in_the_grid(en-us,MSDN.10).jpg"
+      width="465"
+      height="350"
+    />
+  </p>
+  <p class="BostonPostCard" style="text-align: center; margin-bottom: 20px;">
+    <strong>Figure 10.8 - Keeping track of boxes in the grid</strong>
+  </p>
+  <div>
+    <a style="float:left;" href="/tutorials/chapter9" title="Previous Chapter"
+      >Previous Chapter: Subroutines</a
+    >
+    <a style="float:right;" href="/tutorials/chapter11" title="Next Chapter"
+      >Next Chapter: Events</a
+    >
+  </div>
+</div>

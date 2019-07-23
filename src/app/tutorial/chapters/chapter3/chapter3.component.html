@@ -1,3 +1,373 @@
-<p>
-  chapter 3
-</p>
+<div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
+  <h2 class="title">Chapter 3: Variables</h2>
+  <div
+    class="table-of-contents"
+    style="background-color:#eee; border:1px; padding:10px; display:inline-block; max-width:450px"
+  >
+    <h3 class="title" style="border-bottom:medium none; padding-top:0">
+      Table of Contents
+    </h3>
+    <div class="hierarchy-list-header"></div>
+    <ul class="hierarchy-list" style="margin:0; padding:11px">
+      <li class="hierarchy-item">
+        <a href="#Using_Variables_in_our_program"
+          >Using Variables in our program</a
+        >
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Analysis_of_the_program">Analysis of the program</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Rules_for_naming_Variables">Rules for naming Variables</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Playing_with_Numbers">Playing with Numbers</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#A_Simple_Temperature_Converter"
+          >A Simple Temperature Converter</a
+        >
+      </li>
+    </ul>
+    <div class="hierarchy-list-footer"></div>
+  </div>
+  <br />
+  <br />
+  <div class="BostonPostCard">
+    <h3>
+      <a name="Using_Variables_in_our_program"></a>Using Variables in our
+      program
+    </h3>
+    <p style="margin-bottom: 20px;">
+      Wouldn’t it be nice if our program can actually say “Hello” with the users
+      name instead of saying the generic “Hello World?” In order to do that we
+      must first ask the user for his/her name and then store it somewhere and
+      then print out “Hello” with the user’s name. Let’s see how we can do that:
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;Enter your Name: &quot;)
+
+name = TextWindow.Read()
+
+TextWindow.WriteLine(&quot;Hello &quot; &#43; name)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      When you type and execute this program, you’ll see an output like the
+      following:
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 3.1 - Ask the user's name"
+        alt="Figure 3.1 - Ask the user's name"
+        src="http://i.msdn.microsoft.com/gg604874.Figure7(en-us,MSDN.10).jpg"
+        width="492"
+        height="76"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 3.1 - Ask the user&#39;s name</strong>
+    </p>
+    <p>
+      And when you type in your name and hit ENTER, you’ll see the following
+      output:
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 3.2 - A Warm Hello"
+        alt="Figure 3.2 - A Warm Hello"
+        src="http://i.msdn.microsoft.com/gg604874.Figure8(en-us,MSDN.10).jpg"
+        width="492"
+        height="76"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 3.2 - A Warm Hello</strong>
+    </p>
+    <p>
+      Now, if you run the program again, you’ll be asked the same question
+      again. You can type in a different name and the computer will say Hello
+      with that name.
+    </p>
+    <h3><a name="Analysis_of_the_program"></a>Analysis of the program</h3>
+    <p style="margin-bottom: 30px;">
+      In the program you just ran, the line that might have caught your
+      attention is this:
+    </p>
+    <div class="CodeHighlighter">
+      <pre><code class="visual basic">name = TextWindow.Read()</code></pre>
+    </div>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-top: 10px;">
+      <em>Read()</em> looks just like <em>WriteLine()</em>, but with no inputs.
+      It is an operation and basically it tells the computer to wait for the
+      user to type in something and hit the ENTER key. Once the user hits the
+      ENTER key, it takes what the user has typed and returns it to the program.
+      The interesting point is that whatever the user had typed is now stored in
+      a <em>variable</em> called <strong>name</strong>. A <em>variable</em> is
+      defined as a place where you can store values temporarily and use them
+      later. In the line above, <strong>name</strong> was used to store the name
+      of the user.
+    </p>
+    <p style="margin-bottom: 30px;">The next line is also interesting:</p>
+    <div class="CodeHighlighter">
+      <pre><code class="visual basic">TextWindow.WriteLine(&quot;Hello &quot; &#43; name)</code></pre>
+    </div>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-top: 10px;">
+      This is the place where we use the value stored in our variable,
+      <strong>name</strong>. We take the value in <strong>name</strong> and
+      append it to “Hello” and write it to the TextWindow.
+    </p>
+    <p>
+      Once a variable is set, you can reuse it any number of times. For example,
+      you can do the following:
+    </p>
+    <p style="margin-bottom: 20px;">
+      <strong>Note</strong>: Write, just like WriteLine is another operation on
+      ConsoleWindow. Write allows you to write something to the ConsoleWindow
+      but allows succeeding text to be on the same line as the current text.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;Enter your Name: &quot;)
+
+name = TextWindow.Read()
+
+TextWindow.Write(&quot;Hello &quot; &#43; name &#43; &quot;.  &quot;)
+
+TextWindow.WriteLine(&quot;How are you doing &quot; &#43; name &#43; &quot;?&quot;)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">And you’ll see the following output:</p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 3.3 - Reusing a Variable"
+        alt="Figure 3.3 - Reusing a Variable"
+        src="http://i.msdn.microsoft.com/gg604874.Figure9(en-us,MSDN.10).jpg"
+        width="488"
+        height="85"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 3.3 - Reusing a Variable</strong>
+    </p>
+    <h3><a name="Rules_for_naming_Variables"></a>Rules for naming Variables</h3>
+    <p>
+      Variables have names associated with them and that’s how you identify
+      them. There are certain simple rules and some really good guidelines for
+      naming these variables. They are:
+    </p>
+    <ol>
+      <li>
+        The name should start with a letter and should not be the same as any of
+        the keywords like <strong>if</strong>, <strong>for</strong>,
+        <strong>then</strong>, etc.
+      </li>
+      <li>
+        A name can contain any combination of letters, digits and underscores.
+      </li>
+      <li>
+        It is useful to name variables meaningfully – since variables can be as
+        long as you want, use variable names to describe their intent.
+      </li>
+    </ol>
+    <h3><a name="Playing_with_Numbers"></a>Playing with Numbers</h3>
+    <p>
+      We’ve just seen how you can use variables to store the name of the user.
+      In the next few programs, we’ll see how we can store and manipulate
+      numbers in variables. Let’s start with\ a really simple program:
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">number1 = 10
+
+number2 = 20
+
+number3 = number1 &#43; number2
+
+TextWindow.WriteLine(number3)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      When you run this program you’ll get the following as output:
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 3.4 - Adding Two Numbers"
+        alt="Figure 3.4 - Adding Two Numbers"
+        src="http://i.msdn.microsoft.com/gg604874.Figure10(en-us,MSDN.10).jpg"
+        width="491"
+        height="76"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 3.4 - Adding Two Numbers</strong>
+    </p>
+    <p>
+      In the first line of the program, you’re assigning the variable
+      <strong>number1</strong> with a value of 10. And in the second line,
+      you’re assigning the variable <strong>number2</strong> with a value of 20.
+      In the third line, you’re adding <strong>number1</strong> and
+      <strong>number2</strong> and then
+    </p>
+    <p>
+      <strong>Note</strong>: Notice that the numbers don’t have quotes around
+      them. For numbers, quotes are not necessary. You need quotes only when
+      you’re using text.
+    </p>
+  </div>
+  <div class="BostonPostCard">
+    <p>
+      assigning the result of that to <strong>number3</strong>. So, in this
+      case, <strong>number3</strong> will have a value of 30. And that is what
+      we printed out to the TextWindow.
+    </p>
+    <p style="margin-bottom: 20px;">
+      Now, let’s modify that program slightly and see the results:
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">number1 = 10
+
+number2 = 20
+
+number3 = number1 * number2
+
+TextWindow.WriteLine(number3)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      The program above will multiply <strong>number1</strong> with
+      <strong>number2</strong> and store the result in <strong>number3</strong>.
+      And you can see in the result of that program below:
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 3.5 - Multiplying Two Numbers"
+        alt="Figure 3.5 - Multiplying Two Numbers"
+        src="http://i.msdn.microsoft.com/gg604874.Figure11(en-us,MSDN.10).jpg"
+        width="491"
+        height="76"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 3.5 - Multiplying Two Numbers</strong>
+    </p>
+    <p style="margin-bottom: 30px;">
+      Similarly, you can subtract or divide numbers. Here is the subtraction:
+    </p>
+    <div class="CodeHighlighter">
+      <pre><code class="visual basic">number3 = number1 - number2</code></pre>
+    </div>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-top: 10px; margin-bottom: 30px;">
+      And the symbol for division is ‘/’. The progam will look like:
+    </p>
+    <div class="CodeHighlighter">
+      <pre><code class="visual basic">number3 = number1 / number2</code></pre>
+    </div>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-top: 10px;">And the result of this division would be:</p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 3.6 - Dividing Two Numbers"
+        alt="Figure 3.6 - Dividing Two Numbers"
+        src="http://i.msdn.microsoft.com/gg604874.Figure12(en-us,MSDN.10).jpg"
+        width="491"
+        height="76"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 3.6 - Dividing Two Numbers</strong>
+    </p>
+    <h3>
+      <a name="A_Simple_Temperature_Converter"></a>A Simple Temperature
+      Converter
+    </h3>
+    <p>
+      For the next program we’ll use the formula
+      <span align="bottom">
+        <img
+          alt=" "
+          src="http://i.msdn.microsoft.com/gg604874.Equ1(en-us,MSDN.10).jpg"
+          width="79"
+          height="27"
+      /></span>
+      to convert Fahrenheit temperatures to Celsius temperatures.
+    </p>
+    <p style="margin-bottom: 20px;">
+      First, we’ll get the temperature in Fahrenheit from the user and store it
+      in a variable. There’s a special operation that lets us read numbers from
+      the user and that is
+      <strong>TextWindow.ReadNumber</strong>.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;Enter temperature in Fahrenheit: &quot;)
+
+fahr = TextWindow.ReadNumber()</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px; margin-bottom: 30px;">
+      Once we have the Fahrenheit temperature stored in a variable, we can
+      convert it to Celsius like this:
+    </p>
+    <div class="CodeHighlighter">
+      <pre><code class="visual basic">celsius = 5 * (fahr - 32) / 9</code></pre>
+    </div>
+  </div>
+  <div class="BostonPostCard">
+    <p style="margin-top: 10px; margin-bottom: 20px;">
+      The parentheses tell the computer to calculate the
+      <strong>fahr – 32</strong> part first and then process the rest. Now all
+      we have to do is print the result out to the user. Putting it all
+      together, we get this program:
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;Enter temperature in Fahrenheit: &quot;)
+
+fahr = TextWindow.ReadNumber()
+
+celsius = 5 * (fahr - 32) / 9
+
+TextWindow.WriteLine(&quot;Temperature in Celsius is &quot; &#43; celsius)</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">And the result of this program would be:</p>
+    <p style="text-align: center;">
+      <strong>
+        <img
+          title="Figure 3.7 - Temperature Conversion"
+          alt="Figure 3.7 - Temperature Conversion"
+          src="http://i.msdn.microsoft.com/gg604874.Figure13(en-us,MSDN.10).jpg"
+          width="491"
+          height="85"
+      /></strong>
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 3.7 - Temperature Conversion</strong>
+    </p>
+  </div>
+
+  <div>
+    <a style="float: left;" href="/tutorials/chapter2" title="Previous Chapter"
+      >Previous Chapter: Branches</a
+    >
+    <a style="float: right;" href="/tutorials/chapter4" title="Next Chapter"
+      >Next Chapter: Conditions</a
+    >
+  </div>
+</div>

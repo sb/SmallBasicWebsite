@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -13,6 +14,7 @@ import { FaqComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { HeaderComponent } from './header/header.component';
+import { ProgramsComponent } from './programs/programs.component';
 
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { Chapter1Component } from './tutorial/chapters/chapter1/chapter1.component';
@@ -38,6 +40,7 @@ import { DocumentationComponent } from './documentation/documentation.component'
     ContactComponent,
     ResourcesComponent,
     HeaderComponent,
+    ProgramsComponent,
     TutorialComponent,
     Chapter1Component,
     Chapter2Component,
@@ -60,7 +63,8 @@ import { DocumentationComponent } from './documentation/documentation.component'
       HttpClientModule,
       AppRoutingModule,
       MatExpansionModule,
-      MatButtonModule
+      MatButtonModule,
+      FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
