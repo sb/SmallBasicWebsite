@@ -1,3 +1,328 @@
-<p>
-  chapter 9
-</p>
+<div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
+  <h2>Chapter 9: Subroutines</h2>
+  <div
+    class="table-of-contents"
+    style="background-color:#eee; border:1px; padding:10px; display:inline-block; max-width:450px"
+  >
+    <h3 class="title" style="border-bottom:medium none; padding-top:0">
+      Table of Contents
+    </h3>
+    <div class="hierarchy-list-header"></div>
+    <ul class="hierarchy-list" style="margin:0; padding:11px">
+      <li class="hierarchy-item"><a href="#Subroutines">Subroutines</a></li>
+      <li class="hierarchy-item">
+        <a href="#Advantages_of_using_Subroutines"
+          >Advantages of using Subroutines</a
+        >
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Using_variables">Using variables</a>
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Calling_Subroutines_inside_Loops"
+          >Calling Subroutines inside Loops</a
+        >
+      </li>
+      <li class="hierarchy-item">
+        <a href="#Best_Practices">Best Practices</a>
+      </li>
+    </ul>
+    <div class="hierarchy-list-footer"></div>
+  </div>
+  <h3><a name="Subroutines"></a>Subroutines</h3>
+  <p>
+    Very often while writing programs we’ll run into cases where we’ll have to
+    execute the same set of steps, over and over again. In those cases, it
+    probably wouldn’t make sense to rewrite the same statements multiple times.
+    That’s when
+    <em>Subroutines</em> come in handy.
+  </p>
+  <p style="margin-bottom: 20px;">
+    A subroutine is a portion of code within a larger program that usually does
+    something very specific, and that can be called from anywhere in the
+    program. Subroutines are identified by a name that follows the
+    <strong>Sub</strong> keyword and are terminated by the
+    <strong>EndSub</strong> keyword. For example, the following snippet
+    represents a subroutine whose name is <em>PrintTime</em>, and it does the
+    job of printing the current time to the TextWindow.
+  </p>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">Sub PrintTime
+TextWindow.WriteLine(Clock.Time)
+EndSub</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px; margin-bottom: 20px;">
+      Below is a program that includes the subroutine and calls it from various
+      places.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">PrintTime()
+TextWindow.Write(&quot;Enter your name: &quot;)
+name = TextWindow.Read()
+TextWindow.Write(name &#43; &quot;, the time now is: &quot;)
+PrintTime()
+
+Sub PrintTime
+TextWindow.WriteLine(Clock.Time)
+EndSub</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 9.1 - Calling a simple Subroutine"
+        alt="Figure 9.1 - Calling a simple Subroutine"
+        src="http://i.msdn.microsoft.com/gg605193.Calling_a_simple_Subroutine(en-us,MSDN.10).jpg"
+        width="491"
+        height="76"
+      /><br />
+      <strong>Figure 9.1 - Calling a simple Subroutine</strong>
+    </p>
+    <p>
+      You execute a subroutine by calling <em>SubroutineName()</em>. As usual,
+      the punctuators “()” are necessary to tell the computer that you want to
+      execute a subroutine.
+    </p>
+    <h3>
+      <a name="Advantages_of_using_Subroutines"></a>Advantages of using
+      Subroutines
+    </h3>
+    <p>
+      As we just saw above, subroutines help reduce the amount of code you have
+      to type in. Once you have the
+      <em>PrintTime</em> subroutine written, you can call it from anywhere in
+      your program and it’ll print the current time.
+    </p>
+    <p>
+      <strong>Note</strong>: Remember, you can only call a SmallBasic subroutine
+      from within the same program. You cannot call a subroutine from within
+      another program.
+    </p>
+    <p>
+      In addition, subroutines can help decompose complex problems into simpler
+      pieces. Say you had a complex equation to solve, you can write several
+      subroutines that solved smaller pieces of the complex equation. Then you
+      can put the results together to get the solution to the original complex
+      equation.
+    </p>
+    <p>
+      Subroutines can also aid in improving the readability of a program. In
+      other words, if you have well named subroutines for commonly run portions
+      of your program, your program becomes easy to read and comprehend. This is
+      very important if you want to understand someone else’s program or if you
+      want your program to be understood by others. Sometimes, it is helpful
+      even when you want to read your own program, say a week after you wrote
+      it.
+    </p>
+    <h3><a name="Using_variables"></a>Using variables</h3>
+    <p style="margin-bottom: 20px;">
+      You can access and use any variable that you have in a program from within
+      a subroutine. As an example, the following program accepts two numbers and
+      prints out the larger of the two. Notice that the variable
+      <em>max</em> is used both inside and outside of the subroutine.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;Enter first number: &quot;)
+num1 = TextWindow.ReadNumber()
+TextWindow.Write(&quot;Enter second number: &quot;)
+num2 = TextWindow.ReadNumber()
+
+FindMax()
+TextWindow.WriteLine(&quot;Maximum number is: &quot; &#43; max)
+
+Sub FindMax
+If (num1 &gt; num2) Then
+max = num1
+Else
+max = num2
+EndIf
+EndSub</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      And the output of this program looks like this.
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 9.2 - Max of two numbers using Subroutine"
+        alt="Figure 9.2 - Max of two numbers using Subroutine"
+        src="http://i.msdn.microsoft.com/gg605193.Max_of_two_numbers_using_Subroutine(en-us,MSDN.10).jpg"
+        width="491"
+        height="76"
+      /><br />
+      <strong>Figure 9.2 - Max of two numbers using Subroutine</strong>
+    </p>
+    <p style="margin-bottom: 20px;">
+      Let’s look at another example that will illustrate the usage of
+      Subroutines. This time we’ll use a graphics program that computes various
+      points which it will store in variables
+      <em>x</em> and <em>y</em>. Then it calls a subroutine
+      <strong>DrawCircleUsingCenter</strong> which is responsible for drawing a
+      circle using <em>x</em> and <em>y</em> as the center
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">GraphicsWindow.BackgroundColor = &quot;Black&quot;
+GraphicsWindow.PenColor = &quot;LightBlue&quot;
+GraphicsWindow.Width = 480
+For i = 0 To 6.4 Step 0.17
+x = Math.Sin(i) * 100 &#43; 200
+y = Math.Cos(i) * 100 &#43; 200
+
+DrawCircleUsingCenter()
+EndFor
+
+Sub DrawCircleUsingCenter
+startX = x - 40
+startY = y - 40
+
+GraphicsWindow.DrawEllipse(startX, startY, 120, 120)
+EndSub</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center; margin-top: 10px;">
+      <img
+        title="Figure 9.3 - Graphics Example for Subroutines"
+        alt="Figure 9.3 - Graphics Example for Subroutines"
+        src="http://i.msdn.microsoft.com/gg605193.Graphics_Example_for_Subroutines(en-us,MSDN.10).jpg"
+        width="361"
+        height="350"
+      /><br />
+      <strong>Figure 9.3 - Graphics Example for Subroutines</strong>
+    </p>
+    <h3><a name="Best_Practices"></a>Best Practices for Organization</h3>
+    <div style="margin-bottom: 20px; padding-left: 0">
+      <p>
+        Here is the general format for how programs should be organized.
+        Following this will make sure the programs work properly and are also
+        easy to follow for someone looking at them.
+      </p>
+      <ul>
+        <li>- Variables go at the top of the program</li>
+        <li>- Main program goes next</li>
+        <li>- Subroutines should be at the bottom</li>
+      </ul>
+    </div>
+    <h3>
+      <a name="Calling_Subroutines_inside_Loops"></a>Calling Subroutines inside
+      Loops
+    </h3>
+    <p style="margin-bottom: 20px;">
+      Sometimes subroutines get called from inside a loop, during which time
+      they execute the same set of statements but with different values in one
+      or more of the variables. For instance, say if you have a subroutine named
+      <em>PrimeCheck</em> and this subroutine determines if a number is prime or
+      not. You can write a program that lets the user to enter a value and you
+      can then say if it is prime or not, using this subroutine. The program
+      below illustrates that.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">TextWindow.Write(&quot;Enter a number: &quot;)
+i = TextWindow.ReadNumber()
+isPrime = &quot;True&quot;
+PrimeCheck()
+If (isPrime = &quot;True&quot;) Then
+TextWindow.WriteLine(i &#43; &quot; is a prime number&quot;)
+Else
+TextWindow.WriteLine(i &#43; &quot; is not a prime number&quot;)
+EndIf
+
+Sub PrimeCheck
+For j = 2 To Math.SquareRoot(i)
+If (Math.Remainder(i, j) = 0) Then
+isPrime = &quot;False&quot;
+Goto EndLoop
+EndIf
+Endfor
+EndLoop:
+EndSub</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      The PrimeCheck subroutine takes the value of <em>i</em> and tries to
+      divide it by smaller numbers. If a number divides <em>i</em> and leaves no
+      remainder, then <em>i</em> is not a prime number. At that point the
+      subroutine sets the value of <em>isPrime</em> to “False” and exits. If the
+      number was indivisible by smaller numbers then the value of
+      <em>isPrime</em> remains as “True.”
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 9.4 - Prime Check"
+        alt="Figure 9.4 - Prime Check"
+        src="http://i.msdn.microsoft.com/gg605193.Prime_Check(en-us,MSDN.10).jpg"
+        width="491"
+        height="76"
+      /><br />
+      <strong>Figure 9.4 - Prime Check</strong>
+    </p>
+    <p style="margin-bottom: 20px;">
+      Now that you have a subroutine that can do the Prime test for us, you
+      might want to use this to list out all the prime numbers below, say, 100.
+      It is really easy to modify the above program and make the call to
+      <em>PrimeCheck</em> from inside a loop. This gives the subroutine a
+      different value to compute each time the loop is run. Let’s see how this
+      is done with the example below.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">For i = 3 To 100
+isPrime = &quot;True&quot;
+PrimeCheck()
+If (isPrime = &quot;True&quot;) Then
+TextWindow.WriteLine(i)
+EndIf
+EndFor
+
+Sub PrimeCheck
+For j = 2 To Math.SquareRoot(i)
+If (Math.Remainder(i, j) = 0) Then
+isPrime = &quot;False&quot;
+Goto EndLoop
+EndIf
+Endfor
+EndLoop:
+EndSub</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">
+      In the program above, the value of <em>i</em> is updated every time the
+      loop is run. Inside the loop, a call to the subroutine
+      <em>PrimeCheck</em> is made. The subroutine <em>PrimeCheck</em> then takes
+      the value of <em>i</em> and computes whether or not <em>i</em> is a prime
+      number. This result is stored in the variable <em>isPrime</em> which is
+      then accessed by the loop outside of the subroutine. The value of
+      <em>i</em> is then printed if it turns out to be a prime number. And since
+      the loop starts from 3 and goes up to 100, we get a list of all the prime
+      numbers that are between 3 and 100. Below is the result of the program.
+    </p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 9.5 - Prime Numbers"
+        alt="Figure 9.5 - Prime Numbers"
+        src="http://i.msdn.microsoft.com/gg605193.Prime_Numbers(en-us,MSDN.10).jpg"
+        width="491"
+        height="257"
+      /><br />
+      <strong>Figure 9.5 - Prime Numbers</strong>
+    </p>
+  </div>
+
+  <div>
+    <a style="float: left;" href="/tutorials/chapter8" title="Previous Chapter"
+      >Previous Chapter: Turtle</a
+    >
+    <a style="float: right;" href="/tutorials/chapter10" title="Next Chapter"
+      >Next Chapter: Arrays</a
+    >
+  </div>
+</div>

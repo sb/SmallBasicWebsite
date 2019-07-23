@@ -1,3 +1,203 @@
-<p>
-  chapter 5
-</p>
+<div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
+  <h2>Chapter 5: Loops</h2>
+  <div
+    class="table-of-contents"
+    style="background-color:#eee; border:1px; padding:10px; display:inline-block; max-width:450px"
+  >
+    <h3 class="title" style="border-bottom:medium none; padding-top:0">
+      Table of Contents
+    </h3>
+    <div class="hierarchy-list-header"></div>
+    <ul class="hierarchy-list" style="margin:0; padding:11px">
+      <li class="hierarchy-item"><a href="#For_Loop">For Loop</a></li>
+      <li class="hierarchy-item"><a href="#While_Loop">While Loop</a></li>
+    </ul>
+    <div class="hierarchy-list-footer"></div>
+  </div>
+  &nbsp;
+  <br />
+  <br />
+  <div class="BostonPostCard">
+    <h3><a name="For_Loop"></a>For Loop</h3>
+    <p style="margin-bottom: 20px;">
+      Let’s take a program we wrote in the previous chapter.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">i = 1
+start:
+TextWindow.WriteLine(i)
+i = i &#43; 1
+If (i &lt; 25) Then
+Goto start
+EndIf</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px; margin-bottom: 20px;">
+      This program prints out numbers from 1 to 24 in order. This process of
+      incrementing a variable is very common in programming that programming
+      languages usually provide an easier method of doing this. The above
+      program is equivalent to the program below:
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">For i = 1 To 24
+TextWindow.WriteLine(i)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="margin-top: 10px;">And the output is:</p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 5.1 - Using the For Loop"
+        alt="Figure 5.1 - Using the For Loop"
+        src="http://i.msdn.microsoft.com/gg593769.Figure19(en-us,MSDN.10).jpg"
+        width="491"
+        height="257"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 5.1 - Using the For Loop</strong>
+    </p>
+    <p>
+      Notice that we’ve reduced the 8 line program to a 4 line program, and it
+      still does exactly the same as the 8 line program! Remember earlier we
+      said that there are usually several ways of doing the same thing? This is
+      a great example.
+    </p>
+    <p>
+      <strong>For..EndFor</strong> is, in programming terms, called a
+      <em>loop</em>. It allows you to take a variable, give it an initial and an
+      end value and let the computer increment the variable for you. Every time
+      the computer increments the variable, it runs the statements between
+      <strong>For</strong> and <strong>EndFor</strong>.
+    </p>
+    <p>
+      But if you wanted the variable to be incremented by 2 instead of 1 – like
+      say, you wanted to print out all the odd numbers between 1 and 24, you can
+      use the loop to do that too.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">For i = 1 To 24 Step 2
+TextWindow.WriteLine(i)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 5.2 - Just the Odd Numbers"
+        alt="Figure 5.2 - Just the Odd Numbers"
+        src="http://i.msdn.microsoft.com/gg593769.Figure20(en-us,MSDN.10).jpg"
+        width="491"
+        height="154"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 5.2 - Just the Odd Numbers</strong>
+    </p>
+    <p>
+      The <strong>Step 2</strong> part of the <strong>For</strong> statement
+      tells the computer to increment the value of <strong>i</strong> by 2
+      instead of the usual 1. By using <strong>Step</strong> you can specify any
+      increment that you want. You can even specify a negative value for the
+      step and make the computer count backwards, like in the example below:
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">For i = 10 To 1 Step -1
+TextWindow.WriteLine(i)
+EndFor</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 5.3 - Counting Backwards"
+        alt="Figure 5.3 - Counting Backwards"
+        src="http://i.msdn.microsoft.com/gg593769.Figure21(en-us,MSDN.10).jpg"
+        width="491"
+        height="136"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 5.3 - Counting Backwards</strong>
+    </p>
+    <h3><a name="While_Loop"></a>While Loop</h3>
+    <p>
+      The While loop is yet another looping method, that is useful especially
+      when the loop count is not known ahead of time. Whereas a For loop runs
+      for a pre-defined number of times, the While loop runs until a given
+      condition is true. In the example below, we’re halving a number until the
+      result is greater than 1.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">number = 100
+While (number &gt; 1)
+TextWindow.WriteLine(number)
+number = number / 2
+EndWhile</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p style="text-align: center;">
+      <img
+        title="Figure 5.4 - Halving Loop"
+        alt="Figure 5.4 - Halving Loop"
+        src="http://i.msdn.microsoft.com/gg593769.Figure22(en-us,MSDN.10).jpg"
+        width="491"
+        height="102"
+      />
+    </p>
+    <p style="text-align: center;">
+      <strong>Figure 5.4 - Halving Loop</strong>
+    </p>
+    <p>
+      In the program above, we assign the value 100 to <em>number</em> and run
+      the while loop as long as number is greater than 1. Inside the loop, we
+      print out the number and then we divide it by two, effectively halving it.
+      And as expected, the output of the program is numbers that are
+      progressively getting halved one after another.
+    </p>
+    <p>
+      It’ll be really hard to write this program using a For loop, because we
+      don’t know how many times the loop will run. With a while loop it’s easy
+      to check for a condition and ask the computer to either continue the loop
+      or quit.
+    </p>
+    <p>
+      It’ll be interesting to note that every while loop can be unwrapped into
+      an If..Then statement. For instance, the program above can be rewritten as
+      follows, without affecting the end result.
+    </p>
+  </div>
+  <div class="CodeHighlighter">
+    <pre><code class="visual basic">number = 100
+startLabel:
+TextWindow.WriteLine(number)
+number = number / 2
+If (number &gt; 1) Then
+Goto startLabel
+EndIf</code></pre>
+  </div>
+  <div class="BostonPostCard">
+    <p>&nbsp;</p>
+    <p>
+      <strong>Note</strong>: In fact, the computer internally rewrites every
+      While loop into statements that use If..Then along with one or more Goto
+      statements.
+    </p>
+  </div>
+  <div>
+    <a style="float: left;" href="/tutorials/chapter4" title="Previous Chapter"
+      >Previous Chapter: Conditions</a
+    >
+    <a style="float: right;" href="/tutorials/chapter6" title="Next Chapter"
+      >Next Chapter: Graphics</a
+    >
+  </div>
+</div>

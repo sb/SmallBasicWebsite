@@ -1,0 +1,80 @@
+<div id="contentWrapper">
+  <div class="left-nav-and-right-content">
+    <div class="left-nav">
+      <h3>Documentation</h3>
+      <label for="languageSelect">Language</label>
+      <select name="language" id="languageSelect" (change)="languageChanged()" [(ngModel)]="selectedLanguage">
+        <option *ngFor="let language of languages">{{language}}</option>
+      </select>
+      <ul>
+        <li *ngFor="let doc of docs" routerLinkActive="active-link">
+          <a routerLink="/docs/{{doc.name}}" class="{{enumToClass(doc.type)}}">{{doc.name}}</a>
+          <ul class="left-nav-submenu">
+            <li *ngFor="let property of doc.properties">
+              <a href="docs/{{doc.name}}#{{property.name}}" class="property">
+                {{property.name}}
+              </a>
+            </li>
+            <li *ngFor="let operation of doc.operations">
+              <a href="docs/{{doc.name}}#{{operation.name}}" class="operation">
+                {{operation.name}}
+              </a>
+            </li>
+            <li *ngFor="let event of doc.events">
+              <a href="docs/{{doc.name}}#{{event.name}}" class="event">
+                {{event.name}}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="right-content">
+      <div *ngIf="currentDocIndex >= 0; else notFound">
+        <h3 class="{{enumToClass(docs[currentDocIndex].type)}}">{{docs[currentDocIndex].name}}</h3>
+        <div class="description">
+          {{docs[currentDocIndex].summary}}
+        </div>
+
+        <div class="docSubtype" *ngIf="docs[currentDocIndex].properties.length > 0">
+          <h3 class="property">Properties</h3>
+          <div *ngFor="let property of docs[currentDocIndex].properties" id="{{property.name}}" class="docChild">
+            <h4 class="property">{{docs[currentDocIndex].name}}.{{property.name}}</h4>
+            <div class="description">{{property.summary}}
+              <ng-container *ngIf="property.isReadOnly">(read-only)</ng-container>
+            </div>
+          </div>
+        </div>
+          
+        <div class="docSubtype" *ngIf="docs[currentDocIndex].operations.length > 0">
+          <h3 class="operation">Operations</h3>
+          <div *ngFor="let operation of docs[currentDocIndex].operations" id="{{operation.name}}" class="docChild">
+            <h4 class="operation">{{operation.operationSignature}}</h4>
+            <div class="description">
+              {{operation.summary}}
+              <ng-container *ngIf="operation.parameters.length > 0">
+                <div class="summaryHeader">Parameters</div>
+                <div *ngFor="let param of operation.parameters" class="docChild">
+                  <b>{{param.name}}</b>: {{param.summary}}
+                </div>
+              </ng-container>
+              <div class="summaryHeader">Returns</div>
+              <div class="docChild">
+                {{operation.returnType}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="docSubtype" *ngIf="docs[currentDocIndex].events.length > 0">
+          <h3 class="event">Events</h3>
+          <div *ngFor="let event of docs[currentDocIndex].events" id="{{event.name}}" class="docChild">
+            <h4 class="event">{{docs[currentDocIndex].name}}.{{event.name}}</h4>
+            <div class="description">{{event.summary}}</div>
+          </div>
+        </div>
+      </div>
+      <ng-template #notFound>Documentation not found</ng-template>
+    </div>
+  </div>
+</div>
