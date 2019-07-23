@@ -47,6 +47,8 @@ h1, h2, h3, h4, h5, h6 {
 .left-nav {
   padding: 5px;
   background-color: #f3f3f3;
+  width: 20%;
+  min-width: 200px;
 }
 
   .left-nav h3 {
@@ -89,4 +91,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .right-content {
   padding: 5px;
+  width: 50%;
+  flex-grow: 1;
 }

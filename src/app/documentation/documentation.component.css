@@ -1,10 +1,49 @@
 .left-nav a {
+}
+
+.object, .event, .operation, .property {
   background-repeat: no-repeat;
   padding-left: 1.3em;
   background-size: contain;
   display: block;
 }
 
-.left-nav a.object {
+.object {
     background-image: url(/assets/documentation/object.png);
+}
+
+.event {
+    background-image: url(/assets/documentation/event.png);
+}
+
+.operation {
+  background-image: url(/assets/documentation/operation.png);
+}
+
+.property {
+  background-image: url(/assets/documentation/property.png);
+}
+
+.left-nav li.active-link .left-nav-submenu {
+  list-style: none;
+  padding-left: 25px;
+}
+
+h3,h4 {
+  margin: 0;
+}
+
+.docSubtype {
+  padding: 10px;
+  border-top: 1px solid #689800;
+  margin: 5px;
+}
+
+.docChild {
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.description {
+  padding-left: 1.3em;
 }
