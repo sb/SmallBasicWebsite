@@ -15,13 +15,13 @@ export class FeedItem {
   providedIn: 'root'
 })
 export class AnnouncementsService {
-    public smallBasicUrl = "https://blogs.msdn.microsoft.com/smallbasic/";
-    public forumUrl = "https://social.msdn.microsoft.com/Forums/en-US/smallbasic/threads";
-    private corsUrl = "https://cors-anywhere.herokuapp.com/";
-    private smallBasicFeed: Promise<FeedItem[]>;
-    private forumFeed: Promise<FeedItem[]>;
+  public smallBasicUrl = "https://techcommunity.microsoft.com/gxcuf89792/rss/board?board.id=SmallBasic";
+  public forumUrl = "https://social.msdn.microsoft.com/Forums/en-US/smallbasic/threads";
+  private corsUrl = "https://cors-anywhere.herokuapp.com/";
+  private smallBasicFeed: Promise<FeedItem[]>;
+  private forumFeed: Promise<FeedItem[]>;
 
-    constructor(
+  constructor(
         private http: HttpClient
     ) { }
 
@@ -32,7 +32,7 @@ export class AnnouncementsService {
     public getAnnouncements(): Promise <FeedItem[]> {
         if (!this.smallBasicFeed) {
             this.smallBasicFeed = new Promise((resolve, reject) => {
-                this.http.get(this.corsUrl + this.smallBasicUrl + "feed", { responseType: "text" }).subscribe((rawFeed) => {
+                this.http.get(this.corsUrl + this.smallBasicUrl, { responseType: "text" }).subscribe((rawFeed) => {
                     parseString(rawFeed, (err, result) => {
                         if (err) {
                             reject(err);
