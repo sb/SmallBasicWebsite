@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-grow: 1;
 }
 
-mat-card {
+.mat-card {
   flex: 1;
   min-height: 10em;
   min-width: 10em;
