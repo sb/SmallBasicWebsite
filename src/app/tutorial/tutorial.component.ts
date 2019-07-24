@@ -114,16 +114,30 @@ export class TutorialComponent implements OnInit {
 
   public tutorialList = [
     {
+      title: "Level 1 Tutorial",
+      subtitle: "Estimated time to complete: 30 minutes",
+      downloadLink: "/assets/tutorial-downloads/Level1.pdf",
+      image: "/assets/turtle1.png"
+    },
+    {
+      title: "Level 2 Tutorial",
+      subtitle: "Estimated time to complete: 1 hour",
+      downloadLink: "/assets/tutorial-downloads/Level2.pdf",
+      image: "/assets/turtle2.png"
+    },
+    {
+      title: "Level 3 Tutorial",
+      subtitle: "Estimated time to complete: 1.5 hours",
+      downloadLink: "/assets/tutorial-downloads/Level3.pdf",
+      image: "/assets/turtle3.png"
+    },
+    {
       title: "Comprehensive tutorial",
       subtitle: "Estimated time to complete: 3 hours",
       link: this.chapters[0].link,
+      downloadLink: "http://download.microsoft.com/download/9/0/6/90616372-C4BF-4628-BC82-BD709635220D/Introducing%20Small%20Basic.pdf",
       image: "/assets/shelly.png",
-    },
-    {
-      title: "Self-directed tutorial",
-      subtitle: "Estimated time to complete: forever",
-      link: "https://www.google.com"
-    },
+    }
   ];
 
   constructor(private router: Router, private route: ActivatedRoute) {
