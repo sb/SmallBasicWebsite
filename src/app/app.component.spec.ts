@@ -41,4 +41,8 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('small-basic-website');
   });
+
+  it('should fail test', () => {
+    expect(false).toBeTruthy();
+  })
 });
