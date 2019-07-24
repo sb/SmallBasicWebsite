@@ -1,44 +1,49 @@
-div {
-  background-color: white;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-
 .prog-btn {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: normal;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  background-image: none;
-  background-color: #3977ad;
+  background-color: #6fa300;
   border: 1px solid;
   border-color: #357ebd;
-  white-space: nowrap;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 1.42857143;
   border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #fff;
 }
-
-.row {
-  margin: 10px 0;
+.prog-grid {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
 }
 
-.col {
-  width: 33.33333333%;
+.prog-grid .prog-cell img {
+  max-width: 100%;
+}
+
+.prog-cell {
+margin: 1rem;
+}
+.prog-cell img {
   display: block;
-  float: left;
-  position: relative;
-  min-height: 1px;
+}
+
+@media screen and (min-width: 600px) {
+  .prog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .prog-cell {
+    width: calc(50% - 2rem);
+    align-self: flex-start;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .prog-cell {
+      width: calc(33.333% - 2rem);
+    }
+  }
 }
