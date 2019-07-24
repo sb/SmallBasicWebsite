@@ -41,7 +41,7 @@ steps:
     searchFolder: $(System.DefaultWorkingDirectory)/src/angular7/junit
     testRunTitle: Angular
     testResultsFormat: JUnit
-    testResultsFiles: "**/TESTS*.xml"
+    testResultsFiles: "junit/**/TESTS*.xml"
 
 - task: CopyFiles@2
   inputs:
