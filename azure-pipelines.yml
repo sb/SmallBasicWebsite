@@ -38,7 +38,7 @@ steps:
   displayName: 'Publish Angular test results'
   condition: succeededOrFailed()
   inputs:
-    searchFolder: $(System.DefaultWorkingDirectory)/src/angular7/junit
+    searchFolder: $(System.DefaultWorkingDirectory)
     testRunTitle: Angular
     testResultsFormat: JUnit
     testResultsFiles: "junit/**/TESTS*.xml"
