@@ -112,6 +112,20 @@ export class TutorialComponent implements OnInit {
       ] },
   ];
 
+  public tutorialList = [
+    {
+      title: "Comprehensive tutorial",
+      subtitle: "Estimated time to complete: 3 hours",
+      link: this.chapters[0].link,
+      image: "/assets/shelly.png",
+    },
+    {
+      title: "Self-directed tutorial",
+      subtitle: "Estimated time to complete: forever",
+      link: "https://www.google.com"
+    },
+  ];
+
   constructor(private router: Router, private route: ActivatedRoute) {
   }
 
