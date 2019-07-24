@@ -1,12 +1,15 @@
-import { TestBed } from '@angular/core/testing';
-
+import { HttpClient } from '@angular/common/http';
 import { DocumentationService } from './documentation.service';
 
-describe('DocumentationService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+let service: DocumentationService;
+let httpClient: HttpClient;
+
+describe('AnnouncementsService', () => {
+  beforeEach(() => {
+    service = new DocumentationService(httpClient);
+  });
 
   it('should be created', () => {
-    const service: DocumentationService = TestBed.get(DocumentationService);
     expect(service).toBeTruthy();
   });
 });

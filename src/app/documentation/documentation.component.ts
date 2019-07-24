@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DocumentationService, ParentDoc, DocType } from './documentation.service';
+import { DocumentationService, ParentDoc, DocType, SimplePair } from './documentation.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,18 +9,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DocumentationComponent implements OnInit {
   public docs: ParentDoc[] = [];
-  public languages: string[] = [];
+  public languages: SimplePair[] = [];
   public currentDocIndex: number;
   public selectedLanguage: string;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,
+    public docService: DocumentationService) {
   }
 
   ngOnInit() {
     // Get the language options and all the documentation for the default language
-    this.languages = DocumentationService.getLanguages();
-    this.selectedLanguage = this.languages[0];
-    this.docs = DocumentationService.getDocumentation(this.selectedLanguage);
+    this.languages = this.docService.getLanguages();
+    this.selectedLanguage = this.languages[0].summary;
+    this.languageChanged();
 
     // Subscribe to route changes to get the current item being viewed
     this.route.params.subscribe(() => {
@@ -33,7 +34,12 @@ export class DocumentationComponent implements OnInit {
   // Language selection has changed, get new documentation
   languageChanged() {
     console.log(this.selectedLanguage);
-    this.docs = DocumentationService.getDocumentation(this.selectedLanguage);
+    this.docService.getDocumentation(this.selectedLanguage).then((docs) => {
+      this.docs = docs;
+      this.currentDocIndex = this.docs.findIndex((doc) => {
+        return doc.name == this.route.snapshot.params['id'];
+      });
+    });
   }
 
   public enumToClass(enumVal: DocType): string {

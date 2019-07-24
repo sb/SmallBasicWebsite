@@ -1,0 +1,2517 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Small Basic ライブラリ</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SmallBasic.Library.Text">
+            <summary>
+            テキスト オブジェクトは、文字の処理に役立つ操作を提供します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.Append(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            2 つのテキストを合わせて、別のテキストとして返します。この操作は変数の中の不明なテキストが間違って数値として扱われ、追加の代わりに加算されてしまうおそれがある場合に特に効果があります。
+            </summary>
+            <param name="text1">
+            追加されるテキストの最初の部分。
+            </param>
+            <param name="text2">
+            追加されるテキストの 2 番目の部分。
+            </param>
+            <returns>
+            両方の指定された部分を含む、追加されたテキスト。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetLength(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたテキストの長さを取得します。
+            </summary>
+            <param name="text">
+            長さの必要なテキストです。
+            </param>
+            <returns>
+            与えられたテキストの長さです。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.IsSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたサブテキストが大きなテキストの一部であるかどうかを取得します。
+            </summary>
+            <param name="text">
+            検索されるサブテキストを含んだ大きなテキストです。
+            </param>
+            <param name="subText">
+            検索対象のサブテキストです。
+            </param>
+            <returns>
+            サブテキストが与えられたテキスト中に発見された場合に True になります。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.EndsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたテキストが、指定されたサブテキストの内容で終わりになっているかどうかを取得します。
+            </summary>
+            <param name="text">
+            検索される対象の大きなテキストです。
+            </param>
+            <param name="subText">
+            検索対象のサブテキスト。
+            </param>
+            <returns>
+            サブテキストが、与えられたテキストの終わりに発見された場合に True になります。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.StartsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたテキストが、指定されたサブテキストの内容で始まっているかどうかを取得します。
+            </summary>
+            <param name="text">
+            検索される対象の大きなテキストです。
+            </param>
+            <param name="subText">
+            検索対象のサブテキストです。
+            </param>
+            <returns>
+            サブテキストが、与えられたテキストの先頭で発見された場合に True になります。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたテキストからサブテキストを取得します。
+            </summary>
+            <param name="text">
+            サブテキストから派生したテキストです。
+            </param>
+            <param name="start">
+            どこから開始するかを指定します。
+            </param>
+            <param name="length">
+            サブテキストの長さを指定します。
+            </param>
+            <returns>
+            要求されたサブテキスト
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubTextToEnd(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたテキストの、指定された場所から最後までをサブテキストとして取得します。
+            </summary>
+            <param name="text">
+            サブテキストから派生したテキスト。
+            </param>
+            <param name="start">
+            どこから開始するかを指定します。
+            </param>
+            <returns>
+            要求されたサブテキストです。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetIndexOf(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたテキストの中のサブテキストの位置を検索します。
+            </summary>
+            <param name="text">
+            検索される対象のテキストです。
+            </param>
+            <param name="subText">
+            検索するテキストです。
+            </param>
+            <returns>
+            指定されたテキスト中に表れるサブテキストの位置です。そのサブテキストが存在しなかった場合は 0 を返します。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToLowerCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたテキストを小文字に変換します。
+            </summary>
+            <param name="text">
+            小文字に変換されるテキストです。
+            </param>
+            <returns>
+            小文字に変換されたテキストです。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToUpperCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたテキストを大文字に変換します。
+            </summary>
+            <param name="text">
+            大文字に変換されるテキストです。
+            </param>
+            <returns>
+            大文字に変換されたテキストです。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacter(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Unicode の文字コードが与えられた場合、対応する標準テキストとして使用できる文字を取得します。
+            </summary>
+            <param name="characterCode">
+            要求されている文字の、Unicode ベースの文字コード。
+            </param>
+            <returns>
+            指定されたコードに対応する、Unicode 文字。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacterCode(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Unicode 文字が与えられた場合、対応する文字コードを取得します。
+            </summary>
+            <param name="character">
+            その文字コードを要求された文字
+            </param>
+            <returns>
+            指定された文字に対応する、Unicode ベースの文字コードの文字。
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Mouse">
+            <summary>
+            マウス クラスは、カーソルの位置やポインターなどのマウスに関係するプロパティを設定したり取得したりする機能を提供します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.HideCursor">
+            <summary>
+            画面からマウスカーソルを非表示にします。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.ShowCursor">
+            <summary>
+            画面にマウスカーソルを表示させます。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseX">
+            <summary>
+            マウスカーソルの X 座標を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseY">
+            <summary>
+            マウスカーソルの Y 座標を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsLeftButtonDown">
+            <summary>
+            左ボタンを押したかどうかを取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsRightButtonDown">
+            <summary>
+            右ボタンを押したかどうかを取得します。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Desktop">
+            <summary>
+            このクラスはデスクトップとやり取りするための機能を提供します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Desktop.SetWallPaper(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された画像をデスクトップの壁紙に設定します。ローカルのファイル、ネットワーク上のファイル、またはインターネット上の URL を画像として指定することができます。
+            </summary>
+            <param name="fileOrUrl">
+            画像のファイル名もしくはURLです。
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Width">
+            <summary>
+            主デスクトップの画面の横幅を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Height">
+            <summary>
+            主デスクトップの画面の高さを取得します。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication">
+            <summary>
+            Application クラスは、アプリケーションのオブジェクトと共に Small Basic のプログラムを提供します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication.Dispatcher">
+            <summary>
+            Small Basic アプリケーションのディスパッチャーを取得します。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.ImageList">
+            <summary>
+            このクラスはイメージをメモリにロードしたりストアしたりするのを助けます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.LoadImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            イメージをファイルまたはインターネットからメモリへとロードします。
+            </summary>
+            <param name="fileNameOrUrl">
+            ロードするイメージのファイル名です。ローカル ファイルまたはインターネット上のURLを指定できます。
+            </param>
+            <returns>
+            ロードされたイメージの名前を返します。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.ClipImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたイメージの表示位置を記録して、指定された大きさの新しいイメージを返します。
+            </summary>
+            <param name="imageName">
+            記録する元のイメージ。
+            </param>
+            <param name="left">
+            記録する四角形の X 座標。
+            </param>
+            <param name="top">
+            記録する四角形の Y 座標。
+            </param>
+            <param name="width">
+            記録する四角形の横幅。
+            </param>
+            <param name="height">
+            記録する四角形の高さ。
+            </param>
+            <returns>
+            記録されたイメージ。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetWidthOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            ストアされたイメージの横幅を取得します。
+            </summary>
+            <param name="imageName">
+            メモリ内のイメージの名前です。
+            </param>
+            <returns>
+            指定されたイメージの横幅です。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetHeightOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            ストアされたイメージの高さを取得します。
+            </summary>
+            <param name="imageName">
+            メモリ内のイメージの名前です。
+            </param>
+            <returns>
+            指定されたイメージの高さです。
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Timer">
+            <summary>
+            タイマー オブジェクトを使うと、一定の間隔で同じことを繰り返し行うことが簡単にできます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Pause">
+            <summary>
+            タイマーを休止します。Tick イベントは発生しません。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Resume">
+            <summary>
+            一時停止しているタイマーを再開します。Tick イベントはこの後から発生します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Timer.Interval">
+            <summary>
+            タイマーが Tick イベントを発生させる間隔（ミリ秒単位）を設定または取得します。この値は、10 から 100000000 の間で設定できます。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Timer.Tick">
+            <summary>
+            タイマーが指定した間隔だけ進んだときにイベントを発生させます。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.SmallBasicCallback">
+            <summary>
+            全ての Small Basic ライブラリ イベントが使用する署名コールバック
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Stack">
+            <summary>
+            このオブジェクトは、板を積み上げるように値をストアする方法を提供します。積み上げたスタックの一番上に値を置いたり、それを取り出したりすることができます。値は 1 つずつしか取り出せず、最後に入れた値が最初に取り出されます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PushValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたスタックに値を入れます。
+            </summary>
+            <param name="stackName">
+            スタックの名前。
+            </param>
+            <param name="value">
+            入れられる値。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.GetCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたスタックの中のアイテムの個数を取得します。
+            </summary>
+            <param name="stackName">
+            スタックの名前。
+            </param>
+            <returns>
+            指定されたスタックの中のアイテムの個数。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PopValue(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたスタックから値を引き出します。
+            </summary>
+            <param name="stackName">
+            スタックの名前。
+            </param>
+            <returns>
+            スタックからの値。
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Primitive">
+            <summary>
+            テキストまたは数値のプリミティブ型。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.NativeHelper">
+            <summary>
+            ネイティブAPIを呼び出すための静的なプライベートヘルパー
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.GraphicsWindow">
+            <summary>
+            GraphicsWindow は図形描写に関係する入力や出力の機能を提供します。このクラスを使って線を引いたり円や四角形を描くことができます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Show">
+            <summary>
+            Graphics window を表示して、やり取りできるようにします。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Hide">
+            <summary>
+            Graphics window を隠します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            選択されたペンを使用をして、画面上に四角形を描きます。
+            </summary>
+            <param name="x">
+            四角形の X 座標。
+            </param>
+            <param name="y">
+            四角形の Y 座標。
+            </param>
+            <param name="width">
+            四角形の横幅。
+            </param>
+            <param name="height">
+            四角形の高さ。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            選択されたブラシを使って四角形を塗りつぶします。
+            </summary>
+            <param name="x">
+            四角形の X 座標。
+            </param>
+            <param name="y">
+            四角形の Y 座標。
+            </param>
+            <param name="width">
+            四角形の横幅。
+            </param>
+            <param name="height">
+            四角形の高さ。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            選択されたペンを使って画面上に楕円を描きます。
+            </summary>
+            <param name="x">
+            楕円の X 座標。
+            </param>
+            <param name="y">
+            楕円の Y 座標。
+            </param>
+            <param name="width">
+            楕円の横幅。
+            </param>
+            <param name="height">
+            楕円の高さ。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            選択されたブラシで画面上の楕円を塗りつぶします。
+            </summary>
+            <param name="x">
+            楕円の X 座標。
+            </param>
+            <param name="y">
+            楕円の Y 座標。
+            </param>
+            <param name="width">
+            楕円の横幅。
+            </param>
+            <param name="height">
+            楕円の高さ。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            選択されたペンを使って画面上に三角形を描きます。
+            </summary>
+            <param name="x1">
+            最初の点の X 座標。
+            </param>
+            <param name="y1">
+            最初の点の Y 座標。
+            </param>
+            <param name="x2">
+            2 番目の点の X 座標。
+            </param>
+            <param name="y2">
+            2 番目の点の Y 座標。
+            </param>
+            <param name="x3">
+            3 番目の点の X 座標。
+            </param>
+            <param name="y3">
+            3 番目の点の Y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            選択されたブラシを使って画面上に三角形を描いて塗りつぶします。
+            </summary>
+            <param name="x1">
+            最初の点の X 座標。
+            </param>
+            <param name="y1">
+            最初の点の Y 座標。
+            </param>
+            <param name="x2">
+            2 番目の点の X 座標。
+            </param>
+            <param name="y2">
+            2 番目の点の Y 座標。
+            </param>
+            <param name="x3">
+            3 番目の点の X 座標。
+            </param>
+            <param name="y3">
+            3 番目の点の Y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            一点から別の点へと直線を描きます。
+            </summary>
+            <param name="x1">
+            最初の点の X 座標。
+            </param>
+            <param name="y1">
+            最初の点の Y 座標。
+            </param>
+            <param name="x2">
+            2 番目の点の X 座標。
+            </param>
+            <param name="y2">
+            2 番目の点の Y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            画面上の指定された場所にテキスト行を描きます。
+            </summary>
+            <param name="x">
+            テキストの開始点の X 座標。
+            </param>
+            <param name="y">
+            テキストの開始点の Y 座標。
+            </param>
+            <param name="text">
+            描画するテキスト
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawBoundText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            画面上の指定された場所にテキスト行を描きます。
+            </summary>
+            <param name="x">
+            テキストの開始点の X 座標。
+            </param>
+            <param name="y">
+            テキストの開始点の Y 座標。
+            </param>
+            <param name="width">
+            横幅として指定できる最大値です。このパラメーターでテキストの折り返し点を決められます。
+            </param>
+            <param name="text">
+            入力するテキスト。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawResizedImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたサイズで、メモリから指定されたイメージを画面上に描きます。
+            </summary>
+            <param name="imageName">
+            描画するイメージの名前
+            </param>
+            <param name="x">
+            イメージを描画する点の X 座標。
+            </param>
+            <param name="y">
+            イメージを描画する点の Y 座標。
+            </param>
+            <param name="width">
+            描画するイメージの横幅。
+            </param>
+            <param name="height">
+            描画するイメージの高さ。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            メモリから指定されたイメージを画面上に描きます。
+            </summary>
+            <param name="imageName">
+            描画するイメージの名前。
+            </param>
+            <param name="x">
+            イメージを描画する点の X 座標。
+            </param>
+            <param name="y">
+            イメージを描画する点の Y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.SetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された色を使って指定された X 座標、Y 座標にピクセルを描きます。
+            </summary>
+            <param name="x">
+            ピクセルの X 座標。
+            </param>
+            <param name="y">
+            ピクセルの Y 座標。
+            </param>
+            <param name="color">
+            ピクセルにセットする色。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された X 座標、Y 座標のピクセルの色を取得します。
+            </summary>
+            <param name="x">
+            ピクセルの X 座標。
+            </param>
+            <param name="y">
+            ピクセルの Y 座標。
+            </param>
+            <returns>
+            ピクセルにセットする色。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetRandomColor">
+            <summary>
+            自由に選んで使える色を取得します。
+            </summary>
+            <returns>
+            自由に選んで使える色。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetColorFromRGB(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられた赤、緑、青の値から色を生成します。
+            </summary>
+            <param name="red">
+            色中の赤の構成要素 (0-255)。
+            </param>
+            <param name="green">
+            色中の緑の構成要素 (0-255)。
+            </param>
+            <param name="blue">
+            色中の青の構成要素 (0-255)。
+            </param>
+            <returns>
+            ブラシやペンに使用できる色を返します。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Clear">
+            <summary>
+            ウインドウをクリアします。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.ShowMessage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            メッセージ ボックスをユーザーに表示します。
+            </summary>
+            <param name="text">
+            メッセージ ボックスに表示されるテキスト。
+            </param>
+            <param name="title">
+            メッセージ ボックスのタイトル。
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BackgroundColor">
+            <summary>
+            Graphics Window の背景色を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BrushColor">
+            <summary>
+            Graphics Window 上の図形の塗りつぶしのブラシの色を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.CanResize">
+            <summary>
+            Graphics Window がユーザーによってサイズを変更することができるかどうか特定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenWidth">
+            <summary>
+            Graphics Window 上の図形の描画に使用されたペンの太さを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenColor">
+            <summary>
+            Graphics Window 上の図形の描画に使用されたペンの色を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontName">
+            <summary>
+            Graphics Window 上のテキストを書くのに使用されたフォント名を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontSize">
+            <summary>
+            Graphics Window 上のテキストを書くのに使用されたフォントの大きさを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontBold">
+            <summary>
+            Graphics Window 上のテキストを書くのに使うフォントが太字かどうかを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontItalic">
+            <summary>
+            Graphics Window 上のテキストを書くのに使うフォントが斜字かどうかを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Title">
+            <summary>
+            Graphics Window のタイトルを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Height">
+            <summary>
+            Graphics Window の高さを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Width">
+            <summary>
+            Graphics Window の横幅を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Left">
+            <summary>
+            Graphics Window の左の位置を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Top">
+            <summary>
+            Graphics Window の上の位置を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastKey">
+            <summary>
+            最後に押されたもしくは離されたキーを取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastText">
+            <summary>
+            Graphics Window 上で最後に入力されたテキストを取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseX">
+            <summary>
+            マウスの属している Graphics Window の X 座標を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseY">
+            <summary>
+            マウスの属している Graphics Window の Y 座標を取得します。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyDown">
+            <summary>
+            キーボード上のキーが押されたときにイベントを発生させます。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyUp">
+            <summary>
+            キーボード上のキーが離されたときにイベントを発生させます。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseDown">
+            <summary>
+            マウスボタンが押されたときにイベントを発生させます。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseUp">
+            <summary>
+            押されていたマウスボタンが離されたときにイベントを発生させます。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseMove">
+            <summary>
+            マウスが動かされたときにイベントを発生させます。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.TextInput">
+            <summary>
+            GraphicsWindow 上でテキストが入力されたときにイベントを発生させます。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Clock">
+            <summary>
+            このクラスはシステム時計へのアクセスを提供します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Time">
+            <summary>
+            現在のシステム時間を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Date">
+            <summary>
+            現在のシステム日付を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Year">
+            <summary>
+            現在の年を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Month">
+            <summary>
+            現在の月を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Day">
+            <summary>
+            現在の月の日を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.WeekDay">
+            <summary>
+            現在の週の日を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Hour">
+            <summary>
+            現在の時間を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Minute">
+            <summary>
+            現在の分を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Second">
+            <summary>
+            現在の秒を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Millisecond">
+            <summary>
+            現在のミリ秒を取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.ElapsedMilliseconds">
+            <summary>
+            1900 年から現在までのミリ秒数を取得します。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.File">
+            <summary>
+            ファイル オブジェクトは、ディスク上のファイルへのアクセスや読み書きの機能を提供します。このオブジェクトを使って、プログラム上の複数のセッションから設定を保存したり開いたりすることができます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            ファイルを開いてそのファイル全体の内容を読み込みます。この機能は 1 MB 以下の小さなファイルに対しては高速に動作しますが、10 MB 以上のファイルに対しては速度が落ちます。
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            読み込むファイルの完全パスです。完全パスは、たとえば c:\temp\settings.data のような形式です。
+            </para>
+            </param>
+            <returns>
+            ファイル全体の内容。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            ファイルを開いて、指定された内容をそのファイルに書き込みます。元の内容は新しい内容に置き換えられます。
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            書き込み対象のファイルの完全パスです。完全パスは、たとえば c:\temp\settings.data のような形式です。
+            </para>
+            </param>
+            <param name="contents">
+            指定されたファイルに書き込まれる内容。
+            </param>
+            <returns>
+            <para>
+            操作が成功した場合は、"SUCCESS" を返します。それ以外の場合には "FAILED" を返します。
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたファイルを開いて、指定された行番号まで読み込みます。
+            </summary>
+            <param name="filePath">
+            <para>
+            読み込むファイルの完全パスです。完全パスは、たとえば c:\temp\settings.data のような形式です。
+            </para>
+            </param>
+            <param name="lineNumber">
+            読み込むテキストの行番号。
+            </param>
+            <returns>
+            指定されたファイルの指定された行のテキストです。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            指定されたファイルを開いて、指定された行番号で書き込みを行います。
+            </para>
+            <para>
+            この操作は現在の内容を指定行まで上書きします。
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            読み込むファイルの完全パスです。完全パスは、たとえば c:\temp\settings.data のような形式です。
+            </para>
+            </param>
+            <param name="lineNumber">
+            書き込むテキストの行番号。
+            </param>
+            <param name="contents">
+            <para>
+            指定されたファイルの指定された行に書き込まれる内容。
+            </para>
+            </param>
+            <returns>
+            <para>
+            操作が成功した場合は、"SUCCESS" を返します。それ以外の場合には "FAILED" を返します。
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.InsertLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            指定されたファイルを開いて指定された行番号のところにその内容を挿入します。
+            </para>
+            <para>
+            この操作を行っても、指定行の現在の内容は上書きされません。
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            読み込むファイルの完全パスです。完全パスは、たとえば c:\temp\settings.data のような形式です。
+            </para>
+            </param>
+            <param name="lineNumber">
+            挿入されるテキストの行番号。
+            </param>
+            <param name="contents">
+            ファイルに挿入される内容。
+            </param>
+            <returns>
+            <para>
+            操作が成功した場合は、"SUCCESS" を返します。それ以外の場合には "FAILED" を返します。
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.AppendContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            指定されたファイルを開いてそのファイルの末尾に内容を追加します。
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            読み込むファイルの完全パスです。完全パスは、たとえば c:\temp\settings.data のような形式です。
+            </para>
+            </param>
+            <param name="contents">
+            ファイルの末尾に追加される内容です。
+            </param>
+            <returns>
+            <para>
+            操作が成功した場合は、"SUCCESS" を返します。それ以外の場合には "FAILED" を返します。
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CopyFile(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            指定されたソース ファイルを転送先のファイル パスにコピーします。転送先のポイントが存在しない場合は、自動的にそのポイントを作成することを試みます。
+            </para>
+            <para>
+            現在あるファイルは上書きされます。ファイルが上書きされないようにするために、転送先にファイルがあるかどうかを確認してください。
+            </para>
+            </summary>
+            <param name="sourceFilePath">
+            <para>
+            コピーする必要のあるファイルの完全パスです。完全パスは、たとえばc:\temp\settings.data のような形式です。
+            </para>
+            </param>
+            <param name="destinationFilePath">
+            ファイル パスもしくは移動先の場所。
+            </param>
+            <returns>
+            操作が成功した場合は、"SUCCESS" を返します。それ以外の場合には "FAILED" を返します。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたファイルを削除します。
+            </summary>
+            <param name="filePath">
+            <para>
+            転送先の場所もしくはファイルのパスです。完全パスは、たとえば
+            c:\temp\settings.data のような形式です。
+            </para>
+            </param>
+            <returns>
+            操作が成功した場合は、"SUCCESS" を返します。それ以外の場合には "FAILED" を返します。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CreateDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたディレクトリを作成します。
+            </summary>
+            <param name="directoryPath">
+            作成されるディレクトリの完全パス。
+            </param>
+            <returns>
+            操作が成功した場合は、"SUCCESS" を返します。それ以外の場合には "FAILED" を返します。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたディレクトリを削除します。
+            </summary>
+            <param name="directoryPath">
+            削除されるディレクトリの完全パスです。
+            </param>
+            <returns>
+            操作が成功した場合は、"SUCCESS" を返します。それ以外の場合には "FAILED" を返します。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetFiles(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたディレクトリ内のすべてのファイルのパスを取得します。
+            </summary>
+            <param name="directoryPath">
+            ファイルを探す対象のディレクトリ。
+            </param>
+            <returns>
+            操作が成功した場合は、ファイルの配列を返します。それ以外の場合には "FAILED" を返します。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetDirectories(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたディレクトリ内のすべてのディレクトリのパスを取得します。
+            </summary>
+            <param name="directoryPath">
+            サブディレクトリを探す対象ディレクトリ。
+            </param>
+            <returns>
+            操作が成功した場合は、ディレクトリの配列を返します。それ以外の場合には "FAILED" を返します。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetTemporaryFilePath">
+            <summary>
+            <para>
+            新しい一時ファイルを一時ディレクトリ内に作成して 
+            そのファイルの完全パスを返します。
+            </para>
+            </summary>
+            <returns>
+            一時ファイルの完全パスです。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetSettingsFilePath">
+            <summary>
+            <para>
+            このプログラムの設定ファイルの完全パスを取得します。設定ファイルの名前はプログラムの名前に基づいており、プログラムと同じ場所に置かれます。
+            </para>
+            </summary>
+            <returns>
+            このプログラムの設定ファイルの完全パス。
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.File.LastError">
+            <summary>
+            <para>
+            最後のファイル操作エラーのメッセージを設定または取得します。このプロパティは、何かの機能がいつ実行に失敗したかを調べるのに役立ちます。
+            </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Keywords">
+            <summary>
+            Keywords オブジェクトは Small Basic のキーワードに関するヘルプを提供します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.For">
+            <summary>
+            For ステートメントを使うと、一連のステートメントを繰り返し実行できます。
+            </summary>
+            <example>
+            以下の例で数字の 1 から 10 までを表示させます。
+            <code>
+            For i = 1 To 10 
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndFor">
+            <summary>
+            EndFor キーワード関連の情報を見るには、For ステートメントをチェックしてください。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.To">
+            <summary>
+            To キーワード関連の情報を見るには、For ステートメントをチェックしてください。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Step">
+            <summary>
+            Step キーワードで For ループの増分を指定できます。
+            </summary>
+            <example>
+            以下の例で 1 から 10 の間の奇数を表示させます。
+            <code>
+            For i = 1 to 10 Step 2
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.If">
+            <summary>
+            If ステートメントを使って、さまざまなことに対する決定ができます。
+            </summary>
+            <example>
+            以下の例は flip の値に応じて "Win" か "Lose" のどちらかを表示させます。
+            <code>
+            If flip = "Tail" Then
+              TextWindow.WriteLine("Win")
+            Else
+              TextWindow.WriteLine("Lose")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Then">
+            <summary>
+            Then キーワード関連の情報を見るには、If ステートメントをチェックしてください。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Else">
+            <summary>
+            Else キーワード関連の情報を見るには、If ステートメントをチェックしてください。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.ElseIf">
+            <summary>
+            ElseIf キーワードは、If ステートメントを使って決定をするときに、条件に合わなかった場合の代替の動作を提供するのに役に立ちます。
+            </summary>
+            <example>
+            以下の例では、一日の時刻に従って、正しいあいさつ文を表示します。
+            <code>
+            If Clock.Hour &lt; 12 Then
+              TextWindow.WriteLine("おはよう")
+            ElseIf Clock.Hour &lt; 16 Then
+              TextWindow.WriteLine("こんにちは")
+            ElseIf Clock.Hour &lt; 20 Then
+              TextWindow.WriteLine("こんばんは")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndIf">
+            <summary>
+            EndIf キーワードに関する情報を見るには、If ステートメントをチェックしてください。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Goto">
+            <summary>
+            Goto ステートメントは、プログラム中で新しい場所へ分かれるときに使います。
+            </summary>
+            <example>
+            以下のプログラムは連続した数値を無限に表示し続けます。
+            <code>
+            start:
+            TextWindow.WriteLine(i)
+            i = i + 1
+            Goto start
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Sub">
+            <summary>
+            Sub (サブルーチン) ステートメントを使うと、一回の呼び出しでステートメントのグループを呼び出すことができます。
+            </summary>
+            <example>
+            以下の例では、ベルを鳴らして"Win!" と表示させるようなサブルーチンを定義します。
+            <code>
+            Sub Win
+              Sound.PlayBellRing()
+              TextWindow.WriteLine("Win!")
+            EndSub
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndSub">
+            <summary>
+            EndSub キーワードに関する情報を見るには、Sub ステートメントをチェックしてください。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.While">
+            <summary>
+            While ステートメントを使って、望む結果が出るまで同じことを何度も繰り返すことができます。
+            </summary>
+            <example>
+            以下のコードは、100 を超えるまで乱数を表示し続けます。
+            <code>
+            While i &lt; 100
+              i = Math.GetRandomNumber(150)
+              TextWindow.WriteLine(i)
+            EndWhile
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndWhile">
+            <summary>
+            EndWhile キーワード関連の情報を見るには、While ステートメントをチェックしてください。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.And">
+            <summary>
+            論理的な式評価をして、両方の入力値が真だった場合、真を返します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Or">
+            <summary>
+            論理的な式評価をして、入力値のどちらかが真だった場合、真を返します。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Math">
+            <summary>
+            Math クラスはメソッドと関係する便利な数式をたくさん提供します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Abs(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられた数値の絶対値を取得します。例えば、-32.233 を与えた場合は 32.233 を返します。
+            </summary>
+            <param name="number">
+            絶対値を取得する対象となる値。
+            </param>
+            <returns>
+            与えられた値に対する絶対値。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Ceiling(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された値以上の最小の整数値を取得します。例えば、
+            32.233 を与えた場合は 33 を返します。
+            </summary>
+            <param name="number">
+            切り上げを取得する対象となる値。
+            </param>
+            <returns>
+            与えられた値に対する切り上げ。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Floor(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された値以下の最大の整数値を取得します。例えば、
+            32.233 を与えた場合は 32 を返します。
+            </summary>
+            <param name="number">
+            切り下げを取得する対象となる値。
+            </param>
+            <returns>
+            与えられた値に対する切り下げ。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.NaturalLog(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられた数字の自然対数を取得します。
+            </summary>
+            <param name="number">
+            自然対数を取得する対象となる値。
+            </param>
+            <returns>
+            与えられた値に対する自然対数値。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Log(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられた数字の自然対数（基数 10）を取得します。
+            </summary>
+            <param name="number">
+            対数を求める対象の数字
+            </param>
+            <returns>
+            与えられた数字の対数
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Cos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            ラジアンで与えられた角度に対応するコサインを取得します。
+            </summary>
+            <param name="angle">
+            コサインを求める対象の角度（単位はラジアン）
+            </param>
+            <returns>
+            与えられた角度のコサイン
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Sin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            ラジアンで与えられた角度に対応するサインを取得します。
+            </summary>
+            <param name="angle">
+            サインを求める対象の角度（単位はラジアン）
+            </param>
+            <returns>
+            与えられた角度のサイン
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Tan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられた角度のタンジェントをラジアン単位で取得します。
+            </summary>
+            <param name="angle">
+            タンジェントを求める対象の角度（単位はラジアン）。
+            </param>
+            <returns>
+            与えられた角度のタンジェント。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcSin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたサインの値に対応する角度をラジアン単位で取得します。
+            </summary>
+            <param name="sinValue">
+            角度を求める対象のサインの値。
+            </param>
+            <returns>
+            与えられたサインの値に対する角度（単位はラジアン）。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcCos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたコサインの値に対応する角度をラジアン単位で取得します。
+            </summary>
+            <param name="cosValue">
+            角度を求める対象のコサインの値。
+            </param>
+            <returns>
+            与えられたコサインの値に対する角度（単位はラジアン）。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcTan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられたタンジェントの値に対応する角度をラジアン単位で取得します。
+            </summary>
+            <param name="tanValue">
+            角度を求める対象のタンジェントの値。
+            </param>
+            <returns>
+            与えられたタンジェントの値に対する角度（単位はラジアン）。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetDegrees(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            ラジアン単位で与えられた角度を度単位に変換します。
+            </summary>
+            <param name="angle">
+            ラジアン単位で与えられた角度。
+            </param>
+            <returns>
+            度単位に変換された角度。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRadians(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            度単位で与えられた角度をラジアン単位に変換します。
+            </summary>
+            <param name="angle">
+            度単位で与えられた角度。
+            </param>
+            <returns>
+            ラジアン単位に変換された角度。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.SquareRoot(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられた値のルートを取得します。
+            </summary>
+            <param name="number">
+            ルートの値が必要な値。
+            </param>
+            <returns>
+            与えられた値に対するルートの値。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Power(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            基数を指定された指数に累乗します。
+            </summary>
+            <param name="baseNumber">
+            指数に累乗される数。
+            </param>
+            <param name="exponent">
+            基数を累乗する指数。
+            </param>
+            <returns>
+            指定された指数に累乗された基数。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Round(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられた値を四捨五入して最も近い整数値にします。例えば 32.233 は四捨五入して 32.0 になり、
+            32.566 は四捨五入して 33 になります。
+            </summary>
+            <param name="number">
+            近似値が必要な値
+            </param>
+            <returns>
+            与えられた値に対して四捨五入された値。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Max(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            2 つの数値を比較して、2 つのうちの大きい方を返します。
+            </summary>
+            <param name="number1">
+            比較対象の 2 つの値のうちの最初の値。
+            </param>
+            <param name="number2">
+            比較対象の 2 つの値のうちの次の値。
+            </param>
+            <returns>
+            2 つの値のうちの大きい方の値。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Min(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            2 つの数値を比較して、2 つのうちの小さい方を返します。
+            </summary>
+            <param name="number1">
+            比較対象の 2 つの値のうちの最初の値。
+            </param>
+            <param name="number2">
+            比較対象の 2 つの値のうちの次の値。
+            </param>
+            <returns>
+            2 つの値のうちの小さい方の値。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Remainder(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            最初の値を 2 番目の値で割った余りを返します。
+            </summary>
+            <param name="dividend">
+            割られる値。
+            </param>
+            <param name="divisor">
+            割る値。
+            </param>
+            <returns>
+            除算の後の余り。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRandomNumber(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            1 から maxNumber の間の乱数（maxNumber を含む）を取得します。
+            </summary>
+            <param name="maxNumber">
+            要求された乱数値の最大値。
+            </param>
+            <returns>
+            指定された最大値以下の乱数。
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Math.Pi">
+            <summary>
+            パイの値を取得します。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Flickr">
+            <summary>
+            このクラスは Flickr の写真サービスへのアクセスを提供します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetPictureOfMoment">
+            <summary>
+            見せる写真の URL を取得します。
+            </summary>
+            <returns>
+            Flickr の写真のファイルの URL
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetRandomPicture(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたタグでタグ付けされたランダムな写真の URL を取得します。
+            </summary>
+            <param name="tag">
+            要求された写真のタグ。
+            </param>
+            <returns>
+            Flickr のランダムな写真のファイルの URL
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Network">
+            <summary>
+            このヘルパー クラスはネットワーク アクセスのメソッドを提供します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.DownloadFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            1 つのファイルをネットワークからローカルの一時的なファイルとしてダウンロードします。
+            </summary>
+            <param name="url">
+            ネットワーク上のファイルの URL。
+            </param>
+            <returns>
+            ダウンロードされたリモートファイルのローカルなファイル名。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.GetWebPageContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された Web ページのコンテンツを取得します。
+            </summary>
+            <param name="url">
+            Web ページの URL です。
+            </param>
+            <returns>
+            指定された Web ページの内容です。
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.OfficeResearch">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Query(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginQuery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndQuery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Registration(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginRegistration(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndRegistration(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Status">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginStatus(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndStatus(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Discovery(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginDiscovery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndDiscovery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Platform">
+            <summary>
+            Platform オブジェクトは他の .NET ライブラリを一般的に呼び出すための方法を提供します。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Dictionary">
+            <summary>
+            このクラスはオンライン辞書サービスへのアクセスを提供します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinition(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            単語の定義を英語で取得します。
+            </summary>
+            <param name="word">
+            定義される語。
+            </param>
+            <returns>
+            指定された語の定義。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionInFrench(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            単語の定義をフランス語で取得します。
+            </summary>
+            <param name="word">
+            定義される語。
+            </param>
+            <returns>
+            指定された語の定義。
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RestHelper">
+            <summary>
+            Rest based API を呼び出すための静的なプライベート ヘルパー
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.RestHelper.GetContents(System.String)">
+            <summary>
+            Rest URL を与えられると、対応するコンテンツを XML ドキュメントとして取得します。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Program">
+            <summary>
+            Program クラスはプログラムの実行を制御するヘルパーを提供します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.Delay(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたミリ秒単位でプログラムの実行を遅らせます。
+            </summary>
+            <param name="milliSeconds">
+            遅らせる量。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.End">
+            <summary>
+            プログラムを終了させます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.GetArgument(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            このプログラムに渡された指定された引数を返します。
+            </summary>
+            <param name="index">
+            引数のインデックス。
+            </param>
+            <returns>
+            指定されたインデックス上のコマンドライン引数。
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.ArgumentCount">
+            <summary>
+            このプログラムに渡された指定されたコマンドライン引数を返します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.Directory">
+            <summary>
+            実行中のプログラムのディレクトリを取得します。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Array">
+            <summary>
+            このオブジェクトは、与えられた名前で 1 つ以上の値をストアする方法を提供します。それらの値は他のインデックスからアクセスすることができます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsIndex(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたインデックスが配列に含まれているかどうかを取得します。この機能は配列のインデックスが何かの値で初期化されたかどうかを調べる際に有効です。
+            </summary>
+            <param name="array">
+            チェックする配列。
+            </param>
+            <param name="index">
+            チェックするインデックス。
+            </param>
+            <returns>
+            インデックスが指定された配列に存在するかどうかによって 
+            "True" または "False" になります。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            配列が指定された値を含むかどうかを取得します。この機能は、配列の値がどこかのインデックスに格納されているかどうかを調べるときに便利です。
+            </summary>
+            <param name="array">
+            チェックする配列。
+            </param>
+            <param name="value">
+            チェックする値。
+            </param>
+            <returns>
+            値が指定された配列に存在するかどうかによって 
+            "True" または "False" になります。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetAllIndices(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            配列に対してすべてのインデックスを別の配列として取得します。
+            </summary>
+            <param name="array">
+            インデックスを要求された配列。
+            </param>
+            <returns>
+            指定された配列のすべてのインデックスから成る配列です。返された配列のインデックスは 1 から始まります。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetItemCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            配列の中にストアされたアイテムの数を取得します。
+            </summary>
+            <param name="array">
+            個数を要求された配列。
+            </param>
+            <returns>
+            指定された配列の中のアイテムの数。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.IsArray(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            与えられた変数が配列であるかどうかを取得します。
+            </summary>
+            <param name="array">
+            チェックする変数。
+            </param>
+            <returns>
+            指定された変数が配列だった場合は "True"、それ以外は "False" となります。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.SetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された配列およびインデックスに値を設定します。
+            </summary>
+            <param name="arrayName">
+            配列の名前。
+            </param>
+            <param name="index">
+            インデックスの名前。
+            </param>
+            <param name="value">
+            設定される値。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された配列とインデックスの値を取得します。
+            </summary>
+            <param name="arrayName">
+            配列の名前。
+            </param>
+            <param name="index">
+            インデックスの名前。
+            </param>
+            <returns>
+            指定された配列の指定されたインデックス上の値。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.RemoveValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたインデックスに対応するアイテムを配列から削除します。
+            </summary>
+            <param name="arrayName">
+            配列の名前。
+            </param>
+            <param name="index">
+            削除対象のアイテムのインデックス。
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.TextWindow">
+            <summary>
+            TextWindow はテキスト関連の入出力機能を提供します。このクラスを使って、テキスト ベースの text window からテキストや数値の読み書きができます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Show">
+            <summary>
+            Text window を表示して、やり取りができるようにします。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Hide">
+            <summary>
+            text window を非表示にします。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Clear">
+            <summary>
+            TextWindow をクリアします。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Pause">
+            <summary>
+            返る前にユーザーの入力を待ちます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseIfVisible">
+            <summary>
+            TextWindow がすでに開かれている場合のみ、ユーザーの入力を待ちます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseWithoutMessage">
+            <summary>
+            返る前にユーザーの入力を待ちます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Read">
+            <summary>
+            text window からテキストを読み取ります。ENTER キーを押すまでは、何も返されません。
+            </summary>
+            <returns>
+            text window から読み取られたテキスト
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.ReadNumber">
+            <summary>
+            text window から数値を読み取ります。ENTER キーを押すまでは、何も返されません。
+            </summary>
+            <returns>
+            Text window から読み取られた数値
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.WriteLine(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            テキストまたは数値を text window に書き込みます。行末に改行文字が追加され、次回 text window に書き込みが行われたときには、新しい行から始まるようになります。
+            </summary>
+            <param name="data">
+            text window に書き込まれるテキストまたは数値。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Write(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            text window にテキストまたは数値を書き込みます。WriteLine と違って、改行文字は追加されません。この呼び出しの後に text window に書き込まれるテキストや数値は、同じ行に位置します。
+            </summary>
+            <param name="data">
+            Text window に書き込まれるテキストまたは数値
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.VerifyAccess">
+            <summary>
+            Text Window に対するアクセスが成立したかどうかを確認します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.ForegroundColor">
+            <summary>
+            Text window に出力されるテキストの表示色を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.BackgroundColor">
+            <summary>
+            Text window に出力されるテキストの背景色を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorLeft">
+            <summary>
+            Text window 上のカーソルのカラムの位置を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorTop">
+            <summary>
+            Text window 上のカーソルの行の位置を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Left">
+            <summary>
+            Text window の左の位置を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Title">
+            <summary>
+            Text window のタイトルを設定または取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Top">
+            <summary>
+            Text window の上の位置を設定または取得します。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Shapes">
+            <summary>
+            Shape オブジェクトで Graphics window に図形を追加、移動、回転することができます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された横幅と高さで四角形を追加します。
+            </summary>
+            <param name="width">
+            四角形の横幅。
+            </param>
+            <param name="height">
+            四角形の高さ。
+            </param>
+            <returns>
+            Graphics Window に追加された四角形。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された横幅と高さで楕円を追加します。
+            </summary>
+            <param name="width">
+            楕円の横幅。
+            </param>
+            <param name="height">
+            楕円の高さ。
+            </param>
+            <returns>
+            Graphics Window に追加された楕円。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された点に代表された三角形を追加します。
+            </summary>
+            <param name="x1">
+            最初の点の X 座標。
+            </param>
+            <param name="y1">
+            最初の点の Y 座標。
+            </param>
+            <param name="x2">
+            2 番目の点の X 座標。
+            </param>
+            <param name="y2">
+            2 番目の点の Y 座標。
+            </param>
+            <param name="x3">
+            3 番目の点の X 座標。
+            </param>
+            <param name="y3">
+            3 番目の点の Y 座標。
+            </param>
+            <returns>
+            Graphics Window に追加された三角形。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された点と点の間に線を追加します。
+            </summary>
+            <param name="x1">
+            最初の点の X 座標。
+            </param>
+            <param name="y1">
+            最初の点の Y 座標。
+            </param>
+            <param name="x2">
+            2 番目の点の X 座標。
+            </param>
+            <param name="y2">
+            2 番目の点の Y 座標。
+            </param>
+            <returns>
+            Graphics Window に追加された線。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            イメージを図形として追加します。この図形は、移動、動画化、回転することができます。
+            </summary>
+            <param name="imageName">
+            描画対象のイメージの名前。
+            </param>
+            <returns>
+            Graphics Window に追加されたイメージ。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            テキストを、移動、動画化、または回転できる図形として追加します。
+            </summary>
+            <param name="text">
+            追加するテキスト。
+            </param>
+            <returns>
+            Graphics Window に追加された、図形化されたテキスト。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            図形化されたテキストの文章を設定します。
+            </summary>
+            <param name="shapeName">
+            図形化されたテキストの名前。
+            </param>
+            <param name="text">
+            設定する新しいテキストの値。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Graphics Window から図形を削除します。
+            </summary>
+            <param name="shapeName">
+            削除する必要のある図形の名前。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された名前の図形を新しい場所に移動します。
+            </summary>
+            <param name="shapeName">
+            移動する図形の名前。
+            </param>
+            <param name="x">
+            新しい場所の X 座標。
+            </param>
+            <param name="y">
+            新しい場所の Y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Rotate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された名前の図形を指定された角度に回転させます。
+            </summary>
+            <param name="shapeName">
+            回転させる図形の名前。
+            </param>
+            <param name="angle">
+            回転させる図形の角度。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Zoom(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたズームレベルで図形を拡大縮小します。最小値は 0.1 で最大値は 20 です。
+            </summary>
+            <param name="shapeName">
+            回転させる図形の名前。
+            </param>
+            <param name="scaleX">
+            X 軸のズームレベル。
+            </param>
+            <param name="scaleY">
+            Y 軸のズームレベル。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Animate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された名前の図形を指定された位置に移動させます。
+            </summary>
+            <param name="shapeName">
+            移動させる図形の名前。
+            </param>
+            <param name="x">
+            新しい場所の X 座標。
+            </param>
+            <param name="y">
+            新しい場所の Y 座標。
+            </param>
+            <param name="duration">
+            アニメーション時間（ミリ秒）
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetLeft(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された図形の左の座標を取得します。
+            </summary>
+            <param name="shapeName">
+            図形の名前。
+            </param>
+            <returns>
+            図形の左座標。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetTop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された図形の上座標を取得します。
+            </summary>
+            <param name="shapeName">
+            図形の名前。
+            </param>
+            <returns>
+            図形の上座標。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetOpacity(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            図形の不透明度を取得します。
+            </summary>
+            <param name="shapeName">
+            図形の名前。
+            </param>
+            <returns>
+            0 から 100 の間の、オブジェクトの不透明度を示す値です。0 に設定すると完全に透明になり、100 に設定すると完全に不透明になります。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetOpacity(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            図形の不透明度を設定します。
+            </summary>
+            <param name="shapeName">
+            図形の名前。
+            </param>
+            <param name="level">
+            不透明度の 0 から 100 までの間の値です。0 は完全に透明で、100 は完全に不透明です。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.HideShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            すでに追加された図形を隠します。
+            </summary>
+            <param name="shapeName">
+            図形の名前。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.ShowShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            隠された図形を表示します。
+            </summary>
+            <param name="shapeName">
+            図形の名前。
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Controls">
+            <summary>
+            コントロールオブジェクトを使って、追加、移動、他のコントロールとのやり取りができます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddButton(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された位置で Graphics window に対してボタンを追加します。
+            </summary>
+            <param name="caption">
+            ボタンの上に表示されるキャプション。
+            </param>
+            <param name="left">
+            ボタンの X 座標。
+            </param>
+            <param name="top">
+            ボタンの Y 座標。
+            </param>
+            <returns>
+            Graphics Window に追加されたボタン。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetButtonCaption(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたボタンのキャプションを取得します。
+            </summary>
+            <param name="buttonName">
+            キャプションを要求されたボタン。
+            </param>
+            <returns>
+            ボタンの現在のキャプション。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetButtonCaption(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定されたボタンのキャプションを設定します。
+            </summary>
+            <param name="buttonName">
+            キャプションを設定される必要のあるボタン。
+            </param>
+            <param name="caption">
+            ボタンに対する新しいキャプション。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された位置で、テキスト入力ボックスを Graphics window に追加します。
+            </summary>
+            <param name="left">
+            テキスト ボックスの X 座標。
+            </param>
+            <param name="top">
+            テキスト ボックスの Y 座標。
+            </param>
+            <returns>
+            Graphics Window に追加されたテキスト ボックス。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddMultiLineTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された位置で、複数行のテキスト入力ボックスを Graphics Window に追加します。
+            </summary>
+            <param name="left">
+            テキスト ボックスの X 座標。
+            </param>
+            <param name="top">
+            テキスト ボックスの Y 座標。
+            </param>
+            <returns>
+            Graphics Window に追加されたテキスト ボックス。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetTextBoxText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された TextBox の現在のテキストを取得します。
+            </summary>
+            <param name="textBoxName">
+            テキストを要求されたTextBox 
+            </param>
+            <returns>
+            TextBox 中のテキスト
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetTextBoxText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された TextBox にテキストを設定します。
+            </summary>
+            <param name="textBoxName">
+            テキストを設定する必要のある TextBox
+            </param>
+            <param name="text">
+            TextBox の新しいテキスト
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Graphics Window からコントロールを削除します。
+            </summary>
+            <param name="controlName">
+            削除する必要のあるコントロールの名前。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された名前のコントロールを新しい場所へ移動します。
+            </summary>
+            <param name="control">
+            移動するコントロールの名前。
+            </param>
+            <param name="x">
+            新しい場所の X 座標。
+            </param>
+            <param name="y">
+            新しい場所の Y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetSize(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            コントロールの大きさを設定します。
+            </summary>
+            <param name="control">
+            大きさを変更されるコントロールの名前。
+            </param>
+            <param name="width">
+            コントロールの横幅。
+            </param>
+            <param name="height">
+            コントロールの高さ。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.HideControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            既に追加されたコントロールを隠します。
+            </summary>
+            <param name="controlName">
+            コントロールの名前。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.ShowControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            以前隠されたコントロールを表示させます。
+            </summary>
+            <param name="controlName">
+            コントロールの名前。
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastClickedButton">
+            <summary>
+            Graphics Window 上で最後にクリックされたボタンを取得します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastTypedTextBox">
+            <summary>
+            テキストを最後に入力した TextBox を取得します。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.ButtonClicked">
+            <summary>
+            ボタン コントロールがクリックされた時にイベントを発生させます。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.TextTyped">
+            <summary>
+            TextBox コントロールにテキストが入力された時にイベントを発生させます。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Sound">
+            <summary>
+            Sound オブジェクトは音の再生機能を提供します。サンプルの音がライブラリの中で提供されています。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClick">
+            <summary>
+            クリック音を再生します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClickAndWait">
+            <summary>
+            クリック音を再生し、終了を待ちます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChime">
+            <summary>
+            チャイム音を再生します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimeAndWait">
+            <summary>
+            チャイム音を再生し、終了を待ちます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimes">
+            <summary>
+            チャイム音を再生します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimesAndWait">
+            <summary>
+            チャイム音を再生し、終了を待ちます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRing">
+            <summary>
+            ベル音を再生します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRingAndWait">
+            <summary>
+            ベル音を再生し、終了を待ちます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayMusic(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            音符を再生します。
+            </summary>
+            <param name="notes">
+            再生される音符の集合です。書式は、QBasic でサポートされている ミュージック マクロ 言語のサブセットです。
+            </param>
+            <example>
+            <code>
+            Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4")
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Play(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            音楽ファイルを再生します。MP3、WAV、または WMA ファイルを再生できます。それ以外のファイル形式は、コンピューターにインストールされているオーディオ コーデックによって、再生できない場合があります。
+            </para>
+            <para>
+            すでに音楽ファイルを一時停止している場合は、一時停止したところから再生開始します。
+            </para>
+            </summary>
+            <param name="filePath">
+            音楽ファイルへのパスです。ローカルファイル (例: c:\music\track1.mp3) または
+            ネットワーク上のファイル (例: http://contoso.com/track01.wma) を指定できます。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayAndWait(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            音楽ファイルを再生し、終了するまで待ちます。MP3、WAV、または WMA ファイルを再生できます。それ以外のファイル形式は、コンピューターにインストールされているオーディオ コーデックによって、再生できない場合があります。
+            </para>
+            <para>
+            すでに音楽ファイルが一時停止されている場合は、一時停止されたところから再生を再開します。
+            </para>
+            </summary>
+            <param name="filePath">
+            音楽ファイルへのパスです。ローカルファイル (例: c:\music\track1.mp3) または
+            ネットワーク上のファイル (例: http://contoso.com/track01.wma) を指定できます。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Pause(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            音楽ファイルの再生を一時停止します。ファイルがまだ再生されていない場合は、この操作をしても何も起きません。
+            </summary>
+            <param name="filePath">
+            音楽ファイルへのパスです。ローカルファイル (例： c:\music\track1.mp3) でもネットワーク上のファイル (例： http://contoso.com/track01.wma) でも使用できます。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Stop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            音楽ファイルの再生を停止します。ファイルがまだ再生されていない場合は、この操作をしても何も起きません。
+            </summary>
+            <param name="filePath">
+            音楽ファイルへのファイルパスです。これはローカルファイル (例： c:\music\track1.mp3) でもネットワーク上のファイル (例： http://contoso.com/track01.wma) でも使用できます。
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Turtle">
+            <summary>
+            タートルが、ペンのプロパティを操作して図形を描くなどの、Logo のような機能を用意します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Show">
+            <summary>
+            インタラクションを使用できるようにタートルを表示します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Hide">
+            <summary>
+            インタラクションを使用できないようにするためにタートルを非表示にします。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenDown">
+            <summary>
+            ペンを下して、タートルが動作した通りに描くことができるようにします。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenUp">
+            <summary>
+            ペンを上げて、タートルが動作した通りに描くのを停止します。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Move(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            タートルを指定された方向へ移動します。ペンが有効になっているときは、その動きに従って線が描かれます。
+            </summary>
+            <param name="distance">
+            タートルを移動する場所。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.MoveTo(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            タートルを、指定した場所へ回転、移動します。ペンが有効なときは、その動きに従って線が描かれます。
+            </summary>
+            <param name="x">
+            移動先の X 座標。
+            </param>
+            <param name="y">
+            移動先の Y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Turn(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            指定された角度でタートルを回転します。角度は度で指定し、値は正か負を指定できます。角度が正の値の場合は、タートルは右へ回転します。負の場合は左へ回転します。
+            </summary>
+            <param name="angle">
+            タートルを回転する角度。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnRight">
+            <summary>
+            タートルを 90 度右へ回転させます。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnLeft">
+            <summary>
+            タートルを 90 度左へ回転させます。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Speed">
+            <summary>
+            タートルの動作の速度を指定します。1 から 10 の値を指定できます。10 に設定すると、タートルはすぐに動いたり回転します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Angle">
+            <summary>
+            タートルの現在の角度を設定または取得します。設定すると、タートルはすぐに新しい角度へ回転します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.X">
+            <summary>
+            タートルの X 座標を設定または取得します。設定すると、タートルはすぐに新しい場所へ移動します。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Y">
+            <summary>
+            タートルの Y 座標を設定または取得します。設定すると、タートルはすぐに新しい場所へ移動します。
+            </summary>
+        </member>
+    </members>
+</doc>

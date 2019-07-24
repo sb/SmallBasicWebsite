@@ -29,7 +29,7 @@ const routes: Routes = [
     { path: "contact", component: ContactComponent },
     { path: "faq", component: FaqComponent },
     { path: "resources", component: ResourcesComponent },
-    { path: "docs", redirectTo: "docs/Turtle" },
+    { path: "docs", pathMatch: "full", redirectTo: "docs/Turtle" },
     { path: "docs/:id", component: DocumentationComponent },
     {
       path: "tutorials", component: TutorialComponent, children: [

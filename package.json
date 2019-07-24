@@ -23,6 +23,7 @@
     "@angular/router": "~7.2.0",
     "@types/es6-promise": "^3.3.0",
     "core-js": "^2.5.4",
+    "fast-xml-parser": "^3.12.17",
     "font-awesome": "^4.7.0",
     "karma-junit-reporter": "^1.2.0",
     "puppeteer": "^1.19.0",

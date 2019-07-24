@@ -1,0 +1,3985 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>SmallBasicLibrary</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SmallBasic.Library.Array">
+      <summary>
+
+            Този обект осигурява начин за съхраняване на повече от една стойност за дадено име. Тези стойности са достъпни от друг индекс.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.ContainsIndex(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Определя дали масивът съдържа указания индекс. Това е много полезно, когато решавате дали индексът на масива е бил инициализиран с някаква стойност или не.
+
+            </summary>
+      <param name="array">
+
+            Масивът за проверка.
+
+            </param>
+      <param name="index">
+
+            Индексът за проверка.
+
+            </param>
+      <returns>
+
+            "True" или "False" в зависимост от това дали индексът е бил наличен в указания масив.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.ContainsValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Определя дали масивът съдържа или не зададената стойност. Това е много полезно, когато решавате дали стойността на масива е била запазена в някакъв индекс.
+
+            </summary>
+      <param name="array">
+
+            Масивът за проверка.
+
+            </param>
+      <param name="value">
+
+            Стойността, която трябва да се провери.
+
+            </param>
+      <returns>
+
+            "True" или "False" в зависимост от това дали стойността е била налична в указания масив.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.GetAllIndices(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава всички индекси за масива, като друг масив.
+
+            </summary>
+      <param name="array">
+
+            Масивът, чиито индекси са поискани.
+
+            </param>
+      <returns>
+
+            Масив, пълен с всички индекси на посочения масив. Индексът на върнатия масив започва от 1.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.GetItemCount(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава броя на елементите, съхранени в масива.
+
+            </summary>
+      <param name="array">
+
+            Масивът, за който се иска броене.
+
+            </param>
+      <returns>
+
+            Броят на елементите в посочения масив.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.IsArray(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Определя дали дадена променлива е масив.
+
+            </summary>
+      <param name="array">
+
+            Променливата за проверка.
+
+            </param>
+      <returns>
+
+            "True", ако зададената променлива е масив. "False" в противен случай.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.SetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Задава стойност за даден масив и индекс.
+
+            </summary>
+      <param name="arrayName">
+
+            Името на масива.
+
+            </param>
+      <param name="index">
+
+            Имеto на индекса.
+
+            </param>
+      <param name="value">
+
+            Стойността, която да зададете.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.GetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава стойност за даден масив и индекс.
+
+            </summary>
+      <param name="arrayName">
+
+            Името на масива.
+
+            </param>
+      <param name="index">
+
+            Името на индекса.
+
+            </param>
+      <returns>
+
+            Стойността на указания индекс в посочения масив.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.RemoveValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Премахва елемента от масива на указания индекс.
+
+            </summary>
+      <param name="arrayName">
+
+            Името на масива.
+
+            </param>
+      <param name="index">
+
+            Индексът на елемента за премахване.
+
+            </param>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Controls">
+      <summary>
+
+            Обектът "Контроли" ви позволява да добавяте, премествате и взаимодействате с контролите.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.AddButton(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя бутон към графичния прозорец на определената позиция.
+
+            </summary>
+      <param name="caption">
+
+            Надписът за показване в бутона.
+
+            </param>
+      <param name="left">
+
+            Координатът х на бутона.
+
+            </param>
+      <param name="top">
+
+            Координатът y на бутона.
+
+            </param>
+      <returns>
+
+            Бутонът, който е бил добавен към графичния прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.GetButtonCaption(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава текущия надпис на зададения бутон.
+
+            </summary>
+      <param name="buttonName">
+
+            Бутонът, чийто надпис е поискан.
+
+            </param>
+      <returns>
+
+            Текущият надпис на бутона.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.SetButtonCaption(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Задава надписа на посочения бутон.
+
+            </summary>
+      <param name="buttonName">
+
+            Бутонът, чийто надпис трябва да бъде настроен.
+
+            </param>
+      <param name="caption">
+
+            Новият надпис за бутона.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.AddTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя поле за въвеждане на текст в графичния прозорец на определената позиция.
+
+            </summary>
+      <param name="left">
+
+            Координатът x на текстовото поле.
+
+            </param>
+      <param name="top">
+
+            Координатът y на текстовото поле.
+
+            </param>
+      <returns>
+
+            Текстовото поле, което е било добавено към графичния прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.AddMultiLineTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя поле за въвеждане на текст с няколко реда в графичния прозорец на определената позиция.
+
+            </summary>
+      <param name="left">
+
+            Координатът x на текстовото поле.
+
+            </param>
+      <param name="top">
+
+            Координатът y на текстовото поле.
+
+            </param>
+      <returns>
+
+            Текстовото поле, което е било добавено към графичния прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.GetTextBoxText(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава текущия текст в посоченото текстово поле.
+
+            </summary>
+      <param name="textBoxName">
+
+            Текстовото поле, чийто текст се изисква.
+
+            </param>
+      <returns>
+
+            Текстът в текстовото поле.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.SetTextBoxText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Задава текста на посоченото текстовото поле.
+
+            </summary>
+      <param name="textBoxName">
+
+            Текстовото поле, чийто текст трябва да бъде настроен.
+
+            </param>
+      <param name="text">
+
+            Новият текст за текстовото поле.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.Remove(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Премахва контрол от графичния прозорец.
+
+            </summary>
+      <param name="controlName">
+
+            Името на контрола, който трябва да бъде премахнат.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Премества контрола с посоченото име на нова позиция.
+
+            </summary>
+      <param name="control">
+
+            Името на контрола, който ще бъде преместен.
+
+            </param>
+      <param name="x">
+
+            Координатът х на новата позиция.
+
+            </param>
+      <param name="y">
+
+            Координатът y на новата позиция.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.SetSize(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Задава размера на контрола.
+
+            </summary>
+      <param name="control">
+
+            Името на контрола, чийто размер ще бъде променен.
+
+            </param>
+      <param name="width">
+
+            Широчината на контрола.
+
+            </param>
+      <param name="height">
+
+            Височината на контрола.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.HideControl(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Скрива вече добавен контрол.
+
+            </summary>
+      <param name="controlName">
+
+            Името на контрола.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.ShowControl(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Показва скрит контрол.
+
+            </summary>
+      <param name="controlName">
+
+            Името на контрола.
+
+            </param>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Controls.LastClickedButton">
+      <summary>
+
+            Получава последния бутон, който е щракнат върху графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Controls.LastTypedTextBox">
+      <summary>
+
+            Получава последното текстово поле, в което е бил въведен текст.
+
+            </summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Controls.ButtonClicked">
+      <summary>
+
+            Предизвиква събитие при натискане на който и да е бутон за управление.
+
+            </summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Controls.TextTyped">
+      <summary>
+
+            Предизвиква събитие, когато текст е въведен в който и да е контрол на текстовото поле.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Keywords">
+      <summary>
+
+            Ключовият обект е място за предоставяне на документация за основни ключови думи.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.For">
+      <summary>
+
+            Изявлението For ви позволява да изпълнявате набор от изявления няколко пъти.
+
+            </summary>
+      <example>
+
+            Следният пример ще отпечата числата от 1 до 10:
+
+            <code>
+
+            For i = 1 To 10
+
+              TextWindow.WriteLine (I)
+
+            EndFor
+
+            </code></example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.EndFor">
+      <summary>
+
+            Проверете изявлението For за информация относно ключовата дума EndFor.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.To">
+      <summary>
+
+            Проверете израза For за информация относно ключовата дума To.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Step">
+      <summary>
+
+            Ключовата дума Step се използва за определяне на увеличение в цикъла For.
+
+            </summary>
+      <example>
+
+            Следният пример ще отпечата нечетните номера от 1 до 10:
+
+            <code>
+
+            For i = 1 To 10 Step 2
+
+              TextWindow.WriteLine (I)
+
+            EndFor
+
+            </code></example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.If">
+      <summary>
+
+            Изявлението If ви позволява да вземате решения за различни неща.
+
+            </summary>
+      <example>
+
+            Следващият пример ще отпечата "Win" или "Lose" в зависимост от резултата от хвърляне на монета.
+
+            <code>
+
+            If flip = "Tails" Then
+
+              TextWindow.WriteLine ( "Win")
+
+            Else
+
+              TextWindow.WriteLine ( "Lose")
+
+            EndIf
+
+            </code></example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Then">
+      <summary>
+
+            Проверете изявлението If за информация за ключовата дума Then.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Else">
+      <summary>
+
+            Проверете изявлението If за информация за ключовата дума Else.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.ElseIf">
+      <summary>
+
+            Ключовата дума ElseIf помага да се осигури алтернативно условие, докато се вземат решения, използвайки изявлението If.
+
+            </summary>
+      <example>
+
+            В следващия пример ще отпечатаме правилния поздрав въз основа на времето на деня.
+
+            <code>
+
+            If Clock.Hour &lt; 12 Then
+
+              TextWindow.WriteLine ("Добро утро")
+
+            ElseIf Clock.Hour &lt; 16 Then
+
+              TextWindow.WriteLine ("Добър ден")
+
+            ElseIf Clock.Hour &lt; 20 Then
+
+              TextWindow.WriteLine ("Добър вечер")
+
+            EndIf
+
+            </code></example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.EndIf">
+      <summary>
+
+            Проверете изявлението If за информация за ключовата дума EndIf.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Goto">
+      <summary>
+
+            Приложението Goto позволява изпълнение на друго място от програмата.
+
+            </summary>
+      <example>
+
+            Следващата програма ще отпечата последователни номера безкрайно.
+
+            <code>
+
+            start:
+
+            TextWindow.WriteLine (i)
+
+            i = i + 1
+
+            Goto start
+
+            </code></example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Sub">
+      <summary>
+
+            Подменюто Sub (Subroutine) ви позволява да изпълнявате група от действия с едно повикване.
+
+            </summary>
+      <example>
+
+            Следният пример дефинира подпрограма, която повиква звук от камбана и отпечатва "Win".
+
+            <code>
+
+            Sub Win
+
+              Sound.PlayBellRing()
+
+              TextWindow.WriteLine( "Win!")
+
+            EndSub
+
+            </code></example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.EndSub">
+      <summary>
+
+            Проверете изявлението Sub за информация относно ключовата дума EndSub.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.While">
+      <summary>
+
+            Изявлението While ви позволява да повтаряте действие, докато постигнете желан резултат.
+
+            </summary>
+      <example>
+
+        Следният код ще отпечата набор от произволни числа, докато не се появи число, по-голямо от 100.
+
+        <code>
+          While i &lt; 100
+          i = Math.GetRandomNumber(150)
+          TextWindow.WriteLine(i)
+          EndWhile
+        </code>
+      </example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.EndWhile">
+      <summary>
+
+            Проверете израза While за информация за ключовата дума EndWhile.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.And">
+      <summary>
+
+            Извършва логическа операция и връща true, ако и двата въведени израза са верни.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Or">
+      <summary>
+
+            Извършва логическа операция и връща true, ако някой от въведените изрази е верен.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Platform">
+      <summary>
+
+            Обектът Platform осигурява начин за генериране на други библиотеки в .Net.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Shapes">
+      <summary>
+
+            Обектът Shape ви позволява да добавяте, местите и завъртате фигури в графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя фигура на правоъгълник с определената ширина и височина.
+
+            </summary>
+      <param name="width">
+
+            Ширината на фигурата на правоъгълника.
+
+            </param>
+      <param name="height">
+
+            Височината на фигурата на правоъгълника.
+
+            </param>
+      <returns>
+
+            Фигурата на правоъгълника, която е била добавена към графичния прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя фигура на елипса с определената ширина и височина.
+
+            </summary>
+      <param name="width">
+
+            Ширината на фигурата на елипсата.
+
+            </param>
+      <param name="height">
+
+            Височината на фигурата на елипсата.
+
+            </param>
+      <returns>
+
+            Фигурата на елипсата, която е била добавена към графичния прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя фигура на триъгълник, представена от посочените точки.
+
+            </summary>
+      <param name="x1">
+
+            Координатът x на първата точка.
+
+            </param>
+      <param name="y1">
+
+            Координатът y на първата точка.
+
+            </param>
+      <param name="x2">
+
+            Координатът х на втората точка.
+
+            </param>
+      <param name="y2">
+
+            Координатът y на втората точка.
+
+            </param>
+      <param name="x3">
+
+            Координатът х на третата точка.
+
+            </param>
+      <param name="y3">
+
+            Координатът y на третата точка.
+
+            </param>
+      <returns>
+
+            Фигурата на триъгълника, която е била добавена към графичния прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя линия между посочените точки.
+
+            </summary>
+      <param name="x1">
+
+            Координатът x на първата точка.
+
+            </param>
+      <param name="y1">
+
+            Координатът y на първата точка.
+
+            </param>
+      <param name="x2">
+
+            Координатът х на втората точка.
+
+            </param>
+      <param name="y2">
+
+            Координатът y на втората точка.
+
+            </param>
+      <returns>
+
+            Линията, която е била добавена към графичния прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddImage(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя изображение като фигура, която може да се премества, анимира или завърта.
+
+            </summary>
+      <param name="imageName">
+
+            Името на изображението, което да нарисувате.
+
+            </param>
+      <returns>
+
+            Изображението, което е било добавено към графичния прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddText(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя текст като фигура, която може да бъде преместена, анимирана или завъртяна.
+
+            </summary>
+      <param name="text">
+
+            Текстът, който искате да добавите.
+
+            </param>
+      <returns>
+
+            Фигурата на текста, която е била добавена към графичния прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.SetText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Задава текста за текстовата фигура.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на текстовата фигура.
+
+            </param>
+      <param name="text">
+
+            Новата стойност на текста, която искате да зададете.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.Remove(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Премахва фигура от графичния прозорец.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата, която трябва да бъде премахната.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Премества фигурата с посоченото име на нова позиция.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата, която искате да преместите.
+
+            </param>
+      <param name="x">
+
+            Координатът х на новата позиция.
+
+            </param>
+      <param name="y">
+
+            Координатът y на новата позиция.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.Rotate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Завърта фигурата със зададеното име под указания ъгъл.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата, която искате да завъртите.
+
+            </param>
+      <param name="angle">
+
+            Ъгълът на завъртане на фигурата.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.Zoom(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Увеличава фигурата, като използва определените нива на увеличение. Минималната стойност е 0,1, а максимумалната е 20.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата за приближаване.
+
+            </param>
+      <param name="scaleX">
+
+            Оста x на нивото на приближаване.
+
+            </param>
+      <param name="scaleY">
+
+            Оста y на нивото на приближаване.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.Animate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Анимира фигура с посоченото име на нова позиция.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата, която искате да преместите.
+
+            </param>
+      <param name="x">
+
+            Координатът х на новата позиция.
+
+            </param>
+      <param name="y">
+
+            Координатът y на новата позиция.
+
+            </param>
+      <param name="duration">
+
+            Времето за анимацията, в милисекунди.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.GetLeft(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава лявата координата на определената фигура.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата.
+
+            </param>
+      <returns>
+
+            Левият координат на фигурата.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.GetTop(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава горната координатна линия на зададената фигура.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата.
+
+            </param>
+      <returns>
+
+            Най-горният координат на фигурата.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.GetOpacity(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава степента на непрозрачност на фигурата.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата.
+
+            </param>
+      <returns>
+
+            Нивото на непрозрачност на обекта като стойност между 0 и 100. 0 е напълно прозрачна и 100 е напълно непрозрачна.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.SetOpacity(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Задава колко непрозрачна трябва да бъде фигурата.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата.
+
+            </param>
+      <param name="level">
+
+            Нивото на непрозрачност, вариращо от 0 до 100. 0 е напълно прозрачно и 100 е напълно непрозрачно.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.HideShape(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Скрива вече добавена фигура.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.ShowShape(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Показва скрита фигура.
+
+            </summary>
+      <param name="shapeName">
+
+            Името на фигурата.
+
+            </param>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Sound">
+      <summary>
+
+            Обектът Sound (звук) осигурява операции, които позволяват възпроизвеждане на звуци. Някои пробни звуци се предоставят заедно с библиотеката.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClick">
+      <summary>
+
+            Възпроизвежда звука на щракване.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClickAndWait">
+      <summary>
+
+            Възпроизвежда звука на клика и чака да завърши.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChime">
+      <summary>
+
+            Възпроизвежда звука на звънене.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimeAndWait">
+      <summary>
+
+            Възпроизвежда звука на звънене и чака да завърши.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimes">
+      <summary>
+
+            Възпроизвежда звука на звънене.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimesAndWait">
+      <summary>
+
+            Възпроизвежда звука на звънене и чака да завърши.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRing">
+      <summary>
+
+            Възпроизвежда звука на звънец/камбана.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRingAndWait">
+      <summary>
+
+            Възпроизвежда звука на звънеца и чака да завърши.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayMusic(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Възпроизвежда музикални ноти.
+
+            </summary>
+      <param name="notes">
+
+            Набор от музикални ноти, които да свирите. Форматът е част от Music Markup Language, поддържан от QBasic.
+
+            </param>
+      <example>
+        <code>
+
+            Sound.PlayMusic ("O5 C8 C8 G8 G8 А8 А8 G4 F8 F8 Е8 Е8 D8 D8 С4")
+
+            </code>
+      </example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.Play(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>
+
+            Пуска аудио файл. Това може да е файл с mp3, wav или wma. Другите файлови формати могат или не могат да се възпроизведат в зависимост от аудио кодеците, инсталирани на компютъра на потребителя.
+
+            </para>
+        <para>
+
+            Ако файлът вече е бил поставен на пауза, тази операция ще се възобнови от мястото, където възпроизвеждането е било поставено на пауза.
+
+            </para>
+      </summary>
+      <param name="filePath">
+
+            Местоположението за аудиофайла. Това може да бъде локален файл (например: c: \ music \ track1.mp3) или файл в мрежата (напр .: http://contoso.com/track01.wma).
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayAndWait(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>
+
+            Възпроизвежда аудиофайл и чака, докато приключи възпроизвеждането. Това може да е файл с mp3, wav или wma. Другите файлови формати могат или не могат да се възпроизведат в зависимост от аудио кодеците, инсталирани на компютъра на потребителя.
+
+            </para>
+        <para>
+
+            Ако файлът вече е бил поставен на пауза, тази операция ще се възобнови от мястото, където възпроизвеждането е било поставено на пауза.
+
+            </para>
+      </summary>
+      <param name="filePath">
+
+            Местоположението за аудиофайла. Това може да бъде локален файл (например: c: \ music \ track1.mp3) или файл в мрежата (напр .: http://contoso.com/track01.wma).
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.Pause(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Спира възпроизвеждането на аудиофайла. Ако файлът вече не се възпроизвежда, тази операция няма да направи нищо.
+
+            </summary>
+      <param name="filePath">
+
+            Местоположението за аудиофайла. Това може да бъде локален файл (например: c: \ music \ track1.mp3) или файл в мрежата (напр .: http://contoso.com/track01.wma).
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.Stop(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Спира възпроизвеждането на аудиофайла. Ако файлът вече не се възпроизвежда, тази операция няма да направи нищо.
+
+            </summary>
+      <param name="filePath">
+
+            Местоположението за аудиофайла. Това може да бъде локален файл (например: c: \ music \ track1.mp3) или файл в мрежата (напр .: http://contoso.com/track01.wma).
+
+            </param>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.File">
+      <summary>
+
+            Файловият обект предоставя методи за достъп, четене и записване на информация от и към файл на диск. Използвайки този обект, е възможно да запазите и отворите настройките за няколко сесии на програмата си.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.ReadContents(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>
+
+            Отваря файл и прочита цялото съдържание на файла. Този метод ще бъде бърз за малки файлове, които са по-малки от MB, но ще започне да се забавя значително за файлове, по-големи от 10MB.
+
+            </para>
+      </summary>
+      <param name="filePath">
+        <para>
+
+            Пълното местоположение на файла за четене. Пример за пълно местоположение е: c: \ temp \ settings.data.
+
+            </para>
+      </param>
+      <returns>
+
+            Цялото съдържание на файла.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.WriteContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>
+
+            Отваря файл и записва посоченото съдържание в него, замествайки първоначалното съдържание с новото съдържание.
+
+            </para>
+      </summary>
+      <param name="filePath">
+        <para>
+
+            Пълното местоположение на файла, на който да пишете. Пример за пълно местоположение е: c: \ temp \ settings.data.
+
+            </para>
+      </param>
+      <param name="contents">
+
+            Съдържанието, което трябва да запишете в посочения файл.
+
+            </param>
+      <returns>
+        <para>
+
+            Ако операцията е била успешна, това ще върне "SUCCEEDED". В противен случай ще се върне "FAILED".
+
+            </para>
+      </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.ReadLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Отваря посочения файл и чете съдържанието на посочения номер на ред.
+
+            </summary>
+      <param name="filePath">
+        <para>
+
+            Пълното местоположение на файла, от който да се чете. Пример за пълно местоположение е: c: \ temp \ settings.data.
+
+            </para>
+      </param>
+      <param name="lineNumber">
+
+            Номерът на реда в текста, който трябва да се чете.
+
+            </param>
+      <returns>
+
+            Текстът на посочения ред на посочения файл.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.WriteLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>
+
+            Отваря посочения файл и записва съдържанието на посочения номер на ред.
+
+            </para>
+        <para>
+
+            Тази операция ще презапише съществуващо съдържание на посочения ред.
+
+            </para>
+      </summary>
+      <param name="filePath">
+        <para>
+
+            Пълното местоположение на файла, от който да се чете. Пример за пълно местоположение е: c: \ temp \ settings.data.
+
+            </para>
+      </param>
+      <param name="lineNumber">
+
+            Номерът на реда в текста за писане.
+
+            </param>
+      <param name="contents">
+        <para>
+
+            Съдържанието, което трябва да напишете в посочения ред на посочения файл.
+
+            </para>
+      </param>
+      <returns>
+        <para>
+
+            Ако операцията е била успешна, това ще върне "SUCCEEDED". В противен случай ще се върне "FAILED".
+
+            </para>
+      </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.InsertLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>
+
+            Отваря посочения файл и вмъква съдържанието на посочения номер на ред.
+
+            </para>
+        <para>
+
+            Тази операция няма да презапише съществуващо съдържание на посочения ред.
+
+            </para>
+      </summary>
+      <param name="filePath">
+        <para>
+
+            Пълното местоположение на файла, от който да се чете. Пример за пълно местоположение е: c: \ temp \ settings.data.
+
+            </para>
+      </param>
+      <param name="lineNumber">
+
+            Номерът на реда в текста за вмъкване.
+
+            </param>
+      <param name="contents">
+
+            Съдържанието, което искате да вмъкнете във файла.
+
+            </param>
+      <returns>
+        <para>
+
+            Ако операцията е била успешна, това ще върне "SUCCEEDED". В противен случай ще се върне "FAILED".
+
+            </para>
+      </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.AppendContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>
+
+            Отваря посочения файл и прибавя съдържанието към края на файла.
+
+            </para>
+      </summary>
+      <param name="filePath">
+        <para>
+
+            Пълното местоположение на файла, от който да се чете. Пример за пълно местоположение е: c: \ temp \ settings.data.
+
+            </para>
+      </param>
+      <param name="contents">
+
+            Съдържанието, което трябва да се добави към края на файла.
+
+            </param>
+      <returns>
+        <para>
+
+            Ако операцията е била успешна, това ще върне "SUCCEEDED". В противен случай ще се върне "FAILED".
+
+            </para>
+      </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.CopyFile(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>
+
+            Копира определения като източник файл в пътя на целевия файл. Ако целта сочи към местоположение, което не съществува, методът ще се опита да го създаде автоматично.
+
+            </para>
+        <para>
+
+            Съществуващите файлове ще бъдат презаписани. Най-добре е да проверите дали файлът на местоназначението съществува, ако не искате да презапишете съществуващи файлове.
+
+            </para>
+      </summary>
+      <param name="sourceFilePath">
+        <para>
+
+            Пълното местоположение на файла, който трябва да бъде копиран. Пример за пълното местоположение е: c: \ temp \ settings.data.
+
+            </para>
+      </param>
+      <param name="destinationFilePath">
+
+            Местоположението или пътя на файла.
+
+            </param>
+      <returns>
+
+            Ако операцията е била успешна, това ще върне "SUCCEEDED". В противен случай ще се върне "FAILED".
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.DeleteFile(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Изтрива зададения файл.
+
+            </summary>
+      <param name="filePath">
+        <para>
+
+            Пълното местоположение на файла, който трябва да бъде копиран. Пример за пълното местоположение е: c: \ temp \ settings.data.
+
+            </para>
+      </param>
+      <returns>
+
+            Ако операцията е била успешна, това ще върне "SUCCEEDED". В противен случай ще се върне "FAILED".
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.CreateDirectory(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Създава посочената директория.
+
+            </summary>
+      <param name="directoryPath">
+
+            Пълното местоположение на директорията, която ще бъде създадена.
+
+            </param>
+      <returns>
+
+            Ако операцията е била успешна, това ще върне "SUCCEEDED". В противен случай ще се върне "FAILED".
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.DeleteDirectory(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Изтрива посочената директория.
+
+            </summary>
+      <param name="directoryPath">
+
+            Пълният път на директорията за изтриване.
+
+            </param>
+      <returns>
+
+            Ако операцията е била успешна, това ще върне "SUCCEEDED". В противен случай ще се върне "FAILED".
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.GetFiles(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава местоположението на всички файлове в указания път на директорията.
+
+            </summary>
+      <param name="directoryPath">
+
+            Директорията за търсене на файлове.
+
+            </param>
+      <returns>
+
+            Ако операцията е била успешна, това ще върне файловете като масив. В противен случай ще се върне "FAILED".
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.GetDirectories(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава пътя на всички директории в указания път на директорията.
+
+            </summary>
+      <param name="directoryPath">
+
+            Директорията за търсене на поддиректории.
+
+            </param>
+      <returns>
+
+            Ако операцията е била успешна, това ще върне списъка с директории като масив. В противен случай ще се върне "FAILED".
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.GetTemporaryFilePath">
+      <summary>
+        <para>
+
+            Създава нов времен файл в временна директория и връща пълното местоположение на файла.
+
+            </para>
+      </summary>
+      <returns>
+
+            Пълното местоположение на файла на временния файл.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.GetSettingsFilePath">
+      <summary>
+        <para>
+
+            Получава пълното местоположение на файла с настройки за тази програма. Името на файла с настройки се основава на името на програмата и се намира на същото място като програмата.
+
+            </para>
+      </summary>
+      <returns>
+
+            Пълното местоположение на файла с настройки, специфични за тази програма.
+
+            </returns>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.File.LastError">
+      <summary>
+        <para>
+
+            Получава или настройва последното съобщение за грешка, свързано с операцията на файла. Тази характеристика е полезна, за да разберете кога не се изпълнява даден метод.
+
+            </para>
+      </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Stack">
+      <summary>
+
+            Този обект осигурява начин за съхраняване на стойности, точно като подреждане на стак. Можете да изкарате стойност в горната част на стака и да я изкарате. Можете да разпечатате стойностите една по една от стака и последната избрана стойност ще бъде първата, която ще изскочи.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Stack.PushValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя определена стойност към зададения стак.
+
+            </summary>
+      <param name="stackName">
+
+            Името на стака.
+
+            </param>
+      <param name="value">
+
+            Стойността, която трябва да се добави.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Stack.GetCount(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава броя на елементите в посочения стак.
+
+            </summary>
+      <param name="stackName">
+
+            Името на стака.
+
+            </param>
+      <returns>
+
+            Броят на елементите в определения стак.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Stack.PopValue(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Показва и връща стойността на последния елемент от определения стак.
+
+            </summary>
+      <param name="stackName">
+
+            Името на стака.
+
+            </param>
+      <returns>
+
+            Стойността от стака.
+
+            </returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Timer">
+      <summary>
+
+            Обектът Timer предоставя лесен начин да извършвате действия многократно с постоянен интервал между тях.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Timer.Pause">
+      <summary>
+
+            Пауза на таймера. Проблемите в събитията ще бъдат пренебрегнати.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Timer.Resume">
+      <summary>
+
+            Възстановява таймера от състояние в пауза. Проблемите в събитията ще се появят.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Timer.Interval">
+      <summary>
+
+            Определя интервала (в милисекунди), задаващ колко често таймерът трябва да повиши събитието Tick. Тази стойност може да варира от 10 до 100000000.
+
+            </summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Timer.Tick">
+      <summary>
+
+            Предизвиква събитие, когато таймерът цъкне.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Turtle">
+      <summary>
+
+            Класът Turtle (костенурка) осигурява функционалност, подобна на лого, за да привлича фигури чрез манипулиране на свойствата за чертаене с писалката и четката.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.Show">
+      <summary>
+
+            Показва костенурката, за да позволи взаимодействия с нея.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.Hide">
+      <summary>
+
+            Скрива костенурката и забранява взаимодействията с нея.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.PenDown">
+      <summary>
+
+            Задава писалката надолу, за да позволи на костенурката да рисува, докато се движи.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.PenUp">
+      <summary>
+
+            Вдига писалката, за да спре да рисува, докато костенурката се движи.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.Move(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Премества костенурката на определено разстояние. Ако писалката е надолу, тя ще изчертае линия, която се движи.
+
+            </summary>
+      <param name="distance">
+
+            Разстоянието, за да преместите костенурката.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.MoveTo(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Завърта и премества костенурката до определеното място. Ако писалката е надолу, тя ще изчертае линия, която се движи.
+
+            </summary>
+      <param name="x">
+
+            Координатът х на целевата точка.
+
+            </param>
+      <param name="y">
+
+            Координатът y на целевата точка.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.Turn(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Завърта костенурката по зададения ъгъл. Ъгълът е в градуси и може да бъде положителен или отрицателен. Ако ъгълът е положителен, костенурката се върти вдясно. Ако е отрицателен, костенурката се върти наляво.
+
+            </summary>
+      <param name="angle">
+
+            Ъгълът на завъртане на костенурката.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnRight">
+      <summary>
+
+            Завърта костенурката на 90 градуса надясно.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnLeft">
+      <summary>
+
+            Завърта костенурката на 90 градуса наляво.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Turtle.Speed">
+      <summary>
+
+            Указва колко бързо трябва да се движи костенурката. Валидните стойности са от 1 до 10. Ако скоростта е зададена на 10, костенурката се движи и се върти мигновено.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Turtle.Angle">
+      <summary>
+
+            Получава или настройва текущия ъгъл на костенурката. Когато се настрои, това ще превърне костенурката незабавно в новия ъгъл.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Turtle.X">
+      <summary>
+
+            Получава или задава разположението X на костенурката. Когато се настрои, това ще премести костенурката незабавно в новото място.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Turtle.Y">
+      <summary>
+
+            Получава или задава местоположението Y на костенурката. Когато се настрои, това ще премести костенурката незабавно в новото място.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.TextWindow">
+      <summary>
+
+            TextWindow осигурява функционалности за въвеждане и извеждане, свързани с текста. Например, използвайки този клас, е възможно да напишете или да прочетете някакъв текст или номер към и от текстовия прозорец.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Show">
+      <summary>
+
+            Показва текстовия прозорец, за да активира взаимодействията с него.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Hide">
+      <summary>
+
+            Скрива текстовия прозорец. Съдържанието се запазва, докато прозорецът се покаже отново.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Clear">
+      <summary>
+
+            Изчиства текстовия прозорец.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Pause">
+      <summary>
+
+            Изчаква въвеждане от потребителя, преди да се върне.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseIfVisible">
+      <summary>
+
+            Чака въвеждане от потребителя само когато текстовият прозорец вече е отворен.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseWithoutMessage">
+      <summary>
+
+            Изчаква извеждането към потребителя, преди да се върне.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Read">
+      <summary>
+
+            Чете текст от текстовия прозорец. Тази функция няма да се върне, докато потребителят не натисне ENTER.
+
+            </summary>
+      <returns>
+
+            Текстът, който е прочетен от текстовия прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.ReadKey">
+      <summary>
+
+            Чете един знак от текстовия прозорец.
+
+            </summary>
+      <returns>
+
+            Знакът, който е прочетен от текстовия прозорец.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.ReadNumber">
+      <summary>
+
+            Чете номер от текстовия прозорец. Тази функция няма да се върне, докато потребителят не натисне ENTER.
+
+            </summary>
+      <returns>
+
+            Числото, което се чете от текстовия прозорец
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.WriteLine(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Написва текст или номер в текстовия прозорец. Към изведената стойност ще бъде добавен нов знак, така че при следващото записване на нещо в текстовия прозорец ще се появи нов ред.
+
+            </summary>
+      <param name="data">
+
+            Текстът или номерът за записване в текстовия прозорец.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Write(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Написва текст или номер в текстовия прозорец. За разлика от WriteLine, това няма да прибави нов символ, което означава, че всичко, написано в текстовия прозорец след това повикване, ще бъде на същия ред.
+
+            </summary>
+      <param name="data">
+
+            Текстът или номерът за записване в текстовия прозорец.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.VerifyAccess">
+      <summary>
+
+            Проверява дали достъпът до текстов прозорец все още е валиден.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.ForegroundColor">
+      <summary>
+
+            Настройва цвета на изходния текст в текстовия прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.BackgroundColor">
+      <summary>
+
+            Настройва цвета на фона на текста, който се извежда в текстовия прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorLeft">
+      <summary>
+
+            Настройва позицията на колоната на курсора в текстовия прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorTop">
+      <summary>
+
+            Настройва позицията на реда на курсора в текстовия прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.Left">
+      <summary>
+
+            Настройва лявата позиция на текстовия прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.Title">
+      <summary>
+
+            Настройва заглавието за текстовия прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.Top">
+      <summary>
+
+            Настройва горната позиция на текстовия прозорец.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Clock">
+      <summary>
+
+            Този клас осигурява достъп до системния часовник.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Time">
+      <summary>
+
+            Получава текущото системно време.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Date">
+      <summary>
+
+            Получава текущата дата на системата.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Year">
+      <summary>
+
+            Получава текущата година.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Month">
+      <summary>
+
+            Получава текущия месец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Day">
+      <summary>
+
+            Получава текущия ден от месеца.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.WeekDay">
+      <summary>
+
+            Получава текущия ден от седмицата.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Hour">
+      <summary>
+
+            Получава текущия Час.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Minute">
+      <summary>
+
+            Получава текущите минути.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Second">
+      <summary>
+
+            Получава текущите секунди.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Millisecond">
+      <summary>
+
+            Получава текущите милисекунди.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.ElapsedMilliseconds">
+      <summary>
+
+            Изчислява броя на милисекунди, изминал от 1900 година.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication">
+      <summary>
+
+            Класът на приложението предоставя малка основна програма с обект на приложение.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication.Dispatcher">
+      <summary>
+
+            Получава диспечера за приложението Small Basic.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Program">
+      <summary>
+
+            Класът на програмата осигурява помощници за контролиране изпълнението на програмата.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Program.Delay(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Забавя изпълнението на програмата със зададеното количество милисекунди.
+
+            </summary>
+      <param name="milliSeconds">
+
+            Размерът на закъснението.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Program.End">
+      <summary>
+
+            Затваря програмата.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Program.GetArgument(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Връща зададения аргумент за тази програма.
+
+            </summary>
+      <param name="index">
+
+            Индекс на аргумента.
+
+            </param>
+      <returns>
+
+            Аргументът на командния ред на указания индекс.
+
+            </returns>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Program.ArgumentCount">
+      <summary>
+
+            Получава броя на аргументите от командния ред на тази програма.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Program.Directory">
+      <summary>
+
+            Получава директорията на изпълняващата програма.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Dictionary">
+      <summary>
+
+            Този клас предоставя достъп до онлайн речникова услуга.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinition(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава определение на дума на английски. Същото като GetDefinitionEnglishToEnglish.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionEnglishToEnglish(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава определението на дума, от английски на английски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionSimplifiedChineseToEnglish(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава определението на дума, опростен китайски на английски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionEnglishToGerman(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава се определението на една дума, от английски на немски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionEnglishToSimplifiedChinese(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава определение на дума, английски на опростен китайски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionEnglishToFrench(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Дава определение на дума, от английски на френски език.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionGermanToEnglish(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Дава определение на дума, от немски на английски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionEnglishToJapanese(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Дава определение на дума, от английски на японски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionFrenchToEnglish(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Дава определение на една дума, френски на английски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionItalianToEnglish(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава определение на дума, италиански на английски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionTraditionalChineseToEnglish(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава определението за дума, традиционен китайски на английски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionSpanishToEnglish(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Дава определение на дума, испански на английски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionJapaneseToEnglish(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Дава определение на дума, от японски на английски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionEnglishToKorean(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава се определението на дума, от английски на корейски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionEnglishToTraditionalChinese(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава определение на дума, от английски на традиционен китайски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionKoreanToEnglish(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Определя думата, корейски на английски.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionEnglishToItalian(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Дава определение на дума, от английски на италиански.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionEnglishToSpanish(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава се определението на дума, от английски на испански.
+
+            </summary>
+      <param name="word">
+
+            Думата, която трябва да определите.
+
+            </param>
+      <returns>
+
+            Дефиницията на определената дума.
+
+            </returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Desktop">
+      <summary>
+
+            Този клас предлага методи за взаимодействие с работния плот.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Desktop.SetWallPaper(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Задава зададената картина като тапет на работния плот. Този файл може да бъде локален файл или мрежов файл или дори интернет адрес.
+
+            </summary>
+      <param name="fileOrUrl">
+
+            Името на файла или URL адреса на снимката.
+
+            </param>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Desktop.Width">
+      <summary>
+
+            Получава ширината на екрана на основния работен плот.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Desktop.Height">
+      <summary>
+
+            Получава височината на екрана на основния работен плот.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Flickr">
+      <summary>
+
+            Този клас осигурява достъп до фотографски услуги във Flickr.
+
+            </summary>
+    </member>
+    <member name="F:Microsoft.SmallBasic.Library.Flickr._urlTemplate">
+      <summary>
+
+            Flickr URL Template (с https)
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Flickr.GetPictureOfMoment">
+      <summary>
+
+            Получава URL адреса за снимката на момента.
+
+            </summary>
+      <returns>
+
+            URL адрес на файла за моментната снимка на Flickr
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Flickr.GetRandomPicture(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава URL адреса за произволна снимка, маркирана с посочения маркер.
+
+            </summary>
+      <param name="tag">
+
+            Маркерът за исканата снимка.
+
+            </param>
+      <returns>
+
+            URL адрес на файла за произволна снимка на Flickr
+
+            </returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.GraphicsWindow">
+      <summary>
+
+            GraphicsWindow осигурява графично свързана функция за вход и изход. Например, използвайки този клас, е възможно да се нарисуват и запълват кръгове и правоъгълници.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Show">
+      <summary>
+
+            Показва графичния прозорец, за да активира взаимодействията с него.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Hide">
+      <summary>
+
+            Скрива графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Начертава правоъгълник на екрана с помощта на избраната писалка.
+
+            </summary>
+      <param name="x">
+
+            Координатът х на правоъгълника.
+
+            </param>
+      <param name="y">
+
+            Координатът y на правоъгълника.
+
+            </param>
+      <param name="width">
+
+            Широчината на правоъгълника.
+
+            </param>
+      <param name="height">
+
+            Височината на правоъгълника.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Запълва правоъгълник на екрана, като използва избраната четка.
+
+            </summary>
+      <param name="x">
+
+            Координатът х на правоъгълника.
+
+            </param>
+      <param name="y">
+
+            Координатът y на правоъгълника.
+
+            </param>
+      <param name="width">
+
+            Широчината на правоъгълника.
+
+            </param>
+      <param name="height">
+
+            Височината на правоъгълника.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Начертава елипса на екрана, като използва избраната писалка.
+
+            </summary>
+      <param name="x">
+
+            Координатът х на елипсата.
+
+            </param>
+      <param name="y">
+
+            Координатът y на елипсата.
+
+            </param>
+      <param name="width">
+
+            Ширината на елипсата.
+
+            </param>
+      <param name="height">
+
+            Височината на елипсата.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Запълва елипсата на екрана, като използва избраната четка.
+
+            </summary>
+      <param name="x">
+
+            Координатът х на елипсата.
+
+            </param>
+      <param name="y">
+
+            Координатът y на елипсата.
+
+            </param>
+      <param name="width">
+
+            Ширината на елипсата.
+
+            </param>
+      <param name="height">
+
+            Височината на елипсата.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Начертава триъгълник на екрана, като използва избраната писалка.
+
+            </summary>
+      <param name="x1">
+
+            Координатът x на първата точка.
+
+            </param>
+      <param name="y1">
+
+            Координатът y на първата точка.
+
+            </param>
+      <param name="x2">
+
+            Координатът х на втората точка.
+
+            </param>
+      <param name="y2">
+
+            Координатът y на втората точка.
+
+            </param>
+      <param name="x3">
+
+            Координатът х на третата точка.
+
+            </param>
+      <param name="y3">
+
+            Координатът y на третата точка.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Начертава и запълва триъгълник на екрана, като използва избраната четка.
+
+            </summary>
+      <param name="x1">
+
+            Координатът x на първата точка.
+
+            </param>
+      <param name="y1">
+
+            Координатът y на първата точка.
+
+            </param>
+      <param name="x2">
+
+            Координатът х на втората точка.
+
+            </param>
+      <param name="y2">
+
+            Координатът y на втората точка.
+
+            </param>
+      <param name="x3">
+
+            Координатът х на третата точка.
+
+            </param>
+      <param name="y3">
+
+            Координатът y на третата точка.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Начертава линия от една точка до друга.
+
+            </summary>
+      <param name="x1">
+
+            Координатът x на първата точка.
+
+            </param>
+      <param name="y1">
+
+            Координатът y на първата точка.
+
+            </param>
+      <param name="x2">
+
+            Координатът х на втората точка.
+
+            </param>
+      <param name="y2">
+
+            Координатът y на втората точка.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Начертава линия от текст на екрана на посоченото място.
+
+            </summary>
+      <param name="x">
+
+            Координатът x на началната точка на текста.
+
+            </param>
+      <param name="y">
+
+            Координатът y на текста започва.
+
+            </param>
+      <param name="text">
+
+            Текстът, който да нарисувате
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawBoundText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Начертава линия от текст на екрана на посоченото място.
+
+            </summary>
+      <param name="x">
+
+            Координатът x на началната точка на текста.
+
+            </param>
+      <param name="y">
+
+            Координатът y на текста започва.
+
+            </param>
+      <param name="width">
+
+            Максималната налична ширина. Този параметър помага да се определи кога текстът да се обвива.
+
+            </param>
+      <param name="text">
+
+            Текстът, който искате да нарисувате.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawResizedImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Изчертава определеното изображение от паметта на екрана, със зададения размер.
+
+            </summary>
+      <param name="imageName">
+
+            Името на изображението, което да нарисувате
+
+            </param>
+      <param name="x">
+
+            Координатът x на точката за изчертаване на изображението.
+
+            </param>
+      <param name="y">
+
+            Координатът y на точката за изчертаване на изображението.
+
+            </param>
+      <param name="width">
+
+            Широчината, за да нарисувате изображението.
+
+            </param>
+      <param name="height">
+
+            Височината, с която да нарисувате изображението.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Изчертава определеното изображение от паметта на екрана.
+
+            </summary>
+      <param name="imageName">
+
+            Името на изображението, което да нарисувате.
+
+            </param>
+      <param name="x">
+
+            Координатът x на точката за изчертаване на изображението.
+
+            </param>
+      <param name="y">
+
+            Координатът y на точката за изчертаване на изображението.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.SetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Начертава пиксела, определен от координатите x и y, използвайки посочения цвят.
+
+            </summary>
+      <param name="x">
+
+            Координатът х на пиксела.
+
+            </param>
+      <param name="y">
+
+            Координатът y на пиксела.
+
+            </param>
+      <param name="color">
+
+            Цветът на пиксела, който ще бъде зададен.
+
+            </param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава цвета на пиксела при зададените координати x и y.
+
+            </summary>
+      <param name="x">
+
+            Координатът х на пиксела.
+
+            </param>
+      <param name="y">
+
+            Координатът y на пиксела.
+
+            </param>
+      <returns>
+
+            Цветът на пиксела.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetRandomColor">
+      <summary>
+
+            Получава валиден случаен цвят.
+
+            </summary>
+      <returns>
+
+            Валиден случаен цвят.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetColorFromRGB(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Изгражда цвят, като се отчитат червените, зелените и сините стойности.
+
+            </summary>
+      <param name="red">
+
+            Червеният компонент на цвета (0-255).
+
+            </param>
+      <param name="green">
+
+            Зеленият компонент на цвета (0-255).
+
+            </param>
+      <param name="blue">
+
+            Синият компонент на цвета (0-255).
+
+            </param>
+      <returns>
+
+            Връща цвят, който може да се използва за задаване на цвета на четката или писалката.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Clear">
+      <summary>
+
+            Изчиства прозореца.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.ShowMessage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Показва кутия за съобщения на потребителя.
+
+            </summary>
+      <param name="text">
+
+            Текстът, който ще се показва в полето за съобщения.
+
+            </param>
+      <param name="title">
+
+            Заглавието на полето за съобщения.
+
+            </param>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BackgroundColor">
+      <summary>
+
+            Получава или задава цвета на фона на графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BrushColor">
+      <summary>
+
+            Получава или настройва цвета на четката, който да се използва за запълване на фигури, изчертани в графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.CanResize">
+      <summary>
+
+            Указва дали графичният прозорец може да бъде преоразмерен от потребителя.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenWidth">
+      <summary>
+
+            Задава ширината на писалката, използвана за изготвяне на фигури в графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenColor">
+      <summary>
+
+            Задава цвета на писалката, използвана за изготвяне на фигури в графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontName">
+      <summary>
+
+            Задава името на шрифта, който да се използва при изчертаване на текст в графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontSize">
+      <summary>
+
+            Задава размера на шрифта, който да се използва при изчертаване на текст в графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontBold">
+      <summary>
+
+            Задава дали шрифтът, който ще се използва при изчертаване на текст в графичния прозорец, е удебелен.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontItalic">
+      <summary>
+
+            Задава дали шрифтът, който ще се използва при изчертаване на текст в Графичния прозорец, е курсив или не.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Title">
+      <summary>
+
+            Задава заглавието на графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Height">
+      <summary>
+
+            Задава височината на графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Width">
+      <summary>
+
+            Задава ширината на графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Left">
+      <summary>
+
+            Задава лявата позиция на графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Top">
+      <summary>
+
+            Задава горната позиция на графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastKey">
+      <summary>
+
+            Получава последния клавиш на клавиатурата, който е натиснат или освободен.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastText">
+      <summary>
+
+            Получава последния текст, въведен в графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseX">
+      <summary>
+
+            Получава позицията x на мишката спрямо графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseY">
+      <summary>
+
+            Получава позицията y на мишката спрямо графичния прозорец.
+
+            </summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyDown">
+      <summary>
+
+            Показва събитие, когато на клавиатурата е натиснат клавиш.
+
+            </summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyUp">
+      <summary>
+
+            Повдига събитие, когато клавишът е пуснат на клавиатурата.
+
+            </summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseDown">
+      <summary>
+
+            Показва събитие, когато бутонът на мишката е натиснат надолу.
+
+            </summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseUp">
+      <summary>
+
+            Показва събитие, когато бутонът на мишката е пуснат.
+
+            </summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseMove">
+      <summary>
+
+            Повдига събитие, когато мишката се движи наоколо.
+
+            </summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.TextInput">
+      <summary>
+
+            Показва събитие, когато текстът е въведен в GraphicsWindow.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.ImageList">
+      <summary>
+
+            Този клас помага да се зареждат и съхраняват изображения в паметта.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.ImageList.LoadImage(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Зарежда изображение от файл или от Интернет в паметта.
+
+            </summary>
+      <param name="fileNameOrUrl">
+
+            Името на файла, от което да се зареди изображението. Това може да бъде локален файл или URL адрес на интернет местоположението.
+
+            </param>
+      <returns>
+
+            Връща името на зареденото изображение.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.ImageList.GetWidthOfImage(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава ширината на запаметеното изображение.
+
+            </summary>
+      <param name="imageName">
+
+            Името на изображението в паметта.
+
+            </param>
+      <returns>
+
+            Широчината на посоченото изображение.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.ImageList.GetHeightOfImage(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава височината на запаметеното изображение.
+
+            </summary>
+      <param name="imageName">
+
+            Името на изображението в паметта.
+
+            </param>
+      <returns>
+
+            Височината на зададеното изображение.
+
+            </returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.OfficeResearch">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.#ctor">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Query(System.String)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginQuery(System.String,System.AsyncCallback,System.Object)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndQuery(System.IAsyncResult)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String,System.Object)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Registration(System.String)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginRegistration(System.String,System.AsyncCallback,System.Object)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndRegistration(System.IAsyncResult)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String,System.Object)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Status">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginStatus(System.AsyncCallback,System.Object)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndStatus(System.IAsyncResult)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync(System.Object)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Discovery(System.String)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginDiscovery(System.String,System.AsyncCallback,System.Object)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndDiscovery(System.IAsyncResult)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String,System.Object)">
+      <remarks />
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.CancelAsync(System.Object)">
+      <remarks />
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryCompleted">
+      <remarks />
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationCompleted">
+      <remarks />
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusCompleted">
+      <remarks />
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryCompleted">
+      <remarks />
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventHandler">
+      <remarks />
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs">
+      <remarks />
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs.Result">
+      <remarks />
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventHandler">
+      <remarks />
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs">
+      <remarks />
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs.Result">
+      <remarks />
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventHandler">
+      <remarks />
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs">
+      <remarks />
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs.Result">
+      <remarks />
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventHandler">
+      <remarks />
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs">
+      <remarks />
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs.Result">
+      <remarks />
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.RestHelper">
+      <summary>
+
+            Частен статичен помощник за извикване на приложни Rest API
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.RestHelper.GetContents(System.String)">
+      <summary>
+
+            При даден URL адрес за почивка, съдържанието се получава като XML документ.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Math">
+      <summary>
+
+            Класът "Математика" предоставя много полезни методи, свързани с математиката
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Abs(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава абсолютната стойност на дадения номер. Например, -32.233 ще върне 32.233.
+
+            </summary>
+      <param name="number">
+
+            Числото, за което ще получите абсолютна стойност.
+
+            </param>
+      <returns>
+
+            Абсолютната стойност на даденото число.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Ceiling(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Връща най-малкото цяло число, което е по-голямо или равно на аргумента. Закръглява към горната цяла стойност.
+
+            Например 32.233 ще върне 33. Също 44 ще върнат 44.
+
+            </summary>
+      <param name="number">
+
+            Номерът, чийто таван е необходим.
+
+            </param>
+      <returns>
+
+            Стойността на тавана на даден номер.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Floor(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Връща най-голямото цяло число, което е по-малко или равно на аргумента. Закръглява към долната цяла стойност.
+
+            Например 32.233 ще върне 32. Също така, 44 ще върнат 44.
+
+            </summary>
+      <param name="number">
+
+            Номерът, чиято стойност на пода е необходима.
+
+            </param>
+      <returns>
+
+            Стойността на пода на дадения номер.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.NaturalLog(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава натуралната логаритмична стойност на даденото число.
+
+            </summary>
+      <param name="number">
+
+            Числото, чиято натурална логаритмична стойност искаме да намерим.
+
+            </param>
+      <returns>
+
+            Натурална логаритмична стойност на даденото число.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Log(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава стойността на логаритъма (база 10) на даденото число.
+
+            </summary>
+      <param name="number">
+
+            Номерът, чиято логаритмична стойност искаме да намерим.
+
+            </param>
+      <returns>
+
+            Логаритмичната стойност на даденото число.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Cos(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава косинуса на дадения ъгъл в радиани.
+
+            </summary>
+      <param name="angle">
+
+            Ъгълът, чийто косинус е необходим (в радиани).
+
+            </param>
+      <returns>
+
+            Косинусът на дадения ъгъл.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Sin(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава синуса на дадения ъгъл в радиани.
+
+            </summary>
+      <param name="angle">
+
+            Ъгълът, чийто задължителен диапазон е необходим (в радиани).
+
+            </param>
+      <returns>
+
+            Синусът на дадения ъгъл.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Tan(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава допирателната на съответния ъгъл в радиани.
+
+            </summary>
+      <param name="angle">
+
+            Ъгълът, чиято допирателна е необходима (в радиани).
+
+            </param>
+      <returns>
+
+            Допирателната към съответния ъгъл.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.ArcSin(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава ъгъла в радиани, като се има предвид стойността на грешката.
+
+            </summary>
+      <param name="sinValue">
+
+            Синусовата стойност, чийто ъгъл е необходим.
+
+            </param>
+      <returns>
+
+            Ъгълът (в радиани) за дадената синусова стойност.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.ArcCos(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава ъгъла в радиани, като се има предвид косинусната стойност.
+
+            </summary>
+      <param name="cosValue">
+
+            Косинусната стойност, чийто ъгъл е необходим.
+
+            </param>
+      <returns>
+
+            Ъгълът (в радиани) за дадена стойност на косинуса.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.ArcTan(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава ъгъла в радиани, като се има предвид допирателната стойност.
+
+            </summary>
+      <param name="tanValue">
+
+            Допирателната стойност, чийто ъгъл е необходим.
+
+            </param>
+      <returns>
+
+            Ъгълът (в радиани) за дадена тактична стойност.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.GetDegrees(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Преобразува определен ъгъл в радиани в градуси.
+
+            </summary>
+      <param name="angle">
+
+            Ъгълът в радианите.
+
+            </param>
+      <returns>
+
+            Преобразуваният ъгъл в градуси.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.GetRadians(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Преобразува определен ъгъл от градуси в радиани.
+
+            </summary>
+      <param name="angle">
+
+            Ъгълът в градуси.
+
+            </param>
+      <returns>
+
+            Преобразуваният ъгъл в радиани.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.SquareRoot(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава квадратен корен на дадено число.
+
+            </summary>
+      <param name="number">
+
+            Числото, чийто квадратен корен искаме да намерим.
+
+            </param>
+      <returns>
+
+            Стойността на квадратния корен на даденото число.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Power(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Вдига числото на дадената степен.
+
+            </summary>
+      <param name="baseNumber">
+
+            Числото, което трябва да бъде вдигнато на дадената степен.
+
+            </param>
+      <param name="exponent">
+
+            Степента за повишаване на числото.
+
+            </param>
+      <returns>
+
+            Резултатът от повдигането на даденото число на дадената степен.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Round(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Закръглява дадено число до най-близкото цяло число. Например 32.233 ще бъдат закръглени до 32.0 докато
+
+            32.566 ще бъдат закръглени до 33.
+
+            </summary>
+      <param name="number">
+
+            Числото, което искаме да закръглим.
+
+            </param>
+      <returns>
+
+            Закръглената стойност на даденото.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Max(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Сравнява две числа и връща по-голямото от двете.
+
+            </summary>
+      <param name="number1">
+
+            Първото от двете числа за сравнение.
+
+            </param>
+      <param name="number2">
+
+            Второто от двете числа за сравнение.
+
+            </param>
+      <returns>
+
+            По-голямата стойност на двете числа.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Min(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Сравнява две числа и връща по-малката от двете.
+
+            </summary>
+      <param name="number1">
+
+            Първото от двете числа за сравнение.
+
+            </param>
+      <param name="number2">
+
+            Второто от двете числа за сравнение.
+
+            </param>
+      <returns>
+
+            По-малката стойност на двете числа.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Remainder(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Разделя първото число на второто и връща остатъка.
+
+            </summary>
+      <param name="dividend">
+
+            Числото, което трябва да се раздели.
+
+            </param>
+      <param name="divisor">
+
+            Числото, което разделя.
+
+            </param>
+      <returns>
+
+            Остатъкът след делението.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.GetRandomNumber(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава произволен номер между 1 и зададения maxNumber (включително).
+
+            </summary>
+      <param name="maxNumber">
+
+            Максималната стойност за исканата случайна стойност.
+
+            </param>
+      <returns>
+
+            Случайно число, което е по-малко или равно на посочения максимум.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.DoubleToDecimal(System.Double)">
+      <summary>
+
+            Преобразува дробно до десетично число
+
+            </summary>
+      <param name="number">
+
+            Въведено число
+
+            </param>
+      <returns>
+
+            Резултат
+
+            </returns>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Math.Pi">
+      <summary>
+
+            Получава стойността на Пи.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.SmallBasicCallback">
+      <summary>
+
+            Обратна връзка за подпис, която ще бъде използвана от всички малки събития в библиотеката.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Mouse">
+      <summary>
+
+            Класът на мишката осигурява на аксесоарите да получат или зададат свързаните с мишката свойства, като позицията на курсора, показалеца и т.н.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Mouse.HideCursor">
+      <summary>
+
+            Скрива курсора на мишката от екрана.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Mouse.ShowCursor">
+      <summary>
+
+            Показва курсора на мишката на екрана.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseX">
+      <summary>
+
+            Настройва координата на курсора на мишката.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseY">
+      <summary>
+
+            Настройва координатите на курсора на мишката.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Mouse.IsLeftButtonDown">
+      <summary>
+
+            Определя дали е натиснат левият бутон.
+
+            </summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Mouse.IsRightButtonDown">
+      <summary>
+
+            Определя дали е натиснат десният бутон.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.NativeHelper">
+      <summary>
+
+            Частен статичен помощник за извикване на приложни програмни интерфейси.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Network">
+      <summary>
+
+            Този клас помощник осигурява методи за достъп до мрежата.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Network.DownloadFile(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Изтегля файла от мрежата в локален временен файл.
+
+            </summary>
+      <param name="url">
+
+            URL адресът на файла в мрежата.
+
+            </param>
+      <returns>
+
+            Локално име на файл, на което е изтеглен мрежовият файл.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Network.GetWebPageContents(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава съдържанието на определена уеб страница.
+
+            </summary>
+      <param name="url">
+
+            URL адресът на уеб страницата.
+
+            </param>
+      <returns>
+
+            Съдържанието на посочената уеб страница.
+
+            </returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Primitive">
+      <summary>
+
+            Примитивният тип представлява текст или число.
+
+            </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Text">
+      <summary>
+
+            Обектът Text предоставя полезни операции за работа с текст.
+
+            </summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.Append(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Добавя два входящи текста и връща резултата като друг текст. Тази операция е особено полезна, когато се занимавате с непознат текст и променливи, които случайно могат да се третират като числа и да се съберат, вместо да се добавят.
+
+            </summary>
+      <param name="text1">
+
+            Първата част от текста, който трябва да бъде добавен.
+
+            </param>
+      <param name="text2">
+
+            Втората част от текста, който трябва да бъде добавен.
+
+            </param>
+      <returns>
+
+            Приложеният текст съдържащ и двете посочени части.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetLength(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава дължината на дадения текст.
+
+            </summary>
+      <param name="text">
+
+            Текстът, чиято дължина е необходима.
+
+            </param>
+      <returns>
+
+            Дължината на дадения текст.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.IsSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава дали даден субтекст е подмножество на по-големия текст.
+
+            </summary>
+      <param name="text">
+
+            По-големият текст, в който ще се търси подтекстът.
+
+            </param>
+      <param name="subText">
+
+            Подтекстът, който търсите.
+
+            </param>
+      <returns>
+
+            Връща True, ако в съответния текст е намерен подтекстът.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.EndsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Определя дали даден текст завършва или не със зададения подтекст.
+
+            </summary>
+      <param name="text">
+
+            По-големият текст, в който ще се търси подтекстът.
+
+            </param>
+      <param name="subText">
+
+            Подтекстът, който искате да търсите.
+
+            </param>
+      <returns>
+
+            Връща True, ако подтекстът е намерен в края на дадения текст.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.StartsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Определя дали даден текст започва или не със зададения подтекст.
+
+            </summary>
+      <param name="text">
+
+            По-големият текст, в  който ще се търси подтекстът.
+
+            </param>
+      <param name="subText">
+
+            Подтекстът, който искате да търсите.
+
+            </param>
+      <returns>
+
+            Връща True, ако подтекстът е намерен в началото на дадения текст.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава подтекст от дадения текст.
+
+            </summary>
+      <param name="text">
+
+            Текстът за извличане на подтекста.
+
+            </param>
+      <param name="start">
+
+            Указва откъде да се започне.
+
+            </param>
+      <param name="length">
+
+            Определя дължината на подтекста.
+
+            </param>
+      <returns>
+
+            Поисканият подтекст.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetSubTextToEnd(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Получава подтекст от дадения текст от определена позиция до края.
+
+            </summary>
+      <param name="text">
+
+            Текстът за извличане на подтекста.
+
+            </param>
+      <param name="start">
+
+            Указва откъде да започне.
+
+            </param>
+      <returns>
+
+            Поисканият подтекст.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetIndexOf(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Намира позицията, в която се появява подтекст в посочения текст.
+
+            </summary>
+      <param name="text">
+
+            Текстът, в който да търсите.
+
+            </param>
+      <param name="subText">
+
+            Текстът, който търсите.
+
+            </param>
+      <returns>
+
+            Позицията, на която се появява подтекстът в посочения текст. Ако подтекстът не е открит, той връща 0.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToLowerCase(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Преобразува дадения текст в малки букви.
+
+            </summary>
+      <param name="text">
+
+            Текстът, който трябва да се преобразува в малки букви.
+
+            </param>
+      <returns>
+
+            Версията на текста, с малки букви.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToUpperCase(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Преобразува дадения текст в главни букви.
+
+            </summary>
+      <param name="text">
+
+            Текстът, който трябва да се преобразува в главни букви.
+
+            </param>
+      <returns>
+
+            Версията на текста, с главни букви.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacter(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            Като се има предвид кода на Unicode символа, получава съответния знак, който след това може да се използва с обикновен текст.
+
+            </summary>
+      <param name="characterCode">
+
+            Кодът на символите (базиран на Unicode) за желания знак.
+
+            </param>
+      <returns>
+
+            Unicode символ, който съответства на зададения код.
+
+            </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacterCode(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+
+            При даден Unicode символ, получава съответния символен код.
+
+            </summary>
+      <param name="character">
+
+            Знакът, чийто код се изисква.
+
+            </param>
+      <returns>
+
+            Код, базиран на Unicode, който съответства на посочения знак.
+
+            </returns>
+    </member>
+  </members>
+</doc>
