@@ -131,7 +131,6 @@ export class TutorialComponent implements OnInit {
 
   ngOnInit() {
     // Listen to route changes to see if we're on the base page or not
-    // Doing this on 
     this.routeSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isOnBasePage = this.route.children.length == 0;
