@@ -1,212 +1,141 @@
-<div class="cls_004">
-  <span id="chapterTitle" class="cls_004">Chapter 2</span>
-</div>
-<div class="cls_005">
-  <span class="cls_005">Understanding Our First Program</span>
-</div>
-
-<div class="BostonPostCard">
-  <h3 style="margin-bottom: 20px;">
-    <a name="What_really_is_a_computer_program?"
-      >What really is a computer program?</a
-    >
-  </h3>
-  <p style="margin-bottom: 20px;">
-    A program is a set of instructions for the computer. These instructions tell
-    the computer precisely what to do, and the computer always follows these
-    instructions. Just like people, computers can only follow instructions if
-    specified in a language they can understand. These are called programming
-    languages. There are very many languages that the computer can understand
-    and <strong>Small Basic</strong> is one.
-  </p>
-  <p style="margin-bottom: 20px;">
-    Imagine a conversation happening between you and your friend. You and your
-    friends would use words, organized as sentences to convey information back
-    and forth. Similarly, programming languages contain collections of words
-    that can be organized into sentences that convey information to the
-    computer. And programs are basically sets of sentences (sometimes just a few
-    and sometimes many thousands) that together make sense to both the
-    programmer and the computer alike.
-  </p>
-</div>
-
-<div class="cls_012">
-  <span class="cls_012"
-    >There are many languages that the computer can understand. Java, C++,
-    Python, VB, etc. are all powerful modern computer languages that are used to
-    develop simple to complex software programs.</span
-  >
-</div>
-
-<div class="BostonPostCard">
-  <h3 style="margin-bottom: 20px;">
-    <a name="Small_Basic_Programs"></a>Small Basic Programs
-  </h3>
-  <p style="margin-bottom: 20px;">
-    A typical Small Basic program consists of a bunch of statements. Every line
-    of the program represents a statement and every statement is an instruction
-    for the computer. When we ask the computer to execute a Small Basic program,
-    it takes the program and reads the first statement. It understands what
-    we’re trying to say and then executes our instruction͘ Once it’s done
-    executing our first statement, it comes back to the program and reads and
-    executes the second line. It continues to do so until it reaches the end of
-    the program. That is when our program finishes.
-  </p>
-</div>
-<div class="BostonPostCard">
-  <h3 style="margin-bottom: 20px;">
-    <a name="Back_to_Our_First_Program"></a>Back to Our First Program
-  </h3>
-  <p style="margin-bottom: 20px;">
-    Here is the first program we wrote:
-  </p>
+<div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
+  <h2 class="title">Chapter 2: Understanding Our First Program</h2>
+  <div class="BostonPostCard">
+    <h3>
+      <a name="understanding_our_first_program"></a>What really is a computer program?
+    </h3>
+    <p style="margin-bottom: 20px;">
+      A program is a set of instructions for the computer. These instructions
+      tell the computer precisely what to do, and the computer always follows
+      these instructions. Just like people, computers can only follow instructions
+      if specified in a language they can understand. These are called programming
+      languages. There are very many languages that the computer can understand
+      and Small Basic is one.
+    </p>
+    <p style="margin-bottom: 20px;">
+      Imagine a conversation happening between you and your friend. You
+      and your friends would use words, organized as sentences to convey information back and forth. Similarly,
+      programming languages contain collections of words that can be organized into sentences that convey
+      information to the computer. And programs are basically sets of sentences
+      (sometimes just a few and sometimes many thousands) that together make sense to both the programmer and the computer alike.
+      There are many languages that the computer can understand. Java, C++, Python, VB, etc. are all powerful modern computer languages that
+      are used to develop simple to complex software programs.
+    </p>
+    <h3>
+      <a name="small_basic_programs"></a>Small Basic Programs
+    </h3>
+    <p>
+      A typical Small Basic program consists of a bunch
+      programs statements
+      . Every line of the program represents a statement and every statement is
+      an instruction for the computer. When we ask the computer to execute a Small
+      Basic program, it takes the program and reads the first statement. It
+      understands what we’re trying to say and then executes our instruction͘ Once
+      it’s done executing our first statement, it comes back to the program and
+      reads and executes the second line. It continues to do so until it reaches
+      the end of the program. That is when our program finishes.
+    </p>
+    <p style="text-align: center;">
+      <img title="Figure 2.1"
+           alt="Figure 2.1"
+           src="4eb7fd24-acbd-11e9-9d71-0cc47a792c0a_id_4eb7fd24-acbd-11e9-9d71-0cc47a792c0a_files/background07.jpg" />
+    </p>
+    <h3>
+      <a name="our_first_program"></a>Back to Our First Program
+    </h3>
+  </div>
   <div class="CodeHighlighter">
     <pre><code class="visual basic">TextWindow.WriteLine("Hello World")</code></pre>
   </div>
-  <p style="margin-bottom: 20px;">
-    This is a very simple program that consists of one statement. That statement
-    tells the computer to write a line of text which is Hello World , into the
-    Text Window. It literally translates in the computer’s mind to:
-  </p>
-  <div class="CodeHighlighter">
-    <pre><code class="visual basic">Write Hello World</code></pre>
-  </div>
-  <p style="margin-bottom: 20px;">
-    You might have already noticed that the statement can in turn be split into
-    smaller segments much like sentences can be split into words. In the first
-    statement we have 3 distinct segments:
-  </p>
-  <ol type="a" style="font-weight: normal;">
-    <li>TextWindow</li>
-    <li>WriteLine</li>
-    <li>“Hello World”</li>
-  </ol>
-  <p style="margin-bottom: 20px;">
-    The dot, parentheses and the quotes are all punctuations that have to be
-    placed at appropriate positions in the statement, for the computer to
-    understand our intent.
-  </p>
-  <p style="margin-bottom: 20px;">
-    You might remember the black window that appeared when we ran our first
-    program. That black window is called the TextWindow or sometimes referred to
-    as the Console. That is where the result of this program goes. TextWindow,
-    in our program, is called an object. There are a number of such objects
-    available for us to use in our programs. We can perform several different
-    operations on these objects. We’ve already used the WriteLine operation in
-    our program. You might also have noticed that the WriteLine operation is
-    followed by Hello World inside quotes. This text is passed as input to the
-    WriteLine operation, which it then prints out to the user. This is called an
-    input to the operation. Some operations take one or more inputs while others
-    don’t take any͘.
-  </p>
-
-  <div class="cls_012">
-    <span class="cls_012"
-      >Punctuations such as quotes, spaces and parenthesis are very important in
-      a computer program. Based on their position and count, they can change the
-      meaning of what is being expressed
-    </span>
-  </div>
-
   <div class="BostonPostCard">
-    <h3 style="margin-bottom: 20px;">
-      <a name="Our_Second_Program"></a>Our Second Program
+    <p>
+      This is a very simple program that consists of one statement
+      That statement tells the computer to write a line of text which is
+      Hello World, into the Text Window. It literally translates in the computer’s mind to:
+      Write Hello World. You might have already noticed that the statement can in turn
+      be split into smaller segments much like sentences can be split into words.
+      In the first statement we have 3 distinct segments: a) TextWindow b)
+      WriteLine c) “Hello World” The dot, parentheses and the quotes are all
+      punctuations that have to be placed at appropriate positions in the
+      statement, for the computer to understand our intent. You might remember the
+      black window that appeared when we ran our first program. That black window
+      is called the TextWindow or sometimes referred to as the Console. That is
+      where the result of this program goes.
+    </p>
+    <p>
+      The TextWindowis called an object. There are a number of such objects available for us to use in our
+      programs. We can perform several different operations
+      on these objects. We’ve already used the WriteLine<
+      operation in our program. You might also have noticed that the WriteLine
+      operation is followed by Hello inside quotes. This text is passed as input
+    </p>
+    <p>
+      Punctuations such as quotes, spaces and parenthesis are very important in a computer out to the user. This is called an
+      input to the program. Based on their position and count,
+      operation. Some operations take one or more
+      they can change the meaning of what is being
+      inputs while others don’t take any͘
+      expressed.
+    </p>
+    <h3>
+      <a name="our_second_program"></a>Our Second Program
     </h3>
-    <p style="margin-bottom: 20px;">
+    <p>
       Now that you have understood our first program, let’s go ahead and make it
       fancier by adding some colors.
     </p>
   </div>
-
   <div class="CodeHighlighter">
     <pre><code class="visual basic">
-      TextWindow.ForegroundColor = "Yellow"
-      TextWindow.WriteLine("Hello World")
-    </code></pre>
+  TextWindow.ForegroundColor = "Yellow"
+</code><code class="visual basic">
+  TextWindow.WriteLine("Hello World")
+</code></pre>
   </div>
-
-  <div>
-    <div style="left:0px;top:0px">
-      <img src="../../../../assets/tutorial/chapter2/1-adding-colors.jpg" />
-    </div>
-    <div class="cls_008">
-      <span class="cls_008">Figure 5 - Adding Colors</span>
-    </div>
-
-    <div class="cls_007">
-      <p>
-        When you run the above program, you’ll notice that it prints out the
-        same “Hello World” phrase inside TextWindow, but this time it prints it
-        out in yellow instead of the gray that it did earlier.
-      </p>
-    </div>
-    <div style="left:0px;top:0px">
-      <img
-        src="../../../../assets/tutorial/chapter2/2-hello-world-in-yellow.jpg"
-      />
-    </div>
-
-    <div class="cls_008">
-      <span class="cls_008">Figure 6 - Hello World in Yellow</span>
-    </div>
-  </div>
-
-  <div class="cls_007">
-    <span class="cls_007"
-      >Notice the new statement we added to our original program. It uses a new
-      word, </span
-    ><span class="cls_010">ForegroundColor which we equated to a value of </span
-    ><span class="cls_010">“Yellow.”</span><span class="cls_016"> </span
-    ><span class="cls_007">This</span><span class="cls_016"> </span
-    ><span class="cls_007">means we’ve </span
-    ><span class="cls_010">assigned</span
-    ><span class="cls_007"> “Yellow” to </span
-    ><span class="cls_010"
-      >ForegroundColor. Now, the difference between ForegroundColor and the
-      operation WriteLine is that ForegroundColor did not take any inputs nor
-      did it need any parenthesis. Instead it was followed by an </span
-    ><span class="cls_010">equals to</span
-    ><span class="cls_007">
-      symbol and a word. We define ForegroundColor as a </span
-    ><span class="cls_010">Property</span
-    ><span class="cls_007">
-      of TextWindow. Here is a list of values that are valid for the
+  <div class="BostonPostCard">
+    <p style="text-align: center;">
+      <img title="Figure 2.2"
+           alt="Figure 2.2"
+           src="4eb7fd24-acbd-11e9-9d71-0cc47a792c0a_id_4eb7fd24-acbd-11e9-9d71-0cc47a792c0a_files/background08.jpg" />
+    </p>
+    <p>
+      When you run the above program, you’ll notice that it prints out the same
+      “Hello World” phrase inside  TextWindow, but this time it prints it out in yellow instead of the gray
+      that it did earlier. Notice the new statement we added to our original program. It uses a new
+      word, ForegroundColor which we equated to a value of “Yellow.” This means we’ve  assigned “Yellow” to ForegroundColor. Now, the difference between ForegroundColor and the
+      operation WriteLine is that ForegroundColor did not take any inputs nor did
+      it need any parenthesis. Instead it was followed by an of TextWindow. Here is a list of values that are valid for the
       ForegroundColor property. Try replacing “Yellow” with one of these and see
-      the results - don’t forget the quotes, they are required
-      punctuations.</span
-    >
-  </div>
-
-  <div class="cls_011"><span class="cls_011">Black</span></div>
-  <div class="cls_011"><span class="cls_011">Blue</span></div>
-  <div class="cls_011"><span class="cls_011">Cyan</span></div>
-  <div class="cls_011"><span class="cls_011">Gray</span></div>
-  <div class="cls_011"><span class="cls_011">Green</span></div>
-  <div class="cls_011"><span class="cls_011">Magenta</span></div>
-  <div class="cls_011"><span class="cls_011">Red</span></div>
-  <div class="cls_011"><span class="cls_011">White</span></div>
-
-  <div>
-    <img
-      src="4eb7fd24-acbd-11e9-9d71-0cc47a792c0a_id_4eb7fd24-acbd-11e9-9d71-0cc47a792c0a_files/background09.jpg"
-    />
-  </div>
-
-  <div class="cls_011"><span class="cls_011">Yellow</span></div>
-  <div class="cls_011"><span class="cls_011">DarkBlue</span></div>
-  <div class="cls_011"><span class="cls_011">DarkCyan</span></div>
-  <div class="cls_011"><span class="cls_011">DarkGray</span></div>
-  <div class="cls_011"><span class="cls_011">DarkGreen</span></div>
-  <div class="cls_011"><span class="cls_011">DarkMagenta</span></div>
-  <div class="cls_011"><span class="cls_011">DarkRed</span></div>
-  <div class="cls_011"><span class="cls_011">DarkYellow</span></div>
-
-  <div>
-    <a style="float: left;" routerLink="../chapter1" title="Previous Chapter"
-      >Previous Chapter: Getting Started</a
-    >
-    <a style="float: right;" routerLink="../chapter3" title="Next Chapter"
-      >Next Chapter: Variables</a
-    >
+      the results - don’t forget the quotes, they are required punctuations.
+    </p>
+    <div>
+      <div class="cls_011"><span class="cls_011">Black</span></div>
+      <div class="cls_011"><span class="cls_011">Blue</span></div>
+      <div class="cls_011"><span class="cls_011">Cyan</span></div>
+      <div class="cls_011"><span class="cls_011">Gray</span></div>
+      <div class="cls_011"><span class="cls_011">Green</span></div>
+      <div class="cls_011"><span class="cls_011">Magenta</span></div>
+      <div class="cls_011"><span class="cls_011">Red</span></div>
+      <div class="cls_011"><span class="cls_011">White</span></div>
+    </div>
+    <p style="text-align: center;">
+      <img title="Figure 2.3"
+           alt="Figure 2.3"
+           src="4eb7fd24-acbd-11e9-9d71-0cc47a792c0a_id_4eb7fd24-acbd-11e9-9d71-0cc47a792c0a_files/background09.jpg" />
+    </p>
+    <div>
+      <div class="cls_011"><span class="cls_011">Yellow</span></div>
+      <div class="cls_011"><span class="cls_011">DarkBlue</span></div>
+      <div class="cls_011"><span class="cls_011">DarkCyan</span></div>
+      <div class="cls_011"><span class="cls_011">DarkGray</span></div>
+      <div class="cls_011"><span class="cls_011">DarkGreen</span></div>
+      <div class="cls_011"><span class="cls_011">DarkMagenta</span></div>
+      <div class="cls_011"><span class="cls_011">DarkRed</span></div>
+      <div class="cls_011"><span class="cls_011">DarkYellow</span></div>
+    </div>
+    <div>
+      <a style="float: left;" routerLink="../chapter1" title="Previous Chapter">Previous Chapter: Getting Started</a>
+      <a style="float: right;" routerLink="../chapter3" title="Next Chapter">Next Chapter: Variables</a>
+    </div>
   </div>
 </div>
