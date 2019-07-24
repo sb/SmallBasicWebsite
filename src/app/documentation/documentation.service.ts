@@ -71,8 +71,7 @@ export class DocumentationService {
       { name: "ko", summary: "한국어" },
       { name: "nl", summary: "Nederlands" },
       { name: "pl", summary: "polski" },
-      { name: "pt", summary: "português" },
-      //{ name: "pt-br", summary: "???" }, // TODO: is this português (Brazil) ?
+      { name: "pt", summary: "português (Brasil)" },
       { name: "pt-pt", summary: "português (Portugal)" },
       { name: "tr", summary: "Türkçe" },
       { name: "zh-Hans", summary: "中文(简体)" },
