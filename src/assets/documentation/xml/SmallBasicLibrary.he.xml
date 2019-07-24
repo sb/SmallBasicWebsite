@@ -1,0 +1,2553 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmallBasicLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SmallBasic.Library.Text">
+            <summary>
+            אובייקט ה-Text (טקסט) מספק פעולות שימושיות לעבודה עם טקסט (מילים).
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.Append(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מצרפת שני קלטי טקסט ומחזירה את התוצאה כטקסט חדש. פעולה זו שימושית במיוחד כאשר יש שני משתנים עם טקסט שאינו ידוע ובמקרה והטקסטים הם מספרים התוצאה תהיה חיבור ולא צירוף.
+            </summary>
+            <param name="text1">
+            החלק הראשון של הטקסט לצירוף.
+            </param>
+            <param name="text2">
+            החלק השני של הטקסט לצירוף.
+            </param>
+            <returns>
+            הטקסט המצורף משני החלקים.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetLength(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את אורכו של הטקסט הנתון.
+            </summary>
+            <param name="text">
+            הטקסט שאורכו נדרש.
+            </param>
+            <returns>
+            האורך של הטקסט הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.IsSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה אם טקסט החיפוש הוא חלק מטקסט בו מחפשים, או לא.
+            </summary>
+            <param name="text">
+            טקסט המקור שיש לחפש בו את תת-הטקסט.
+            </param>
+            <param name="subText">
+            תת-הטקסט שיש לחפש.
+            </param>
+            <returns>
+            True (אמת) במידה ותת-הטקסט נמצא בטקסט המקורי, אחרת False (שקר).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.EndsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה אם הטקסט הנחקר מסתיים בתת-הטקסט, או לא.
+            </summary>
+            <param name="text">
+            טקסט המקור שיש לחפש בו את תת-הטקסט.
+            </param>
+            <param name="subText">
+            תת-הטקסט שיש לחפש.
+            </param>
+            <returns>
+            True (אמת) במידה ותת-הטקסט נמצא בסוף הטקסט המקורי, אחרת False (שקר).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.StartsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה אם הטקסט החיפוש מתחיל בתת-הטקסט, או לא.
+            </summary>
+            <param name="text">
+            טקסט המקור שיש לחפש בו את תת-הטקסט.
+            </param>
+            <param name="subText">
+            תת-הטקסט שיש לחפש.
+            </param>
+            <returns>
+            True (אמת) במידה ותת-הטקסט נמצא בתחילת הטקסט המקורי, אחרת False (שקר).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה תת-טקסט מתוך הטקסט המקורי.
+            </summary>
+            <param name="text">
+            הטקסט שממנו יש להחזיר תת-טקסט.
+            </param>
+            <param name="start">
+            מציין מאיפה להתחיל את ההעברה מהטקסט.
+            </param>
+            <param name="length">
+            מציין את אורכו של תת-הטקסט.
+            </param>
+            <returns>
+            תת-הטקסט המבוקש.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubTextToEnd(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה תת-טקסט ממיקום מסוים בטקסט המקור ועד לסופו.
+            </summary>
+            <param name="text">
+            הטקסט שממנו יש להחזיר תת-טקסט.
+            </param>
+            <param name="start">
+            מציין מאיפה להתחיל את ההעברה מהטקסט.
+            </param>
+            <returns>
+            תת-הטקסט המבוקש.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetIndexOf(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחפשת את המיקום של תת-טקסט בטקסט המקור.
+            </summary>
+            <param name="text">
+            הטקסט שבו יש לחפש.
+            </param>
+            <param name="subText">
+            הטקסט לחיפוש.
+            </param>
+            <returns>
+            המיקום שבו מופיע תת-הטקסט בטקסט המקורי. אם הטקסט אינו מופיע מוחזר 0.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToLowerCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            ממיר את הטקסט המועבר לאותיות קטנות (באלף-בית אירופי).
+            </summary>
+            <param name="text">
+            הטקסט להמרה לאותיות קטנות.
+            </param>
+            <returns>
+            הטקסט המומר לאותיות קטנות.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToUpperCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            ממיר את הטקסט המועבר לאותיות גדולות (באלף-בית אירופי).
+            </summary>
+            <param name="text">
+            הטקסט להמרה לאותיות גדולות.
+            </param>
+            <returns>
+            הטקסט המומר לאותיות גדולות.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacter(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            בהינתן קוד Unicode של תו, מחזירה את התו המתאים הניתן לשימוש בטקסט רגיל.
+            </summary>
+            <param name="characterCode">
+            הקוד (מבוסס Unicode) של התו המבוקש.
+            </param>
+            <returns>
+            תו ה-Unicode המתאים לקוד שצוין.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacterCode(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            בהינתן תו Unicode מחזירה את הקוד שלו.
+            </summary>
+            <param name="character">
+            התו שמעוניינים בקוד שלו.
+            </param>
+            <returns>
+            הקוד (מבוסס Unicode) המתאים לתו שצוין.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Mouse">
+            <summary>
+            אובייקט ה-Mouse (עכבר) מספק גישה אל מאפייני העכבר, כגון מיקום הסמן, המצביע וכדו'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.HideCursor">
+            <summary>
+            מסתירה את סמן העכבר מהמסך.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.ShowCursor">
+            <summary>
+            מציגה את סמן העכבר על המסך.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseX">
+            <summary>
+            מחזירה או מעדכנת את קואורדינטת ה-x של סמן העכבר.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseY">
+            <summary>
+            מחזירה או מעדכנת את קואורדינטת ה-y של סמן העכבר.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsLeftButtonDown">
+            <summary>
+            מחזירה האם הכפתור השמאלי של העכבר לחוץ או לא.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsRightButtonDown">
+            <summary>
+            מחזירה האם הכפתור הימני של העכבר לחוץ או לא.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Desktop">
+            <summary>
+            אוביקט ה-Desktop מספק פעולות הקשורות לשלחן העבודה.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Desktop.SetWallPaper(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            משנה את התמונה המצויינת בתור הרקע של שולחן העבודה. התמונה יכולה להיות קובץ מקומי, ברשת או כתובת באינטרנט.
+            </summary>
+            <param name="fileOrUrl">
+            שם הקובץ או המיקום באינטרנט (URL) של התמונה.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Width">
+            <summary>
+            מחזירה את רוחב המסך של שולחן העבודה הראשי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Height">
+            <summary>
+            מחזירה את גובה המסך של שולחן העבודה הראשי.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication">
+            <summary>
+            אובייקט (class) האפליקציה מספק ל-Small Basic תוכנית עם אובייקט אפליקציה.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication.Dispatcher">
+            <summary>
+            מקבלת את המשלח (dispatcher) מתוכנית ה-SmallBasic
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.ImageList">
+            <summary>
+            אוביקט ה-ImageList (רשימת תמונות) עוזר לטעון ולאחסן תמונות מ\אל הזיכרון.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.LoadImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            טוענת קובץ תמונה מהדיסק או מהאינטרנט לזיכרון.
+            </summary>
+            <param name="fileNameOrUrl">
+            שם הקובץ לטעינה. יכול להיות קובץ מקומי או מיקום באינטרנט (URL).
+            </param>
+            <returns>
+            שם התמונה שנטענה.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.ClipImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            גוזרת חלק מתמונה המועברת ומחזירה תמונה חדשה לפי הגבולות שהוגדרו.
+            </summary>
+            <param name="imageName">
+            התמונה המקורית שאותה יש לגזור.
+            </param>
+            <param name="left">
+            קואורדינטת ה-x של המלבן לגזירה.
+            </param>
+            <param name="top">
+            קואורדינטת ה-y של המלבן לגזירה.
+            </param>
+            <param name="width">
+            הרוחב של המלבן לגזירה.
+            </param>
+            <param name="height">
+            הגובה של המלבן לגזירה.
+            </param>
+            <returns>
+            התמונה שנגזרה.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetWidthOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הרוחב של תמונה טעונה.
+            </summary>
+            <param name="imageName">
+            שם התמונה בזיכרון.
+            </param>
+            <returns>
+            רוחב התמונה שצוינה.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetHeightOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הגובה של תמונה טעונה.
+            </summary>
+            <param name="imageName">
+            שם התמונה בזיכרון.
+            </param>
+            <returns>
+            גובה התמונה שצוינה.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Timer">
+            <summary>
+            אוביקט ה-Timer (קוצב זמן) מספק דרך פשוטה לבצע פעולה שוב ושוב במרווח זמן קבוע.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Pause">
+            <summary>
+            משהה את  השעון, אירועי תקתוק שעון לא יישלחו.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Resume">
+            <summary>
+            מחדשת את פעולת קוצב הזמן לאחר השהייה. אירועי תקתוק שעון שוב נשלחים.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Timer.Interval">
+            <summary>
+            מחזירה או משנה את המרווח (במילישניות) המציין בכל כמה זמן נשלח אירוע תקתוק שעון. הערך יכול להיות בטווח 10 עד 100,000,000.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Timer.Tick">
+            <summary>
+            שולחת אירוע בתקתוק קוצב הזמן.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.SmallBasicCallback">
+            <summary>
+            חתימת התקשורת החוזרת (signature callback) שתהיה בשימוש ספריית הארועים של Small Basic
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Stack">
+            <summary>
+            אוביקט ה-Stack (מחסנית) משמש לאחסון ערכים בסגנון של ערימת צלחות. אפשר לדחוף ערך לראש המחסנית ואפשר לשלוף אותו משם. ניתן לשלוף ערכים רק אחד אחרי השני מהמחסנית כך שערך שנדחף אחרון יהיה הראשון שיישלף.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PushValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            דוחפת ערך לראש המחסנית שצוינה.
+            </summary>
+            <param name="stackName">
+            שם המחסנית.
+            </param>
+            <param name="value">
+            הערך לדחיפה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.GetCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את מספר הפריטים במחסנית שצוינה.
+            </summary>
+            <param name="stackName">
+            שם המחסנית.
+            </param>
+            <returns>
+            מספר הפריטים במחסנית.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PopValue(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            שולפת ערך מהמחסנית שצוינה.
+            </summary>
+            <param name="stackName">
+            שם המחסנית.
+            </param>
+            <returns>
+            הערך מהמחסנית.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Primitive">
+            <summary>
+            הסוג הבסיסי המייצג טקסט או מספר.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.NativeHelper">
+            <summary>
+            פעולת עזר סטטית פרטית לקריאה ל-APIs מקומיים
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.GraphicsWindow">
+            <summary>
+            אוביקט ה-GraphicsWindow (חלון גראפי) מספק פעולות קלט ופלט גראפיות. למשל, באמצעות אוביקט זה אפשר לצייר ולמלא עיגולים ומרובעים.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Show">
+            <summary>
+            מציגה את החלון הגראפי כדי לאפשר אינטראקציה איתו.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Hide">
+            <summary>
+            מסתירה את החלון הגראפי.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת מלבן על המסך באמצעות העט הנבחר.
+            </summary>
+            <param name="x">
+            קואורדינטת ה-x של המלבן.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של המלבן.
+            </param>
+            <param name="width">
+            רוחבו של המלבן.
+            </param>
+            <param name="height">
+            גובהו של המלבן.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת וממלאת מלבן על המסך באמצעות המברשת הנבחרת.
+            </summary>
+            <param name="x">
+            קואורדינטת ה-x של המלבן.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של המלבן.
+            </param>
+            <param name="width">
+            רוחבו של המלבן.
+            </param>
+            <param name="height">
+            גובהו של המלבן.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת אליפסה (אובל) על המסך באמצעות העט הנבחר.
+            </summary>
+            <param name="x">
+            קואורדינטת ה-x של האליפסה.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של האליפסה.
+            </param>
+            <param name="width">
+            רוחבה של האליפסה.
+            </param>
+            <param name="height">
+            גובהה של האליפסה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת וממלאת אליפסה (אובל) על המסך באמצעות המברשת הנבחרת.
+            </summary>
+            <param name="x">
+            קואורדינטת ה-x של האליפסה.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של האליפסה.
+            </param>
+            <param name="width">
+            רוחבה של האליפסה.
+            </param>
+            <param name="height">
+            גובהה של האליפסה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת משולש על המסך באמצעות העט הנבחר.
+            </summary>
+            <param name="x1">
+            קואורדינטת ה-x של הנקודה הראשונה.
+            </param>
+            <param name="y1">
+            קואורדינטת ה-y של הנקודה הראשונה.
+            </param>
+            <param name="x2">
+            קואורדינטת ה-x של הנקודה השניה.
+            </param>
+            <param name="y2">
+            קואורדינטת ה-y של הנקודה השניה.
+            </param>
+            <param name="x3">
+            קואורדינטת ה-x של הנקודה השלישית.
+            </param>
+            <param name="y3">
+            קואורדינטת ה-y של הנקודה השלישית.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת וממלאת משולש על המסך באמצעות המברשת הנבחרת.
+            </summary>
+            <param name="x1">
+            קואורדינטת ה-x של הנקודה הראשונה.
+            </param>
+            <param name="y1">
+            קואורדינטת ה-y של הנקודה הראשונה.
+            </param>
+            <param name="x2">
+            קואורדינטת ה-x של הנקודה השניה.
+            </param>
+            <param name="y2">
+            קואורדינטת ה-y של הנקודה השניה.
+            </param>
+            <param name="x3">
+            קואורדינטת ה-x של הנקודה השלישית.
+            </param>
+            <param name="y3">
+            קואורדינטת ה-y של הנקודה השלישית.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת קו בין שתי נקודות.
+            </summary>
+            <param name="x1">
+            קואורדינטת ה-x של הנקודה הראשונה.
+            </param>
+            <param name="y1">
+            קואורדינטת ה-y של הנקודה הראשונה.
+            </param>
+            <param name="x2">
+            קואורדינטת ה-x של הנקודה השניה.
+            </param>
+            <param name="y2">
+            קואורדינטת ה-y של הנקודה השניה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת שורת טקסט על המסך במקום שצוין.
+            </summary>
+            <param name="x">
+            קואורדינטת ה-x של נקודת התחלת הטקסט.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של נקודת התחלת הטקסט.
+            </param>
+            <param name="text">
+            הטקסט לציור.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawBoundText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת שורת טקסט על המסך במקום שצוין, רוחב הציון חסום.
+            </summary>
+            <param name="x">
+            קואורדינטת ה-x של נקודת התחלת הטקסט.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של נקודת התחלת הטקסט.
+            </param>
+            <param name="width">
+            הרוחב המקסימלי האפשרי. פרמטר זה מגדיר היכן הטקסט צריך לגלוש.
+            </param>
+            <param name="text">
+            הטקסט לציור.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawResizedImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת את התמונה שצוינה על המסך בגודל שצוין.
+            </summary>
+            <param name="imageName">
+            שם התמונה שיש לצייר.
+            </param>
+            <param name="x">
+            קואורדינטת ה-x של הנקודת בה יש לצייר את התמונה.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של הנקודת בה יש לצייר את התמונה.
+            </param>
+            <param name="width">
+            הרוחב לציור התמונה.
+            </param>
+            <param name="height">
+            הגובה לציור התמונה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת את התמונה שצוינה על המסך.  
+            </summary>
+            <param name="imageName">
+            שם התמונה שיש לצייר.
+            </param>
+            <param name="x">
+            קואורדינטת ה-x של הנקודת בה יש לצייר את התמונה.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של הנקודת בה יש לצייר את התמונה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.SetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציירת את הפיקסל המצוין בקואורדינטות x ו-y בעזרת הצבע שצוין.
+            </summary>
+            <param name="x">
+            קואורדינטת ה-x של הפיקסל.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של הפיקסל.
+            </param>
+            <param name="color">
+            צבע הפיקסל לציור.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את צבע הפיקסל בקואורדינטות x ו-y.
+            </summary>
+            <param name="x">
+            קואורדינטת ה-x של הפיקסל.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של הפיקסל.
+            </param>
+            <returns>
+            צבעו של הפיקסל.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetRandomColor">
+            <summary>
+            מחזירה צבע אקראי תקף.
+            </summary>
+            <returns>
+            צבע אקראי תקף.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetColorFromRGB(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה צבע המורכב מערכי אדום, ירוק וכחול.
+            </summary>
+            <param name="red">
+            הרכיב האדום של הצבע (0-255).
+            </param>
+            <param name="green">
+            הרכיב הירוק של הצבע (0-255).
+            </param>
+            <param name="blue">
+            הרכיב הכחול של הצבע (0-255).
+            </param>
+            <returns>
+            מחזירה צבע תקף שניתן להשתמש בו לקביעת הצבע של עט או מברשת.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Clear">
+            <summary>
+            מנקה את החלון.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.ShowMessage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציגה תיבת הודעה למשתמש.
+            </summary>
+            <param name="text">
+            הטקסטשיוצג בתיבת ההודעה.
+            </param>
+            <param name="title">
+            הכותרת של תיבת ההודעה.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BackgroundColor">
+            <summary>
+            מחזירה או מעדכנת את צבע הרקע של החלון הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BrushColor">
+            <summary>
+            מחזירה או מעדכנת את צבע המברשת המשמשת למילוי של צורות המצוירות על החלון הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.CanResize">
+            <summary>
+            מציינת אם ניתןלשנות את גודלו של החלון הגראפי, או לא.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenWidth">
+            <summary>
+            מחזירה או מעדכנת את רוחבו של העט המשמש לציור צורות על המסך הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenColor">
+            <summary>
+            מחזירה או מעדכנת את צבע העט המשמש לציור צורות על המסך הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontName">
+            <summary>
+            מחזירה או מעדכנת את שם הגופן (פונט) המשמש לציור טקסט על המסך הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontSize">
+            <summary>
+            מחזירה או מעדכנת את גודל הגופן (פונט) המשמש לציור טקסט על המסך הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontBold">
+            <summary>
+            מעדכנת או מחזירה אם הגופן (פונט) המשמש לציור טקסט על המסך הגראפי מודגש.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontItalic">
+            <summary>
+            מציינת אם הגופן (פונט) המשמש לציור טקסט על המסך הגראפי מוטה.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Title">
+            <summary>
+            מחזירה או מעדכנת את הכותרת של החלון הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Height">
+            <summary>
+            מחזירה או מעדכןנת את גובהו של החלון הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Width">
+            <summary>
+            מחזירה או מעדכנת את רוחבו של החלון הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Left">
+            <summary>
+            מחזירה או מעדכנת את המיקום השמאלי של החלון הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Top">
+            <summary>
+            מחזירה או מעדכנת את המיקום העליון של החלון הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastKey">
+            <summary>
+            מחזירה את המקש האחרון שנלחץ או שוחרר.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastText">
+            <summary>
+            מחזירה את הטקסט האחרון שהוזן לחלון הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseX">
+            <summary>
+            מחזירה את מיקום ה-x של העכבר יחסית לחלון הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseY">
+            <summary>
+            מחזירה את מיקום ה-y של העכבר יחסית לחלון הגראפי.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyDown">
+            <summary>
+            שולחת אירוע כאשר מקש נלחץ במקלדת.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyUp">
+            <summary>
+            שולחת אירוע כאשר מקש משוחרר במקלדת.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseDown">
+            <summary>
+            שולחת אירוע כאשר כפתור העכבר נלחץ למטה.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseUp">
+            <summary>
+            שולחת אירוע כאשר כפתור העכבר משוחרר.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseMove">
+            <summary>
+            שולחת אירוע כאשר העכבר מוזז.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.TextInput">
+            <summary>
+            שולחת אירוע כאשר טקסט מוזן לחלון הגראפי.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Clock">
+            <summary>
+            אוביקט ה-Clock (שעון) מספק גישה לשעון המערכת.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Time">
+            <summary>
+            מחזירה את הזמן הנוכחי של המערכת.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Date">
+            <summary>
+            מחזירה את התאריך הנוכחי של המערכת.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Year">
+            <summary>
+            מחזירה את השנה הנוכחית.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Month">
+            <summary>
+            מחזירה את החודש הנוכחי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Day">
+            <summary>
+            מחזירה את היום בחודש הנוכחי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.WeekDay">
+            <summary>
+            מחזירה את היום בשבוע הנוכחי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Hour">
+            <summary>
+            מחזירה את השעה הנוכחית.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Minute">
+            <summary>
+            מחזירה את הדקה הנוכחית.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Second">
+            <summary>
+            מחזירה את השניה הנוכחית.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Millisecond">
+            <summary>
+            מחזירה את המילישניה הנוכחית.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.ElapsedMilliseconds">
+            <summary>
+            מחזירה את מספר המילישניות שעברו מאז 1900 (הזמן כערך אחד).
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.File">
+            <summary>
+            אוביקט ה-File (קובץ) מספק פעולות לגישה, קריאה וכתיבת מידע מ\אל קובץ לדיסק (מערכת הקבצים). שימוש באוביקט זה מאפשר להעביר הגדרות בין הפעלות שונות של התוכנית שלכם.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            פותחת קובץ וקוראת את כל תוכנו. פעולה זו מהירה בד"כ עבור קבצים קטנים מ-MB אחד, אך מתחילה להיות איטית באופן מורגש עבור קבצים גדולים מ-10 MB.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            הנתיב המלא של הקובץ לקריאה. דוגמה לנתיב מלא היא c:\temp\settings.data.
+            </para>
+            </param>
+            <returns>
+            תוכנו המלא של הקובץ.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            פותחת קובץ וכותבת את התוכן המצויין לתוכו, התוכן החדש מחליף את המקורי.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            הנתיב המלא של הקובץ לכתיבה. דוגמה לנתיב מלא היא c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="contents">
+            התוכן לכתיבה לתוך הקובץ שצוין.
+            </param>
+            <returns>
+            <para>
+            במידה והפעולה הצליחה "SUCCESS" (הצלחה), אחרת "FAILED" (כשלון).
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            פותחת את הקובץ שצוין וקוראת את התוכן בשורה שצוינה.
+            </summary>
+            <param name="filePath">
+            <para>
+            הנתיב המלא של הקובץ לקריאה. דוגמה לנתיב מלא היא c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            מספר השורה של הטקסט לקריאה.
+            </param>
+            <returns>
+            הטקסט בשורה המצוינה של הקובץ שצוין.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            פותחת את הקובץ שצוין וכותבת את את התוכן בשורה שצוינה.
+            </para>
+            <para>
+            פעולה זו תחליף כל תוכן קיים בשורה שצוינה.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            הנתיב המלא של הקובץ לכתיבה. דוגמה לנתיב מלא היא c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            מספר השורה של הטקסט לכתיבה.
+            </param>
+            <param name="contents">
+            <para>
+            התוכן לכתיבה בשורה שצוינה של הקובץ שצוין.
+            </para>
+            </param>
+            <returns>
+            <para>
+            במידה והפעולה הצליחה "SUCCESS" (הצלחה), אחרת "FAILED" (כשלון).
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.InsertLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            פותחת את הקובץ שצוין ומכניסה את התוכן שהועבר בשורה שצוינה.
+            </para>
+            <para>
+            פעולה זו אינה מחליפה את התוכן הקיים בשורה שצוינה.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            הנתיב המלא של הקובץ לכתיבה. דוגמא לנתיב מלא היא c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            מספר השורה של הטקסט לכתיבה.
+            </param>
+            <param name="contents">
+            התוכן להכנסה לקובץ.
+            </param>
+            <returns>
+            <para>
+            במידה והפעולה הצליחה "SUCCESS" (הצלחה), אחרת "FAILED" (כשלון).
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.AppendContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            פותחת את הקובץ שצוין ומוסיפה את התוכן לסוף הקובץ.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            הנתיב המלא של הקובץ לכתיבה. דוגמא לנתיב מלא היא c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="contents">
+            התוכן להוספה בסוף הקובץ.
+            </param>
+            <returns>
+            <para>
+            במידה והפעולה הצליחה "SUCCESS" (הצלחה), אחרת "FAILED" (כשלון).
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CopyFile(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            מעתיקה את קובץ המקור שצוין לנתיב היעד שצוין. במידה והיעד מצביע למיקום שאינו קיים, הפעולה תנסה ליצור אותו אוטומטית.
+            </para>
+            <para>
+            קובץ קיים יוחלף. אם אינך רוצה לדרוס קבצים קיימים, מומלץ ראשית לבדוק אם קובץ היעד קיים.
+            </para>
+            </summary>
+            <param name="sourceFilePath">
+            <para>
+            הנתיב המלא של הקובץ להעתקה. דוגמא לנתיב מלא היא c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="destinationFilePath">
+            מיקום היעד או נתיב הקובץ.  
+            </param>
+            <returns>
+            במידה והפעולה הצליחה "SUCCESS" (הצלחה), אחרת "FAILED" (כשלון).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוחקת את הקובץ שצוין.
+            </summary>
+            <param name="filePath">
+            <para>
+            מיקום היעד או הנתיב המלא של הקובץ למחיקה. דוגמא לנתיב מלא היא c:\temp\settings.data.
+            </para>
+            </param>
+            <returns>
+            במידה והפעולה הצליחה "SUCCESS" (הצלחה), אחרת "FAILED" (כשלון).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CreateDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            יוצרת את התיקיה שצוינה.
+            </summary>
+            <param name="directoryPath">
+            הנתיב המלא של התיקיה ליצירה.
+            </param>
+            <returns>
+            במידה והפעולה הצליחה "SUCCESS" (הצלחה), אחרת "FAILED" (כשלון).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוחקת את התיקיה שצוינה.
+            </summary>
+            <param name="directoryPath">
+            הנתיב המלא של התיקיה למחיקה.
+            </param>
+            <returns>
+            במידה והפעולה הצליחה "SUCCESS" (הצלחה), אחרת "FAILED" (כשלון).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetFiles(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הנתיבים של כל הקבצים בנתיב התיקיה שצוין.
+            </summary>
+            <param name="directoryPath">
+            התיקיה לחיפוש הקבצים.
+            </param>
+            <returns>
+            במידה והפעולה הצליחה, היא מחזירה את רשימת הקבצים במערך, אחרת מחזירה "FAILED" (כשלון).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetDirectories(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הנתיבים של כל התיקיות בנתיב התיקיה שצוין.
+            </summary>
+            <param name="directoryPath">
+            התיקיה לחיפוש תת-התיקיות.
+            </param>
+            <returns>
+            במידה והפעולה הצליחה, היא מחזירה את רשימת התיקיות במערך, אחרת מחזירה "FAILED" (כשלון).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetTemporaryFilePath">
+            <summary>
+            <para>
+            יוצרת קובץ זמני חדש בספרייה זמנית ומחזירה את הנתיב המלא שלו.
+            </para>
+            </summary>
+            <returns>
+            הנתיב המלא של הקובץ הזמני.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetSettingsFilePath">
+            <summary>
+            <para>
+            מחזירה את הנתיב המלא של קובץ הגדרות התוכנית. שמו של הקובץ מבוסס על שם התוכנית והוא ממוקם יחד עם התוכנית.
+            </para>
+            </summary>
+            <returns>
+            הנתיב המלא של קובץ ההגדרות של התוכנית הרצה.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.File.LastError">
+            <summary>
+            <para>
+            מחזיר את הודעת השגיאה האחרונה מפעולות על קבצים. הודעה זו שימושית כשרוצים להבין מדוע פעולה מסוימת נכשלה.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Keywords">
+            <summary>
+            אובייקט ה-Keywords (מילות מפתח)  הוא שומר מקום (place holder) לתיעוד מילות מפתח של Small Basic.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.For">
+            <summary>
+            פקודת ה-For (עבור) מאפשר ביצוע של רצף משפטים מספר פעמים.
+            </summary>
+            <example>
+            הדוגמא הבאה כותבת את סדרת המספרים בין 1 ל-10
+            <code>
+                    ‪For i = 1 To 10  
+             (TextWindow.WriteLine(i 
+                               EndFor‬
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndFor">
+            <summary>
+			 עבור המילה השמורה EndFor, בדקו את המידע על פקודת ה-For.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.To">
+            <summary>
+            עבור המילה השמורה To, בדקו את המידע על פקודת ה-For.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Step">
+            <summary>
+            המילה השמורה Step (צעד) משמשת להגדיר את גודל הקידום של לולאת For.
+            </summary>
+            <example>
+            הדוגמא הבאה תכתוב את המספרים האי-זוגיים שבין 1 ל-10.
+            <code>
+                For i = 1 to 10 Step 2
+             (TextWindow.WriteLine(i   
+                                EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.If">
+            <summary>
+            פקודת ה-If (אם) מאפשרת ביצוע מותנה של משפטים שונים.
+            </summary>
+            <example>
+            בדוגמא הבאה תיכתב מילה שונה, "Win" או "Lose" בתלות בערך של המשתנה flip.
+            <code>
+                    ‪If flip = "Tail" Then 
+            ("TextWindow.WriteLine("Win
+                                     Else
+            ("TextWindow.WriteLine("Lose
+                                    EndIf‬
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Then">
+            <summary>
+            עבור המילה השמורה Then, בדקו את המידע על פקודת ה-If.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Else">
+            <summary>
+            עבור המילה השמורה Else, בדקו את המידע על פקודת ה-If.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.ElseIf">
+            <summary>
+            המילה השמורה ElseIf מאפשרת תנאי חליפי כאשר משפטים בפקודת ה-If.
+            </summary>
+            <example>
+            בדוגמא הבאה תיכתב ברכה מתאימה לפי השעה ביום.
+            <code>
+                        If Clock.Hour &lt; 12 Then
+            ("TextWindow.WriteLine("Good Morning  
+                    ElseIf Clock.Hour &lt; 16 Then
+          ("TextWindow.WriteLine("Good Afternoon
+                    ElseIf Clock.Hour &lt; 20 Then
+            ("TextWindow.WriteLine("Good Evening
+                                             EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndIf">
+            <summary>
+            עבור המילה השמורה EndIf, בדקו את המידע על פקודת ה-If.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Goto">
+            <summary>
+            פקודת ה-Goto (עבור אל) מאפשרת העברת הביצוע למקום אחר בתוכנית.  
+            </summary>
+            <example>
+            התוכנית הבאה כותבת סדרת מספרים ללא הפסקה.
+            <code>
+                             ‪start:
+            (TextWindow.WriteLine(i
+                          i = i + 1
+                         Goto start‬
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Sub">
+            <summary>
+            פקודת ה-Sub (שגרה) מאפשרת לקבץ משפטים קשורים תחת שם אחד.
+            </summary>
+            <example>
+            בדוגמא הבאה מוגדרת שגרה שמפעילה צלצול וגם כותבת "!Win".
+            <code>
+                                 ‪Sub Win
+                    ()Sound.PlayBellRing
+            ("!TextWindow.WriteLine("Win
+                                  EndSub‬
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndSub">
+            <summary>
+            עבור המילה השמורה EndSub, בדקו את המידע על פקודת ה-Sub.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.While">
+            <summary>
+            פקודת ה-While (כל עוד), מאפשרת לחזור על ביצוע משפטים עד שמגיעים לתוצאה רצויה.
+            </summary>
+            <example>
+            בדוגמא הבאה נכתבים מספרים אקראיים עד שנתקלים במספר הגדול מ-100.
+            <code>
+                         ‪While i &lt; 100
+            (i = Math.GetRandomNumber(150
+            (TextWindow.WriteLine(i
+                                 EndWhile‬
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndWhile">
+            <summary>
+            עבור המילה השמורה EndWhile, בדקו את המידע על פקודת ה-While.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.And">
+            <summary>
+            חישוב לוגי המחזיר אמת אם שני התנאים הם אמת.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Or">
+            <summary>
+            חישוב לוגי המחזיר אמת אם לפחות אחד התנאים הוא אמת.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Math">
+            <summary>
+            אוביקט ה-Math (מתמטיקה) מספק הרבה פעולות מתמטיות שימושיות.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Abs(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הערך המוחלט של המספר הנתון. לדוגמה עבור 32.233- יוחזר 32.233.
+            </summary>
+            <param name="number">
+            המספר שעבורו יש לחשב את הערך המוחלט.
+            </param>
+            <returns>
+            ערכו המוחלט של המספר הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Ceiling(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה מספר שלם הגדול או שווה (תקרה) למספר העשרוני הנתון. לדוגמה, עבור 32.322 יוחזר 33.
+            </summary>
+            <param name="number">
+            המספר שעבורו יש לחשב את ערך התקרה.
+            </param>
+            <returns>
+            ערך התקרה של המספר הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Floor(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+           מחזירה מספר שלם הקטן או שווה (רצפה) למספר העשרוני. 
+		   לדוגמה, עבור 32.322 יוחזר 32.
+            </summary>
+            <param name="number">
+            המספר שעבורו יש לחשב את ערך הרצפה.
+            </param>
+            <returns>
+            ערך הרצפה של המספר הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.NaturalLog(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את ערך פונקצית הלוגריתם הטבעי של המספר הנתון.
+            </summary>
+            <param name="number">
+            המספר שעבורו יש לחשב את ערך הלוגריתם הטבעי.
+            </param>
+            <returns>
+            ערך הלוגריתם הטבעי של המספר הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Log(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את ערך הלוגריתם (בבסיס 10) של המספר הנתון.
+            </summary>
+            <param name="number">
+            המספר שעבורו יש לחשב את ערך הלוגריתם.
+            </param>
+            <returns>
+            ערך הלוגריתם של המספר הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Cos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את ערך הקוסינוס של הזווית הנתונה (ברדיאנים).
+            </summary>
+            <param name="angle">
+            הזווית (ברדיאנים) שעבורה יש לחשב את ערך הקוסינוס.
+            </param>
+            <returns>
+            ערך הקוסינוס של הזווית הנתונה..
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Sin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את ערך הסינוס של הזווית שהנתונה (ברדיאנים).
+            </summary>
+            <param name="angle">
+            הזווית (ברדיאנים) שעבורה יש לחשב את ערך הסינוס.
+            </param>
+            <returns>
+            ערך הסינוס של הזווית הנתונה.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Tan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את ערך הטנגנס של הזווית הנתונה (ברדיאנים).
+            </summary>
+            <param name="angle">
+            הזווית (ברדיאנים) שעבורה יש לחשב את ערך הטנגנס.
+            </param>
+            <returns>
+            ערך הטנגנס של הזווית הנתונה.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcSin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            בהינתן ערך סינוס, מחזירה את הזווית ברדיאנים (ארקסינוס).
+            </summary>
+            <param name="sinValue">
+            ערך הסינוס שעבורו יש לחשב את הזווית.
+            </param>
+            <returns>
+            הזווית (ברדיאנים) עבור ערך הסינוס הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcCos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            בהינתן ערך קוסינוס, מחזירה את הזווית ברדיאנים (ארקקוסינוס).
+            </summary>
+            <param name="cosValue">
+            ערך הקוסינוס שעבורו יש לחשב את הזווית.
+            </param>
+            <returns>
+            הזווית (ברדיאנים) עבור ערך הקוסינוס הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcTan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            בהינתן ערך טנגנס, מחזירה את הזווית ברדיאנים (ארקטנגנס).
+            </summary>
+            <param name="tanValue">
+            ערך הטנגנס שעבורו יש לחשב את הזווית.
+            </param>
+            <returns>
+            הזווית (ברדיאנים) עבור ערך הטנגנס הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetDegrees(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            ממירה את הזווית שהועברה מרדיאנים למעלות.
+            </summary>
+            <param name="angle">
+            הזווית ברדיאנים.
+            </param>
+            <returns>
+            הזווית המומרת במעלות.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRadians(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            ממירה את הזווית שהועברה ממעלות לרדיאנים.
+            </summary>
+            <param name="angle">
+            הזווית במעלות.
+            </param>
+            <returns>
+            הזווית המומרת ברדיאנים.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.SquareRoot(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את השורש הריבועי של המספר המועבר.
+            </summary>
+            <param name="number">
+            המספר שעבורו יש לחשב את השורש הריבועי.
+            </param>
+            <returns>
+            ערך השורש הריבועי של המספר הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Power(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מעלה את מספר הבסיס בחזקה שצוינה.
+            </summary>
+            <param name="baseNumber">
+            המספר שאותו יש להעלות בחזקה.
+            </param>
+            <param name="exponent">
+            החזקה (אקפוננט) שבה מעלים את הבסיס 
+            </param>
+            <returns>
+            הבסיס בחזקת האקספוננט.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Round(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מעגלת את המספר המועבר לשלם הקרוב ביותר. למשל עבור 32.322 יוחזר 32.0 ועבור 32.566 יוחזר 33.
+            </summary>
+            <param name="number">
+            המספר שעבורו נדרש העגול.
+            </param>
+            <returns>
+            הערך המעוגל של המספר הנתון.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Max(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            משווה בין שני מספרים ומחזירה את הגדול מביניהם.
+            </summary>
+            <param name="number1">
+            המספר הראשון להשוואה.
+            </param>
+            <param name="number2">
+            המספר השני להשוואה.
+            </param>
+            <returns>
+            הערך הגבוה מבין שני המספרים.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Min(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            משווה בין שני מספרים ומחזירה את הקטן מביניהם.
+            </summary>
+            <param name="number1">
+            המספר הראשון להשוואה.
+            </param>
+            <param name="number2">
+            המספר השני להשוואה.
+            </param>
+            <returns>
+            הערך הנמוך מבין שני המספרים.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Remainder(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחלקת את המספר הראשון בשני ומחזירה את השארית.
+            </summary>
+            <param name="dividend">
+            המספר לחלוקה.
+            </param>
+            <param name="divisor">
+            המספר המחלק.
+            </param>
+            <returns>
+            השארית לאחר החלוקה.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRandomNumber(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה מספר (פסודו) אקראי בין 1 ל-maxNumber (כולל).
+            </summary>
+            <param name="maxNumber">
+            המספר המקסימלי עבור הערך האקראי המבוקש.
+            </param>
+            <returns>
+            מספר אקראי קטן או שווה למספר המקסימלי שצוין.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Math.Pi">
+            <summary>
+            מחזיר את הערך פאי (Pi).
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Flickr">
+            <summary>
+            אוביקט זה מאפשר שימוש בשירות התמונות Flickr.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetPictureOfMoment">
+            <summary>
+            מחזירה את הכתובת (URL) של התמונה הרגעית בשירות.
+            </summary>
+            <returns>
+            כתובת (URL) של התמונה הרגעית ב-Flickr.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetRandomPicture(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הכתובת (URL) של תמונה אקראית עם התג שצוין.
+            </summary>
+            <param name="tag">
+            התג עבור התמונה המבוקשת.
+            </param>
+            <returns>
+            כתובת (URL) של התמונה האקראית מ-Flickr.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Network">
+            <summary>
+            אוביקט ה-Network (רשת) מספק פעולות גישה לרשת.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.DownloadFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מורידה קובץ מהרשת לקובץ מקומי זמני.
+            </summary>
+            <param name="url">
+            כתובת (URL) הקובץ ברשת.
+            </param>
+            <returns>
+            שם קובץ מקומי שאליו הורד הקובץ.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.GetWebPageContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את תוכנו של דף ה-web שצוין.
+            </summary>
+            <param name="url">
+            כתובת (URL) דף ה-web.
+            </param>
+            <returns>
+            תוכנו של הדף שצוין.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.OfficeResearch">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Query(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginQuery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndQuery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Registration(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginRegistration(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndRegistration(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Status">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginStatus(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndStatus(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Discovery(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginDiscovery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndDiscovery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Platform">
+            <summary>
+            אוביקט ה-Platform (מערכת) מאפשר לגשת לספריות אחרות של .Net.
+           </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Dictionary">
+            <summary>
+            אוביקט המספק גישה לשירותי מילון (Dictionary) מקוונים באנגלית.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinition(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הגדרת המילה באנגלית.
+            </summary>
+            <param name="word">
+            המילה להגדרה (הערך המילוני).
+            </param>
+            <returns>
+            ההגדרה\ות של המילה שצוינה.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionInFrench(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הגדרת המילה בצרפתית.
+            </summary>
+            <param name="word">
+            המילה להגדרה (הערך המילוני).
+            </param>
+            <returns>
+            ההגדרה\ות של המילה שצוינה.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RestHelper">
+            <summary>
+            פעולת עזר סטטית פרטית לקריאה ל-APIs מבוססי Rest.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.RestHelper.GetContents(System.String)">
+            <summary>
+            משיגה את התכנים של URL Rest נתון ומחזירה במסמך XML.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Program">
+            <summary>
+            אוביקט ה-Program (תוכנית) מספק פעולות עזר לשליטה על התוכנית המתבצעת.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.Delay(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מעכבת את ביצוע התוכנית במספר המילישניות שצוין.
+            </summary>
+            <param name="milliSeconds">
+            זמן ההמתנה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.End">
+            <summary>
+            מסיימת את ביצוע התוכנית.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.GetArgument(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הארגומנט שהועבר לתוכנית בשורת הפקודה.
+            </summary>
+            <param name="index">
+            האינדקס של הארגומנט.
+            </param>
+            <returns>
+            הארגומנט באינדקס שצוין.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.ArgumentCount">
+            <summary>
+            מחזירה את מספר הארגומנטים שהועברו לתוכנית בשורת הפקודה.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.Directory">
+            <summary>
+            מחזירה את שם התיקיה של התוכנית המתבצעת.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Array">
+            <summary>
+            אוביקט זה מספק דרך לשמור יותר מערך אחד עבור שם מסויים. ערכים אלו נגישים על ידי אינדקס (מציין) אחר.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsIndex(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה האם המערך מכיל את האינדקס שצוין, או לא. הדבר שימושי כאשר רוצים לבדוק האם אינדקס כזה אותחל עם ערך במערך זה.
+            </summary>
+            <param name="array">
+            המערך לבדיקה.
+            </param>
+            <param name="index">
+            האינדקס לבדיקה.
+            </param>
+            <returns>
+            True (אמת) במידה והמערך מכיל את האינדקס שצוין, אחרת False (שקר).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה האם המערך מכיל את הערך שצוין, או לא. הדבר מאד שימושי כאשר רוצים לבדוק אם ערך מסויים נשמר באיזה שהוא אינדקס.
+            </summary>
+            <param name="array">
+            המערך לבדיקה.
+            </param>
+            <param name="value">
+            הערך לבדיקה.
+            </param>
+            <returns>
+            True (אמת) במידה והמערך מכיל את הערך שצוין, אחרת False (שקר).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetAllIndices(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את כל האינדקסים של המערך, כמערך אחר.
+            </summary>
+            <param name="array">
+            המערך שעבורו התבקשו האינדקסים.
+            </param>
+            <returns>
+            מערך מלא בכל האינדקסים של המערך שצוין. האינדקס של המערך המוחזר מתחיל מ-1.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetItemCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את מספר הפריטים המאוחסנים במערך.
+            </summary>
+            <param name="array">
+            המערך שעבורו הספירה נדרשת.
+            </param>
+            <returns>
+            מספר הפריטים במערך.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.IsArray(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה האם המשתנה שצוין הוא מערך, או לא.
+            </summary>
+            <param name="array">
+            המשתנה לבדיקה.
+            </param>
+            <returns>
+            True (אמת) במידה והמשתנה הוא מערך, אחרת False (שקר).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.SetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            השמת ערך עבור המערך והאינדקס שצוינו.
+            </summary>
+            <param name="arrayName">
+            שם המערך.
+            </param>
+            <param name="index">
+            שם האינדקס.
+            </param>
+            <param name="value">
+            הערך להשמה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה ערך עבור המערך והאינדקס שצוינו.
+            </summary>
+            <param name="arrayName">
+            שם המערך.
+            </param>
+            <param name="index">
+            שם האינדקס.
+            </param>
+            <returns>
+            הערך באינדקס שצוין של המערך שצוין.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.RemoveValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מסירה פריט במערך באינדקס שצוין.
+            </summary>
+            <param name="arrayName">
+            שם המערך.
+            </param>
+            <param name="index">
+            האינדקס של הפריט למחיקה.
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.TextWindow">
+            <summary>
+            אוביקט ה-TextWindow (חלון טקסט) מספק פעולות קלט ופלט של טקסט. לדוגמה באמצעות אוביקט זה ניתן לכתוב או לקרוא טקסט או מספר מ\אל החלון מבוסס הטקסט.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Show">
+            <summary>
+            מציגה את חלון הטקסט, כדי לאפשר פעולות איתו.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Hide">
+            <summary>
+            מסתירה את חלון הטקסט.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Clear">
+            <summary>
+            מנקה את חלון הטקסט.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Pause">
+            <summary>
+            מחכה לקלט מהמשתמש (ללא הודעה על כך), על מנת להמשיך ריצת התוכנית.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseIfVisible">
+            <summary>
+            מחכה לקלט מהמשתמש להמשך הריצה, בתנאי שחלון הטקטס כבר מוצג.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseWithoutMessage">
+            <summary>
+            מחכה לקלט מהמשתמש (ללא הודעה על כך), על מנת להמשיך ריצת התוכנית.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Read">
+            <summary>
+            קוראת שורת טקסט מחלון הטקסט, השגרה אינה חוזרת עד שהמשתמש מקיש ENTER.
+            </summary>
+            <returns>
+            הטקט שנקרא מחלון הטקסט.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.ReadNumber">
+            <summary>
+            קוראת מספר מחלון הטקסט, השגרה אינה חוזרת עד שהמשתמש מקיש ENTER.
+            </summary>
+            <returns>
+            המספר שנקרא מחלון הטקסט.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.WriteLine(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            כותבת טקסט או מספר לחלון הטקסט. תו "שורה חדשה" יתווסף לפלט, כך שפעולת הכתיבה הבאה תתבצע בשורה חדשה.
+            </summary>
+            <param name="data">
+            הטקסט או המספר לכתיבה בחלון הטקסט.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Write(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            כותבת טקסט או מספר לחלון הטקסט. בניגוד ל-WriteLine, תו "שורה חדשה" לא יתווסף לפלט, כך שפעולת הכתיבה הבאה תתבצע באותה השורה.
+            </summary>
+            <param name="data">
+            הטקסט או המספר לכתיבת בחלון הטקסט.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.VerifyAccess">
+            <summary>
+            מאמת תאם הגישה לחלון הטקסט כבר בוצעה.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.ForegroundColor">
+            <summary>
+            מחזירה או מעדכנת את צבע הטקסט שייכתב לחלון הטקסט.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.BackgroundColor">
+            <summary>
+            מחזירה או מעדכנת את צבע הרקע של הטקסט שייכתב לחלון הטקסט.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorLeft">
+            <summary>
+            מחזירה או מעדכנת את עמודת מיקום הסמן בחלון הטקסט.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorTop">
+            <summary>
+            מחזירה או מעדכנת את שורת מיקום הסמן בחלון הטקסט.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Left">
+            <summary>
+            מחזירה או מעדכנת את המיקום השמאלי של חלון הטקסט.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Title">
+            <summary>
+            מחזירה או מעדכנת את הכותרת של חלון הטקסט.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Top">
+            <summary>
+            מחזירה או מעדכנת את המיקום העליון של חלון הטקסט.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Shapes">
+            <summary>
+            אוביקט ה-Shapes (צורות) מאפשר להוסיף, להזיז ולסובב צורות על החלון הגרפי.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוסיפה מלבן עם הרוחב והאורך שצוינו.
+            </summary>
+            <param name="width">
+            רוחבו של המלבן.
+            </param>
+            <param name="height">
+            גובהו של המלבן.
+            </param>
+            <returns>
+            המלבן שנוסף לחלון הגרפי.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוסיפה אליפסה (אובל) עם הרוחב והאורך שצוינו.
+            </summary>
+            <param name="width">
+            רוחבה של האליפסה.
+            </param>
+            <param name="height">
+            גובהה של האליפסה.
+            </param>
+            <returns>
+            האליפסה שנוספה לחלון הגרפי.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוסיפה משולש עם הנקודות שצוינו.
+            </summary>
+            <param name="x1">
+            קואורדינטת ה-x של הנקודה הראשונה.
+            </param>
+            <param name="y1">
+            קואורדינטת ה-y של הנקודה הראשונה.
+            </param>
+            <param name="x2">
+            קואורדינטת ה-x של הנקודה השניה.
+            </param>
+            <param name="y2">
+            קואורדינטת ה-y של הנקודה השניה.
+            </param>
+            <param name="x3">
+            קואורדינטת ה-x של הנקודה השלישית.
+            </param>
+            <param name="y3">
+            קואורדינטת ה-y של הנקודה השלישית.
+            </param>
+            <returns>
+            המשולש שנוסף לחלון הגרפי.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוסיפה קו ישר בין הנקודות שצוינו.
+            </summary>
+            <param name="x1">
+            קואורדינטת ה-x של הנקודה הראשונה.
+            </param>
+            <param name="y1">
+            קואורדינטת ה-y של הנקודה הראשונה.
+            </param>
+            <param name="x2">
+            קואורדינטת ה-x של הנקודה השניה.
+            </param>
+            <param name="y2">
+            קואורדינטת ה-y של הנקודה השניה.
+            </param>
+            <returns>
+            הקו שנוסף לחלון הגרפי.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוסיפה תמונה כצורה שניתן להזיזה, להנפישה או לסובבה.
+            </summary>
+            <param name="imageName">
+            שם התמונה שיש לצייר.
+            </param>
+            <returns>
+            התמונה שנוספה לחלון הגרפי.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוסיפה מלל כצורה ניתן להזיזה, להנפישה או לסובבה.
+            </summary>
+            <param name="text">
+            המלל להוספה.
+            </param>
+            <returns>
+            צורת המלל שהוספה כעת לחלון הגרפי.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציב את המלל כצורת מלל. 
+            </summary>
+            <param name="shapeName">
+            השם של צורת המלל.
+            </param>
+            <param name="text">
+            ערך המלל החדש להצבה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מסירה צורה מהחלון הגרפי.
+            </summary>
+            <param name="shapeName">
+            שם הצורה שיש למחוק.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מזיזה את הצורה בעלת השם שצוין למיקום חדש.
+            </summary>
+            <param name="shapeName">
+            שם הצורה להזזה.
+            </param>
+            <param name="x">
+            קואורדינטת ה-x של המיקום החדש.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של המיקום החדש.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Rotate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מסובבת את הצורה בעלת השם שצוין לזווית שצוינה.
+            </summary>
+            <param name="shapeName">
+            שם הצורה שיש להזיזה.
+            </param>
+            <param name="angle">
+            הזווית לסיבוב הצורה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Zoom(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            משנה את גודל הצורה לפי רמת ההגדלה (זום) שצוינה. הרמה המינימלית היא 0.1 והמקסימלית 20.
+            </summary>
+            <param name="shapeName">
+            שם הצורה שיש לשנות את גודלה.
+            </param>
+            <param name="scaleX">
+            רמת ההגדלה בציר ה-x.
+            </param>
+            <param name="scaleY">
+            רמת ההגדלה בציר ה-y.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Animate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            הנפשה (אנימציה) של הצורה עם השם שצוין למקום חדש.
+            </summary>
+            <param name="shapeName">
+            שם הצורה להעברה.
+            </param>
+            <param name="x">
+            קואורדינטת ה-x של המיקום החדש.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של המיקום החדש.
+            </param>
+            <param name="duration">
+            זמן ההנפשה (אנימציה) במילישניות.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetLeft(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הקואורדינטה השמאלית של הצורה שצוינה.
+            </summary>
+            <param name="shapeName">
+            שם הצורה.
+            </param>
+            <returns>
+            הקואורדינטה השמאלית של הצורה.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetTop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הקואורדינטה העליונה של הצורה שצוינה.
+            </summary>
+            <param name="shapeName">
+            שם הצורה.
+            </param>
+            <returns>
+            הקואורדינטה העליונה של הצורה.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetOpacity(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את רמת האטימות של הצורה.
+            </summary>
+            <param name="shapeName">
+            שם הצורה.
+            </param>
+            <returns>
+            רמת האטימות של הצורה כערך בין 0 ל-100. 0 עבור שקיפות מליאה ו-100 עבור אטימות מליאה.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetOpacity(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            משנה את רמת האטימות של הצורה.
+            </summary>
+            <param name="shapeName">
+            שם הצורה.
+            </param>
+            <param name="level">
+            רמת האטימות של הצורה כערך בין 0 ל-100. 0 עבור שקיפות מליאה ו-100 עבור אטימות מליאה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.HideShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מסתירה צורה שכבר נוספה.
+            </summary>
+            <param name="shapeName">
+            שם הצורה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.ShowShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציגה צורה שהוסתרה קודם לכן.
+            </summary>
+            <param name="shapeName">
+            שם הצורה.
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Controls">
+            <summary>
+            אובייקט ה- Controls (פקדים) מאפשר להוסיף, להזיז ולשלוט בפקדים.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddButton(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוסיפה לחלון הגראפי כפתור עם הרוחב והגובה שצוינו.
+            </summary>
+            <param name="caption">
+            הכיתוב של הכפתור.
+            </param>
+            <param name="left">
+            קואורדינטת ה-x של הכפתור.
+            </param>
+            <param name="top">
+            קואורדינטת ה-y של הכפתור.
+            </param>
+            <returns>
+            הכפתור שנוסף עכשיו לחלון הגראפי.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetButtonCaption(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הכיתוב הנוכחי של הכפתור שצוין.
+            </summary>
+            <param name="buttonName">
+            הכפתור שמעוניינים בכיתוב שלו.
+            </param>
+            <returns>
+            הכיתוב הנוכחי של הכפתור.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetButtonCaption(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            משנה את הכיתוב של הכפתור שצוין.
+            </summary>
+            <param name="buttonName">
+            הכפתור שהכיתוב שלו צריך להיקבע.
+            </param>
+            <param name="caption">
+            הכיתוב החדש של הכפתור.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוסיפה לחלון הגראפי תיבת טקסט עם הרוחב והגובה שצוינו.
+            </summary>
+            <param name="left">
+            קואורדינטת ה-x של תיבת הטקסט.
+            </param>
+            <param name="top">
+            קואורדינטת ה-y של תיבת הטקסט.
+            </param>
+            <returns>
+            תיבת הטקסט שנוספה עכשיו לחלון הגראפי.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddMultiLineTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מוסיפה לחלון הגראפי תיבת רשימה לקלט מרובה שורות עם הרוחב והגובה שצוינו.
+            </summary>
+            <param name="left">
+            קואורדינטת ה-x של תיבת הרשימה.
+            </param>
+            <param name="top">
+            קואורדינטת ה-y של תיבת הרשימה.
+            </param>
+            <returns>
+            תיבת הרשימה שנוספה עכשיו לחלון הגראפי.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetTextBoxText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחזירה את הטקסט הנוכחי של תיבת הטקסט שצוינה.
+            </summary>
+            <param name="textBoxName">
+            תיבת הטקסט שמעוניינים בטקסט שלה.
+            </param>
+            <returns>
+            הטקסט בתיבת הטקסט.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetTextBoxText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            משנה את הטקסט בתיבת הטקסט שצוינה.
+            </summary>
+            <param name="textBoxName">
+            תיבת הטקסט שמעוניינים לשנות את הטקסט שלה.
+            </param>
+            <param name="text">
+            הטקסט החדש של תיבת הטקסט.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מסירה פקד מהחלון הגראפי.
+            </summary>
+            <param name="controlName">
+            שם הפקד שיש להסיר.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מזיזה פקד למיקום חדש.
+            </summary>
+            <param name="control">
+            שם הפקד שצריך להזיז.
+            </param>
+            <param name="x">
+            קואורדינטת ה-x של המיקום החדש.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של המיקום החדש.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetSize(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            משנה את גודלו של פקד.
+            </summary>
+            <param name="control">
+            שם הפקד שיש לשנות את גודלו.
+            </param>
+            <param name="width">
+            הרוחב החדש של הפקד.
+            </param>
+            <param name="height">
+            הגובה החדש של הפקד.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.HideControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מחביאה פקד שנמצא על החלון הגראפי.
+            </summary>
+            <param name="controlName">
+            שם הפקד.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.ShowControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מציגה פקד שהוחבא קודם לכן.
+            </summary>
+            <param name="controlName">
+            שם הפקד.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastClickedButton">
+            <summary>
+            מחזירה את הכפתור האחרון שנלחץ בחלון הגראפי.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastTypedTextBox">
+            <summary>
+            מחזירה את תיבת הטקסט האחרונה ,שהוזן אליה טקסט, בחלון הגראפי. 
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.ButtonClicked">
+            <summary>
+            מעוררת אירוע כאשר כפתור כלשהו נלחץ.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.TextTyped">
+            <summary>
+            מעוררת אירוע כאשר טקסט מוזן לתיבת טקסט כלשהיא.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Sound">
+            <summary>
+            אוביקט ה-Sound (צליל) מספק פעולות המאפשרות ניגון צלילים. מספר דוגמאות של צלילים מסופקות עם תיקיה זו.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClick">
+            <summary>
+            מנגנת את הצליל Click (קליק).
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClickAndWait">
+            <summary>
+            מנגנת את הצליל Click (קליק) ומחכה שיסתיים.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChime">
+            <summary>
+            מנגנת את הצליל Chime (צליל מצילה).
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimeAndWait">
+            <summary>
+            מנגנת את הצליל Chime (צליל מצילה) ומחכה שיסתיים.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimes">
+            <summary>
+            מנגנת את הצליל Chimes (צליל פעמונים).
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimesAndWait">
+            <summary>
+            מנגנת את הצליל Chimes (צליל פעמונים) ומחכה שיסתיים.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRing">
+            <summary>
+            מנגנת את הצליל Bell Ring (צלצול פעמון).
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRingAndWait">
+            <summary>
+            מנגנת את הצליל Bell Ring (צלצול פעמון) ומחכה שיסתיים.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayMusic(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מנגמת תווים מוסיקליים.
+            </summary>
+            <param name="notes">
+            רצף של תווים שצריך לנגן. הפורמט הוא חלק משפת סימון המוזיקה של QBasic.
+            </param>
+            <example>
+            <code>
+            ("Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Play(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            מנגנת קובץ שמע (אודיו). פורמטים נתמכים הם mp3, wav או wma. קבצים בפורמט אחר תלויים בקבצי codec שמע המותקנים במחשב המשתמש.
+            </para>
+            <para>
+            במידה והשמעת הקובץ הייתה כבר בהשהייה, פעולה זו תמשיך מהמקום האחרון שבו נעצרה ההשמעה.
+            </para>
+            </summary>
+            <param name="filePath">
+			<para>
+            הנתיב לקובץ השמע. הנתיב יכול להיות קובץ מקומי, למשל
+			</para>
+			<para>
+c:\music\track1.mp3
+			</para>
+			<para>
+או קובץ ברשת, למשל 
+			</para>
+			<para>
+http://contoso.com/track01.wma.
+			</para>
+            </param>
+        </member>
+		 <member name="M:Microsoft.SmallBasic.Library.Sound.PlayAndWait(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            מנגנת קובץ שמע (אודיו) ומחכה שיסתיים. פורמטים נתמכים הם mp3, wav או wma. קבצים בפורמט אחר תלויים בקבצי codec שמע המותקנים במחשב המשתמש.
+            </para>
+            <para>
+            במידה והשמעת הקובץ הייתה כבר בהשהייה, פעולה זו תמשיך מהמקום האחרון שבו נעצרה ההשמעה.
+            </para>
+            </summary>
+            <param name="filePath">
+           <para>
+            הנתיב לקובץ השמע. הנתיב יכול להיות קובץ מקומי, למשל
+			</para>
+			<para>
+c:\music\track1.mp3
+			</para>
+			<para>
+או קובץ ברשת, למשל 
+			</para>
+			<para>
+http://contoso.com/track01.wma.
+			</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Pause(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            השהיית ההשמעה של קובץ שמע. במידה והקובץ לא מנגן כבר, פעולה זו אינה מבצעת דבר.
+            </summary>
+            <param name="filePath">
+            <para>
+            הנתיב לקובץ השמע. הנתיב יכול להיות קובץ מקומי, למשל
+			</para>
+			<para>
+c:\music\track1.mp3
+			</para>
+			<para>
+או קובץ ברשת, למשל 
+			</para>
+			<para>
+http://contoso.com/track01.wma.
+			</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Stop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            עצירת ההשמעה של קובץ שמע. במידה והקובץ לא מנגן כבר, פעולה זו אינה מבצעת דבר.
+            </summary>
+            <param name="filePath">
+            <para>
+            הנתיב לקובץ השמע. הנתיב יכול להיות קובץ מקומי, למשל
+			</para>
+			<para>
+c:\music\track1.mp3
+			</para>
+			<para>
+או קובץ ברשת, למשל 
+			</para>
+			<para>
+http://contoso.com/track01.wma.
+			</para>
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Turtle">
+            <summary>
+            אוביקט ה-Turtle (צב) מספק פעולות בסגנון שפת לוגו לציור צורות ע"י שימוש בעט ומאפייני ציור בסיסיים.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Show">
+            <summary>
+            מציגה את הצב כדי לאפשר אינטראקציה איתו.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Hide">
+            <summary>
+            מסתירה את הצב כדי לא לאפשר אינטראקציה איתו.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenDown">
+            <summary>
+            מורידה את העט אל משטח העבודה,מה שמאפשר ציור באמצעות הצב ע"י הזזתו.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenUp">
+            <summary>
+            מגביהה את העיט מעל משטח העבודה, בכדי להפסיק את הציור תוך כדי תנועת הצב.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Move(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מזיזה את הצב למרחק שצוין, במידה והעט למטה יצויר קו תוך כדי התזוזה.
+            </summary>
+            <param name="distance">
+            המרחק להזזת הצב.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.MoveTo(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מזיזה את הצב למיקום שצוין, במידה והעט למטה יצויר קו תוך כדי התזוזה.
+            </summary>
+            <param name="x">
+            קואורדינטת ה-x של הנקודה שצוינה.
+            </param>
+            <param name="y">
+            קואורדינטת ה-y של הנקודה שצוינה.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Turn(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            מסובבת את הצב לפי הזווית שצוינה. הזווית נמדדת במעלות ויכולה להיות חיובית או שלילית. במידה והיא חיובית, הצב פונה לימינו. במידה והזוווית שלילית, הצב פונה לשמאלו.
+            </summary>
+            <param name="angle">
+            הזווית לסיבוב הצב.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnRight">
+            <summary>
+            מסובבת את הצב 90 מעלות לימינו.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnLeft">
+            <summary>
+            מסובב את הצב 90 מעלות לשמאלו.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Speed">
+            <summary>
+            מציינת את קצב ההתקדמות של הצב. ערכים חוקיים הם 1 עד 10. אם המהירות נקבעת ל-10 הצב נע ומסתובב מיד.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Angle">
+            <summary>
+            מחזירה או משנה את הזווית הנוכחית של הצב. בעת השינוי, הצב מסתובב מיד לזווית החדשה.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.X">
+            <summary>
+            מחזירה או משנה את קואורדינטת ה-x של הצב. בעת השינוי, הצב יעבור מיד לנקודה החדשה.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Y">
+            <summary>
+            מחזירה או משנה את קואורדינטת ה-y של הצב. בעת שינוי, הצב יעבור מיד לנקודה החדשה.
+            </summary>
+        </member>
+    </members>
+</doc>

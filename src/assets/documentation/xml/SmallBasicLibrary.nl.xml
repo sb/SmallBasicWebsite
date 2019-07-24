@@ -1,0 +1,2508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>SmallBasicLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SmallBasic.Library.Text">
+            <summary>
+            Het Text object heeft bewerkingen voor het werken met tekst.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.Append(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Plakt twee stukken tekst achter elkaar. Gebruik dit om tekens of cijfers achter elkaar te plakken in plaats van op te tellen.
+            </summary>
+            <param name="text1">
+            Eerste deel van de tekst die samengevoegd gaat worden.
+            </param>
+            <param name="text2">
+            Tweede deel van de tekst die samengevoegd gaat worden.
+            </param>
+            <returns>
+            Een tekst uit de twee aan elkaar geplakte delen.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetLength(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt de lengte van de tekst.
+            </summary>
+            <param name="text">
+            De tekst waarvan de lengte bepaald moet worden.
+            </param>
+            <returns>
+            De lengte van de opgegeven tekst.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.IsSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt of een gegeven stuk tekst de opgegeven tekst bevat.
+            </summary>
+            <param name="text">
+            Het grotere stuk tekst waarbinnen de opgegeven tekst gezocht moet worden.
+            </param>
+            <param name="subText">
+            De subtekst om te zoeken.
+            </param>
+            <returns>
+            'True' (Waar) als de opgegeven tekst voorkomt in het grotere stuk tekst en 'False' (Niet waar) als dit niet zo is.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.EndsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt of een gegeven stuk tekst eindigt met de opgegeven tekst.
+            </summary>
+            <param name="text">
+            Het stuk tekst waarbinnen de opgegeven tekst gezocht moet worden.
+            </param>
+            <param name="subText">
+            De subtekst om te zoeken.
+            </param>
+            <returns>
+            'True' (Waar) als het eerste opgegeven tekstdeel eindigt met het tweede stuk tekst en 'False' (Niet waar) als dit niet zo is.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.StartsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt of een gegeven stuk tekst begint met de opgegeven tekst.
+            </summary>
+            <param name="text">
+            Het stuk tekst waarbinnen de opgegeven tekst gezocht moet worden.
+            </param>
+            <param name="subText">
+            De subtekst om te zoeken.
+            </param>
+            <returns>
+            'True' (Waar) als het eerste opgegeven tekstdeel begint met het tweede stuk tekst en 'False' (Niet waar) als dit niet zo is.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Haalt een tekstdeel op uit de opgegeven tekst.
+            </summary>
+            <param name="text">
+            De tekst waar het tekstdeel uit opgehaald moet worden.
+            </param>
+            <param name="start">
+            Geeft aan op welke positie het tekstdeel begint.
+            </param>
+            <param name="length">
+            Geeft aan hoe lang het tekstdeel moet zijn.
+            </param>
+            <returns>
+            Het gevraagde tekstdeel.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubTextToEnd(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Haalt een tekstdeel op uit de opgegeven tekst van de opgegeven positie tot het einde.
+            </summary>
+            <param name="text">
+            De tekst waar het tekstdeel uitgehaald moet worden.
+            </param>
+            <param name="start">
+            Geeft aan op welke positie het tekstdeel begint.
+            </param>
+            <returns>
+            Het gevraagde tekstdeel.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetIndexOf(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt op welke positie in de opgegeven tekst de eveneens opgegeven deeltekst begint.
+            </summary>
+            <param name="text">
+            Het stuk tekst waarbinnen de opgegeven tekst gezocht moet worden.
+            </param>
+            <param name="subText">
+            De tekst waar naar gezocht moet worden.
+            </param>
+            <returns>
+            De positie waar de subtekst verschijnt in de aangegeven tekst; als de tekst niet wordt getoond, is het resultaat 0.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToLowerCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zet de opgegeven tekst om in kleine letters.
+            </summary>
+            <param name="text">
+            De tekst die omgezet moet worden in kleine letters.
+            </param>
+            <returns>
+            De in kleine letters omgezette tekst.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToUpperCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zet de opgegeven tekst om in hoofdletters.
+            </summary>
+            <param name="text">
+            De tekst die omgezet moet worden in hoofdletters.
+            </param>
+            <returns>
+            De in hoofdletters omgezette tekst.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacter(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Geeft op basis van de opgegeven Unicode-tekencode het bijbehorende karakter, dat met gewone tekst gecombineerd kan worden.
+            </summary>
+            <param name="characterCode">
+            De tekencode (gebaseerd op de Unicode-tekenset) voor het gewenste karakter.
+            </param>
+            <returns>
+            Een Unicode-teken dat correspondeert met de opgegeven code.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacterCode(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt van een Unicode-teken de bijbehorende tekencode.
+            </summary>
+            <param name="character">
+            Het karakter waarvan de code moet worden bepaald.
+            </param>
+            <returns>
+            De tekencode (gebaseerd op de Unicode-tekenset) behorende bij het opgegeven karakter.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Mouse">
+            <summary>
+            Met de Mouse-class kunnen aan de muis gerelateerde eigenschappen worden uitgelezen of ingesteld, zoals de aanwijspositie, cursor, enz.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.HideCursor">
+            <summary>
+            Verbergt de cursor op het scherm.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.ShowCursor">
+            <summary>
+            Maakt de cursor zichtbaar op het scherm.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseX">
+            <summary>
+            Leest of stelt de cursor een x-coördinaat.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseY">
+            <summary>
+            Leest of stelt de cursor een y-coördinaat.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsLeftButtonDown">
+            <summary>
+            Bepaalt of de linker muisknop is ingedrukt of niet.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsRightButtonDown">
+            <summary>
+            Bepaalt of de rechter muisknop is ingedrukt of niet.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Desktop">
+            <summary>
+            De Desktop-class maakt interactie met het bureaublad mogelijk.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Desktop.SetWallPaper(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stelt de opgegeven afbeelding in als bureaublad-achtergrond. Dit bestand kan een lokaal bestand of een netwerkbestand zijn of zelfs een Internet URL.
+            </summary>
+            <param name="fileOrUrl">
+            De bestandsnaam of URL van de afbeelding.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Width">
+            <summary>
+            Uitlezen van de schermbreedte van het primaire bureaublad.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Height">
+            <summary>
+            Uitlezen van de schermhoogte van het primaire bureaublad.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication">
+            <summary>
+            De Application-class voorziet in een Small Basic-programma met een applicatie-object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication.Dispatcher">
+            <summary>
+            Bepaalt wie de opsteller is van een Small Basic-applicatie.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.ImageList">
+            <summary>
+            De ImageList-class voorziet in het opslaan van afbeeldingen in het geheugen en het ophalen van afbeeldingen uit het geheugen.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.LoadImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Haalt een afbeelding op vanuit een bestand of vanaf het Internet in het geheugen.
+            </summary>
+            <param name="fileNameOrUrl">
+            De bestandsnaam of internetlocatie waar de afbeelding van geladen kan worden.
+            </param>
+            <returns>
+            De naam van het bestand dat is geladen.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.ClipImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Knipt een portie van een opgegeven afbeelding en retourneert een nieuwe afbeelding gebaseerd op de gespecificeerde grenzen.
+            </summary>
+            <param name="imageName">
+            De originele afbeelding om te knippen.
+            </param>
+            <param name="left">
+            De x-coördinaat van de kniprechthoek.
+            </param>
+            <param name="top">
+            De y-coördinaat van de kniprechthoek.
+            </param>
+            <param name="width">
+            De breedte van de kniprechthoek.
+            </param>
+            <param name="height">
+            De hoogte van de kniprechthoek.
+            </param>
+            <returns>
+            De geknipte afbeelding.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetWidthOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt de breedte van de opgeslagen afbeelding.
+            </summary>
+            <param name="imageName">
+            De naam van de afbeelding in het geheugen.
+            </param>
+            <returns>
+            De breedte van het opgegeven bestand.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetHeightOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt de hoogte van de opgeslagen afbeelding.
+            </summary>
+            <param name="imageName">
+            De naam van de afbeelding in het geheugen.
+            </param>
+            <returns>
+            De hoogte van de opgegeven afbeelding.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Timer">
+            <summary>
+            Het Timer-object voorziet in het herhaaldelijk uitvoeren van code met een constante tussenpoos.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Pause">
+            <summary>
+            Onderbreekt de timer. Wekker-code gaat niet af.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Resume">
+            <summary>
+            Hervat de timer events nadat ze zijn gepauseerd. Wekker events worden nou weer uitgevoerd.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Timer.Interval">
+            <summary>
+            Uitlezen of instellen van het interval (in milliseconden) dat aangeeft hoe vaak de wekker-code moet worden uitgevoerd. De waarde can variëren van 10 tot 100.000.000
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Timer.Tick">
+            <summary>
+            Activeert een subroutine die gekoppeld is aan de wekkerfunctie van het Timer-object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.SmallBasicCallback">
+            <summary>
+            De aanroep-signatuur die door alle Small Basic-klassebibliotheken wordt gebruikt voor 'events' (gebeurtenissen).
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Stack">
+            <summary>
+            Dit object voorziet in een manier om waarden op te hogen als borden op een stapel. Je kunt een waarde boven op de stack duwen en het ervan af duwen. Je kunt de waarden alleen een voor een van de stack duwen en de laatst gepubliceerde waarde zal de eerste waarde zijn die opkomt.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PushValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Plaatst een waarde bovenop de stapel (ook wel aangeduid als stack).
+            </summary>
+            <param name="stackName">
+            De naam van de stapel.
+            </param>
+            <param name="value">
+            De waarde die op de stapel geplaatst moet worden.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.GetCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt het aantal waarden in de opgegeven stapel.
+            </summary>
+            <param name="stackName">
+            De naam van de stapel.
+            </param>
+            <returns>
+            Het aantal waarden in de opgegeven stapel.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PopValue(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Haalt de waarde van de opgegeven stapel af.
+            </summary>
+            <param name="stackName">
+            De naam van de stapel.
+            </param>
+            <returns>
+            De waarde in de stapel.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Primitive">
+            <summary>
+            Het primitieve type dat tekst of cijfers vertegenwoordigt.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.NativeHelper">
+            <summary>
+            Een functie voor het aanroepen van systeemeigen API"s.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.GraphicsWindow">
+            <summary>
+            Het object GraphicsWindow (het grafische venster) voorziet in grafische functies. Met deze klasse kunnen bijvoorbeeld cirkels en vierkanten getekend en ingekleurd worden.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Show">
+            <summary>
+            Toont het grafische venster en maakt interactie mogelijk.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Hide">
+            <summary>
+            Verbergt het grafische venster.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Tekent een rechthoek op het scherm met de geselecteerde pen.
+            </summary>
+            <param name="x">
+            De x-coördinaat van de rechthoek.
+            </param>
+            <param name="y">
+            De y-coördinaat van de rechthoek.
+            </param>
+            <param name="width">
+            De breedte van de rechthoek.
+            </param>
+            <param name="height">
+            De hoogte van de rechthoek.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Inkleuren van een rechthoek op het scherm met het geselecteerde penseel.
+            </summary>
+            <param name="x">
+            De x-coördinaat van de rechthoek.
+            </param>
+            <param name="y">
+            De y-coördinaat van de rechthoek.
+            </param>
+            <param name="width">
+            De breedte van de rechthoek.
+            </param>
+            <param name="height">
+            De hoogte van de rechthoek.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Tekent een ellips op het scherm met de geselecteerde pen.
+            </summary>
+            <param name="x">
+            De x-coördinaat van de ellips.
+            </param>
+            <param name="y">
+            De y-coördinaat van de ellips.
+            </param>
+            <param name="width">
+            De breedte van de ellips.
+            </param>
+            <param name="height">
+            De hoogte van de ellips.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Inkleuren van een ellips op het scherm met het geselecteerde penseel.
+            </summary>
+            <param name="x">
+            De x-coördinaat van de ellips.
+            </param>
+            <param name="y">
+            De y-coördinaat van de ellips.
+            </param>
+            <param name="width">
+            De breedte van de ellips.
+            </param>
+            <param name="height">
+            De hoogte van de ellips.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Tekent een driehoek op het scherm met de geselecteerde pen.
+            </summary>
+            <param name="x1">
+            De x-coördinaat van het eerste punt.
+            </param>
+            <param name="y1">
+            De y-coördinaat van het eerste punt.
+            </param>
+            <param name="x2">
+            De x-coördinaat van het tweede punt.
+            </param>
+            <param name="y2">
+            De y-coördinaat van het tweede punt.
+            </param>
+            <param name="x3">
+            De x-coördinaat van het derde punt.
+            </param>
+            <param name="y3">
+            De y-coördinaat van het derde punt.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Tekent een ingekleurde driehoek op het scherm met het geselecteerde penseel.
+            </summary>
+            <param name="x1">
+            De x-coördinaat van het eerste punt.
+            </param>
+            <param name="y1">
+            De y-coördinaat van het eerste punt.
+            </param>
+            <param name="x2">
+            De x-coördinaat van het tweede punt.
+            </param>
+            <param name="y2">
+            De y-coördinaat van het tweede punt.
+            </param>
+            <param name="x3">
+            De x-coördinaat van het derde punt.
+            </param>
+            <param name="y3">
+            De y-coördinaat van het derde punt.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Tekent een lijn tussen twee punten.
+            </summary>
+            <param name="x1">
+            De x-coördinaat van het eerste punt.
+            </param>
+            <param name="y1">
+            De y-coördinaat van het eerste punt.
+            </param>
+            <param name="x2">
+            De x-coördinaat van het tweede punt.
+            </param>
+            <param name="y2">
+            De y-coördinaat van het tweede punt.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Tekent een regel tekst op het scherm op de opgegeven locatie.
+            </summary>
+            <param name="x">
+            De x-coördinaat van het punt waar de tekst moet beginnen.
+            </param>
+            <param name="y">
+            De y-coördinaat van het punt waar de tekst moet beginnen.
+            </param>
+            <param name="text">
+            De tekst die getekend moet worden
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawBoundText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Tekent een regel tekst op het scherm op de opgegeven locatie.
+            </summary>
+            <param name="x">
+            De x-coördinaat van het punt waar de tekst moet beginnen.
+            </param>
+            <param name="y">
+            De y-coördinaat van het punt waar de tekst moet beginnen.
+            </param>
+            <param name="width">
+            De maximaal beschikbare breedte. Deze parameter bepaalt wanneer de tekst doorloopt op de volgende regel.
+            </param>
+            <param name="text">
+            De tekst die getekend moet worden.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawResizedImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Tekent de opgegeven afbeelding vanuit het geheugen op het scherm, in de opgegeven grootte.
+            </summary>
+            <param name="imageName">
+            De naam van de afbeelding die getekend moet worden
+            </param>
+            <param name="x">
+            De x-coördinaat van het punt waar de afbeelding getekend moet worden.
+            </param>
+            <param name="y">
+            De y-coördinaat van het punt waar de afbeelding getekend moet worden.
+            </param>
+            <param name="width">
+            De breedte van de afbeelding die getekend moet worden.
+            </param>
+            <param name="height">
+            De hoogte van de afbeelding die getekend moet worden.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Tekent de opgegeven afbeelding vanuit het geheugen op het scherm.  
+            </summary>
+            <param name="imageName">
+            De naam van de afbeelding die getekend moet worden.
+            </param>
+            <param name="x">
+            De x-coördinaat van het punt waar de afbeelding getekend moet worden.
+            </param>
+            <param name="y">
+            De y-coördinaat van het punt waar de afbeelding getekend moet worden.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.SetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Tekent een pixel op het scherm met de opgegeven X- en Y-coördinaten in de opgegeven kleur.
+            </summary>
+            <param name="x">
+            De x-coördinaat van de pixel.
+            </param>
+            <param name="y">
+            De y-coördinaat van de pixel.
+            </param>
+            <param name="color">
+            De kleur van de pixel.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt de kleur van de pixel op de opgegeven X- en Y-coördinaten.
+            </summary>
+            <param name="x">
+            De x-coördinaat van de pixel.
+            </param>
+            <param name="y">
+            De y-coördinaat van de pixel.
+            </param>
+            <returns>
+            De kleur van de pixel.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetRandomColor">
+            <summary>
+            Geeft een geldige willekeurige kleur.
+            </summary>
+            <returns>
+            Een geldige willekeurige kleur.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetColorFromRGB(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stelt een kleur samen op basis van de opgegeven rood-, blauw- en groen-waarden.
+            </summary>
+            <param name="red">
+            De rode component van de kleur (0-255).
+            </param>
+            <param name="green">
+            De groene component van de kleur (0-255).
+            </param>
+            <param name="blue">
+            De blauwe component van de kleur (0-255).
+            </param>
+            <returns>
+            Retourneert een kleur die gebruikt kan worden om een penseel of penkleur in te stellen.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Clear">
+            <summary>
+            Maakt het venster leeg.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.ShowMessage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Toont een berichtvenster aan de gebruiker.
+            </summary>
+            <param name="text">
+            De tekst die in het berichtvenster getoond moet worden.
+            </param>
+            <param name="title">
+            De titel voor het berichtvenster.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BackgroundColor">
+            <summary>
+            Bepaalt de achtergrondkleur van het grafische venster of stelt deze in.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BrushColor">
+            <summary>
+            Bepaalt de penseelkleur, of stelt deze in, die gebruikt moet worden om de vormen in te kleuren die op het grafische venster getekend zijn.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.CanResize">
+            <summary>
+            Geeft aan of het grafische venster door de gebruiker vergroot of verkleind kan worden.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenWidth">
+            <summary>
+            Bepaalt de breedte, of stelt deze in, van de pen waarmee vormen worden getekend op het grafische venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenColor">
+            <summary>
+            Bepaalt of stelt de kleur in van de pen waarmee vormen worden getekend op het grafische venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontName">
+            <summary>
+            Bepaalt of stelt het lettertype in die gebruikt moet worden om tekst te tekenen op het grafische venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontSize">
+            <summary>
+            Bepaalt of stelt de lettergrootte in die gebruikt moet worden om tekst te tekenen op het grafische venster.
+            </summary>pe
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontBold">
+            <summary>
+            Bepaalt of een vetgedrukt lettertype gebruikt moet worden bij het tekenen van tekst op het grafische scherm.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontItalic">
+            <summary>
+            Bepaalt of een schuingedrukt lettertype gebruikt moet worden bij het tekenen van tekst op het grafische scherm.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Title">
+            <summary>
+            Uitlezen of instellen van de titel van het grafische venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Height">
+            <summary>
+            Uitlezen of instellen van de hoogte van het grafische venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Width">
+            <summary>
+            Uitlezen of instellen van de breedte van het grafische venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Left">
+            <summary>
+            Uitlezen of instellen van de positie van de linkerkant van het grafische venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Top">
+            <summary>
+            Uitlezen of instellen van de positie van de bovenkant van het grafische venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastKey">
+            <summary>
+            Bepaalt welke toets als laatste is ingedrukt of losgelaten.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastText">
+            <summary>
+            Krijgt de laatste tekst die is ingevoerd in het grafische venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseX">
+            <summary>
+            Bepaalt de x-coördinaat van de cursor ten opzichte van het grafische venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseY">
+            <summary>
+            Bepaalt de y-coördinaat van de cursor ten opzichte van het grafische venster.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyDown">
+            <summary>
+            Activeert een subroutine na het indrukken van een toets op het toetsenbord. Bijvoorbeeld, GraphicsWindows.KeyDown = DoeIets.Sub DoeIets var = Graphicswindow.Lastkey GraphicsWindow.ShowMessage(var, 'Laatst ingedrukte toets') EndSub
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyUp">
+            <summary>
+            Activeert een subroutine na het loslaten van een toets op het toetsenbord. Bijvoorbeeld, GraphicsWindows.KeyUp = DoeIets.Sub DoeIets var = Graphicswindow.Lastkey GraphicsWindow.ShowMessage(var, 'Laatst ingedrukte toets') EndSub
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseDown">
+            <summary>
+            Activeert een subroutine na het indrukken van de muisknop boven het grafische venster. Bijvoorbeeld, GraphicsWindows.MouseDown = MuisPositie.Sub MuisPositie x = GraphicsWindow.MouseX GraphicsWindow.ShowMessage(x, 'X-positie van de muis') Endsub
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseUp">
+            <summary>
+            Activeert een subroutine na het loslaten van de muisknop boven het grafische venster. Bijvoorbeeld, GraphicsWindows.MouseDown = MuisPositie.Sub MuisPositie x = GraphicsWindow.MouseX GraphicsWindow.ShowMessage(x, 'X-positie van de muis') Endsub
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseMove">
+            <summary>
+            Roept een gebeurtenis op wanneer de muis wordt bewogen.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.TextInput">
+            <summary>
+            Roept een gebeurtenis op wanneer de tekst wordt ingevoerd in het grafisch venster.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Clock">
+            <summary>
+            De Clock-class geeft toegang tot de systeemklok.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Time">
+            <summary>
+            Haalt de actuele systeemtijd op.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Date">
+            <summary>
+            Haalt de actuele systeemdatum op.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Year">
+            <summary>
+            Uitlezen van het huidige jaar.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Month">
+            <summary>
+            Uitlezen van de huidige maand.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Day">
+            <summary>
+            Uitlezen van de huidige dag van de maand.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.WeekDay">
+            <summary>
+            Uitlezen van de huidige dag van de week.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Hour">
+            <summary>
+            Uitlezen van het actuele uur.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Minute">
+            <summary>
+            Uitlezen van de actuele minuut.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Second">
+            <summary>
+            Uitlezen van de actuele seconde.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Millisecond">
+            <summary>
+            Uitlezen van de actuele milliseconde.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.ElapsedMilliseconds">
+            <summary>
+            Krijgt het aantal milliseconden welke zijn verstreken sinds 1900.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.File">
+            <summary>
+            Het File-object voorziet in methoden om informatie toegankelijk te maken, te lezen en te schrijven van en naar een bestand op de harde schijf. Je kunt bijvoorbeeld gegevens opslaan in de ene sessie van het programma en openen in een andere.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Opent een bestand en leest de hele inhoud. Deze methode is snel bestanden die kleiner zijn dan 1MB, maar opvallend langzaam voor bestanden die groter zijn dan 10MB.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            De volledige bestandslocatie van het in te lezen bestand. Een voorbeeld van een volledige bestandslocatie is c:\temp\leesmij.txt.
+            </para>
+            </param>
+            <returns>
+            De volledige inhoud van het bestand.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Opent een bestand en legt de opgegeven inhoud er in vast, waarbij de oorspronkelijke inhoud word vervangen door de nieuwe.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            De volledige bestandslocatie van het aan te maken bestand. Een voorbeeld van een volledige bestandslocatie is c:\temp\leesmij.txt.
+            </para>
+            </param>
+            <param name="contents">
+            De inhoud die moet worden vastgelegd in het opgegeven bestand.
+            </param>
+            <returns>
+            <para>
+            Als de bewerking met succes is uitgevoerd, wordt "SUCCESS" getoond. Anders "FAILED".
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Opent het gespecificeerde bestand en leest de inhoud op het opgegeven regelnummer.
+            </summary>
+            <param name="filePath">
+            <para>
+            De volledige bestandslocatie van het bestand waaruit gelezen moet worden. Een voorbeeld van een volledige bestandslocatie is c:\temp\leesmij.txt.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Het regelnummer van de tekst die ingelezen moet worden.
+            </param>
+            <returns>
+            De tekst op de opgegeven regel van het gespecificeerde bestand.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Opent het gespecificeerde bestand en schrijft de inhoud op het opgegeven regelnummer.
+            </para>
+            <para>
+            Deze bewerking zal de reeds aanwezige inhoud op de opgegeven regel overschrijven.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            De volledige bestandslocatie van het bestand waaruit gelezen moet worden. Een voorbeeld van een volledige bestandslocatie is c:\temp\leesmij.txt.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Het regelnummer dat aangeeft waar de tekst geschreven moet worden.
+            </param>
+            <param name="contents">
+            <para>
+            De inhoud die op de opgegeven regel van het gespecificeerde bestand moet worden geschreven.
+            </para>
+            </param>
+            <returns>
+            <para>
+            Als de bewerking met succes is uitgevoerd, wordt "SUCCESS" getoond, anders "FAILED".
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.InsertLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Opent het gespecificeerde bestand en voegt de inhoud in op het opgegeven regelnummer.
+            </para>
+            <para>
+            Deze bewerking zal de reeds aanwezige inhoud op de opgegeven regel niet overschrijven.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            De volledige bestandslocatie van het bestand waaruit gelezen moet worden. Een voorbeeld van een volledige bestandslocatie is c:\temp\leesmij.txt.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Het regelnummer dat aangeeft waar de tekst tussengevoegd moet worden.
+            </param>
+            <param name="contents">
+            De inhoud die in het bestand moet worden ingevoegd.
+            </param>
+            <returns>
+            <para>
+            Als de bewerking met succes is uitgevoerd, wordt "SUCCESS" getoond, anders "FAILED".
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.AppendContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Opent het gespecificeerde bestand en voegt de inhoud toe aan het einde van het bestand.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            De volledige bestandslocatie van het bestand waaruit gelezen moet worden. Een voorbeeld van een volledige bestandslocatie is c:\temp\leesmij.txt.
+            </para>
+            </param>
+            <param name="contents">
+            De inhoud die moet worden ingevoegd aan het einde van het bestand.
+            </param>
+            <returns>
+            <para>
+            Als de bewerking met succes is uitgevoerd, wordt "SUCCESS" getoond, anders "FAILED".
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CopyFile(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Kopieert het specifieke bronbestand naar het gewenste bestandspad. Als het doel een bestandspad is dat niet bestaat, dan zal de methode proberen om het pad automatisch te creëren.
+            </para>
+            <para>
+            Bestaande bestanden zullen worden overschreven. Het is beter om te controleren of de bestemmingsbestanden bestaan als je deze niet wenst te overschrijven.
+            </para>
+            </summary>
+            <param name="sourceFilePath">
+            <para>
+            De volledige bestandslocatie van het bronbestand dat gekopieerd moet worden. Een voorbeeld van een volledige bestandslocatie is c:\temp\leesmij.txt.
+            </para>
+            </param>
+            <param name="destinationFilePath">
+            De bestandslocatie waar het doelbestand naartoe gekopieerd moet worden.  
+            </param>
+            <returns>
+            Als de bewerking met succes is uitgevoerd, wordt "SUCCESS" getoond, anders "FAILED".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verwijdert het opgegeven bestand.
+            </summary>
+            <param name="filePath">
+            <para>
+            De bestemminsglocatie of het pad naar het bestand. Een voorbeeld van een volledig pad wordt c:\temp\settings.data.
+            </para>
+            </param>
+            <returns>
+            Als de bewerking met succes is uitgevoerd, wordt "SUCCESS" getoond, anders "FAILED".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CreateDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Maakt de opgegeven map aan.
+            </summary>
+            <param name="directoryPath">
+            De volledige locatie van de map die moet worden aangemaakt.
+            </param>
+            <returns>
+            Als de bewerking met succes is uitgevoerd, wordt "SUCCESS" getoond, anders "FAILED".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verwijdert de opgegeven map.
+            </summary>
+            <param name="directoryPath">
+            De volledige locatie van de map die verwijdert moet worden. Een voorbeeld van een volledige maplocatie is c:\temp.
+            </param>
+            <returns>
+            Als de bewerking met succes is uitgevoerd, wordt "SUCCESS" getoond, anders "FAILED".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetFiles(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt de lijst van bestanden in een gegeven map.
+            </summary>
+            <param name="directoryPath">
+            De map waarvan bepaald moet worden welke bestanden er in aanwezig zijn.
+            </param>
+            <returns>
+            Als de bewerking met succes is uitgevoerd, levert dit bestanden in een matrix op, anders "FAILED".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetDirectories(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt de lijst van mappen in een gegeven map.
+            </summary>
+            <param name="directoryPath">
+            De map waarvan bepaald moet worden welke submappen erin aanwezig zijn.
+            </param>
+            <returns>
+            Als de bewerking met succes is uitgevoerd, levert dit lijst van mappen in een matrix op, anders "FAILED".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetTemporaryFilePath">
+            <summary>
+            <para>
+            Maakt een nieuw tijdelijk bestand aan in een tijdelijke map en geeft de volledige bestandslocatie.
+            </para>
+            </summary>
+            <returns>
+            De volledige bestandslocatie van het tijdelijke bestand.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetSettingsFilePath">
+            <summary>
+            <para>
+            Verkrijgt het volledige pad van het instellingen bestand voor dit programma. Het instellingenbestand is gebaseerd op de programmanaam en is aanwezig in dezelfde locatie als het programma.
+            </para>
+            </summary>
+            <returns>
+            De volledige bestandslocatie van het bestand met instellingen voor dit programma.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.File.LastError">
+            <summary>
+            <para>
+            Bepaalt welke foutmelding als laatste is opgetreden als gevolg van een bestandsbewerking. Met deze eigenschap kan bepaald worden wat er fout ging.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Keywords">
+            <summary>
+            Het Keywords-object is een plek waarin documentatie wordt bewaard voor Small Basic-trefwoorden.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.For">
+            <summary>
+            De bewerkingen binnen een zogenaamde For-loop worden meerdere keren uitgevoerd. To geeft aan wat het laatste nummer in de lijst is. EndFor markeert het einde van de For loop.
+            </summary>
+            <example>
+            Het volgende voorbeeld print de getallen 1 tot 10
+            <code>
+            For i = 1 To 10 
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndFor">
+            <summary>
+            Bekijk het For trefwoord voor informatie over EndFor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.To">
+            <summary>
+            Bekijk het For trefwoord voor informatie over To.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Step">
+            <summary>
+            Het volgende voorbeeld print de oneven getallen van 1 tot 9 want de stap grootte is 2.
+            </summary>
+            <example>
+            Het volgende voorbeeld print de oneven getallen van 1 tot 10
+            <code>
+            For i = 1 to 10 Step 2
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.If">
+            <summary>
+            Met If (Als) wordt code achter Then (dan) uitgevoerd als de vergelijking waar is. De code achter Else (anders) wordt uitgevoerd als de vergelijking niet waar is.
+            </summary>
+            <example>
+            Het volgende voorbeeld schrijft "Munt" of "Kop" afhankelijk van de uitkomst van het gooien van een munt.
+            <code>
+            If flip = "Munt" Then
+              TextWindow.WriteLine("Munt")
+            Else
+              TextWindow.WriteLine("Kop")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Then">
+            <summary>
+            Bekijk het If trefwoord voor informatie over Then.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Else">
+            <summary>
+            Bekijk het If trefwoord voor informatie over Else.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.ElseIf">
+            <summary>
+            Het ElseIf trefwoord helpt in het voorzien van een alternative conditie terwijl er gebruik gemaakt wordt van het If-statement.
+            </summary>
+            <example>
+            In het volgende voorbeeld wordt de groet bepaald door de huidige tijd.
+            <code>
+            If Clock.Hour &lt; 12 Then
+              TextWindow.WriteLine("Goedemorgen")
+            ElseIf Clock.Hour &lt; 16 Then
+              TextWindow.WriteLine("Goedemiddag")
+            ElseIf Clock.Hour &lt; 20 Then
+              TextWindow.WriteLine("Goedenavond")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndIf">
+            <summary>
+            Bekijk het If trefwoord voor informatie over EndIf.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Goto">
+            <summary>
+            Met GoTo (GaNaar) springt het programma naar een met : benoemde plek.  
+            </summary>
+            <example>
+            Het volgende programma print eindeloos opeenvolgende getallen.
+            <code>
+            start:
+            TextWindow.WriteLine(i)
+            i = i + 1
+            Goto start
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Sub">
+            <summary>
+            Met Sub wordt een groep bewerkingen samen gebracht. Hiermee wordt een nieuwe bewerking (Subroutine) gemaakt.
+            </summary>
+            <example>
+            Het volgende voorbeeld maakt een nieuwe bewerking (Subroutine) genaamd Win dat een bel laat rinkelen en "Win!" Print.
+            <code>
+            Sub Win
+              Sound.PlayBellRing()
+              TextWindow.WriteLine("Win!")
+            EndSub
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndSub">
+            <summary>
+            Bekijk het Sub trefwoord voor informatie over EndSub.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.While">
+            <summary>
+            Met While (Zolang) worden bewerkingen uitgevoerd zolang een vergelijking waar is.
+            </summary>
+            <example>
+            De volgende code print een lijst met willekeurige getallen zolang het getal kleiner is dan 100.
+            <code>
+            While i &lt; 100
+              i = Math.GetRandomNumber(150)
+              TextWindow.WriteLine(i)
+            EndWhile
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndWhile">
+            <summary>
+            Bekijk het While trefwoord voor informatie over EndWhile.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.And">
+            <summary>
+            voert een logische bewerking uit en levert waar op als beide invoer waar zijn.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Or">
+            <summary>
+            Voert een logische bewerking uit en levert waar op als een van de invoer waar is.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Math">
+            <summary>
+            De Math-klasse voorziet in een heleboel nuttige, wiskundige methoden.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Abs(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt de positieve waarde van een getal. -32,233 wordt 32,233. 16,12 blijft 16,12
+            </summary>
+            <param name="number">
+            Het getal waarvan de absolute waarde moet worden bepaald.
+            </param>
+            <returns>
+            De absolute waarde van het gegeven getal.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Ceiling(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Rondt een getal met komma af naar boven. Bijvoorbeeld, voor 32,233 het resultaat is 33. 32 blijft 32.
+            </summary>
+            <param name="number">
+            Het getal dat naar boven moet worden afgerond.
+            </param>
+            <returns>
+            De naar boven afgeronde waarde van het gegeven getal.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Floor(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Rondt een getal met komma af naar beneden. Bijvoorbeeld, voor 32,233 het resultaat is 32. 33 blijft 33.
+            </summary>
+            <param name="number">
+            Het getal dat naar beneden moet worden afgerond.
+            </param>
+            <returns>
+            De naar beneden afgeronde waarde van het gegeven getal.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.NaturalLog(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Berekent de natuurlijke logaritme van een gegeven getal.
+            </summary>
+            <param name="number">
+            Het getal waarvan de natuurlijke logaritme moet worden berekend.
+            </param>
+            <returns>
+            De natuurlijke logaritmische waarde van het gegeven getal.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Log(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Berekent de logaritme met grondtal 10 van een gegeven getal.
+            </summary>
+            <param name="number">
+            Het getal waarvan de logaritme moet worden berekend
+            </param>
+            <returns>
+            De logaritmische waarde van het gegeven getal
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Cos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Berekent de cosinus van een gegeven hoek in radialen.
+            </summary>
+            <param name="angle">
+            De hoek waarvan de cosinus moet worden berekend (in radialen).
+            </param>
+            <returns>
+            De cosinus van de gegeven hoek.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Sin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Berekent de sinus van een gegeven hoek in radialen.
+            </summary>
+            <param name="angle">
+            De hoek waarvan de sinus moet worden berekend (in radialen)
+            </param>
+            <returns>
+            De sinus van de gegeven hoek
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Tan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Berekent de tangens van een gegeven hoek in radialen.
+            </summary>
+            <param name="angle">
+            De hoek waarvan de tangens moet worden berekend (in radialen).
+            </param>
+            <returns>
+            De tangens van de gegeven hoek.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcSin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Krijgt de hoek in radialen, gegeven de sinus waarde.
+            </summary>
+            <param name="sinValue">
+            De sinus waarde waarvan de hoek wordt benodigd.
+            </param>
+            <returns>
+            de hoek (in radialen) fvo de gegeven sinus waarde.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcCos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Krijgt de hoek in radialen, gegeven de cosinus waarde.
+            </summary>
+            <param name="cosValue">
+            De cosinus waaarde waarvan de hoek moet worden verkregen.
+            </param>
+            <returns>
+            De hoek (in radialen) voor de gegeven cosinus waarde.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcTan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Krijgt de hoek in radialen, gegeven de tangus waarde.
+            </summary>
+            <param name="tanValue">
+            de tangus waarde waarvan de hoek moet worden verkregen.
+            </param>
+            <returns>
+            de hoek (in radialen) voor de gegeven tangus waarde.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetDegrees(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zet de gegeven hoek in radialen om naar graden.
+            </summary>
+            <param name="angle">
+            De hoek in radialen.
+            </param>
+            <returns>
+            De hoek omgezet naar graden.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRadians(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zet een gegeven hoek in graden om naar radialen.
+            </summary>
+            <param name="angle">
+            De hoek in graden.
+            </param>
+            <returns>
+            De hoek omgezet naar radialen.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.SquareRoot(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Berekent de vierkantswortel van een gegeven getal.
+            </summary>
+            <param name="number">
+            Het getal waarvan de vierkantswortel moet worden berekend.
+            </param>
+            <returns>
+            De vierkantswortel van het gegeven getal.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Power(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verheft het grondtal tot de opgegeven macht.
+            </summary>
+            <param name="baseNumber">
+            Het grondtal.
+            </param>
+            <param name="exponent">
+            De exponent waarmee het grondtal moet worden verheven.
+            </param>
+            <returns>
+            De uitkomst van de machtsverheffing van het grondtal tot de opgegeven macht (de exponent).
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Round(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Rondt een getal af naar het dichtsbijzijnde gehele getal. Bijvoorbeeld 32,233 wordt 32 en 32,566 wordt 33.
+            </summary>
+            <param name="number">
+            Het getal dat moet worden afgerond.
+            </param>
+            <returns>
+            De afgeronde waarde van een gegeven getal.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Max(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vergelijkt twee getallen en geeft de grootste van de twee terug als resultaat.
+            </summary>
+            <param name="number1">
+            Het eerste getal van de twee die vergeleken moeten worden.
+            </param>
+            <param name="number2">
+            Het tweede getal van de twee die vergeleken moeten worden.
+            </param>
+            <returns>
+            Het grootste getal van de twee.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Min(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vergelijkt twee getallen en geeft de kleinste van de twee terug als resultaat.
+            </summary>
+            <param name="number1">
+            Het eerste getal van de twee die vergeleken moeten worden.
+            </param>
+            <param name="number2">
+            Het tweede getal van de twee die vergeleken moeten worden.
+            </param>
+            <returns>
+            Het kleinste getal van de twee.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Remainder(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Deelt het eerste getal door het tweede en geeft de rest als resultaat. Bijvoorbeeld, 20 gedeeld door 3 is 6 met rest 2.
+            </summary>
+            <param name="dividend">
+            Het deeltal.
+            </param>
+            <param name="divisor">
+            De deler.
+            </param>
+            <returns>
+            De rest na deling.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRandomNumber(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Genereert een willekeurig getal tussen 1 en de opgegeven bovengrens.
+            </summary>
+            <param name="maxNumber">
+            De bovengrens.
+            </param>
+            <returns>
+            Een willekeurig getal dat groter is dan 1 en kleiner of gelijk aan de gegeven bovengrens.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Math.Pi">
+            <summary>
+            Geeft de waarde van het getal Pi
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Flickr">
+            <summary>
+            Deze klasse geeft toegang tot Flickr-fotofuncties.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetPictureOfMoment">
+            <summary>
+            Bepaalt de URL voor de afbeelding van het moment.
+            </summary>
+            <returns>
+            Een bestanden URL voor de Flickr-afbeelding van dit moment
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetRandomPicture(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt de URL voor een willekeurige afbeelding met het opgegeven kenmerk.
+            </summary>
+            <param name="tag">
+            Het kenmerk voor de gevraagde afbeelding.
+            </param>
+            <returns>
+            Een bestands-URL voor de random Flickr-afbeelding.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Network">
+            <summary>
+            Deze functie ondersteunt toegangsmethoden tot het netwerk.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.DownloadFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Download een bestand van Internet naar een lokaal tijdelijk bestand.
+            </summary>
+            <param name="url">
+            De URL van het bestand op Internet.
+            </param>
+            <returns>
+            De lokale bestandsnaam waaronder de download is opgeslagen.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.GetWebPageContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Haalt de inhoud op van een opgegeven webpagina.
+            </summary>
+            <param name="url">
+            De URL van de webpagina.
+            </param>
+            <returns>
+            De inhoud van de opgegeven webpagina.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.OfficeResearch">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Query(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginQuery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndQuery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Registration(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginRegistration(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndRegistration(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Status">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginStatus(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndStatus(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Discovery(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginDiscovery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndDiscovery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Platform">
+            <summary>
+            Met het Platform-object kunnen andere .Net klassebibliotheken worden aangeroepen.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Dictionary">
+            <summary>
+            Deze klasse geeft toegang tot een online woordenboek.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinition(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Geeft de betekenis van een woord in het Engels.
+            </summary>
+            <param name="word">
+            Het woord waarvoor de betekenis opgehaald moet worden.
+            </param>
+            <returns>
+            De betekenis(sen) van het opgegeven woord.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionInFrench(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Geeft de betekenis van een woord in het Frans.
+            </summary>
+            <param name="word">
+            Het woord waarvoor de betekenis opgehaald moet worden.
+            </param>
+            <returns>
+            De betekenis(sen) van het opgegeven woord.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RestHelper">
+            <summary>
+            Functionaliteit voor het aanroepen van Rest API's.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.RestHelper.GetContents(System.String)">
+            <summary>
+            Retourneert de inhoud van een XML-document op basis van de opgegeven Rest-URL.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Program">
+            <summary>
+            De Program-klasse voorziet in functies ter ondersteuning van het uitvoeren van programma's.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.Delay(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Wacht het opgegeven aantal milliseconden.
+            </summary>
+            <param name="milliSeconds">
+            De hoeveelheid vertraging.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.End">
+            <summary>
+            Beëindigt het programma.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.GetArgument(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Geeft het opgegeven argument welke is doorgegeven aan dit programma.
+            </summary>
+            <param name="index">
+            Index van het argument.
+            </param>
+            <returns>
+            Het opdrachtregelargument met de opgegeven index.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.ArgumentCount">
+            <summary>
+            Het aantal opdrachtregelargumenten dat aan het programma is meegegeven.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.Directory">
+            <summary>
+            Verkrijgt de map van het uitvoerende programma.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Array">
+            <summary>
+            Met een array kan meer dan één waarde aan een variabele worden toegekend. Ieder element in een array heeft een unieke index waarmee dat element toegankelijk wordt.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsIndex(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verifieert of de matrix voorzien is van de specifieke index. Dit is zeer bruikbaar bij het besluit of de matrix index is geïnitialiseerd door een waarde of niet.
+            </summary>
+            <param name="array">
+            De matrix om te controleren.
+            </param>
+            <param name="index">
+            De index waarvan het bestaan in de array gecontroleerd moet worden.
+            </param>
+            <returns>
+            "True" of "False" afhankelijk van of de index aanwezig was in de specifieke matrix of niet.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verifieert of de matrix voorzien is van de specifieke waarde. Dit is zeer bruikbaar bij het besluit of de waarde was opgeslagen in een index.
+            </summary>
+            <param name="array">
+            De matrix die moet worden gecontroleerd.
+            </param>
+            <param name="value">
+            De waarde die gezocht moet worden in de array.
+            </param>
+            <returns>
+            "True" of "False" afhankelijk van of de waarde aanwezig was in de opgegeven matrix of niet.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetAllIndices(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verkrijgt alle indices van de matrix, als andere matrix.
+            </summary>
+            <param name="array">
+            De matrix waarvan indices worden gevraagd.
+            </param>
+            <returns>
+            Een matrix gevuld met alle indices van de opgegeven matrix. De index van de geretourneerde matrix start bij 1.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetItemCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verkrijgt het aantal items opgeslagen in de matrix.
+            </summary>
+            <param name="array">
+            De matrix waarvoor de telling is aangevraagd.
+            </param>
+            <returns>
+            Het aantal elementen in de opgegeven array.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.IsArray(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verifieert of een gegeven variabele een matrix is of niet.
+            </summary>
+            <param name="array">
+            De variabele om te controleren.
+            </param>
+            <returns>
+            "True" als de opgegeven variabele een matrix is, anders "False".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.SetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Kent een waarde toe voor een opgegeven matrix en index.
+            </summary>
+            <param name="arrayName">
+            De naam van de matrix.
+            </param>
+            <param name="index">
+            De naam van de index.
+            </param>
+            <param name="value">
+            De waarde die moet worden toegekend.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Geeft als resultaat de waarde van een opgegeven matrix en index.
+            </summary>
+            <param name="arrayName">
+            De naam van de matrix.
+            </param>
+            <param name="index">
+            De naam van de index.
+            </param>
+            <returns>
+            De waarde van het element dat is gespecificeerd middels de opgegeven matrix en index.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.RemoveValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verwijdert het array element met de opgegeven index.
+            </summary>
+            <param name="arrayName">
+            De naam van de matrix.
+            </param>
+            <param name="index">
+            De index van het element dat verwijderd moet worden.
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.TextWindow">
+            <summary>
+            Het TextWindow voorziet in tekstinvoer- en -uitvoerfuncties. Met deze klasse kan tekst geschreven worden in het tekstvenster of kan invoer van de gebruiker gelezen worden.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Show">
+            <summary>
+            Maakt het tekstvenster zichtbaar zodat interactie mogelijk wordt.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Hide">
+            <summary>
+            Verbergt het tekstvenster.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Clear">
+            <summary>
+            Maakt het tekstvenster leeg.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Pause">
+            <summary>
+            Wacht op invoer door de gebruiker alvorens verder te gaan.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseIfVisible">
+            <summary>
+            Wacht alleen op invoer door de gebruiker als het tekstvenster al open is.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseWithoutMessage">
+            <summary>
+            Wacht op invoer door de gebruiker alvorens verder te gaan.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Read">
+            <summary>
+            Leest een regel tekst van het tekstvenster. Deze functie gaat pas verder als de gebruiker op ENTER heeft gedrukt.
+            </summary>
+            <returns>
+            De tekst die is gelezen uit het tekstvenster na te zijn ingevoerd door de gebruiker.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.ReadNumber">
+            <summary>
+            Leest een getal uit het tekstvenster. Deze functie gaat pas verder als de gebruiker op ENTER heeft gedrukt.
+            </summary>
+            <returns>
+            Het getal dat is gelezen uit het tekstvenster na te zijn ingevoerd door de gebruiker.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.WriteLine(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Schrijft tekst of een getal in het tekstvenster. Een nieuwe regel markering zal worden toegevoegd aan de uitvoer, zodat de volgende keer dat er iets geschreven wordt in het tekstvenster, het op een nieuwe regel verschijnt.
+            </summary>
+            <param name="data">
+            De tekst of cijferreeks die in het tekstvenster geschreven moet worden.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Write(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Schrijft tekst in het tekstvenster. In tegenstelling tot WriteLine, wordt hierbij geen nieuwe regel markering toegevoegd, zodat de volgende keer dat er iets geschreven wordt in het tekstvenster, het aan dezelfde regel wordt toegevoegd.
+            </summary>
+            <param name="data">
+            De tekst of cijferreeks die in het tekstvenster geschreven moet worden.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.VerifyAccess">
+            <summary>
+            Verifieert of toegang tot het tekstvenster reeds heeft plaatsgevonden.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.ForegroundColor">
+            <summary>
+            Uitlezen of instellen van de voorgrondkleur van de tekst die geschreven gaat worden in het tekstvenster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.BackgroundColor">
+            <summary>
+            Uitlezen of instellen van de achtergrondkleur van de tekst die geschreven gaat worden in het tekstvenster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorLeft">
+            <summary>
+            Verkrijgt of stelt de cursorkolompositie in op het tekst venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorTop">
+            <summary>
+            Verkrijgt of stelt de cursorrijpositie in op het tekst venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Left">
+            <summary>
+            Uitlezen of instellen van de positie van de linker zijkant van het tekstvenster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Title">
+            <summary>
+            Uitlezen of instellen van de titel van het tekstvenster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Top">
+            <summary>
+            Uitlezen of instellen van de positie van de bovenkant van het tekstvenster.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Shapes">
+            <summary>
+            Met het Shape-object kun je vormen toevoegen, verschuiven en roteren in het grafische venster.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Voegt een rechthoek toe met de opgegeven breedte en hoogte.
+            </summary>
+            <param name="width">
+            De breedte van de rechthoek.
+            </param>
+            <param name="height">
+            De hoogte van de rechthoek.
+            </param>
+            <returns>
+            Een objectverwijzing naar de rechthoek die is toegevoegd aan het grafische venster.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Voegt een ellips toe met de opgegeven breedte en hoogte.
+            </summary>
+            <param name="width">
+            De breedte van de ellips.
+            </param>
+            <param name="height">
+            De hoogte van de ellips.
+            </param>
+            <returns>
+            Een objectverwijzing naar de ellips die is toegevoegd aan het grafische venster.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Voegt een driehoek toe op basis van de opgegeven coördinaten van drie punten.
+            </summary>
+            <param name="x1">
+            De x-coördinaat van het eerste punt.
+            </param>
+            <param name="y1">
+            De y-coördinaat van het eerste punt.
+            </param>
+            <param name="x2">
+            De x-coördinaat van het tweede punt.
+            </param>
+            <param name="y2">
+            De y-coördinaat van het tweede punt.
+            </param>
+            <param name="x3">
+            De x-coördinaat van het derde punt.
+            </param>
+            <param name="y3">
+            De y-coördinaat van het derde punt.
+            </param>
+            <returns>
+            Een objectverwijzing naar de driehoek die is toegevoegd aan het grafische venster.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Voegt een lijn toe op basis van de opgegeven coördinaten van twee punten.
+            </summary>
+            <param name="x1">
+            De x-coördinaat van het eerste punt.
+            </param>
+            <param name="y1">
+            De y-coördinaat van het eerste punt.
+            </param>
+            <param name="x2">
+            De x-coördinaat van het tweede punt.
+            </param>
+            <param name="y2">
+            De y-coördinaat van het tweede punt.
+            </param>
+            <returns>
+            Een objectverwijzing naar de lijn die is toegevoegd aan het grafische venster.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Voegt een afbeelding toe die kan worden verplaatst, geanimeerd of gedraaid.
+            </summary>
+            <param name="imageName">
+            De naam van de afbeelding die getekend moet worden.
+            </param>
+            <returns>
+            Een objectverwijzing naar de afbeelding die is toegevoegd aan het grafische venster.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Voegt wat tekst toe aan een vorm welke kan worden verplaatst, geanimeerd of geroteerd.
+            </summary>
+            <param name="text">
+            De tekst om toe te voegen.
+            </param>
+            <returns>
+            De tekst vorm welke is toegevoegd aan het grafisch venster.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stelt de tekst van een figuur in. 
+            </summary>
+            <param name="shapeName">
+            De naam van het tekst vorm.
+            </param>
+            <param name="text">
+            De nieuwe tekst waarde om in te stellen.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verwijdert een vorm uit het grafische venster.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm die moet worden verwijderd.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verplaatst de vorm met de opgegeven naam naar een nieuwe positie.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm welke moet worden verplaatst.
+            </param>
+            <param name="x">
+            De x-coördinaat van de nieuwe positie.
+            </param>
+            <param name="y">
+            De y-coördinaat van de nieuwe positie.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Rotate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Roteert de vorm met de opgegeven naam over de opgegeven hoek.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm die geroteerd moet worden.
+            </param>
+            <param name="angle">
+            De hoek waarmee de vorm geroteerd moet worden.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Zoom(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Schaalt de vorm gebruikmakend van de opgegeven zoom niveaus.  Minimum is 0.1 en maximum is 20.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm die geroteerd moet worden.
+            </param>
+            <param name="scaleX">
+            Het zoomniveau op de x-as.
+            </param>
+            <param name="scaleY">
+            Het zoomniveau op de y-as.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Animate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Animeert een vorm met de opgegeven naam naar een nieuwe positie.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm welke moet worden verplaatst.
+            </param>
+            <param name="x">
+            De x-coördinaat van de nieuwe positie.
+            </param>
+            <param name="y">
+            De y-coördinaat van de nieuwe positie.
+            </param>
+            <param name="duration">
+            De animatietijd in milliseconden.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetLeft(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt de linker coördinaat van de opgegeven vorm.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm.
+            </param>
+            <returns>
+            De linker coördinaat van de vorm.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetTop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bepaalt de bovenste coördinaat van de opgegeven vorm.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm.
+            </param>
+            <returns>
+            De bovenste coördinaat van de vorm.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetOpacity(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verkrijgt de doorzichtigheid van een vorm.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm.
+            </param>
+            <returns>
+            De doorzichtigheid van het object als een waarde tussen 0 en 100. 0 is geheel transparent en 100 is geheel dekkend.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetOpacity(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stelt in hoe dekkend een vorm moet worden weergegeven.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm.
+            </param>
+            <param name="level">
+            Het dekkend vermogen van 0 tot 100. 0 is geheel transparent en 100 is geheel dekkend.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.HideShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verbergt een reeeds toegevoegde vorm.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.ShowShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Toont een voorheen verborgen vorm.
+            </summary>
+            <param name="shapeName">
+            De naam van de vorm.
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Controls">
+            <summary>
+            de Controls-object stel je in staat om verplaatsen, toe te voegen en interactie aan te gaan door middel van controls.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddButton(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Voegt een knop toe aan het grafisch venster met de opgegeven breedte en hoogte.
+            </summary>
+            <param name="caption">
+            Het bijschrift om te tonen in de knop.
+            </param>
+            <param name="left">
+            De x-coördinaat van de knop.
+            </param>
+            <param name="top">
+            De y-coördinaat van de knop.
+            </param>
+            <returns>
+            De knop die zojuist is toegevoegd aan het grafisch venster.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetButtonCaption(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verkrijgt het huidige bijschrijft van de opgegeven knop.
+            </summary>
+            <param name="buttonName">
+            De knop waarvan het bijschrijft wordt gevraagd.
+            </param>
+            <returns>
+            Het huidige bijschrijft van de knop.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetButtonCaption(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stelt het bijschrijft van de opgegeven knop in.
+            </summary>
+            <param name="buttonName">
+            De knop waarvan het bijschrijft moet worden ingesteld.
+            </param>
+            <param name="caption">
+            Het nieuwe bijschrijft voor de knop.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Voegt een tekst invoer box toe aan het grafisch venster met de opgegeven breedte en hoogte.
+            </summary>
+            <param name="left">
+            De x-coördinaat van de tekstbox.
+            </param>
+            <param name="top">
+            De y-coördinaat van de tekstbox.
+            </param>
+            <returns>
+            De tekstbox welke zojuist is toegevoegd aan het grafisch venster.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddMultiLineTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Voegt een multi-line tekstinvoer box toe aan het grafisch venster met de opgegeven breedte en hoogte.
+            </summary>
+            <param name="left">
+            De x-coördinaat van de tekstbox.
+            </param>
+            <param name="top">
+            De y-coördinaat van de tekstbox.
+            </param>
+            <returns>
+            De tekstbox welke zojuist is toegevoegd aan het grafisch venster.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetTextBoxText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verkrijgt de huidige tekst van de opgegeven tekstbox.
+            </summary>
+            <param name="textBoxName">
+            De tekstbox waarvan de tekst wordt gevraagd.
+            </param>
+            <returns>
+            De tekst in de tekstbox.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetTextBoxText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stelt de tekst in van de opgegeven tekstbox.
+            </summary>
+            <param name="textBoxName">
+            De tekstbox waarvan de tekst moet worden ingesteld.
+            </param>
+            <param name="text">
+            De nieuwe tekst voor de tekstbox.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verwijdert een control van het grafisch venster.
+            </summary>
+            <param name="controlName">
+            De naam van de control welke moet worden verwijderd.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verplaatst de Control met de opgegeven naam naar een nieuwe positie.
+            </summary>
+            <param name="control">
+            De naam van de Control wat moet worden verplaatst.
+            </param>
+            <param name="x">
+            De x-coördinaat van de nieuwe positie.
+            </param>
+            <param name="y">
+            De y-coördinaat van de nieuwe positie.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetSize(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stelt de maat in van de Control.
+            </summary>
+            <param name="control">
+            De naam van de Control waaarvan het formaat moet worden gewijzigd.
+            </param>
+            <param name="width">
+            De breedte van de Control.
+            </param>
+            <param name="height">
+            De hoogte van de Control.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.HideControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verbergt een reeds toegevoegd Control.
+            </summary>
+            <param name="controlName">
+            De naam van de Control.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.ShowControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Toont een voorheen verborgen Control.
+            </summary>
+            <param name="controlName">
+            De naam van de Control.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastClickedButton">
+            <summary>
+            Vekrijgt de laatste knop die is aangeklikt in het grafisch venster.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastTypedTextBox">
+            <summary>
+            Verkrijgt de laatste tekstbox, waar tekst is ingetypt.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.ButtonClicked">
+            <summary>
+            Roept een gebeurtenis op wanneer enig knop control is aangeklikt.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.TextTyped">
+            <summary>
+            Roept een gebeurtenis op wanneer tekst wordt ingetypt in een tekstbox Control.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Sound">
+            <summary>
+            Het Sound-object voorziet in bewerkingen voor het afspelen van geluiden. Sommige voorbeeldgeluiden zijn meegeleverd met de betreffende bibliotheek.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClick">
+            <summary>
+            Speelt een klikgeluid af.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClickAndWait">
+            <summary>
+            Speelt een klikgeluid af en wacht tot het afgelopen is.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChime">
+            <summary>
+            Speelt het geluid van een klokkenspel af.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimeAndWait">
+            <summary>
+            Speelt het geluid van een klokkenspel af en wacht tot het afgelopen is.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimes">
+            <summary>
+            Speelt het geluid van meerdere klokkenspelen af.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimesAndWait">
+            <summary>
+            Speelt het geluid van meerdere klokken af en wacht tot het afgelopen is.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRing">
+            <summary>
+            Speelt het geluid af van een rinkelende bel.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRingAndWait">
+            <summary>
+            Speelt het geluid af van een rinkelende bel en wacht tot het afgelopen is.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayMusic(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Speelt muzikale noten.
+            </summary>
+            <param name="notes">
+            Een verzameling van muzikale noten om af te spelen. Het formaat is een deelverzamling van de Music Markup Language ondersteund door QBasic.
+            </param>
+            <example>
+            <code>
+            Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4")
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Play(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Speelt een audio bestand af. Dit kan een mp3, wav of wma bestand zijn. Andere bestandsformaten kunnen wel of niet worden afgespeeld afhankelijk van de geïnstalleerde audiocodecs op de computer.
+            </para>
+            <para>
+            Als het bestand al onderbroken was, dan zal het verder worden afgespeeld van af de positie waar het afspelen onderbroken was.
+            </para>
+            </summary>
+            <param name="filePath">
+            De bestandslocatie voor het audiobestand. Dit kan een lokaal bestand zijn (bijv. c:\muziek\track1.mp3) of een bestand op Internet (bijv. http://contoso.com/track01.wma).
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayAndWait(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Speelt een audiobestand af en wacht totdat het gereed is met afspelen. Dit kan een mp3, wav of wma bestand zijn. Andere formaten kunnen wel of niet worden afgespeeld afhankelijk van de geinstalleerde audio codecs op de computer.
+            </para>
+            <para>
+            Als het bestand al onderbroken was, dan zal het verder worden afgespeeld van af de positie waar het afspelen onderbroken was.
+            </para>
+            </summary>
+            <param name="filePath">
+            De bestandslocatie voor het audiobestand. Dit kan een lokaal bestand zijn (bijv. c:\muziek\track1.mp3) of een bestand op Internet (bijv. http://contoso.com/track01.wma).
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Pause(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Onderbreekt het afspelen van een audiobestand. Als het bestand nog niet afgespeeld werd, heeft deze bewerking geen effect.
+            </summary>
+            <param name="filePath">
+            De bestandslocatie voor het audiobestand. Dit kan een lokaal bestand zijn (bijv. c:\muziek\track1.mp3) of een bestand op Internet (bijv. http://contoso.com/track01.wma).
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Stop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stopt het afspelen van een audiobestand. Als het bestand nog niet afgespeeld werd, heeft deze bewerking geen effect.
+            </summary>
+            <param name="filePath">
+            De bestandslocatie voor het audiobestand. Dit kan een lokaal bestand zijn (bijv. c:\muziek\track1.mp3) of een bestand op Internet (bijv. http://contoso.com/track01.wma).
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Turtle">
+            <summary>
+            Met de Turtle-klasse kan een schildpad afbeelding worden getekend en gemanipuleerd door het instellen van de eigenschappen van pen en tekening.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Show">
+            <summary>
+            Toont de schildpad en activeert de mogelijkheid tot interactie.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Hide">
+            <summary>
+            Verbergt de schildpad en deactiveert de mogelijkheid tot interactie.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenDown">
+            <summary>
+            Laat de pen zakken waardoor de schildpad kan tekenen terwijl deze beweegt.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenUp">
+            <summary>
+            Tilt de pen op waardoor het tekenen stopt terwijl de schildpad beweegt.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Move(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verplaatst de schildpad een opgegeven afstand. Als de pen omlaag is, tekent deze een lijn terwijl de schilpad beweegt.
+            </summary>
+            <param name="distance">
+            De afstand waarover de schildpad verplaatst moet worden.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.MoveTo(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Draait en verplaatst de schildpad naar de opgegeven locatie. Als de pen omlaag is, tekent deze een lijn terwijl de schilpad beweegt.
+            </summary>
+            <param name="x">
+            De x-coördinaat van de bestemming.
+            </param>
+            <param name="y">
+            De y-coördinaat van de bestemming.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Turn(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Draait de schildpad over de opgegeven hoek. De hoek is in graden en kan zowel positief als negatief zijn. Als de hoek positief is, draait de schildpad naar rechts. Als de hoek negatief is, draait de schildpad naar links.
+            </summary>
+            <param name="angle">
+            De hoek waaronder de schildpad gedraaid moet worden.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnRight">
+            <summary>
+            Draait de schildpad 90 graden naar rechts.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnLeft">
+            <summary>
+            Draait de schildpad 90 graden naar links.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Speed">
+            <summary>
+            Geeft aan hoe snel de schildpad moet bewegen. Geldige waarden zijn van 1 tot 10. Als de snelheid is ingesteld op 10, dan beweegt en roteert de schildpad onmiddellijk.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Angle">
+            <summary>
+            Uitlezen of instellen van de huidige hoek van de schildpad. Tijdens het instellen draait de schildpad onmiddellijk over de nieuwe hoek.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.X">
+            <summary>
+            Uitlezen of instellen van de x-coördinaat van de schildpad. Tijdens het instellen verspringt de schildpad onmiddellijk naar de nieuwe positie.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Y">
+            <summary>
+            Uitlezen of instellen van de y-coördinaat van de schildpad. Tijdens het instellen verspringt de schildpad onmiddellijk naar de nieuwe positie.
+            </summary>
+        </member>
+    </members>
+</doc>

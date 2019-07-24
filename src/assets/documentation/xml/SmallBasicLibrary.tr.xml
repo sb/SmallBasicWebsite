@@ -1,0 +1,2508 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmallBasicLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SmallBasic.Library.Text">
+            <summary>
+            Text nesnesi Text ile çalışabilmek için gerekli yardımcı işlemleri sağlar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.Append(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            İki metin girdisi ekler ve sonucu yeni bir metin olarak döndürür. This operation is particularly useful when dealing with unknown text in variables which could accidentally be treated as numbers and get added, instead of getting appended.
+            </summary>
+            <param name="text1">
+            Eklenecek metnin ilk kısmı için kullanılır.
+            </param>
+            <param name="text2">
+            Eklenecek metnin ikinci kısmı için kullanılır.
+            </param>
+            <returns>
+            Belirtilen kısımları içeren eklenmiş metni sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetLength(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen metnin uzunluğunu belirtir.
+            </summary>
+            <param name="text">
+            Uzunluğu ölçülecek metin için kullanılır.
+            </param>
+            <returns>
+            Verilen metnin uzunluğunu değer olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.IsSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen bir metnin başka bir metinde bulunup bulunmadığını belirtir.
+            </summary>
+            <param name="text">
+            Alt metnin aranacağı metin için kullanılır.
+            </param>
+            <param name="subText">
+            Alt metin için kullanılır.
+            </param>
+            <returns>
+            Verilen metnin bulunması durumunda "True" değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.EndsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen metnin belirtilen alt metin ile bitip bitmediğini belirtir.
+            </summary>
+            <param name="text">
+            Aramanın yapılacağı metin için kullanılır.
+            </param>
+            <param name="subText">
+            Alt metin için kullanılır.
+            </param>
+            <returns>
+            Alt metnin verilen metnin sonunda bulunması durumunda "True" değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.StartsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen metnin belirtilen alt metin ile başlayıp başlamadığını belirtir.
+            </summary>
+            <param name="text">
+            Aramanın yapılacağı metin için kullanılır.
+            </param>
+            <param name="subText">
+            Alt metin için kullanılır.
+            </param>
+            <returns>
+            Alt metnin verilen metnin başında bulunması durumunda "True" değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen metinden bir alt metin türetir.
+            </summary>
+            <param name="text">
+            Alt metnin türetileceği metin için kullanılır.
+            </param>
+            <param name="start">
+            Alt metnin nereden başlayacağını belirtir.
+            </param>
+            <param name="length">
+            Alt metnin uzunluğunu belirtir.
+            </param>
+            <returns>
+            İstenen alt metni sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubTextToEnd(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen metinden bir alt metni belirtilen konumdan sona yerleştirir.
+            </summary>
+            <param name="text">
+            Alt metnin türetileceği metin için kullanılır.
+            </param>
+            <param name="start">
+            Alt metnin nereden başlayacağını belirtir.
+            </param>
+            <returns>
+            İstenen alt metni sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetIndexOf(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Alt metnin belirtilen metindeki konumunu bulur.
+            </summary>
+            <param name="text">
+            Aramanın yapılacağı metin için kullanılır.
+            </param>
+            <param name="subText">
+            Aranacak metin için kullanılır.
+            </param>
+            <returns>
+            Belirtilen metin içinde görünen alt resmin pozisyonu. Eğer metin görünmüzse, 0 döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToLowerCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen metni küçük harfe dönüştürür.
+            </summary>
+            <param name="text">
+            Küçük harfe dönüştürülecek metin için kullanılır.
+            </param>
+            <returns>
+            Verilen metnin küçük harfli halini sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToUpperCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen metni büyük harfe dönüştürür.
+            </summary>
+            <param name="text">
+            Büyük harfe dönüştürülecek metin için kullanılır.
+            </param>
+            <returns>
+            Verilen metnin büyük harfli halini sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacter(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            İleride normal bir metinde kullanmak üzere verilen Unicode karakter kodunun karşılığı olan karakteri belirtir.
+            </summary>
+            <param name="characterCode">
+            Unicode karakter kodu için kullanılır.
+            </param>
+            <returns>
+            Unicode karakter koduna karşılık gelen karakteri sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacterCode(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen Unicode karakterinin karakter kodunu belirtir.
+            </summary>
+            <param name="character">
+            Kodu istenen karakter için kullanılır.
+            </param>
+            <returns>
+            Belirtilen karakterin Unicode karakter kodunu sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Mouse">
+            <summary>
+            The mouse class provides accessors to get or set the mouse related properties, like the cursor position, pointer, etc.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.HideCursor">
+            <summary>
+            Fare imlecini ekranda gizler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.ShowCursor">
+            <summary>
+            Fare imlecini ekranda gösterir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseX">
+            <summary>
+            Fare imlecinin x-koordinatını belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseY">
+            <summary>
+            Fare imlecinin y-koordinatını belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsLeftButtonDown">
+            <summary>
+            Sol tuşa basılıp basılmadığını belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsRightButtonDown">
+            <summary>
+            Sağ tuşa basılıp basılmadığını belirtir.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Desktop">
+            <summary>
+            Masaüstü ile etkileşim yöntemleri sağlar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Desktop.SetWallPaper(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen fotoğrafı masaüstü duvar kağıdı olarak ayarlar. Dosya yerel konumda ya da ağda bulunabilir.
+            </summary>
+            <param name="fileOrUrl">
+            Fotoğrafın dosya adı ya da URL'si için kullanılır.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Width">
+            <summary>
+            Birincil masaüstünün ekran genişliği için kullanılır.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Height">
+            <summary>
+            Birincil masaüstünün ekran yüksekliği için kullanılır.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication">
+            <summary>
+            Uygulama sınıfı, Small Basic programına uygulama nesnesi sağlar.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication.Dispatcher">
+            <summary>
+            Small Basic uygulaması için göndereni belirtir.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.ImageList">
+            <summary>
+            Hafızadaki resimleri yükleyip depolamak için yardımcı olur.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.LoadImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bir resmi dosyadan ya da internetten hafızaya yükler.
+            </summary>
+            <param name="fileNameOrUrl">
+            Resmin yükleneceği dosyanın adı için kullanılır. Dosya yerel konumda ya da ağda bulunabilir.
+            </param>
+            <returns>
+            Yüklenen resmin adını sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.ClipImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen resmin belirli bir kısmını kırpar ve belirtilen değerlerde yeni bir resim oluşturur.
+            </summary>
+            <param name="imageName">
+            Kırpılacak olan orijinal resim.
+            </param>
+            <param name="left">
+            Kırpılacak dikdörtgenin X koordinasyonu.
+            </param>
+            <param name="top">
+            Kırpılacak dikdörtgenin Y koordinasyonu.
+            </param>
+            <param name="width">
+            Kırpılacak dikdörtgenin genişliği.
+            </param>
+            <param name="height">
+            Kırpılacak dikdörtgenin yüksekliği.
+            </param>
+            <returns>
+            Kırpılan resim.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetWidthOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Depolanan resmin genişliği için kullanılır.
+            </summary>
+            <param name="imageName">
+            Hafızadaki şeklin ismi.
+            </param>
+            <returns>
+            Belirtilen resmin genişliği.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetHeightOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Depolanan resmin yüksekliği için kullanılır.
+            </summary>
+            <param name="imageName">
+            Hafızadaki şeklin ismi.
+            </param>
+            <returns>
+            Belirtilen resmin yüksekliği.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Timer">
+            <summary>
+            Sabit bir aralıkta birşeyin tekrar ederek yapılmasını sağlar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Pause">
+            <summary>
+            Zamanlayıcıyı duraklatır. İşaretlenen olaylar gerçekleşmeyecektir.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Resume">
+            <summary>
+            Zamanlayıcıyı kaldığı yerden devam ettirir. İşaretlenen olaylar gerçekleşmeyecektir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Timer.Interval">
+            <summary>
+            İşaretlenen olayların ne kadar sıklıkla gerçekleşeceğini belirtir. Aralık 10 ile 100000000 arasındadır.(milisaniye)
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Timer.Tick">
+            <summary>
+            Zamanlayıcı işaretlendiğinde olayı gerçekleştirir.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.SmallBasicCallback">
+            <summary>
+            Tüm Small Basic kütüphanesi olayları tarafından kullanılacak imza callback'ini belirtir.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Stack">
+            <summary>
+            Bu nesne bir tabağı üst üste doldurma gibi değerleri depolamanın bir yolunu sağlar. Yığının en tepesine bir değer gönderebilir ve oradan alabilirsiniz. Yığından değerleri sadece tek tek alabilirsiniz ve son giren değer çıkacak ilk değer olacaktır.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PushValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen yığına bir değer atar.
+            </summary>
+            <param name="stackName">
+            Yığının adı.
+            </param>
+            <param name="value">
+            Atanacak değer için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.GetCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen yığındaki öğe sayısını belirtir.
+            </summary>
+            <param name="stackName">
+            Yığının adı.
+            </param>
+            <returns>
+            Belirtilen yığının öğe sayısını döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PopValue(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen yığından değer alır.
+            </summary>
+            <param name="stackName">
+            Yığının adı.
+            </param>
+            <returns>
+            Yığındaki değeri döndürür.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Primitive">
+            <summary>
+            Metin ya da sayıyı gösteren ilkel tipi belirtir.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.NativeHelper">
+            <summary>
+            Yerel API'leri çağırmak için özel statik yardımcı belirtir.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.GraphicsWindow">
+            <summary>
+            Grafik penceresi girdi ve çıktı fonksiyonlarıyla ilgili grafikleri sağlar. Örneğin, bu sınıfı kullanarak çemberler ve üçgen çizip, içlerini renklendirebilirsiniz. 
+			</summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Show">
+            <summary>
+            Grafik penceresini etkileşimleri aktifleştirmek için gösterir.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Hide">
+            <summary>
+            Grafik penceresini gizler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Seçilen kalem ile ekranda dikdörten çizer.
+            </summary>
+            <param name="x">
+            Dikdörtgenin x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Dikdörtgenin y-koordinatı için kullanılır.
+            </param>
+            <param name="width">
+            Dikdörtgenin genişliği için kullanılır.
+            </param>
+            <param name="height">
+            Dikdörtgenin yüksekliği için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Seçilen fırça ile ekrandaki dikdörtgeni doldurur.
+            </summary>
+            <param name="x">
+            Dikdörtgenin x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Dikdörtgenin y-koordinatı için kullanılır.
+            </param>
+            <param name="width">
+            Dikdörtgenin genişliği için kullanılır.
+            </param>
+            <param name="height">
+            Dikdörtgenin yüksekliği için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Seçilen kalem ile ekranda elips çizer.
+            </summary>
+            <param name="x">
+            Elipsin x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Elipsin y-koordinatı için kullanılır.
+            </param>
+            <param name="width">
+            Elipsin genişliği için kullanılır.
+            </param>
+            <param name="height">
+            Elipsin yüksekliği için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Seçilen fırça ile ekrandaki elipsi doldurur.
+            </summary>
+            <param name="x">
+            Elipsin x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Elipsin y-koordinatı için kullanılır.
+            </param>
+            <param name="width">
+            Elipsin genişliği için kullanılır.
+            </param>
+            <param name="height">
+            Elipsin yüksekliği için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Seçilen kalem ile ekranda üçgen çizer.
+            </summary>
+            <param name="x1">
+            İlk noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y1">
+            İlk noktanın y-koordinatı için kullanılır.
+            </param>
+            <param name="x2">
+            İkinci noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y2">
+            İkinci noktanın y-koordinatı için kullanılır.
+            </param>
+            <param name="x3">
+            Üçüncü noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y3">
+            Üçüncü noktanın y-koordinatı için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Seçilen fırça ile ekrandaki üçgeni doldurur.
+            </summary>
+            <param name="x1">
+            İlk noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y1">
+            İlk noktanın y-koordinatı için kullanılır.
+            </param>
+            <param name="x2">
+            İkinci noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y2">
+            İkinci noktanın y-koordinatı için kullanılır.
+            </param>
+            <param name="x3">
+            Üçüncü noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y3">
+            Üçüncü noktanın y-koordinatı için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bir noktadan diğerine bir çizgi çizer.
+            </summary>
+            <param name="x1">
+            İlk noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y1">
+            İlk noktanın y-koordinatı için kullanılır.
+            </param>
+            <param name="x2">
+            İkinci noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y2">
+            İkinci noktanın y-koordinatı için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen konumda ekranda bir metin çizgisi çizer.
+            </summary>
+            <param name="x">
+            Metnin başlangıç noktasının x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Metnin başlangıç noktasının y-koordinatı için kullanılır.
+            </param>
+            <param name="text">
+            Çizilecek metin için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawBoundText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen konumda ekranda bir metin çizgisi çizer.
+            </summary>
+            <param name="x">
+            Metnin başlangıç noktasının x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Metnin başlangıç noktasının y-koordinatı için kullanılır.
+            </param>
+            <param name="width">
+            Uygun maksimum genişlik için kullanılır.th. Sözcüğün kaydırılması gereken durumlarda bu parametre yardımcı olur.
+            </param>
+            <param name="text">
+            Çizilecek metin için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawResizedImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Hafızadaki belirtilen bir resmi belirtilen boyutta ekrana çizdirir.
+            </summary>
+            <param name="imageName">
+            Çizdirilecek resmin ismi için kullanılır.
+            </param>
+            <param name="x">
+            Resmin çizdirileceği noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Resmin çizdirileceği noktanın y-koordinatı için kullanılır.
+            </param>
+            <param name="width">
+            Resmin çizilmesi için gerekli genişlik için kullanılır.
+            </param>
+            <param name="height">
+            Resmin çizilmesi için gerekli yükseklik için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Hafızadaki belirtilen bir resmi ekrana çizdirir.  
+            </summary>
+            <param name="imageName">
+            Çizilecek resim için kullanılır.
+            </param>
+            <param name="x">
+            Resmin çizdirileceği noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Resmin çizdirileceği noktanın y-koordinatı için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.SetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen rengi kullanarak belirtilen x ve y koordinatları ile piksel çizer.
+            </summary>
+            <param name="x">
+            Pikselin x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Pikselin y-koordinatı için kullanılır.
+            </param>
+            <param name="color">
+            Ayarlanacak piksel rengi için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen x ve y koordinatlarındaki pikselin rengini belirtir.
+            </summary>
+            <param name="x">
+            Pikselin x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Pikselin y-koordinatı için kullanılır.
+            </param>
+            <returns>
+            Pikselin rengini değer olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetRandomColor">
+            <summary>
+            Rastgele bir renk seçer.
+            </summary>
+            <returns>
+            Rastgele bir rengi sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetColorFromRGB(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen Kırmızı, Yeşil ve Mavi değerlerinde bir renk oluşturur.
+            </summary>
+            <param name="red">
+            Kırmızı renk  bileşeni (0-255).
+            </param>
+            <param name="green">
+            Yeşil renk bileşeni (0-255).
+            </param>
+            <param name="blue">
+            Mavi renk bileşeni (0-255).
+            </param>
+            <returns>
+            Fırça ya da kalem renginde kullanılmak üzere bir renk değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Clear">
+            <summary>
+            Ekranı temizler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.ShowMessage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Ekranda girilen mesajı gösterir.
+            </summary>
+            <param name="text">
+            Mesaj kutusunda gösterilecek metin için kullanılır.
+            </param>
+            <param name="title">
+            Mesaj kutusunun başlığı için kullanılır.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BackgroundColor">
+            <summary>
+            Grafik penceresinin arkaplan rengini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BrushColor">
+            <summary>
+            Grafik penceresinde şekilleri doldurmak için kullanılan fırça rengini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.CanResize">
+            <summary>
+            Grafik penceresinin kullanıcı tarafından yeniden boyutlandırılıp boyutlandırılamayacığını belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenWidth">
+            <summary>
+            Grafik penceresinde şekil çizmek için kullanılan kalemin kalınlığını belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenColor">
+            <summary>
+            Grafik penceresinde şekil çizmek için kullanılan kalemin rengini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontName">
+            <summary>
+            Grafik penceresinde metni yazmak için kullanılan yazı tipi ismini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontSize">
+            <summary>
+            Grafik penceresinde metni yazmak için kullanılan yazı boyutunu belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontBold">
+            <summary>
+            Grafik penceresinde yazılacak yazının kalın olup olmayacağını belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontItalic">
+            <summary>
+            Grafik penceresinde yazılacak yazının italik olup olmayacağını belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Title">
+            <summary>
+            Grafik penceresinin başlığını belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Height">
+            <summary>
+            Grafik penceresinin yüksekliğini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Width">
+            <summary>
+            Grafik penceresinin genişliğini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Left">
+            <summary>
+            Grafik penceresinin sol konumunu belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Top">
+            <summary>
+            Grafik penceresinin üst konumunu belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastKey">
+            <summary>
+            Girilen ya da basılan son tuşu belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastText">
+            <summary>
+            Grafik penceresine girilen son metni belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseX">
+            <summary>
+            Grafik penceresine göre farenin x-konumunu belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseY">
+            <summary>
+            Grafik penceresine göre farenin y-konumunu belirtir.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyDown">
+            <summary>
+            Klavyeden bir tuşa basıldığında bir olayı aktifleştirir.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyUp">
+            <summary>
+            Klavyeden bir tuş serbest bırakıldığında bir olayı aktifleştirir.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseDown">
+            <summary>
+            Fare tuşuna basıldığında bir olayı aktifleştirir.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseUp">
+            <summary>
+            Fare tuşu serbest bırakıldığında bir olayı gerçekleştirir.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseMove">
+            <summary>
+            Fare hareket ettirildiğinde bir olayı gerçekleştirir.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.TextInput">
+            <summary>
+            Grafik penceresine bir metin girildiğinde bir olay yordamı çağırır.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Clock">
+            <summary>
+            Sistem saatine erişmeyi sağlar.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Time">
+            <summary>
+            Güncel sistem saatini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Date">
+            <summary>
+            Güncel sistem tarihini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Year">
+            <summary>
+            Güncel yıl bilgisini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Month">
+            <summary>
+            Güncel ay bilgisini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Day">
+            <summary>
+            Güncel ayın gününü belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.WeekDay">
+            <summary>
+            Haftanın gününü belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Hour">
+            <summary>
+            Güncel saati belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Minute">
+            <summary>
+            Güncel dakikayı belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Second">
+            <summary>
+            Güncel saniyeyi belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Millisecond">
+            <summary>
+            Güncel milisaniyeyi belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.ElapsedMilliseconds">
+            <summary>
+            1900'den beri geçen süredeki milisaniyeyi belirtir.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.File">
+            <summary>
+            Bilgiye erişilmesi, bilginin dosyaya yazılması ve dosyadan okunması için yöntemler sağlar. "Dosya" öğesini kullanarak programınızın çoklu oturum ayarlarını değiştirmeniz mümkündür.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Bir dosya açar ve dosya içeriğinin tamamını okur. Bu yöntem 1 MB'tan küçük boyutlu dosyalar için hızlı, 10MB tan büyük boyutlu dosyalar için ise oldukça yavaş olacaktır.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Okunacak dosyanın konumu için kullanılır. Örn: c:\temp\settings.data.
+            </para>
+            </param>
+            <returns>
+            Dosya içeriğinin tamamını döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Bir dosya açar ve belirtilen içeriği eskisiyle değiştirerek dosyaya yazdırır.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Yazdırılacak dosyanın konumu için kullanılır. Örn: c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="contents">
+            Belirtilen dosyaya yazdırılacak içerik için kullanılır.
+            </param>
+            <returns>
+            <para>
+            İşlem başarılı olursa "SUCCESS", başarısız olursa "FAILED" değeri döndürür.
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen dosyayı açar ve belirtilen satırdaki içeriği okur.
+            </summary>
+            <param name="filePath">
+            <para>
+            İçeriğin okunacağı dosyanın konumu için kullanılır. Örn: c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Metnin okunacak satır numarası için kullanılır.
+            </param>
+            <returns>
+            Belirtilen dosyanın belirtilen satırındaki metni döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Belirtilen dosyayı açar ve içeriği belirtilen satıra yazar.
+            </para>
+            <para>
+            Bu işlem belirtilen satırdaki içeriği varolanın üstüne yazar.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            İçeriğin okunacağı dosyanın konumu için kullanılır. Örn: c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Metnin yazılacak satır numarası için kullanılır.
+            </param>
+            <param name="contents">
+            <para>
+            Belirtilen dosyanın belirtilen satırına yazılacak içerik için kullanılır.
+            </para>
+            </param>
+            <returns>
+            <para>
+            İşlem başarılı olursa "SUCCESS", başarısız olursa "FAILED" değeri döndürür.
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.InsertLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Belirtilen dosyayı açar ve belirtilen satırdaki içeriği ekler.
+            </para>
+            <para>
+            Bu işlem belirtilen satırdaki içeriği varolanın üstüne yazmaz.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            İçeriğin okunacağı dosyanın konumu için kullanılır. Örn: c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Metnin eklenecek satır numarası için kullanılır.
+            </param>
+            <param name="contents">
+            Dosyaya eklenecek içerik için kullanılır.
+            </param>
+            <returns>
+            <para>
+            İşlem başarılı olursa "SUCCESS", başarısız olursa "FAILED" değeri döndürür.
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.AppendContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Belirtilen dosyayı açar ve içeriği dosyanın sonuna ekler.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            İçeriğin okunacağı dosyanın konumu için kullanılır. Örn: c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="contents">
+            Dosyanın sonuna eklenecek içerik için kullanılır.
+            </param>
+            <returns>
+            <para>
+            İşlem başarılı olursa "SUCCESS", başarısız olursa "FAILED" değeri döndürür.
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CopyFile(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Belirtilen kaynak dosyayı hedef dosya konumuna kopyalar. Hedef konumun bulunmaması durumunda konum otomatik olarak yaratılır.
+            </para>
+            <para>
+            Varolan dosyaların üstüne yazılır. Üstüne yazmayı önlemek için hedef dosyanın varolup olmadığı kontrol edilebilir.
+            </para>
+            </summary>
+            <param name="sourceFilePath">
+            <para>
+            Kopyalanması gereken dosyanın konumu için kullanılır. Örn: c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="destinationFilePath">
+            Hedef ya da dosya konumu için kullanılır.  
+            </param>
+            <returns>
+            İşlem başarılı olursa "SUCCESS", başarısız olursa "FAILED" değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen dosyayı siler.
+            </summary>
+            <param name="filePath">
+            <para>
+            Hedef ya da dosya konumu için kullanılır. Örn: c:\temp\settings.data.
+            </para>
+            </param>
+            <returns>
+            İşlem başarılı olursa "SUCCESS", başarısız olursa "FAILED" değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CreateDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen dizini yaratır.
+            </summary>
+            <param name="directoryPath">
+            Yaratılacak dizinin konumu için kullanılır.
+            </param>
+            <returns>
+            İşlem başarılı olursa "SUCCESS", başarısız olursa "FAILED" değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen dizini siler.
+            </summary>
+            <param name="directoryPath">
+            Silinecek dizinin konumu için kullanılır.
+            </param>
+            <returns>
+            İşlem başarılı olursa "SUCCESS", başarısız olursa "FAILED" değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetFiles(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen dizindeki bütün dosyaların konumlarını belirtir.
+            </summary>
+            <param name="directoryPath">
+            Dosyaların aranacağı dizin için kullanılır.
+            </param>
+            <returns>
+            İşlem başarılı olursa dosyaları array olarak döndürür, başarısız olursa "FAILED" değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetDirectories(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen dizindeki tüm dizinlerin konumlarını belirtir.
+            </summary>
+            <param name="directoryPath">
+            Alt dizinlerin aranacağı dizin için kullanılır.
+            </param>
+            <returns>
+            İşlem başarılı olursa dizinlerin listesini array olarak döndürür, başarısız olursa "FAILED" değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetTemporaryFilePath">
+            <summary>
+            <para>
+            Geçici bir dizin içinde yeni bir geçici dosya yaratır ve dosyanın konumunu değer olarak döndürür.
+            </para>
+            </summary>
+            <returns>
+            Geçiçi dosyanın konumunu değer olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetSettingsFilePath">
+            <summary>
+            <para>
+            Bu program için ayarların bulunduğu dosyanın konumunu belirtir. Ayarların bulunduğu dosyanın adı programın adına bağlıdır ve programla aynı konumda bulunur.
+            </para>
+            </summary>
+            <returns>
+            Bu programa özel ayarların bulunduğu dosyanın konumunu değer olarak döndürür.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.File.LastError">
+            <summary>
+            <para>
+            En son karşılaşılan hata mesajı tabanlı dosya işlemini belirtir. Bu özellik, çalıştırılırken hatayla karşılaşılan yöntemlerin bulunmasında yardımcı olur.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Keywords">
+            <summary>
+            Keywords nesnesi Small Basic anahtar kelimeleri için dokümantasyon sağlayan bir yer tutucudur.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.For">
+            <summary>
+            For deyimi bir dizi işlemin birden çok kez çalıştırılabilmesine olanak verir.
+            </summary>
+            <example>
+            Takip eden örnek, ekrana 1 ile 10 arasında sayıları yazdıracak
+            <code>
+            For i = 1 To 10 
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndFor">
+            <summary>
+            EndFor anahtar sözcüğü hakkında bilgi için For deyimini kontrol edin.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.To">
+            <summary>
+            To anahtar sözcüğü hakkında bilgi için For deyimini kontrol edin.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Step">
+            <summary>
+            Step anahtar sözcüğü For döngüsü içinde adım sayısını belirlemek için kullanılır.
+            </summary>
+            <example>
+            Takip eden örnek, ekrana 1 ile 10 arasındaki tek sayıları yazdıracak
+            <code>
+            For i = 1 to 10 Step 2
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.If">
+            <summary>
+            If deyimi farklı şeyleri yapabilmek için kararlarda bulunmanıza olanak verir.
+            </summary>
+            <example>
+            Takip eden örnek, çevirmenin durumuna göre ekrana "Kazandın" ya da "Kaybettin" yazdıracak.
+            <code>
+            If flip = "Kuyruk" Then
+              TextWindow.WriteLine("Kazandın")
+            Else
+              TextWindow.WriteLine("Kaybettin")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Then">
+            <summary>
+            Then anahtar sözcüğü hakkında bilgi için If deyimini kontrol edin.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Else">
+            <summary>
+            Else anahtar sözcüğü hakkında bilgi için If deyimini kontrol edin.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.ElseIf">
+            <summary>
+            ElseIf anahtar sözcüğü If deyimini kullanarak kararlar verirken alternatif durumlar oluşturabilmemize yardım eder.
+            </summary>
+            <example>
+            Takip eden örnekde, günün saatine göre en uygun selamlamayı ekrana yazdıracağız.
+            <code>
+            If Clock.Hour &lt; 12 Then
+              TextWindow.WriteLine("Günaydın")
+            ElseIf Clock.Hour &lt; 16 Then
+              TextWindow.WriteLine("Tünaydın")
+            ElseIf Clock.Hour &lt; 20 Then
+              TextWindow.WriteLine("İyi Akşamlar")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndIf">
+            <summary>
+            EndIf anahtar sözcüğü hakkında bilgi için If deyimini kontrol edin.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Goto">
+            <summary>
+            Goto deyimi program içerisinde yeni bir konuma gidebilmenize olanak verir.  
+            </summary>
+            <example>
+            Takip eden program, ekrana sonsuz sayıda ardışık rakam yazdıracak.
+            <code>
+            start:
+            TextWindow.WriteLine(i)
+            i = i + 1
+            Goto start
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Sub">
+            <summary>
+            Yordam (Alt Yordam) deyimi gruplar halindeki kod satırlarını tek bir çağrı ile yapabilmenize olanak verir.
+            </summary>
+            <example>
+            Takip eden örnek, ekrana "Kazandın" yazan ve zil çalan bir alt yordam tanımlar.
+            <code>
+            Sub Win
+              Sound.PlayBellRing()
+              TextWindow.WriteLine("Kazandın!")
+            EndSub
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndSub">
+            <summary>
+            EndSub anahtar sözcüğü hakkında bilgi için Sub deyimini kontrol edin.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.While">
+            <summary>
+            While deyimi arzu edilen sonuca ulaşılana kadar birşeyi defalarca tekrar edebilmenize olanak verir.
+            </summary>
+            <example>
+            Takip eden kod, içlerinden biri 100 sayısına ulaşana kadar ekrana rastgele sayılar yazdırır.
+            <code>
+            While i &lt; 100
+              i = Math.GetRandomNumber(150)
+              TextWindow.WriteLine(i)
+            EndWhile
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndWhile">
+            <summary>
+            EndWhile anahtar sözcüğü hakkında bilgi için While deyimini kontrol edin.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.And">
+            <summary>
+            Eğer her iki girdi de true ise, mantıksal hesaplama true döndürür.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Or">
+            <summary>
+            Eğer girdilerden herhangi birisi true ise, mantıksal hesaplama true döndürür.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Math">
+            <summary>
+            Matematik ile ilgili birçok yöntemin bulunduğu sınıf için kullanılır.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Abs(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen sayının mutlak değerini belirtir. Örn: -32.233 :32.233.
+            </summary>
+            <param name="number">
+            Mutlak değeri alınacak sayı için kullanılır.
+            </param>
+            <returns>
+            Verilen sayının mutlak değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Ceiling(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen ondalık sayıyı kendinden büyük ilk tamsayıya yükseltir. Örn: 32.233 : 33.
+            </summary>
+            <param name="number">
+            Yükseltilecek sayı değeri için kullanılır.
+            </param>
+            <returns>
+            Verilen sayının yükseltilmiş değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Floor(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen ondalık sayıyı kendinden küçük ilk tamsayıya indirger. Örn: 32.233 : 32.
+            </summary>
+            <param name="number">
+            İndirgenecek sayı değeri için kullanılır.
+            </param>
+            <returns>
+            Verilen sayının indirgenmiş değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.NaturalLog(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen sayının gerçek logaritmik değerini hesaplar.
+            </summary>
+            <param name="number">
+            Logaritmik değeri hesaplanacak sayı için kullanılır.
+            </param>
+            <returns>
+            Verilen sayının logaritmik değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Log(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen sayının 10 tabanındaki logaritmik değerini hesaplar.
+            </summary>
+            <param name="number">
+            Logaritmik değeri hesaplanacak sayı için kullanılır.
+            </param>
+            <returns>
+            Verilen sayının logaritmik değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Cos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen açının radyan cinsinden kosinüs değerini hesaplar.
+            </summary>
+            <param name="angle">
+            Kosinüs değeri hesaplanacak açı için kullanılır. (radyan cinsinden)
+            </param>
+            <returns>
+            Verilen açının kosinüs değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Sin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen açının radyan cinsinden sinüs değerini hesaplar.
+            </summary>
+            <param name="angle">
+            Sinüs değeri hesaplanacak açı için kullanılır. (radyan cinsinden)
+            </param>
+            <returns>
+            Verilen açının sinüs değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Tan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen açının radyan cinsinden tanjant değerini hesaplar.
+            </summary>
+            <param name="angle">
+            Tanjant değeri hesaplanacak açı için kullanılır. (radyan cinsinden)
+            </param>
+            <returns>
+            Verilen açının tanjant değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcSin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen sinüs değerinin radyan cinsinden açısını hesaplar.
+            </summary>
+            <param name="sinValue">
+            Açı için gerekli sinüs değeri için kullanılır.
+            </param>
+            <returns>
+            Verilen sinüs değerinin radyan cinsinden açısını dödürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcCos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen kosinüs değerinin radyan cinsinden açısını hesaplar.
+            </summary>
+            <param name="cosValue">
+            Açı için gerekli kosinüs değeri için kullanılır.
+            </param>
+            <returns>
+            Verilen kosinüs değerinin radyan cinsinden açısını dödürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcTan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen tanjant değerinin radyan cinsinden açısını hesaplar.
+            </summary>
+            <param name="tanValue">
+            Açı için gerekli tanjant değeri için kullanılır.
+            </param>
+            <returns>
+            Verilen tanjant değerinin radyan cinsinden açısını dödürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetDegrees(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Radyan cinsinden verilen açıyı derece cinsine çevirir.
+            </summary>
+            <param name="angle">
+            Radyan cinsinden açı için kullanılır.
+            </param>
+            <returns>
+            Derece cinsine çevrilmiş açı değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRadians(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Derece cinsinden verilen açıyı radyan cinsine çevirir.
+            </summary>
+            <param name="angle">
+            Derece cinsinden açı için kullanılır.
+            </param>
+            <returns>
+            Radyan cinsine çevrilmiş açı değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.SquareRoot(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen sayının karekökünü hesaplar.
+            </summary>
+            <param name="number">
+            Karekökü hesaplanacak sayı için kullanılır.
+            </param>
+            <returns>
+            Verilen sayının karekök değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Power(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Taban sayısının belirtilen kuvvete yükseltilmesini sağlar.
+            </summary>
+            <param name="baseNumber">
+            Kuvveti alınacak sayı için kullanılır.
+            </param>
+            <param name="exponent">
+            Kuvvetin kaçıncı dereceden olacağını belirtmek için kullanılır.
+            </param>
+            <returns>
+            Sayının belirtilen derecede kuvvetinin değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Round(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen sayıyı kendine en yakın tam sayıya yuvarlar. Örn: 32.233 : 32.0, 32.566 : 33.
+            </summary>
+            <param name="number">
+            Yuvarlanacak sayı değeri için kullanılır.
+            </param>
+            <returns>
+            Verilen sayının yuvarlanmış değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Max(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            İki sayıyı karşılaştırır ve büyük olanın değerini döndürür.
+            </summary>
+            <param name="number1">
+            Karşılaştırılacak iki sayıdan ilki için kullanılır.
+            </param>
+            <param name="number2">
+            Karşılaştırılacak iki sayıdan ikincisi için kullanılır.
+            </param>
+            <returns>
+            İki sayıdan büyüğünün değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Min(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            İki sayıyı karşılaştırır ve küçük olanın değerini döndürür.
+            </summary>
+            <param name="number1">
+            Karşılaştırılacak iki sayıdan ilki için kullanılır.
+            </param>
+            <param name="number2">
+            Karşılaştırılacak iki sayıdan ikincisi için kullanılır.
+            </param>
+            <returns>
+            İki sayıdan küçüğünün değerini döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Remainder(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Birinci sayıyı ikinci sayıya böler ve kalan değeri döndürür.
+            </summary>
+            <param name="dividend">
+            Bölünen sayı için kullanılır.
+            </param>
+            <param name="divisor">
+            Bölen sayı için kullanılır.
+            </param>
+            <returns>
+            Bölme işlemi sonrası kalan değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRandomNumber(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            1 ile belirtilen sayı aralığında rastgele sayı üretir.
+            </summary>
+            <param name="maxNumber">
+            Rastgele sayının üretileceği sayı aralığının maksimum değeri için kullanılır.
+            </param>
+            <returns>
+            Rastgele üretilen sayı değerini döndürür.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Math.Pi">
+            <summary>
+            Pi değerini hesaplar.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Flickr">
+            <summary>
+            Flickr fotoğraf servisine erişimi sağlar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetPictureOfMoment">
+            <summary>
+            O anki fotoğrafın URL'sini belirtir.
+            </summary>
+            <returns>
+            O anki Flickr fotoğrafının dosya URL'sini sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetRandomPicture(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen bir etiket doğrultusunda rastgele bir fotoğrafın URL'sini belirtir.
+            </summary>
+            <param name="tag">
+            İstenen fotoğrafın etiketi için kullanılır.
+            </param>
+            <returns>
+            Flickr dan rastgele bir fotoğrafın dosya URL'sini sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Network">
+            <summary>
+            Ağ erişim yöntemlerini sağlar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.DownloadFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bir dosyayı ağdan geçici yerel dosyaya indirir.
+            </summary>
+            <param name="url">
+            Ağda bulunan dosyanın URL'i için kullanılır.
+            </param>
+            <returns>
+            İndirilen dosyanın adını sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.GetWebPageContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen web sayfasının içeriğini belirtir.
+            </summary>
+            <param name="url">
+            Web sayfasının URL'si için kullanılır.
+            </param>
+            <returns>
+            Belirtilen web sayfasının içeriğini sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.OfficeResearch">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Query(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginQuery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndQuery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Registration(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginRegistration(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndRegistration(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Status">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginStatus(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndStatus(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Discovery(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginDiscovery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndDiscovery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Platform">
+            <summary>
+            Genellikle diğer .NET kütüphanelerini çağırır.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Dictionary">
+            <summary>
+            Çevrimiçi bir sözlük servisine bağlanmayı sağlar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinition(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bir kelimenin İngilizce anlamını bulur.
+            </summary>
+            <param name="word">
+            Anlamı bulunacak kelime için kullanılır.
+            </param>
+            <returns>
+            Belirlenen kelimenin anlamını döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionInFrench(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bir kelimenin Fransızca anlamını bulur.
+            </summary>
+            <param name="word">
+            Anlamı bulunacak kelime için kullanılır.
+            </param>
+            <returns>
+            Belirlenen kelimenin anlamını döndürür.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RestHelper">
+            <summary>
+            Rest tabanlı API'leri çağırmak için özel statik bir yardımcıdır.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.RestHelper.GetContents(System.String)">
+            <summary>
+            Rest URL vererek; içeriği XML belgesi gibi alır.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Program">
+            <summary>
+            Programın çalışmasını kontrol etmek için yardım sağlar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.Delay(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Programın çalışmasını belirtilen süre doğrultusunda geciktirir.
+            </summary>
+            <param name="milliSeconds">
+            Gecikme süresi için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.End">
+            <summary>
+            Programı sonlandırır.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.GetArgument(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bu programa aktarılan belirli bir argümanı döndürür.
+            </summary>
+            <param name="index">
+            Argümanın dizini.
+            </param>
+            <returns>
+            Belirtilen dizindeki komut satırı argümanını döndürür.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.ArgumentCount">
+            <summary>
+            Bu programa aktarılan komut satırı argümanlarının sayısını belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.Directory">
+            <summary>
+            Çalışan programın konumunu belirtir.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Array">
+            <summary>
+            Verilen bir isim için birden fazla değer depolamayı sağlar. Bu değerlere başka bir dizin tarafından ulaşılabilir.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsIndex(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dizinin tanımlanmış dizini içerip içermediğini kontrol eder. Dizi dizinine değer atanıp atanmadığına karar vermede yardımcı olur.
+            </summary>
+            <param name="array">
+            Diziyi kontrol etmek için kullanılır.
+            </param>
+            <param name="index">
+            Dizini kontrol etmek için kullanılır.
+            </param>
+            <returns>
+            Dizin belirtilen arrayde bulunuyorsa "True", bulunmuyorsa "False" değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dizinin belirtilen değeri içerip içermediğini kontrol eder. Dizi değerinin herhangi bir dizinde depolanıp depolanmadığına karar vermede yardımcı olur.
+            </summary>
+            <param name="array">
+            Diziyi kontrol etmek için kullanılır.
+            </param>
+            <param name="value">
+            Değeri kontrol etmek için kullanılır.
+            </param>
+            <returns>
+            Belirtilen değer bulunuyorsa "True", bulunmuyorsa "False" değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetAllIndices(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Diğer bir dizi gibi dizi için tüm indisleri getirir.
+            </summary>
+            <param name="array">
+            Dizinin indislerini talep etmek için kullanılır.
+            </param>
+            <returns>
+            Belirli bir dizinin tüm indisleriyle doldurulmuştır bir dizidir. Dönen dizinin dizini 1 ile başlar.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetItemCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dizide bulunan öğe sayısını belirtir.
+            </summary>
+            <param name="array">
+            Öğe sayısı istenen dizi için kullanılır.
+            </param>
+            <returns>
+            Belirtilen dizinin öğe sayısını döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.IsArray(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen değişkenin dizi olup olmadığını döndürür.
+            </summary>
+            <param name="array">
+            Değişkeni kontrol etmek için kullanılır.
+            </param>
+            <returns>
+            Belirtilen değişken diziyse "True", değilse "False" değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.SetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen dizi ve dizini için değer atar.
+            </summary>
+            <param name="arrayName">
+            Dizinin adı.
+            </param>
+            <param name="index">
+            Dizinin adı.
+            </param>
+            <param name="value">
+            Atanacak değer.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Verilen dizi ve dizini için değer alır.
+            </summary>
+            <param name="arrayName">
+            Dizinin adı.
+            </param>
+            <param name="index">
+            Dizinin adı.
+            </param>
+            <returns>
+            Belirtilen dizinin belirtilen dizinindeki değeri döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.RemoveValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen dizindeki dizi öğesini kaldırmak için kullanılır.
+            </summary>
+            <param name="arrayName">
+            Dizinin adı.
+            </param>
+            <param name="index">
+            Kaldırılacak öğenin dizini.
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.TextWindow">
+            <summary>
+            TextWindow metinsel girdi ve çıktı fonksiyonları sağlar. Örneğin, bu sınıfı kullanarak; metin ya da sayıları metin penceresine yazmak ya da metin penceresinden okumak mümkündür.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Show">
+            <summary>
+            Metin penceresini etkileşimleri aktifleştirmek için gösterir.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Hide">
+            <summary>
+            Metin penceresini gizler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Clear">
+            <summary>
+            Metin penceresini temizler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Pause">
+            <summary>
+            Değer döndürmeden önce kullanıcı girişini bekler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseIfVisible">
+            <summary>
+            Kullanıcı girişini yalnızca metin penceresi önceden açıksa bekler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseWithoutMessage">
+            <summary>
+            Değer döndürmeden önce kullanıcı girişini bekler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Read">
+            <summary>
+            Metin penceresinden bir satır metin okur. Bu fonksiyon kullanıcı ENTER tuşuna basana kadar dönmeyecektir.
+            </summary>
+            <returns>
+            Metin penceresinden okunan metni sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.ReadNumber">
+            <summary>
+            Metin penceresinden bir sayı okur. Bu fonksiyon kullanıcı ENTER tuşuna basana kadar dönmeyecektir.
+            </summary>
+            <returns>
+            Metin penceresinden okunan sayıyı değer olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.WriteLine(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Metin penceresine metin ya da sayı yazar. Yeni satır karakteri çıktıya eklenir, bu yüzden sonraki metin penceresine yazımlarda yazılan metin yeni satıra eklenir.
+            </summary>
+            <param name="data">
+            Metin penceresine yazılacak metin ya da sayı için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Write(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Metin penceresine metin ya da sayı yazar.  "WriteLine" ın aksine, yeni satır karakteri eklenmez, yani, bu çağrı aynı satırda ise metin penceresine hiçbir şey yazılmaz.
+            </summary>
+            <param name="data">
+            Metin penceresine yazılacak metin ya da sayı için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.VerifyAccess">
+            <summary>
+            Metin penceresine erişimin önceden yapılıp yapılmadığını doğrular.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.ForegroundColor">
+            <summary>
+            Metnin çıktı olarak metin penceresinde görünecek önalan rengini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.BackgroundColor">
+            <summary>
+            Metnin çıktı olarak metin penceresinde görünecek arkaplan rengini belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorLeft">
+            <summary>
+            Metin penceresindeki imlecin kolon konumunu belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorTop">
+            <summary>
+            Metin penceresindeki imlecin satır konumunu belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Left">
+            <summary>
+            Metin penceresinin sol konumunu belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Title">
+            <summary>
+            Metin penceresi için başlığı belirtir.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Top">
+            <summary>
+            Metin penceresinin üst konumunu belirtir.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Shapes">
+            <summary>
+            Grafik penceresinde şekil ekleme, şekli hareket ettirme ve şekli döndürme işlemlerini sağlar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen genişlik ve yükseklikte dikdörtgen şekil ekler.
+            </summary>
+            <param name="width">
+            Dikdörtgen şeklin genişliği.
+            </param>
+            <param name="height">
+            Dikdörtgen şeklin yüksekliği.
+            </param>
+            <returns>
+            Grafik penceresine eklenen dikdörtgen şekli sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen genişlik ve yükseklikte elips şekil ekler.
+            </summary>
+            <param name="width">
+            Elips şeklin genişliği için kullanılır.
+            </param>
+            <param name="height">
+            Elips şeklin yüksekliği için kullanılır.
+            </param>
+            <returns>
+            Grafik penceresine eklenen elips şekli sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen noktalara göre üçgen şekil ekler.
+            </summary>
+            <param name="x1">
+            İlk noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y1">
+            İlk noktanın y-koordinatı için kullanılır.
+            </param>
+            <param name="x2">
+            İkinci noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y2">
+            İkinci noktanın y-koordinatı için kullanılır.
+            </param>
+            <param name="x3">
+            Üçüncü noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y3">
+            Üçüncü noktanın y-koordinatı için kullanılır.
+            </param>
+            <returns>
+            Grafik penceresine eklenen üçgen şekli sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen noktalar arasında çizgi ekler.
+            </summary>
+            <param name="x1">
+            İlk noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y1">
+            İlk noktanın y-koordinatı için kullanılır.
+            </param>
+            <param name="x2">
+            İkinci noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y2">
+            İkinci noktanın y-koordinatı için kullanılır.
+            </param>
+            <returns>
+            Grafik penceresine eklenen çizgiyi sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Taşınabilir, hareket ettirilebilir ya da döndürülebilir şekil halinde resim ekler.
+            </summary>
+            <param name="imageName">
+            Çizilecek resmin ismi için kullanılır.
+            </param>
+            <returns>
+            Grafik penceresine eklenen resmi sonuç olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Şekil olarak taşınabilecek, animasyon yapılabilecek ya da döndürülebilecek bazı metinler ekler.
+            </summary>
+            <param name="text">
+            Eklenecek metin.
+            </param>
+            <returns>
+            Grafik penceresine yeni eklenen metin şekli.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Metin şeklinin metnini ayarlar. 
+            </summary>
+            <param name="shapeName">
+            Metin şeklinin ismi.
+            </param>
+            <param name="text">
+            Ayarlanacak yeni metin değeri.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Grafik penceresinden bir şekli siler.
+            </summary>
+            <param name="shapeName">
+            Silinecek şeklin ismi için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Şekli, belirtilen isimle başka konuma taşır.
+            </summary>
+            <param name="shapeName">
+            Çizdirilecek şeklin ismi için kullanılır.
+            </param>
+            <param name="x">
+            Yeni pozisyonun x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Yeni pozisyonun y-koordinatı için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Rotate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Şekli, belirtilen isimle belirtilen açı kadar döndürür.
+            </summary>
+            <param name="shapeName">
+            Döndürülecek şeklin ismi için kullanılır.
+            </param>
+            <param name="angle">
+            Döndürülecek açı değeri için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Zoom(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirli yakınlaştırma dereceleri kullanarak şekilleri ölçeklendirir. Minimum 0.1 ve maksimum 20 dir.
+            </summary>
+            <param name="shapeName">
+            Döndürülecek şeklin ismi için kullanılır.
+            </param>
+            <param name="scaleX">
+            X eksenindeki yakınlaştırma derecesi.
+            </param>
+            <param name="scaleY">
+            Y eksenindeki yakınlaştırma derecesi.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Animate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Şekli, belirtilen isimle yeni bir konuma çizdirir.
+            </summary>
+            <param name="shapeName">
+            Taşınacak şeklin ismi için kullanılır.
+            </param>
+            <param name="x">
+            Yeni pozisyonun x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Yeni pozisyonun y-koordinatı için kullanılır.
+            </param>
+            <param name="duration">
+            Animasyonda kullanılacak milisaniye cinsinden süre için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetLeft(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen şeklin sol koordinatını belirtir.
+            </summary>
+            <param name="shapeName">
+            Şeklin ismi için kullanılır.
+            </param>
+            <returns>
+            Şeklin sol koordinatını değer olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetTop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen şeklin üst koordinatını belirtir.
+            </summary>
+            <param name="shapeName">
+            Şeklin ismi için kullanılır.
+            </param>
+            <returns>
+            Şeklin üst koordinatını değer olarak döndürür.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetOpacity(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Şeklin opaklığını (ışık geçirgenliğini) belirtir.
+            </summary>
+            <param name="shapeName">
+            Şeklin ismi için kullanılır.
+            </param>
+            <returns>
+            Nesnenin opak düzeyi 0 ve 100 arasında değişir. 0 tamamıyla saydam ve 100 tamamıyla opak olmak üzere.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetOpacity(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Render edilecek şeklin opaklığını (ışık geçirgenliğini) ayarlar.
+            </summary>
+            <param name="shapeName">
+            Şeklin ismi için kullanılır.
+            </param>
+            <param name="level">
+            Opak düzeyi 0 ve 100 arasında değişir.0 tamamıyla saydam ve 100 tamamıyla opak olmak üzere.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.HideShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Önceden eklenmiş şekli saklar.
+            </summary>
+            <param name="shapeName">
+            Şeklin ismi için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.ShowShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Önceden gizlenmiş şekli gösterir.
+            </summary>
+            <param name="shapeName">
+            Şeklin ismi için kullanılır.
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Controls">
+            <summary>
+            Kontrol nesnesi, kontroller eklemenize, taşımanıza ve onlarla haberleşebilmenize imkan verir.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddButton(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Grafik penceresine belirtilen genişlik ve yükseklikte buton ekler.
+            </summary>
+            <param name="caption">
+            Buton üzerinde gösterilecek başlık.
+            </param>
+            <param name="left">
+            Butonun X koordinatı.
+            </param>
+            <param name="top">
+            Butonun Y koordinatı.
+            </param>
+            <returns>
+            Grafik penceresine yeni eklenen buton.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetButtonCaption(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen butonun o anki başlığını alır.
+            </summary>
+            <param name="buttonName">
+            Başlığı beklenen buton.
+            </param>
+            <returns>
+            Butonun şu anki başlığı.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetButtonCaption(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen butonun başlığını ayarlar.
+            </summary>
+            <param name="buttonName">
+            Başlığı ayarlanması gereken buton.
+            </param>
+            <param name="caption">
+            Buton için yeni başlık.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Grafik penceresine belirtilen genişlik ve yükseklikte metin girişi kutusu ekler.
+            </summary>
+            <param name="left">
+            Metin kutusunun X koordinatı.
+            </param>
+            <param name="top">
+            Metin kutusunun Y koordinatı.
+            </param>
+            <returns>
+            Grafik penceresine yeni eklenen metin kutusu.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddMultiLineTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Grafik penceresine belirtilen genişlik ve yükseklikte çok satırlı metin girişi kutusu ekler.
+            </summary>
+            <param name="left">
+            Metin kutusunun X koordinatı.
+            </param>
+            <param name="top">
+            Metin kutusunun Y koordinatı.
+            </param>
+            <returns>
+            Grafik penceresine yeni eklenen metin kutusu.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetTextBoxText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen metin kutusunun o anki metnini alır.
+            </summary>
+            <param name="textBoxName">
+            Metni beklenen metin kutusu.
+            </param>
+            <returns>
+            Metin kutusu içindeki metin
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetTextBoxText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen metin kutusunun metnini ayarlar.
+            </summary>
+            <param name="textBoxName">
+            Metni ayarlanması gereken metin kutusu.
+            </param>
+            <param name="text">
+            Metin kutusu için yeni metin.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Grafik penceresinden kontrolü kaldırır.
+            </summary>
+            <param name="controlName">
+            Kaldırılması gereken kontrolün ismi.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Belirtilen isimdeki kontrolü yeni bir pozisyona taşır.
+            </summary>
+            <param name="control">
+            Taşınacak kontrolün ismi.
+            </param>
+            <param name="x">
+            Yeni pozisyonun X koordinatı.
+            </param>
+            <param name="y">
+            Yeni pozisyonun Y koordinatı.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetSize(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Kontrolün boyutunu ayarlar.
+            </summary>
+            <param name="control">
+            Yeniden boyutlandırılacak kontrolün ismi.
+            </param>
+            <param name="width">
+            Kontrolün genişliği.
+            </param>
+            <param name="height">
+            Kontrolün yüksekliği.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.HideControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Eklenmiş olan kontrolü gizler.
+            </summary>
+            <param name="controlName">
+            Kontrolün ismi.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.ShowControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Bir önceki gizlenmiş kontrolü gösterir.
+            </summary>
+            <param name="controlName">
+            Kontrolün ismi.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastClickedButton">
+            <summary>
+            Grafik penceresinde tıklanan son botunu alır.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastTypedTextBox">
+            <summary>
+            Metin girişi yapılan son metin kutusunu alır.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.ButtonClicked">
+            <summary>
+            Bir buton kontrolüne tıklandığında bir olay oluşturur.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.TextTyped">
+            <summary>
+            Bir metin kutusu kontrolüne metin girildiğinde bir olay oluşturur.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Sound">
+            <summary>
+            Seslerin çalınması ile ilgili işlemleri sağlar. Bazı sesler kütüphane tarafından sağlanmaktadır.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClick">
+            <summary>
+            Tıklatma (Click) sesini çalar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClickAndWait">
+            <summary>
+            Tıklatma (Click) sesini çalar ve bitmesi için bekler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChime">
+            <summary>
+            Çan (Chime) sesini çalar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimeAndWait">
+            <summary>
+            Çan (Chime) sesini çalar ve bitmesi için bekler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimes">
+            <summary>
+            Çanlar (Chimes) sesini çalar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimesAndWait">
+            <summary>
+            Çanlar (Chimes) sesini çalar ve bitmesi için bekler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRing">
+            <summary>
+            Kapı zili (Bell Ring) sesini çalar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRingAndWait">
+            <summary>
+            Kapı zili (Bell Ring) sesini çalar ve bitmesi için bekler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayMusic(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Müzik notaları çalar.
+            </summary>
+            <param name="notes">
+            Çalınacak müzik notaları seti.  Biçimi, QBasic tarafından desteklenen Music Markup Language'in bir alt setidir.
+            </param>
+            <example>
+            <code>
+            Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4")
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Play(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Ses dosyası çalar. Bu; mp3, wav ya da wma dosyası olabilir. Diğer dosya formatları bilgisayarda yüklü mevcut çözücülere bağlı olarak çalınamayabilir.
+            </para>
+            <para>
+            Eğer dosya duraklatılmış durumdaysa, dosya kaldığı yerden çalmaya devam eder.
+            </para>
+            </summary>
+            <param name="filePath">
+            Ses dosyasının konumu için kullanılır. Dosya yerel konumda ya da ağda bulunabilir. Örn: c:\music\track1.mp3) ya da http://contoso.com/track01.wma
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayAndWait(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Ses dosyasını çalar ve çalma bitene kadar bekler. Bu; mp3, wav ya da wma dosyası olabilir. Diğer dosya formatları bilgisayarda yüklü mevcut çözücülere bağlı olarak çalınamayabilir.
+            </para>
+            <para>
+            Eğer dosya duraklatılmış durumdaysa, dosya kaldığı yerden çalmaya devam eder.
+            </para>
+            </summary>
+            <param name="filePath">
+            Ses dosyasının konumu için kullanılır. Dosya yerel konumda ya da ağda bulunabilir. Örn: c:\music\track1.mp3) ya da http://contoso.com/track01.wma
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Pause(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Ses dosyasını duraklatır. Eğer dosya çalınmıyorsa, herhangi bir işlem gerçekleşmez.
+            </summary>
+            <param name="filePath">
+            Ses dosyası için yol. Bu, yerel bir dosya (örn: c:\music\track1.mp3) ya da ağınızdaki bir dosya (örn: http://contoso.com/track01.wma) olabilir.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Stop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Ses dosyasını durdurur. Eğer dosya çalınmıyorsa, herhangi bir işlem gerçekleşmez.
+            </summary>
+            <param name="filePath">
+            Ses dosyası için yol. Bu, yerel bir dosya (örn: c:\music\track1.mp3) ya da ağınızdaki bir dosya (örn: http://contoso.com/track01.wma) olabilir.
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Turtle">
+            <summary>
+            Kaplumbağa, Logo benzeri fonksiyonlarla kalemle ve ilkel çizim yöntemleri sayesinde şekiller çizmeyi sağlar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Show">
+            <summary>
+            Kaplumbağayı gösterir ve kaplumbağa ile etkileşimi etkinleştirir.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Hide">
+            <summary>
+            Kaplumbağayı gizler ve kaplumbağa ile etkileşimi kaldırır.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenDown">
+            <summary>
+            Kaplumbağa hareket ederken çizim yapması için kalemi aşağı indirir.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenUp">
+            <summary>
+            Kaplumbağa hareket ederken çizim yapmasını durdurmak için kalemi yukarı kaldırır.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Move(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Kaplumbağayı belirli bir uzaklığa götürür. Eğer kalem inikse, kaplumbağa hareket ettiğinde çizim yapılır.
+            </summary>
+            <param name="distance">
+            Kaplumbağanın gideceği uzaklık için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.MoveTo(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Kaplumbağayı belirli bir konuma döndürerek hareket ettirir. Eğer kalem inikse, kaplumbağa hareket ettiğinde çizim yapılır.
+            </summary>
+            <param name="x">
+            Hedef noktanın x-koordinatı için kullanılır.
+            </param>
+            <param name="y">
+            Hedef noktanın y-koordinatı için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Turn(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Kaplumbağayı belirli bir açıda döndürür. Açı derece cinsindendir ve pozitif ya da negatif olabilir. Eğer açı pozitifse kaplumbağa sağına, negatifse soluna döner.
+            </summary>
+            <param name="angle">
+            Kaplumbağanın döneceği açı için kullanılır.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnRight">
+            <summary>
+            Kaplumbağa 90 derece sağa döner.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnLeft">
+            <summary>
+            Kaplumbağa 90 derece sola döner.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Speed">
+            <summary>
+            Kaplumbağanın hareket hızını belirler. Hız değeri 1 ile 10 arasındadır. Hız değeri 10 olduğunda, kaplumbağa anında hareket eder ve döner.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Angle">
+            <summary>
+            Kaplumbağanın anlık açısını belirtir. Ayarlar esnasında, kaplumbağa anında yeni açıya döner.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.X">
+            <summary>
+            Kaplumbağanın X konumunu belirtir. Ayarlar esnasında, kaplumbağa anında yeni konuma hareket eder.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Y">
+            <summary>
+            Kaplumbağanın X konumunu belirtir. Ayarlar esnasında, kaplumbağa anında yeni konuma hareket eder.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2515 @@
+﻿<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmallBasicLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SmallBasic.Library.Text">
+            <summary>
+            Text 物件在處理文本時提供有用的操作。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.Append(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            合併兩個文本輸入並將結果作為另一文本返回。該操作在處理變數中的未知文本時特別有用。因為變數可能被錯誤地當做兩個數字並相加而不是作為文本附加。
+            </summary>
+            <param name="text1">
+            被附加的文本的第一部分。
+            </param>
+            <param name="text2">
+            被附加的文本的第二部分。
+            </param>
+            <returns>
+            包含所有特定部分的附加文本。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetLength(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得給定文本的長度。
+            </summary>
+            <param name="text">
+            需知其長度的文本。
+            </param>
+            <returns>
+            給定文本的長度。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.IsSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個給定子文本是否為大文本的子集。
+            </summary>
+            <param name="text">
+            將在其中搜索子文本的較大文本。
+            </param>
+            <param name="subText">
+            待搜索的子文本。
+            </param>
+            <returns>
+            如果在給定文本中發現子文本則為 True。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.EndsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個給定文本是否以給定子文本結束。
+            </summary>
+            <param name="text">
+            在其中進行搜索的較大文本。
+            </param>
+            <param name="subText">
+            The sub-text to search for.
+            </param>
+            <returns>
+            如果在給定文本的最後發現子文本則為 True。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.StartsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個給定文本是否是以給定子文本開始。
+            </summary>
+            <param name="text">
+            在其中進行搜索的較大文本。
+            </param>
+            <param name="subText">
+            待搜索的子文本。
+            </param>
+            <returns>
+            如果在給定文本的開始發現子文本則為 True。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            從給定文本中獲得子文本。
+            </summary>
+            <param name="text">
+            將在其中產生子文本的文本。
+            </param>
+            <param name="start">
+            指定從何處開始。
+            </param>
+            <param name="length">
+            指定子文本的長度。
+            </param>
+            <returns>
+            被請求的子文本
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubTextToEnd(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得從給定文本中的特定位置開始到結尾的子文本。
+            </summary>
+            <param name="text">
+            The text to derive the sub-text from.
+            </param>
+            <param name="start">
+            Specifies where to start from.
+            </param>
+            <returns>
+            要求的子文本。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetIndexOf(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            找到子文本出現在特定文本中的位置。
+            </summary>
+            <param name="text">
+            在其中進行搜索的文本。
+            </param>
+            <param name="subText">
+            待搜索的文本。
+            </param>
+            <returns>
+            子文本在特定文本中的位置。如果文本未出現，則返回 0。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToLowerCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            轉換給定文本為小寫。
+            </summary>
+            <param name="text">
+            將轉換為小寫的文本。
+            </param>
+            <returns>
+            給定文本的小寫版本。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToUpperCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            轉換給定文本為大寫。
+            </summary>
+            <param name="text">
+            將轉換為大寫的文本。
+            </param>
+            <returns>
+            給定文本的大寫版本。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacter(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            根據 Unicode 字元碼，獲得相應的字元，這些字元可以在正常文本中使用。
+            </summary>
+            <param name="characterCode">
+            要求字元的字元代碼（基於 Unicode）
+            </param>
+            <returns>
+            和特定的代碼相對應的 Unicode 字元。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacterCode(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            提供一個 Unicode 字元，獲得對應的字元代碼。
+            </summary>
+            <param name="character">
+            其代碼被請求的字元。
+            </param>
+            <returns>
+            和特定的字元相對應的 Unicode 代碼。
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Mouse">
+            <summary>
+            mouse 類提供訪問器以獲得或設置滑鼠相關的屬性，例如游標位置，指標等。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.HideCursor">
+            <summary>
+            在螢幕上隱藏滑鼠游標。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.ShowCursor">
+            <summary>
+            在螢幕上顯示滑鼠游標。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseX">
+            <summary>
+            獲得或設置滑鼠游標的 x 座標。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseY">
+            <summary>
+            獲得或設置滑鼠游標的 y 座標。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsLeftButtonDown">
+            <summary>
+            獲得是否左鍵被按下。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsRightButtonDown">
+            <summary>
+            獲得是否右鍵被按下。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Desktop">
+            <summary>
+            該類提供同桌面交互的方法。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Desktop.SetWallPaper(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            設置特定的圖片作為桌面的牆紙。該檔可以是一個本地檔或一個網路檔或者甚至是一個 URL。
+            </summary>
+            <param name="fileOrUrl">
+            圖片的檔案名或 URL。
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Width">
+            <summary>
+            獲得主桌面的螢幕寬度。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Height">
+            <summary>
+            獲得主桌面的螢幕高度。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication">
+            <summary>
+            Application 類提供 Small Basic 程式一個應用物件。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication.Dispatcher">
+            <summary>
+            獲得 Small Basic 的反射程式。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.ImageList">
+            <summary>
+            該類將圖像載入並存放到記憶體。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.LoadImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            將圖像從互聯網或檔中載入到記憶體。
+            </summary>
+            <param name="fileNameOrUrl">
+            要載入的影像檔名。可以是一個本地檔或一個 Internet 上的 URL。
+            </param>
+            <returns>
+            返回已載入的圖像名。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.ClipImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            在給定圖像中剪貼一部分並返回基於這個特定邊界的新圖像
+            </summary>
+            <param name="imageName">
+            待剪貼的原始圖像。
+            </param>
+            <param name="left">
+            剪貼矩形的 X 座標。
+            </param>
+            <param name="top">
+            剪貼矩形的 Y 座標。
+            </param>
+            <param name="width">
+            剪貼矩形的寬度。
+            </param>
+            <param name="height">
+            剪貼矩形的高度。
+            </param>
+            <returns>
+            剪貼的圖像。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetWidthOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得存儲圖像的寬度。
+            </summary>
+            <param name="imageName">
+            記憶體中圖像的名稱。
+            </param>
+            <returns>
+            特定圖像的寬度。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetHeightOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得存儲圖像的高度。
+            </summary>
+            <param name="imageName">
+            記憶體中圖像的名稱。
+            </param>
+            <returns>
+            特定圖像的高度。
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Timer">
+            <summary>
+            Timer 物件提供一個簡單的途徑以一個定長的間隔重複做一些事情。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Pause">
+            <summary>
+            暫停 timer。Tick 事件不會被引發。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Resume">
+            <summary>
+            將 timer 從暫定轉為繼續。Tick 事件現在將被引發。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Timer.Interval">
+            <summary>
+            獲得或設置間隔（毫秒）以特定 timer 多久引發 Tick 事件。該值可以從 10 到 100000000
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Timer.Tick">
+            <summary>
+            當 timer 計數時引發一個事件。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.SmallBasicCallback">
+            <summary>
+            所有的 Small Basic 庫的事件都會使用的簽名的回呼函數
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Stack">
+            <summary>
+            該物件提供一種途徑像在一個盤子中堆疊一樣存儲數值。您可以將一個值推入堆疊的頂部可以將其推出。您僅可以一個一個地將值推出堆疊同時最後被推入的值將最先被推出。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PushValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            把值壓到特定堆疊裡。
+            </summary>
+            <param name="stackName">
+            堆疊名稱。
+            </param>
+            <param name="value">
+            進棧值。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.GetCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得特定堆疊內的專案數量。
+            </summary>
+            <param name="stackName">
+            堆疊名稱。
+            </param>
+            <returns>
+            在特定堆疊中項的個數。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PopValue(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            從特定堆疊內彈出值。
+            </summary>
+            <param name="stackName">
+            堆疊名稱。
+            </param>
+            <returns>
+            堆疊的值。
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Primitive">
+            <summary>
+            基本元素類型代表文本或數位。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.NativeHelper">
+            <summary>
+            調用 Native APIs 的私有靜態説明器
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.GraphicsWindow">
+            <summary>
+            GraphicsWindow 提供圖形相關的輸入輸出功能。例如，使用該類，可以繪製和填充圓形和矩形。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Show">
+            <summary>
+            顯示 Graphics 視窗以便能與其交互。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Hide">
+            <summary>
+            隱藏 Graphics 視窗。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            使用選中的筆在螢幕上繪製一個矩形。
+            </summary>
+            <param name="x">
+            矩形 X 座標。
+            </param>
+            <param name="y">
+            矩形 y 座標。
+            </param>
+            <param name="width">
+            矩形寬度。
+            </param>
+            <param name="height">
+            矩形高度。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            使用選中的 Brush 在螢幕上填充矩形。
+            </summary>
+            <param name="x">
+            矩形 X 座標。
+            </param>
+            <param name="y">
+            矩形 y 座標。
+            </param>
+            <param name="width">
+            矩形寬度。
+            </param>
+            <param name="height">
+            矩形高度。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            使用選擇的筆在螢幕上繪製一個橢圓。
+            </summary>
+            <param name="x">
+            橢圓的 x 座標。
+            </param>
+            <param name="y">
+            橢圓的 y 座標。
+            </param>
+            <param name="width">
+            橢圓的寬度。
+            </param>
+            <param name="height">
+            橢圓的高度。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            使用選中的 Brush 在螢幕上填充橢圓。
+            </summary>
+            <param name="x">
+            The x co-ordinate of the ellipse.
+            </param>
+            <param name="y">
+            The y co-ordinate of the ellipse.
+            </param>
+            <param name="width">
+            The width of the ellipse.
+            </param>
+            <param name="height">
+            The height of the ellipse.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            使用選擇的筆在螢幕上繪製一個三角形。
+            </summary>
+            <param name="x1">
+            第一點的 X 座標。
+            </param>
+            <param name="y1">
+            第一點的 Y 座標。
+            </param>
+            <param name="x2">
+            第二點的 X 座標。
+            </param>
+            <param name="y2">
+            第二點的 Y 座標。
+            </param>
+            <param name="x3">
+            第三點的 X 座標。
+            </param>
+            <param name="y3">
+            第三點的 Y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            使用選擇的筆在螢幕上繪製並填充一個三角形。
+            </summary>
+            <param name="x1">
+            第一點的 X 座標。
+            </param>
+            <param name="y1">
+            第一點的 Y 座標。
+            </param>
+            <param name="x2">
+            第二點的 X 座標。
+            </param>
+            <param name="y2">
+            第二點的 Y 座標。
+            </param>
+            <param name="x3">
+            第三點的 X 座標。
+            </param>
+            <param name="y3">
+            第三點的 Y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            繪製一條線從一點到另一點。
+            </summary>
+            <param name="x1">
+            第一點的 X 座標。
+            </param>
+            <param name="y1">
+            第一點的 Y 座標。
+            </param>
+            <param name="x2">
+            第二點的 x 座標。
+            </param>
+            <param name="y2">
+            第二點的 y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            在螢幕的特定位置繪製一條文本線.
+            </summary>
+            <param name="x">
+            文本開始點的 x 座標。
+            </param>
+            <param name="y">
+            文本開始點的 y 座標。
+            </param>
+            <param name="text">
+            繪製文本
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawBoundText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            在螢幕的特定位置繪製一條文本線.
+            </summary>
+            <param name="x">
+            The x co-ordinate of the text start point.
+            </param>
+            <param name="y">
+            The y co-ordinate of the text start point.
+            </param>
+            <param name="width">
+            最大允許寬度。該參數説明定義何時文本應當換行。
+            </param>
+            <param name="text">
+            待繪製的文本。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawResizedImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            在螢幕上以特定大小繪製一個從記憶體中取出的特定圖形。
+            </summary>
+            <param name="imageName">
+            繪製圖像的名稱
+            </param>
+            <param name="x">
+            繪製圖像所在點的X 座標。
+            </param>
+            <param name="y">
+            繪製圖像所在點的Y 座標。
+            </param>
+            <param name="width">
+            繪製圖像的寬度。
+            </param>
+            <param name="height">
+            繪製圖像的高度。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            在螢幕上繪製一個從記憶體取出來的特定的圖形。  
+            </summary>
+            <param name="imageName">
+            需要移動的圖像的名稱。
+            </param>
+            <param name="x">
+            繪製圖像所在點的X 座標。
+            </param>
+            <param name="y">
+            繪製圖像所在點的Y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.SetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            以特定的顏色繪製一個特定 x 座標和 y 座標的圖元點。
+            </summary>
+            <param name="x">
+            圖元的 X 座標。
+            </param>
+            <param name="y">
+            圖元的 Y 座標。
+            </param>
+            <param name="color">
+            圖元設置的顏色。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得特定 x 座標和 y 座標的圖元點的顏色。
+            </summary>
+            <param name="x">
+            圖元的 X 座標。
+            </param>
+            <param name="y">
+            圖元的 Y 座標。
+            </param>
+            <returns>
+            圖元的顏色。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetRandomColor">
+            <summary>
+            獲得有效的隨機顏色。
+            </summary>
+            <returns>
+            一個有效的隨機顏色。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetColorFromRGB(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            以給定的 Red，Green 和 Blue 的值構建一個顏色。
+            </summary>
+            <param name="red">
+            顏色的紅色成分 (0-255)。
+            </param>
+            <param name="green">
+            顏色的綠色成分 (0-255)。
+            </param>
+            <param name="blue">
+            顏色的藍色成分 (0-255)。
+            </param>
+            <returns>
+            返回一個可以設置筆刷或筆顏色的顏色。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Clear">
+            <summary>
+            清空視窗。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.ShowMessage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            向使用者顯示一個訊息方塊。
+            </summary>
+            <param name="text">
+            訊息方塊上顯示的文本。
+            </param>
+            <param name="title">
+            訊息方塊標題。
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BackgroundColor">
+            <summary>
+            獲得或設置 Graphics Window 的背景色。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BrushColor">
+            <summary>
+            獲得或設置用來填充繪製在 Graphics Window 上的圖形的小刷子顏色。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.CanResize">
+            <summary>
+            指定 Graphics Window 大小是否可以被使用者修改。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenWidth">
+            <summary>
+            獲得或設置用來繪製在 Graphics Window 上的圖形的筆的寬度。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenColor">
+            <summary>
+            獲得或設置用來繪製在 Graphics Window 上的圖形的筆的顏色。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontName">
+            <summary>
+            獲得或設置將顯示在 Graphics Window 上文本的 Font Name。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontSize">
+            <summary>
+            獲得或設置將顯示在 Graphics Window 上文本的 Font Size。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontBold">
+            <summary>
+            獲得或設置是否在 Graphics Window 中輸入文字的字體是粗體。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontItalic">
+            <summary>
+            獲得或設置是否在 Graphics Window 中輸入文字的字體是斜體。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Title">
+            <summary>
+            獲得或設置圖形視窗的標題。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Height">
+            <summary>
+            獲得或設置圖形視窗的 Height。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Width">
+            <summary>
+            獲得或設置圖形視窗的 Width。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Left">
+            <summary>
+            獲得或設置圖形視窗的 Left Position。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Top">
+            <summary>
+            獲得或設置圖形視窗的 Top Position。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastKey">
+            <summary>
+            獲得上一個被按下或釋放的按鍵。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastText">
+            <summary>
+            獲得上一次輸入 Graphics Window 的文本。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseX">
+            <summary>
+            獲得滑鼠相對於 Graphics Window 的 x 座標。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseY">
+            <summary>
+            獲得滑鼠相對於 Graphics Window 的 y 座標值。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyDown">
+            <summary>
+            當鍵盤上的按鍵被按下時引發事件。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyUp">
+            <summary>
+            當鍵盤上的按鍵被釋放時引發一個事件。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseDown">
+            <summary>
+            當滑鼠鍵被按下時引發一個事件。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseUp">
+            <summary>
+            當滑鼠鍵被釋放時引發一個事件。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseMove">
+            <summary>
+            當滑鼠被移動時引發一個事件。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.TextInput">
+            <summary>
+            當文本被輸入 GraphicsWindow 時引發一個事件。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Clock">
+            <summary>
+            這個類提供系統時鐘的訪問。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Time">
+            <summary>
+            獲得當前的系統時間。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Date">
+            <summary>
+            獲得當前的系統日期。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Year">
+            <summary>
+            獲得當前的年。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Month">
+            <summary>
+            獲得當前月。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Day">
+            <summary>
+            獲得月份中當前的天。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.WeekDay">
+            <summary>
+            獲得星期中當前的天。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Hour">
+            <summary>
+            獲得當前的小時。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Minute">
+            <summary>
+            獲得當前的分。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Second">
+            <summary>
+            獲得當前的 Second。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Millisecond">
+            <summary>
+            獲得當前的 Millisecond。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.ElapsedMilliseconds">
+            <summary>
+            獲得 1900 年以來經過的毫秒的數值。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.File">
+            <summary>
+            File 物件提供方法訪問並讀寫資訊到硬碟檔中。使用該物件，可以保存和打開您程式中跨多個進程的設置。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            打開一個檔並讀取全部內容。該方法對於小於 1 MB 的小檔很快，但隨著檔增大速度會下降，在檔大於 10 MB 時會顯著變慢。
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            待讀取檔的完整路徑。完整路徑的例子可以是 c:\temp\settings.data。
+            </para>
+            </param>
+            <returns>
+            檔的全部內容。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            打開一個檔並且寫入特定的內容，用新內容替換原始的內容。
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            待寫入檔的完整路徑。完整路徑的例子可以是 c:\temp\settings.data。
+            </para>
+            </param>
+            <param name="contents">
+            寫入特定檔的內容。
+            </param>
+            <returns>
+            <para>
+            如果操作成功，將返回 "SUCCESS"。否則將返回 "FAILED"。
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            打開特定檔讀取特定行數的內容。
+            </summary>
+            <param name="filePath">
+            <para>
+            待讀取檔的完整路徑。完整路徑的例子可以是 c:\temp\settings.data。
+            </para>
+            </param>
+            <param name="lineNumber">
+            讀取文本的行數。
+            </param>
+            <returns>
+            特定檔的特定行中的文本。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            打開特定的檔並且在特定的行寫入內容。
+            </para>
+            <para>
+            這個操作將覆蓋特定的行現存的所有內容。
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            The full path of the file to read from.  An example of a full path will be c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            寫入文本的行數。
+            </param>
+            <param name="contents">
+            <para>
+            要在特定檔的特定行中寫入的內容。
+            </para>
+            </param>
+            <returns>
+            <para>
+            如果操作成功，將返回 "SUCCESS"。否則將返回 "FAILED"。
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.InsertLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            打開特定檔並且在特定行中插入內容。
+            </para>
+            <para>
+            這個操作將不會覆蓋特定的行現存的所有內容。
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            The full path of the file to read from.  An example of a full path will be c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            插入檔的內容。
+            </param>
+            <param name="contents">
+            插入檔的內容。
+            </param>
+            <returns>
+            <para>
+            如果操作成功，將返回 "SUCCESS"。否則將返回 "FAILED"。
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.AppendContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            打開特定的檔並且在檔末端附加內容。
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            The full path of the file to read from.  An example of a full path will be c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="contents">
+            附加在檔末尾的內容。
+            </param>
+            <returns>
+            <para>
+            如果操作成功，將返回 "SUCCESS"。否則將返回 "FAILED"。
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CopyFile(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            複製特定的原始檔案到目的檔案路徑。如果目標指向一個不存在的位置，該方法將試圖自動創建它。
+            </para>
+            <para>
+            現有檔將被覆蓋。如果您不希望覆蓋已存在的檔，請務必檢查目的檔案是否存在。
+            </para>
+            </summary>
+            <param name="sourceFilePath">
+            <para>
+            待複製檔的完整路徑。完整路徑的例子可以是
+c:\temp\settings.data。
+            </para>
+            </param>
+            <param name="destinationFilePath">
+            目標位置或檔路徑。  
+            </param>
+            <returns>
+            如果操作成功，將返回 "SUCCESS"。否則將返回 "FAILED"。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            刪除特定路徑。
+            </summary>
+            <param name="filePath">
+            <para>
+            目標位置或檔路徑。完整路徑的例子可以是
+c:\temp\settings.data。
+            </para>
+            </param>
+            <returns>
+            如果操作成功，將返回 "SUCCESS"。否則將返回 "FAILED"。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CreateDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            創建特定路徑。
+            </summary>
+            <param name="directoryPath">
+            創建目錄的完整路徑。
+            </param>
+            <returns>
+            如果操作成功，將返回 "SUCCESS"。否則將返回 "FAILED"。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            刪除特定的目錄。
+            </summary>
+            <param name="directoryPath">
+            待刪除目錄的完整路徑。
+            </param>
+            <returns>
+            如果操作成功，將返回 "SUCCESS"。否則將返回 "FAILED"。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetFiles(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得在特定目錄路徑中所有檔的路徑。
+            </summary>
+            <param name="directoryPath">
+            查找檔的目錄。
+            </param>
+            <returns>
+            如果操作成功，將檔以一個陣列返回。否則將返回 "FAILED"。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetDirectories(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得在特定目錄路徑中所有的路徑。
+            </summary>
+            <param name="directoryPath">
+            尋找子目錄的目錄。
+            </param>
+            <returns>
+            如果操作成功，將目錄清單以一個陣列返回。否則將返回 "FAILED"。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetTemporaryFilePath">
+            <summary>
+            <para>
+            在一個臨時目錄中創建一個暫存檔案並返回完整路徑。
+            </para>
+            </summary>
+            <returns>
+            暫存檔案的完整路徑。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetSettingsFilePath">
+            <summary>
+            <para>
+            獲得程式設置檔的完整路徑。設置檔案名基於程式名並存放在與程式相同的位置。
+            </para>
+            </summary>
+            <returns>
+            該程式特定的設定檔的完整路徑。
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.File.LastError">
+            <summary>
+            <para>
+            獲得或設置最近發生的基於檔操作的錯誤資訊。該屬性在尋找某些失敗的方法時很有用。
+            </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Keywords">
+            <summary>
+            Keywords 物件是為 Small Basic Keywords 提供幫助文檔的佔位符。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.For">
+            <summary>
+            For 語句允許您多次執行一組語句。
+            </summary>
+            <example>
+            下面的例子將打印出從 1到10的數字。
+            <code>
+            For i = 1 To 10 
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndFor">
+            <summary>
+            檢查 For 語句有關於 EndFor 的關鍵字。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.To">
+            <summary>
+            檢查 For 語句有關於 To 的關鍵字。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Step">
+            <summary>
+            Step 關鍵字用於指定 For 循環的增量。
+            </summary>
+            <example>
+            下面的例子將打印出從 1到10的奇數。
+            <code>
+            For i = 1 to 10 Step 2
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.If">
+            <summary>
+            If 語句允許在您對不同的事情做出決定。
+            </summary>
+            <example>
+            下面的例子將根據翻轉的結果打印出“Win (贏)”或“Lose (輸)”。
+            <code>
+            If flip = "Tail" Then
+              TextWindow.WriteLine("Win")
+            Else
+              TextWindow.WriteLine("Lose")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Then">
+            <summary>
+            檢查 If 語句來找出關於 Then 關鍵字的資訊。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Else">
+            <summary>
+            檢查 If 語句來找出關於 Else 關鍵字的資訊。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.ElseIf">
+            <summary>
+            ElseIf 關鍵字允許您在使用 If 語句作判斷時使用額外的條件。
+            </summary>
+            <example>
+            在下面的例子中，我們會根據當天的時間打印出合適的問候語。
+            <code>
+            If Clock.Hour &lt; 12 Then
+              TextWindow.WriteLine("Good Morning")
+            ElseIf Clock.Hour &lt; 16 Then
+              TextWindow.WriteLine("Good Afternoon")
+            ElseIf Clock.Hour &lt; 20 Then
+              TextWindow.WriteLine("Good Evening")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndIf">
+            <summary>
+            檢查 If 語句來找出關於 Endif 關鍵字的資訊。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Goto">
+            <summary>
+            Goto 語句可允許程序跳到一個新位置。  
+            </summary>
+            <example>
+            下面的程序將不斷地打印出連續的數字。
+            <code>
+            start:
+            TextWindow.WriteLine(i)
+            i = i + 1
+            Goto start
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Sub">
+            <summary>
+            Sub (子程序) 語句允許您通過一次的調用來完成一組事情。
+            </summary>
+            <example>
+            下面的例子所定義的一個子例程，會播放鈴聲，並打印“Win (贏)”。
+            <code>
+            Sub Win
+              Sound.PlayBellRing()
+              TextWindow.WriteLine("Win!")
+            EndSub
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndSub">
+            <summary>
+            檢查 Sub 語句中有關該 EndSub 關鍵字的資訊。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.While">
+            <summary>
+            While 語句允許你重複某些動作，直到達到預期的結果為止。
+            </summary>
+            <example>
+            下面的代碼將打印一組隨機數字，直到遇到一個大於 100的數。
+            <code>
+            While i &lt; 100
+              i = Math.GetRandomNumber(150)
+              TextWindow.WriteLine(i)
+            EndWhile
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndWhile">
+            <summary>
+            檢查 While 語句中有關該 EndWhile 關鍵字的資訊。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.And">
+            <summary>
+            執行邏輯的計算，如果兩個輸入值都是為true (真) 時，則輸出 true (真)。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Or">
+            <summary>
+            執行邏輯的計算，如果其中一個輸入值是為true (真) 時，就輸出 true (真)。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Math">
+            <summary>
+            Math 類提供了許多和數學相關的方法。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Abs(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個給定數位的絕對值。例如，-32.233 將返回 32.233。
+            </summary>
+            <param name="number">
+            一個需要求其絕對值的數位。
+            </param>
+            <returns>
+            給定數位的絕對值。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Ceiling(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個大於等於特定數位的整數。例如，
+32.233 將返回 33。
+            </summary>
+            <param name="number">
+            需要其上限值的數位。
+            </param>
+            <returns>
+            給定數位的上限。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Floor(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個小於等於特定數位的整數。例如，
+32.233 將返回 32。
+            </summary>
+            <param name="number">
+            需要其下限值的數位。
+            </param>
+            <returns>
+            給定數位的下限。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.NaturalLog(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得給定數的自然對數。
+            </summary>
+            <param name="number">
+            需要其自然對數值的數位。
+            </param>
+            <returns>
+            給定數位的自然對數值。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Log(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得給定數的對數（以 10 為底）。
+            </summary>
+            <param name="number">
+            要求對數值的數位
+            </param>
+            <returns>
+            給定數位的對數值
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Cos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得給定弧度的角的余弦。
+            </summary>
+            <param name="angle">
+            需要其餘弦值的角（弧度表示）。
+            </param>
+            <returns>
+            給定角的余弦。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Sin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得給定弧度的角的正弦。
+            </summary>
+            <param name="angle">
+            要求正弦值（弧度表示）的角
+            </param>
+            <returns>
+            給定數位的正弦值
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Tan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得給定弧度的角的正切。
+            </summary>
+            <param name="angle">
+            需要其正切值的角（弧度表示）。
+            </param>
+            <returns>
+            給定角的正切。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcSin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            給定正弦值，獲得以弧度表示的角。
+            </summary>
+            <param name="sinValue">
+            需要其角度的正弦值。
+            </param>
+            <returns>
+            對應給定正弦值的角（弧度表示）。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcCos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            給定余弦值，獲得以弧度表示的角。
+            </summary>
+            <param name="cosValue">
+            需要其角度的余弦值。
+            </param>
+            <returns>
+            對應給定余弦值的角（弧度表示）。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcTan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            給定正切值，獲得以弧度表示的角。
+            </summary>
+            <param name="tanValue">
+            對應給定正切值的角（弧度表示）。
+            </param>
+            <returns>
+            對應給定正切值的角（弧度表示）。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetDegrees(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            把一個角的弧度轉化為角度。
+            </summary>
+            <param name="angle">
+            以弧度表示的角。
+            </param>
+            <returns>
+            以角度轉化的角。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRadians(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            把一個角的角度轉化為弧度。
+            </summary>
+            <param name="angle">
+            以角度表示的角。
+            </param>
+            <returns>
+            以弧度轉化的角。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.SquareRoot(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得給定數的平方根。
+            </summary>
+            <param name="number">
+            需要其平方根值的數位。
+            </param>
+            <returns>
+            給定數位的平方根值。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Power(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            求底數的給定冪。
+            </summary>
+            <param name="baseNumber">
+            將作指數運算的數位。
+            </param>
+            <param name="exponent">
+            冪。
+            </param>
+            <returns>
+            特定指數的底數。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Round(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            將給定的數位四捨五入到最近的證書。例如，32.233 四捨五入為 32.0 
+32.566 四捨五入為 33。
+            </summary>
+            <param name="number">
+            需要其近似值的數位。
+            </param>
+            <returns>
+            給定數位的四捨五入值。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Max(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            比較兩個數並返回較大數。
+            </summary>
+            <param name="number1">
+            待比較的兩個數字中的第一個。
+            </param>
+            <param name="number2">
+            待比較的兩個數字中的第二個。
+            </param>
+            <returns>
+            兩個數字中的較大值。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Min(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            比較兩個數並返回較小數。
+            </summary>
+            <param name="number1">
+            待比較的兩個數字中的第一個。
+            </param>
+            <param name="number2">
+            待比較的兩個數字中的第二個。
+            </param>
+            <returns>
+            兩個數字中的較小值。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Remainder(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            將第一個數除以第二個數並將餘數返回。
+            </summary>
+            <param name="dividend">
+            被除數。
+            </param>
+            <param name="divisor">
+            除數。
+            </param>
+            <returns>
+            餘數。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRandomNumber(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個在 1 和特定的 maxNumber（含）之間的亂數。
+            </summary>
+            <param name="maxNumber">
+            被請求亂數的最大值。
+            </param>
+            <returns>
+            一個小於或等於特定的最大數的 Random 數。
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Math.Pi">
+            <summary>
+            獲得 Pi 值
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Flickr">
+            <summary>
+            該類提供訪問 Flickr 照片服務的功能。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetPictureOfMoment">
+            <summary>
+            獲得現在的這張圖片的 URL。
+            </summary>
+            <returns>
+            指向某一時刻 Flickr 上圖片的檔 URL
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetRandomPicture(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            隨即獲得標記了特定標籤的圖片的 URL。
+            </summary>
+            <param name="tag">
+            請求圖片的標籤。
+            </param>
+            <returns>
+            指向 Flickr 隨機圖片的檔 URL
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Network">
+            <summary>
+            這個私有的説明器類提供對網路訪問的方法
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.DownloadFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            將檔從網路下載到一個本地暫存檔案。
+            </summary>
+            <param name="url">
+            檔在網路上的 URL。
+            </param>
+            <returns>
+            下載檔案的本地檔案名。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.GetWebPageContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得特定網頁內容。
+            </summary>
+            <param name="url">
+            網頁的URL位址
+            </param>
+            <returns>
+            特定網頁的內容。
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.OfficeResearch">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Query(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginQuery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndQuery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Registration(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginRegistration(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndRegistration(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Status">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginStatus(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndStatus(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Discovery(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginDiscovery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndDiscovery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Platform">
+            <summary>
+            Platform 物件提供一種途徑以泛型調用其他 .Net 庫。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Dictionary">
+            <summary>
+            該類提供訪問一個連線 Dictionary 服務。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinition(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個單詞的英文定義。
+            </summary>
+            <param name="word">
+            要定義的詞。
+            </param>
+            <returns>
+            特定詞的定義。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionInFrench(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個單詞的法語定義。
+            </summary>
+            <param name="word">
+            要定義的詞。
+            </param>
+            <returns>
+            特定詞的定義。
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RestHelper">
+            <summary>
+            調用 Rest based APIs 的私有靜態説明器
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.RestHelper.GetContents(System.String)">
+            <summary>
+            給定一個 Rest URL，以 XML 文檔的形式獲得其內容。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Program">
+            <summary>
+            程式的類提供了説明器來控制程式的執行。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.Delay(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            延遲程式執行特定的毫秒數。
+            </summary>
+            <param name="milliSeconds">
+            延遲量。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.End">
+            <summary>
+            結束程式。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.GetArgument(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            返回傳遞到此程式的特定參數。
+            </summary>
+            <param name="index">
+            參數索引。
+            </param>
+            <returns>
+            特定索引的命令列參數。
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.ArgumentCount">
+            <summary>
+            獲得傳遞給此程式的命令列參數的個數。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.Directory">
+            <summary>
+            獲得程式執行目錄。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Array">
+            <summary>
+            該物件提供為給定名字儲存多個值得方法。這些值可以通過另一個索引獲得。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsIndex(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個陣列是否包含特定的索引。這在決定陣列的索引是否被某些值初始化時很有用。
+            </summary>
+            <param name="array">
+            核對陣列。
+            </param>
+            <param name="index">
+            核對索引。
+            </param>
+            <returns>
+            "True" 或 "False" 取決於該值是否存在於特定的.
+陣列。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得一個陣列是否包含特定的索引。這在決定陣列的值是否被存儲在某些索引中時很有用。
+            </summary>
+            <param name="array">
+            核對陣列。
+            </param>
+            <param name="value">
+            核對值。
+            </param>
+            <returns>
+            "True" 或 "False" 取決於該值是否存在於特定的.
+陣列。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetAllIndices(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得該陣列的所有索引，作為另一個陣列。
+            </summary>
+            <param name="array">
+            需要其索引的陣列。
+            </param>
+            <returns>
+            一個以特定陣列中全部索引填充的陣列。所返回陣列的索引從 1 開始。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetItemCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得存儲在陣列中的項的數量。
+            </summary>
+            <param name="array">
+            要求計數的陣列。
+            </param>
+            <returns>
+            特定陣列中項的數量。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.IsArray(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得是否為一個陣列中的給定變數。
+            </summary>
+            <param name="array">
+            核對變數。
+            </param>
+            <returns>
+            如果特定變數是一個陣列則為“True”。否則為“False” 。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.SetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            設置給定陣列和索引的值。
+            </summary>
+            <param name="arrayName">
+            陣列的名稱。
+            </param>
+            <param name="index">
+            索引名稱。
+            </param>
+            <param name="value">
+            設置值。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得給定陣列和索引的值。
+            </summary>
+            <param name="arrayName">
+            陣列的名稱。
+            </param>
+            <param name="index">
+            索引的名稱。
+            </param>
+            <returns>
+            特定陣列特定位置上的值。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.RemoveValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            移除特定索引的陣列項。
+            </summary>
+            <param name="arrayName">
+            陣列的名稱。
+            </param>
+            <param name="index">
+            要移除的項的索引。
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.TextWindow">
+            <summary>
+            TextWindow 提供文本相關的輸入和輸出功能。例如使用該類，可以從文本視窗中讀取或向其中寫入文本或數位。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Show">
+            <summary>
+            顯示 Text 視窗使其可交互。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Hide">
+            <summary>
+            隱藏文本視窗。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Clear">
+            <summary>
+            清除 TextWindow。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Pause">
+            <summary>
+            返回前等待使用者輸入。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseIfVisible">
+            <summary>
+            只在 TextWindow 打開的時候等待使用者輸入。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseWithoutMessage">
+            <summary>
+            返回前等待使用者輸入。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Read">
+            <summary>
+            從文本的視窗中讀取一行文本。此功能在使用者按下回車鍵前將不會返回本文。
+            </summary>
+            <returns>
+            從文本視窗讀取的文本
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.ReadNumber">
+            <summary>
+            從文本的視窗中讀取一行數字。此功能在使用者按下回車鍵前將不會返回本文。
+            </summary>
+            <returns>
+            從文本視窗讀取的數字
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.WriteLine(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            在文本視窗中寫文本或數位。一行新的字元會被附加到輸出，因此下一次當新的內容寫入文本視窗時會出現在新的一行中。
+            </summary>
+            <param name="data">
+            寫入文本視窗的文本或數字。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Write(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            在文本視窗中寫文本或數位。與 WriteLine 不同，這不會附加一行新的字元，也就是說，任何在該調用之後寫入文本視窗的內容都將在同一行。
+            </summary>
+            <param name="data">
+            寫在文本視窗的文本或數位
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.VerifyAccess">
+            <summary>
+            驗證對文本視窗的訪問是否完成
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.ForegroundColor">
+            <summary>
+            獲得或設置文本視窗中輸出文本的前景色。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.BackgroundColor">
+            <summary>
+            獲得或設置文本視窗中輸出文本的背景色。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorLeft">
+            <summary>
+            獲得或設置文本視窗中滑鼠的列位置。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorTop">
+            <summary>
+            獲得或設置文本視窗中滑鼠的行位置。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Left">
+            <summary>
+            獲得或設置 Text Window 的 Left 位置。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Title">
+            <summary>
+            獲得或設置文本視窗的 Title。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Top">
+            <summary>
+            獲得或設置 Text Window 的 Top 位置。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Shapes">
+            <summary>
+            Shape 物件允許您添加移動和旋轉 Graphics window 中的形狀。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            以特定的長和寬增加一個矩形。
+            </summary>
+            <param name="width">
+            矩形的寬度。
+            </param>
+            <param name="height">
+            矩形的高度。
+            </param>
+            <returns>
+            添加到 Graphics Window 的矩形。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            以特定的寬和高增加一個橢圓。
+            </summary>
+            <param name="width">
+            橢圓的寬度。
+            </param>
+            <param name="height">
+            橢圓的高度。
+            </param>
+            <returns>
+            添加到 Graphics Window 的橢圓形。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            增加一個由特定的點表示的三角形。
+            </summary>
+            <param name="x1">
+            第一點的 X 座標。
+            </param>
+            <param name="y1">
+            第一點的 Y 座標。
+            </param>
+            <param name="x2">
+            第二點的 x 座標。
+            </param>
+            <param name="y2">
+            第二點的 y 座標。
+            </param>
+            <param name="x3">
+            第三點的 X 座標。
+            </param>
+            <param name="y3">
+            第三點的 Y 座標。
+            </param>
+            <returns>
+            添加到 Graphics Window 的三角形。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            在特定的點之間增加一條線。
+            </summary>
+            <param name="x1">
+            第一點的 X 座標。
+            </param>
+            <param name="y1">
+            第一點的 Y 座標。
+            </param>
+            <param name="x2">
+            第二點的 X 座標。
+            </param>
+            <param name="y2">
+            第二點的 Y 座標。
+            </param>
+            <returns>
+            添加到 Graphics Window 的直線。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            將圖像以形狀添加以使其可以移動，動畫或旋轉。
+            </summary>
+            <param name="imageName">
+            需要繪製的圖像的名稱。
+            </param>
+            <returns>
+            剛添加到 Graphics Window 中的圖像。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            以圖形的方式添加一些文本以使其可以移動，動畫或旋轉。
+            </summary>
+            <param name="text">
+            待添加文本。
+            </param>
+            <returns>
+            Graphics Window 中添加的文本圖形。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            設置文本圖形的文本。 
+            </summary>
+            <param name="shapeName">
+            文本圖形的名稱。
+            </param>
+            <param name="text">
+            待設置的新文本值。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            從 Graphics Window 移出一個形狀。
+            </summary>
+            <param name="shapeName">
+            需要移除的形狀的名稱。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            把特定名字的圖形移動到新的位置。
+            </summary>
+            <param name="shapeName">
+            需要移動的形狀的名稱。
+            </param>
+            <param name="x">
+            新位置的 x 座標。
+            </param>
+            <param name="y">
+            新位置的 y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Rotate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            旋轉特定名字的圖形至特定角度。
+            </summary>
+            <param name="shapeName">
+            The name of the shape to rotate.
+            </param>
+            <param name="angle">
+            形狀旋轉的角度。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Zoom(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            使用特定的縮放尺來縮放形狀。最小為 0.1 最大為 20。
+            </summary>
+            <param name="shapeName">
+            要旋轉的形狀的名稱。
+            </param>
+            <param name="scaleX">
+            x 軸縮放尺。
+            </param>
+            <param name="scaleY">
+            y 軸縮放尺。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Animate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            移動特定名字的圖形到新的位置。
+            </summary>
+            <param name="shapeName">
+            The name of the shape to move.
+            </param>
+            <param name="x">
+            The x co-ordinate of the new position.
+            </param>
+            <param name="y">
+            The y co-ordinate of the new position.
+            </param>
+            <param name="duration">
+            動畫的時間，以毫秒計。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetLeft(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得特定名字的圖形左座標值。
+            </summary>
+            <param name="shapeName">
+            形狀的名稱。
+            </param>
+            <returns>
+            圖形的左座標。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetTop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得特定名字的圖形頂座標值。
+            </summary>
+            <param name="shapeName">
+            形狀的名稱。
+            </param>
+            <returns>
+            圖形的頂部座標。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetOpacity(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得形狀的透明度。
+            </summary>
+            <param name="shapeName">
+            形狀的名稱。
+            </param>
+            <returns>
+            在 0 至 100 之間的物件的透明度。0 為完全透明，100 為完全不透明。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetOpacity(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            設置形狀的透明程度。
+            </summary>
+            <param name="shapeName">
+            形狀的名稱。
+            </param>
+            <param name="level">
+            透明度的範圍由 0 至 100。0 是完全透明而 100 是完全不透明。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.HideShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            隱藏一個已添加的形狀。
+            </summary>
+            <param name="shapeName">
+            形狀的名稱。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.ShowShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            顯示先前隱藏的形狀。
+            </summary>
+            <param name="shapeName">
+            形狀的名稱。
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Controls">
+            <summary>
+            Controls 物件允許您添加，移動控制項並同控制項交互。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddButton(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            以特定寬度和高度添加一個按鈕到 graphics window。
+            </summary>
+            <param name="caption">
+            按鈕上的標題。
+            </param>
+            <param name="left">
+            按鈕的 x 座標
+            </param>
+            <param name="top">
+            按鈕的 y 座標
+            </param>
+            <returns>
+            添加至 Graphics Window 的按鈕。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetButtonCaption(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得特定按鈕的當前標題。
+            </summary>
+            <param name="buttonName">
+            需要其標題的 Button。
+            </param>
+            <returns>
+            按鈕的當前標題。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetButtonCaption(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            設置特定按鈕的標題。
+            </summary>
+            <param name="buttonName">
+            需要設置其標題的 Button。
+            </param>
+            <param name="caption">
+            按鈕的新標題。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            以特定高度和寬度添加一個文本輸入框 至 graphics window。
+            </summary>
+            <param name="left">
+            文字方塊的 x 座標。
+            </param>
+            <param name="top">
+            文字方塊的 y 座標。
+            </param>
+            <returns>
+            添加至 Graphics Window 的文字方塊。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddMultiLineTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            以特定高度和寬度添加一個多行文本輸入框 至 graphics window。
+            </summary>
+            <param name="left">
+            文字方塊的 x 座標。
+            </param>
+            <param name="top">
+            文字方塊的 y 座標。
+            </param>
+            <returns>
+            添加至 Graphics Window 的文字方塊。
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetTextBoxText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            獲得特定 TextBox 的當前文本。
+            </summary>
+            <param name="textBoxName">
+            需要其文本的 TextBox。
+            </param>
+            <returns>
+            TextBox 中的文本
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetTextBoxText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            設置特定 TextBox 的文本。
+            </summary>
+            <param name="textBoxName">
+            需要設置其文本的 TextBox。
+            </param>
+            <param name="text">
+            TextBox 的新文本。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            從 Graphics Window 移除一個控制項。
+            </summary>
+            <param name="controlName">
+            待移除控制項名。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            將特定名字的控制項移動到新位置。
+            </summary>
+            <param name="control">
+            待移動的控制項名。
+            </param>
+            <param name="x">
+            新位置的 x 座標。
+            </param>
+            <param name="y">
+            新位置的 y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetSize(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            設置控制項的大小。
+            </summary>
+            <param name="control">
+            待調整大小的控制項。
+            </param>
+            <param name="width">
+            控制項的寬度。
+            </param>
+            <param name="height">
+            控制項的高度。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.HideControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            隱藏一個已添加的控制項。
+            </summary>
+            <param name="controlName">
+            控制項名。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.ShowControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            顯示一個曾隱藏的控制項。
+            </summary>
+            <param name="controlName">
+            控制項名。
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastClickedButton">
+            <summary>
+            獲得在 Graphics Window 中最後被點擊的 Button。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastTypedTextBox">
+            <summary>
+            獲得最後被輸入文本的 TextBox。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.ButtonClicked">
+            <summary>
+            當任意按鈕控制項被點擊時引發事件。
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.TextTyped">
+            <summary>
+            當任意 TextBox 控制項被輸入文本時引發事件。
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Sound">
+            <summary>
+            Sound 物件提供允許重播聲音的操作。一些示例聲音可以在庫中找到。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClick">
+            <summary>
+            播放 Click Sound。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClickAndWait">
+            <summary>
+            播放 Click Sound 並等待其結束。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChime">
+            <summary>
+            播放 Chime Sound。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimeAndWait">
+            <summary>
+            播放 Chime Sound 並等待其結束。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimes">
+            <summary>
+            播放 Chime Sound。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimesAndWait">
+            <summary>
+            播放 Chime Sound 並等待其結束。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRing">
+            <summary>
+            播放 Bell Ring Sound。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRingAndWait">
+            <summary>
+            播放 Bell Ring Sound 並等待其結束。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayMusic(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            播放音符。
+            </summary>
+            <param name="notes">
+            一組待播放的音符。其格式為 QBasic 支援的音樂標記語言（Music Markup Language）的子集。
+            </param>
+            <example>
+            <code>
+            Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4")
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Play(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            播放一個音效檔。它可以是一個 mp3 或 wav 或 wma 檔。其他檔案格式能否被支援取決於使用者電腦上安裝的音訊解碼程式。
+            </para>
+            <para>
+            如果一個檔已經被暫停，該操作會從暫停處繼續。
+            </para>
+            </summary>
+            <param name="filePath">
+            音訊檔的路徑。它可以是本地檔（例如：c:\music\track1.mp3）或網路檔（例如：http://contoso.com/track01.wma）。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayAndWait(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            播放一個音效檔並等待它結束播放。它可以是一個 mp3 或 wav 或 wma 檔。其他檔案格式能否被支援取決於使用者電腦上安裝的音訊解碼程式。
+            </para>
+            <para>
+            If the file was already paused, this operation will resume from the position where the playback was paused.
+            </para>
+            </summary>
+            <param name="filePath">
+            The path for the audio file.  This could either be a local file (eg: c:\music\track1.mp3) or a file on the network (eg: http://contoso.com/track01.wma).
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Pause(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            暫停一個音效檔的重播。如果該檔沒有正在被播放，則該操作不會做任何事情。
+            </summary>
+            <param name="filePath">
+            音訊檔的路徑。它可以是本地檔（例如：c:\music\track1.mp3）或網路檔（例如：http://contoso.com/track01.wma）。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Stop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            停止一個音效檔的重播。如果該檔沒有正在被播放，則該操作不會做任何事情。
+            </summary>
+            <param name="filePath">
+            音訊檔的路徑。它可以是本地檔（例如：c:\music\track1.mp3）或網路檔（例如：http://contoso.com/track01.wma）。
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Turtle">
+            <summary>
+            龜標提供類似 LOGO 語言的功能，通過操作筆的屬性以及繪製基本元素來繪製圖形。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Show">
+            <summary>
+            顯示龜標以啟動與其相互作用。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Hide">
+            <summary>
+            隱藏龜標以遮罩與其相互作用。 
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenDown">
+            <summary>
+            放下筆使龜標移動時繪製圖功能可用。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenUp">
+            <summary>
+            拿起筆使龜標移動時停止繪製圖。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Move(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            將龜標移動特定距離。如果筆是落下狀態，則它將隨龜標移動繪製一條線。
+            </summary>
+            <param name="distance">
+            移動龜標的距離。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.MoveTo(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            將龜標轉動並移動到特定位置。如果筆是落下狀態，則它將隨龜標移動繪製一條線。
+            </summary>
+            <param name="x">
+            終點的 x 座標。
+            </param>
+            <param name="y">
+            終點的 y 座標。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Turn(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            以特定角度轉動龜標。Angle 是或為正或為負的度數。如果角度為正，龜標向右轉。如果為負，龜標向左轉。
+            </summary>
+            <param name="angle">
+            轉動龜標的角度。
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnRight">
+            <summary>
+            把龜標右轉90度。
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnLeft">
+            <summary>
+            把龜標左轉90度。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Speed">
+            <summary>
+            指定龜標移動的速度。有效值為 1 到 10。如果 Speed 設置為 10，龜標將立即移動或旋轉。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Angle">
+            <summary>
+            獲得或設置龜標的當前角度。設置時，龜標會立即被轉動到新的角度。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.X">
+            <summary>
+            獲得或設置龜標的 X 位置。設置時，龜標會立即被移動到新的位置。
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Y">
+            <summary>
+            獲得或設置龜標的 Y 位置。設置時，龜標會立即被移動到新的位置。
+            </summary>
+        </member>
+    </members>
+</doc>

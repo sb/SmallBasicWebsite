@@ -4,7 +4,7 @@
       <h3>Documentation</h3>
       <label for="languageSelect">Language</label>
       <select name="language" id="languageSelect" (change)="languageChanged()" [(ngModel)]="selectedLanguage">
-        <option *ngFor="let language of languages">{{language}}</option>
+        <option *ngFor="let language of languages">{{language.summary}}</option>
       </select>
       <ul>
         <li *ngFor="let doc of docs" routerLinkActive="active-link">
@@ -23,6 +23,11 @@
             <li *ngFor="let event of doc.events">
               <a href="docs/{{doc.name}}#{{event.name}}" class="event">
                 {{event.name}}
+              </a>
+            </li>
+            <li *ngFor="let keyword of doc.keywords">
+              <a href="docs/{{doc.name}}#{{keyword.name}}" class="keyword">
+                {{keyword.name}}
               </a>
             </li>
           </ul>
@@ -58,8 +63,8 @@
                   <b>{{param.name}}</b>: {{param.summary}}
                 </div>
               </ng-container>
-              <div class="summaryHeader">Returns</div>
-              <div class="docChild">
+              <div class="summaryHeader" *ngIf="operation.returnType">Returns</div>
+              <div class="docChild" *ngIf="operation.returnType">
                 {{operation.returnType}}
               </div>
             </div>
@@ -71,6 +76,13 @@
           <div *ngFor="let event of docs[currentDocIndex].events" id="{{event.name}}" class="docChild">
             <h4 class="event">{{docs[currentDocIndex].name}}.{{event.name}}</h4>
             <div class="description">{{event.summary}}</div>
+          </div>
+        </div>
+
+        <div class="docSubtype" *ngIf="docs[currentDocIndex].keywords.length > 0">
+          <div *ngFor="let keyword of docs[currentDocIndex].keywords" id="{{keyword.name}}" class="docChild">
+            <h4 class="keyword">{{docs[currentDocIndex].name}}.{{keyword.name}}</h4>
+            <div class="description">{{keyword.summary}}</div>
           </div>
         </div>
       </div>

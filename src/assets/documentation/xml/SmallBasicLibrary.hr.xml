@@ -1,0 +1,2515 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmallBasicLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SmallBasic.Library.Text">
+            <summary>
+            Tekstualni objekt pruža korisne operacije za rad s tekstom.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.Append(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            DoDobiva dva tekstualna ulaza i vraća rezultat kao drugi tekst. Ova operacija je naročito korisna kod bavljenja s nepoznatim tekstom u varijablama koje bi se greškom mogle smatrati brojevima i biti dodane, umjesto da budu priložene.
+            </summary>
+            <param name="text1">
+            Prvi dio teksta za dodati.
+            </param>
+            <param name="text2">
+            Drugi dio teksta za dodati.
+            </param>
+            <returns>
+            Dodani tekst sadrži oba određena dijela.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetLength(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva duljinu danog teksta.
+            </summary>
+            <param name="text">
+            Tekst kojemu je potrebna dužina.
+            </param>
+            <returns>
+            Duljina danog teksta.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.IsSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva svejedno je li dan ili ne subText je podtekst većeg teksta.
+            </summary>
+            <param name="text">
+            Veći tekst unutar kojeg će podtekst biti pretražen.
+            </param>
+            <param name="subText">
+            Podtekst za pretragu.
+            </param>
+            <returns>
+            Istinito ukoliko je podtekst pronađen unutar datog teksta.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.EndsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva svejedno je li dan ili ne tekst završava s određenim subText.
+            </summary>
+            <param name="text">
+            Veći tekst unutar kojeg će biti pretraga.
+            </param>
+            <param name="subText">
+            Podtekst za pretragu.
+            </param>
+            <returns>
+            Istinito ukoliko je podtekst pronađen na kraju datog teksta.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.StartsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva svejedno je li dan ili ne tekst počinje s određenim subText.
+            </summary>
+            <param name="text">
+            Veći tekst unutar kojeg će biti pretraga.
+            </param>
+            <param name="subText">
+            Podtekst za pretragu.
+            </param>
+            <returns>
+            Istinito ukoliko je podtekst pronađen na početku datog teksta.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva podtekst iz danog teksta.
+            </summary>
+            <param name="text">
+            Tekst iz kojeg je izveden podtekst.
+            </param>
+            <param name="start">
+            Određuje odakle krenuti.
+            </param>
+            <param name="length">
+            Određuje dužinu podteksta.
+            </param>
+            <returns>
+            Tražen podtekst
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubTextToEnd(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva podtekst iz danog teksta sa određene pozicije do kraja.
+            </summary>
+            <param name="text">
+            Tekst iz kojeg je izveden podtekst.
+            </param>
+            <param name="start">
+            Određuje odakle krenuti.
+            </param>
+            <returns>
+            Tražen podtekst.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetIndexOf(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pronalazi poziciju gdje se podtekst pojavljuje u određenom tekstu.
+            </summary>
+            <param name="text">
+            Tekst unutar kojega treba pretražiti.
+            </param>
+            <param name="subText">
+            Tekst za pretragu.
+            </param>
+            <returns>
+            Pozicija na kojoj se pod tekst pojavljuje u određenom tekstu.  Ako se tekst ne pojavi, vraća 0.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToLowerCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pretvara dati tekst u mala slova.
+            </summary>
+            <param name="text">
+            Tekst za pretvorbu u mala slova.
+            </param>
+            <returns>
+            Verzija danog teksta sa malim slovima.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToUpperCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pretvara dati tekst u velika slova.
+            </summary>
+            <param name="text">
+            Tekst za pretvorbu u velika slova.
+            </param>
+            <returns>
+            Verzija danog teksta sa velikim slovima.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacter(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            S obzirom na Unicode kod znaka, dobiva odgovarajući znak, koji se tada može se koristiti u običnom tekstu.
+            </summary>
+            <param name="characterCode">
+            Kod znaka (Baziran na unicede-u) za željeni znak.
+            </param>
+            <returns>
+            Unicode znak koji odgovara navedenom kodu.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacterCode(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            S obzirom na Unicode kod znaka, dobiva odgovarajući znak.
+            </summary>
+            <param name="character">
+            Znak čiji je kod zahtjevan.
+            </param>
+            <returns>
+            Kod temeljan na Unicode-u koji odgovara određenom znaku.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Mouse">
+            <summary>
+            Klasa miša pruža pristupnike za dobivanje ili postavljanje postavki vezane uz miš, poput pozicije korsora, pokazivača, itd.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.HideCursor">
+            <summary>
+            Sakriva kursor miša na zaslonu.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.ShowCursor">
+            <summary>
+            Prikazuje kursore miša na zaslonu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseX">
+            <summary>
+            Dobiva ili postavlja kursor miša na x koordinatu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseY">
+            <summary>
+            Dobiva ili postavlja kursor miša na y koordinatu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsLeftButtonDown">
+            <summary>
+            Dobiva kad je lijeva tipka pritisnuta i kad nije.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsRightButtonDown">
+            <summary>
+            Dobiva kad je desna tipka pritisnuta i kad nije.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Desktop">
+            <summary>
+            Ova klasa pruža metode interakcije s radnom površinom.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Desktop.SetWallPaper(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Postavlja određenu sliku kao pozadinsku sliku radne površine.  Može biti lokalna datoteka ili mrežna datoteka ili čak Internet URL.
+            </summary>
+            <param name="fileOrUrl">
+            Datotečno ime ili URL slike.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Width">
+            <summary>
+            Dobiva širinu zaslona glavne radne površine.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Height">
+            <summary>
+            Dobiva visinu zaslona glavne radne površine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication">
+            <summary>
+            Klasa aplikacije pruža Small Basic program s aplikacijskim objektom.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication.Dispatcher">
+            <summary>
+            Dobiva dispečer za Small Basic aplikaciju
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.ImageList">
+            <summary>
+            Ova klasa pomaže učitavanju i pohranjivanju slika u memoriju.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.LoadImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Učitava sliku iz datoteke ili interneta u memoriju.
+            </summary>
+            <param name="fileNameOrUrl">
+            Ime datoteke za učitavanje slike.  Ovo može biti lokalna datoteka ili URL do internetske lokacije.
+            </param>
+            <returns>
+            Vraća ime učitane slike.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.ClipImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Izsjeca dio dane slike i vraća novu sliku temeljenu na određenim granicama.
+            </summary>
+            <param name="imageName">
+            Izvornu sliku u isječak.
+            </param>
+            <param name="left">
+            X koordinata isječka pravokutnika.
+            </param>
+            <param name="top">
+            Y koordinata isječka pravokutnika.
+            </param>
+            <param name="width">
+            Širina isječka pravokturnika.
+            </param>
+            <param name="height">
+            Visina isječka pravokturnika.
+            </param>
+            <returns>
+            Odrezana slika.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetWidthOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva širinu pohranjene slike.
+            </summary>
+            <param name="imageName">
+            Ime slike u memoriji.
+            </param>
+            <returns>
+            Širina određene slike.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetHeightOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva visinu pohranjene slike.
+            </summary>
+            <param name="imageName">
+            Ime slike u memoriji.
+            </param>
+            <returns>
+            Visina određene slike.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Timer">
+            <summary>
+            Objekt Brojač pruža jednosstavan način da se nešto uradi u više navrata s konstantnim intervalom između.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Pause">
+            <summary>
+            Pauzira brojač.  Označeni događaji neće biti podignuti.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Resume">
+            <summary>
+            Nastavlja brojač iz stanja pauze.  Označeni događaji će biti podignuti.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Timer.Interval">
+            <summary>
+            Dobiva ili postavlja interval (z milisekundama) određivajući kako će često brojač podignuti označeni događaj.  Ova vrijednost može biti od 10 do 100000000
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Timer.Tick">
+            <summary>
+            Podiže događaj kada brojilo broji.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.SmallBasicCallback">
+            <summary>
+            Povratni poziv potpisa koji će biti korišten u svim događajima Small Basic biblioteka
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Stack">
+            <summary>
+            Ovaj objekt pruža način pohrane vrijednosti poput slaganja ploča.  Možete gurniti vrijednost na vrh stoga i izvući ju. Možete izvlačiti samo jednu po jednu vrijednost sa stoga a poslijednja vrijednost će biti prva koja će izaći.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PushValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Gura vrijednost na određen stog.
+            </summary>
+            <param name="stackName">
+            Ime stoga.
+            </param>
+            <param name="value">
+            Vrijednost za postaviti.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.GetCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva broj stavki u odrešenom stogu.
+            </summary>
+            <param name="stackName">
+            Ime stoga.
+            </param>
+            <returns>
+            Broj stavki u određenom stogu.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PopValue(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Izvlači vrijednost s određenog stoga.
+            </summary>
+            <param name="stackName">
+            Ime stoga.
+            </param>
+            <returns>
+            Vrijednost iz stoga.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Primitive">
+            <summary>
+            Primitivan način prikaza ili teksta ili brojeva.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.NativeHelper">
+            <summary>
+            Osobni statični pomočnik za pozivanje Native API
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.GraphicsWindow">
+            <summary>
+            GraphicsWindow pruža grafički vezane ulazne i izlazne funkcionalnosti.  Na primjer, korištenjem ove klase, možemo nacrtati i ispuniti krugove i pravokutnike.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Show">
+            <summary>
+            Prikazuje prozor s grafikama kako bi se omogućila interakcija s njim.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Hide">
+            <summary>
+            Sakriva prozor s grafikama.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Na zaslonu crta pravokutnik pomoću odabrane Kemijske.
+            </summary>
+            <param name="x">
+            X-koordinata pravokutnika.
+            </param>
+            <param name="y">
+            Y-koordinata pravokutnika.
+            </param>
+            <param name="width">
+            Širina pravokutnika.
+            </param>
+            <param name="height">
+            Visina pravokutnika.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Ispunjava pravokutnik na zaslonu pomoću odabrane Četke.
+            </summary>
+            <param name="x">
+            X-koordinata pravokutnika.
+            </param>
+            <param name="y">
+            Y-koordinata pravokutnika.
+            </param>
+            <param name="width">
+            Širina pravokutnika.
+            </param>
+            <param name="height">
+            Visina pravokutnika.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Na zaslonu crta elipsu pomoću odabrane Kemijske.
+            </summary>
+            <param name="x">
+            X-koordinata elipse.
+            </param>
+            <param name="y">
+            Y-koordinata elipse.
+            </param>
+            <param name="width">
+            Širina elipse.
+            </param>
+            <param name="height">
+            Visina elipse.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Popunjava elipsu na zaslonu pomoću odabrane Četke.
+            </summary>
+            <param name="x">
+            X-koordinata elipse.
+            </param>
+            <param name="y">
+            Y-koordinata elipse.
+            </param>
+            <param name="width">
+            Širina elipse.
+            </param>
+            <param name="height">
+            Visina elipse.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Na zaslonu crta trokut pomoću odabrane Kemijske.
+            </summary>
+            <param name="x1">
+            X-koordinata prve točke.
+            </param>
+            <param name="y1">
+            Y-koordinata prve točke.
+            </param>
+            <param name="x2">
+            X-koordinata druge točke.
+            </param>
+            <param name="y2">
+            Y-koordinata druge točke.
+            </param>
+            <param name="x3">
+            X-koordinata treće točke.
+            </param>
+            <param name="y3">
+            Y-koordinata treće točke.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Na zaslonu crta i popunjava trokut pomoću odabrane četke.
+            </summary>
+            <param name="x1">
+            X-koordinata prve točke.
+            </param>
+            <param name="y1">
+            Y-koordinata prve točke.
+            </param>
+            <param name="x2">
+            X-koordinata druge točke.
+            </param>
+            <param name="y2">
+            Y-koordinata druge točke.
+            </param>
+            <param name="x3">
+            X-koordinata treće točke.
+            </param>
+            <param name="y3">
+            Y-koordinata treće točke.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Crta liniju od jedne do druge točke.
+            </summary>
+            <param name="x1">
+            X-koordinata prve točke.
+            </param>
+            <param name="y1">
+            Y-koordinata prve točke.
+            </param>
+            <param name="x2">
+            X-koordinata druge točke.
+            </param>
+            <param name="y2">
+            Y-koordinata druge točke.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Crta red teksta na zaslonu na određenoj lokaciji.
+            </summary>
+            <param name="x">
+            X-koordinata točke početka teksta.
+            </param>
+            <param name="y">
+            Y-koordinata točke početka teksta.
+            </param>
+            <param name="text">
+            Tekst za nacrtati
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawBoundText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Crta red teksta na zaslonu na određenoj lokaciji.
+            </summary>
+            <param name="x">
+            X-koordinata točke početka teksta.
+            </param>
+            <param name="y">
+            Y-koordinata točke početka teksta.
+            </param>
+            <param name="width">
+            Maksimalna dozvoljena širina. Ovaj parametar pomaže definiranju kad se tekst treba umotati.
+            </param>
+            <param name="text">
+            Tekst za nacrtati.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawResizedImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Crta određenu sliku iz memorije na zaslonu u određenoj veličini.
+            </summary>
+            <param name="imageName">
+            Ime slike za nacrtati
+            </param>
+            <param name="x">
+            X-koordinata točke za crtanje slike.
+            </param>
+            <param name="y">
+            Y-koordinata točke za crtanje slike.
+            </param>
+            <param name="width">
+            Širina za crtanje slike.
+            </param>
+            <param name="height">
+            Visina za crtanje slike.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Crta određenu sliku iz memorije na zaslonu.  
+            </summary>
+            <param name="imageName">
+            Ime slike za nacrtati.
+            </param>
+            <param name="x">
+            X-koordinata točke za crtanje slike.
+            </param>
+            <param name="y">
+            Y-koordinata točke za crtanje slike.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.SetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Crta pixel određen x i y koordinatom koristeći određenu boju.
+            </summary>
+            <param name="x">
+            X-koodrinata pixela.
+            </param>
+            <param name="y">
+            Y-koodrinata pixela.
+            </param>
+            <param name="color">
+            Boja pixela za postaviti.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva boju pixela na određenim x i y koordinatama.
+            </summary>
+            <param name="x">
+            X-koodrinata pixela.
+            </param>
+            <param name="y">
+            Y-koodrinata pixela.
+            </param>
+            <returns>
+            Boja pixela.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetRandomColor">
+            <summary>
+            Dobiva ispravnu nasumičnu boju.
+            </summary>
+            <returns>
+            Valjana nasumična boja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetColorFromRGB(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Konstruira boju danu u Crvenim, Zelenim i Plavim vrijednostima.
+            </summary>
+            <param name="red">
+            Crvena komponenta boje (0-255).
+            </param>
+            <param name="green">
+            Zelena komponenta boje (0-255).
+            </param>
+            <param name="blue">
+            Plava komponenta boje (0-255).
+            </param>
+            <returns>
+            Vraća boju koja može biti korištena za postavljanje boje četke ili kemijske.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Clear">
+            <summary>
+            Čisti prozor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.ShowMessage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Prikazuje korisniku okvir s porukom.
+            </summary>
+            <param name="text">
+            Tekst za prikaz u kutiji za poruku.
+            </param>
+            <param name="title">
+            Naslov kutije za poruku.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BackgroundColor">
+            <summary>
+            Dobiva ili postavlja Pozadinsku boju Prozora s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BrushColor">
+            <summary>
+            Dobiva ili postavlja boju četke da se koristi za ispunjavanje oblika nacrtanih u Prozoru s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.CanResize">
+            <summary>
+            Specificira može li se ili ne Prozoru s grafikama promjeniti veličina od strane korisnika.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenWidth">
+            <summary>
+            Dobiva ili postavlja širinu kemijske korištenu za crtanje oblika u Prozoru s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenColor">
+            <summary>
+            Dobiva ili postavlja boju kemijske korištenu za crtanje oblika u Prozoru s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontName">
+            <summary>
+            Dobiva ili postavlja ime fonta da bude korišten kod crtanja teksta u Prozoru s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontSize">
+            <summary>
+            Dobiva ili postavlja veličinu fonta da bude korištena kod crtanja teksta u Prozoru s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontBold">
+            <summary>
+            Dobiva ili postavlja iako je ili nije font korišten kod crtanja teksta u Prozoru s grafikama Graphics Window podebljan.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontItalic">
+            <summary>
+            Dobiva ili postavlja iako je ili nije font korišten kod crtanja teksta u Prozoru s grafikama Graphics Window ukošen.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Title">
+            <summary>
+            Dobiva ili postavlja naslov za prozor s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Height">
+            <summary>
+            Dobiva ili postavlja visinu prozora s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Width">
+            <summary>
+            Dobiva ili postavlja širinu prozora s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Left">
+            <summary>
+            Dobiva ili postavlja lijevu poziciju prozora s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Top">
+            <summary>
+            Dobiva ili postavlja gornju poziciju prozora s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastKey">
+            <summary>
+            Dobiva posljednju tipku koja je pritisnuta ili puštena.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastText">
+            <summary>
+            Dobiva posljednji tekst koji je unesen u Prozor s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseX">
+            <summary>
+            Dobiva x poziciju miša vezanu za Prozor s grafikama.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseY">
+            <summary>
+            Dobiva y poziciju miša vezanu za Prozor s grafikama.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyDown">
+            <summary>
+            Podiže događaj kad je pritisnuta tipka na tipkovnici.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyUp">
+            <summary>
+            Podiže događaj kad je puštena tipka na tipkovnici.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseDown">
+            <summary>
+            Podiže događaj kad je pritisnuta tipka miša.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseUp">
+            <summary>
+            Podiže događaj kad je puštena tipka miša.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseMove">
+            <summary>
+            Podiže događaj kad je pokrenut miš.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.TextInput">
+            <summary>
+            Podiže događaj kad je tekst unesen u GraphicsWindow.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Clock">
+            <summary>
+            Ova klasa pruža pristup sistemskom satu
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Time">
+            <summary>
+            Dobiva trenutno sistemsko vrijeme.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Date">
+            <summary>
+            Dobiva trenutni sistemski datum.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Year">
+            <summary>
+            Dobiva trenutnu godinu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Month">
+            <summary>
+            Dobiva trenutni Mjesec.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Day">
+            <summary>
+            Dobiva trenutni dan u mjesecu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.WeekDay">
+            <summary>
+            Dobiva trenutni dan tjedna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Hour">
+            <summary>
+            Dobiva trenutni Sat.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Minute">
+            <summary>
+            Dobiva trenutnu Minutu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Second">
+            <summary>
+            Dobiva trenutnu Sekundu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Millisecond">
+            <summary>
+            Dobiva trenutnu Milisekundu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.ElapsedMilliseconds">
+            <summary>
+            Dobiva broj milisekundi koje su prošle od 1900.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.File">
+            <summary>
+            Objekt Datoteka pruža metode za pristup, čitanje i pisanje podataka iz i u datoteku na disku.  Koristeći ovaj objekt, moguće je spremiti i otvoriti postavke preko mnogostrukih sesija vašeg programa.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Otvara datoteku i čita sav sadržaj datoteke. Ova metoda će biti brza za male datoteke koje su manje od MB u veličini, ali će početi usporavati i biti vidljiva za datoteke veće od 10MB.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Puna putanja do datoteke koju će se čitati.  Npr. puna putanja će biti c:\temp\settings.data.
+            </para>
+            </param>
+            <returns>
+            Cijeli sadržaj datoteke.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Otvara datoteku i upisuje u nju određene sadržaje, zamjenjujući prvobitni sadržaj s novim sadržajem.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Puna putanja do datoteke u koju će se zapisivati.  Npr. puna putanja će biti c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="contents">
+            Sadržaj za upis u određenu datoteku.
+            </param>
+            <returns>
+            <para>
+            Ako je zadatak uspješno završen, pisat će "USPJEH".  Inače će pisati "GREŠKA".
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Otvara određenu datoteku i čita sadržaj na broju određenog  redka.
+            </summary>
+            <param name="filePath">
+            <para>
+            Puna putanja do datoteke iz koje će se čitati.  Npr. puna putanja će biti c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Broj redka teksta za čitanje.
+            </param>
+            <returns>
+            Tekst u određenom redku određene datoteke.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Otvara određenu datoteki i zapisuje sadržaje na određen broj redka.
+            </para>
+            <para>
+            Ovaj zadatak će prepisati bilo koji postojeći sadržaj na određenom redku.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Puna putanja do datoteke iz koje će se čitati.  Npr. puna putanja će biti c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Broj redka teksta za zapisivanje.
+            </param>
+            <param name="contents">
+            <para>
+            Sadržaji za zapisati na određenom redku određene datoteke.
+            </para>
+            </param>
+            <returns>
+            <para>
+            Ako je zadatak uspješno završen, pisat će "USPJEH".  Inače će pisati "GREŠKA".
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.InsertLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Otvara određenu datoteku i unosi sadržaje na određen broj redka.
+            </para>
+            <para>
+            Ovaj zadatak neće prepisati nikakav postojeći sadržaj u određenom redku.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Puna putanja do datoteke iz koje će se čitati.  Npr. puna putanja će c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Broj redka teksta za umetanje.
+            </param>
+            <param name="contents">
+            Sadržaj za umetnuti u datoteku.
+            </param>
+            <returns>
+            <para>
+            Ako je zadatak uspješno završen, pisat će "USPJEH".  Inače će pisati "GREŠKA".
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.AppendContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Otvara određenu datoteku i pridodaje sadržaje kraju datoteke.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Puna putanja do datoteke iz koje će se čitati.  Npr. puna putanja će biti c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="contents">
+            Sadržaji za dodati na kraj datoteke.
+            </param>
+            <returns>
+            <para>
+            Ako je zadatak uspješno završen, pisat će "USPJEH".  Inače će pisati "GREŠKA".
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CopyFile(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Kopira navedenu izvornu datoteku u putanju odredišne datoteke. Ako odredište ukazuje na mjesto koje ne postoji, način će ju pokušati stvoriti automatski.
+            </para>
+            <para>
+            Postojeća datoteka će biti prepisana. Najbolje je provjeriti postoji li odredišna datoteka ako ne želite prepisati postojeće datoteke.
+            </para>
+            </summary>
+            <param name="sourceFilePath">
+            <para>
+            Puna putanja datoteke koja treba biti kopirana. Npr. puna putanja će biti c:\temp\settings.data.
+            </para>
+            </param>
+            <param name="destinationFilePath">
+            Odredišna lokacija putanje datoteke.  
+            </param>
+            <returns>
+            Ako je zadatak uspješno završen, pisat će "USPJEH".  Inače će pisati "GREŠKA".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Briše određenu datoteku.
+            </summary>
+            <param name="filePath">
+            <para>
+            Odredišna lokacija putanje datoteke. Npr. puna putanja će biti 
+            c:\temp\settings.data.
+            </para>
+            </param>
+            <returns>
+            Ako je zadatak uspješno završen, pisat će "USPJEH".  Inače će pisati "GREŠKA".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CreateDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stvara određeni direktorij.
+            </summary>
+            <param name="directoryPath">
+            Puna putanja do direktorija za stvaranje.
+            </param>
+            <returns>
+            Ako je zadatak uspješno završen, pisat će "USPJEH".  Inače će pisati "GREŠKA".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Briše određeni direktorij.
+            </summary>
+            <param name="directoryPath">
+            Puna putanja do direktorija za uklanjanje.
+            </param>
+            <returns>
+            Ako je zadatak uspješno završen, pisat će "USPJEH".  Inače će pisati "GREŠKA".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetFiles(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva putanju svih datoteka u određenoj putanji direktorija.
+            </summary>
+            <param name="directoryPath">
+            Direktorij za pretragu za datotekama.
+            </param>
+            <returns>
+            Ako je zadatak uspješno završen, vratit će datoteke kao polje.  Inaće će vratiti "GREŠKA".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetDirectories(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva putanju svih diraktorija u određenoj putanji direktorija.
+            </summary>
+            <param name="directoryPath">
+            Direktorij za pretragu za poddirektorijima.
+            </param>
+            <returns>
+            Ako je zadatak uspješno završen, vratit će datoteke kao polje.  Inaće će vratiti "GREŠKA".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetTemporaryFilePath">
+            <summary>
+            <para>
+            Stvara novu privremenu datoteku u privremenom diraktoriju i vraća 
+            punu putanju datoteke.
+            </para>
+            </summary>
+            <returns>
+            Puna datotečna putanja privremene datoteke.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetSettingsFilePath">
+            <summary>
+            <para>
+            Dobavlja punu putanju postavki datoteke za. Postavke ime datoteke se temelje na imenu programa i prisutne su na istoj lokaciji kao lokacija programa.
+            </para>
+            </summary>
+            <returns>
+            Puna putanja datoteke postavki specifične za ovaj program.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.File.LastError">
+            <summary>
+            <para>
+            Dobavlja ili postavlja posljednju susretnutu datotečnu operacijski baziranu poruku o pogrešci. Ovo svojstvo je korisno  kako bi ste saznali kada se neki način ne izvrši.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Keywords">
+            <summary>
+            Objekt Ključne riječije držač lokacije za pružanje dokumentacije za Small Basic Ključne riječi
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.For">
+            <summary>
+            For izjava vam omogućava da izvršite skup izjava više puta.
+            </summary>
+            <example>
+            Sljedeći primjer će ispisati brojeve od 1 do 10
+            <code>
+            For i = 1 To 10 
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndFor">
+            <summary>
+            Provjerite For izjavu za informaciju o EndFor ključnoj riječi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.To">
+            <summary>
+            Provjerite For izjavu za informaciju o To ključnoj riječi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Step">
+            <summary>
+            Step ključna riječ se koristi za određivanje povećanja za For petlju.
+            </summary>
+            <example>
+            Sljedeći primjer će ispisati neparne brojeve od 1 do 10
+            <code>
+            For i = 1 to 10 Step 2
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.If">
+            <summary>
+            If vam omogućuje u odlukama za rađenje raznih stvari.
+            </summary>
+            <example>
+            Sljedeći primjer će ispisati ili "Pobjeda" ili "Poraz" ovisno o rezultatu.
+            <code>
+            If flip = "Pismo" Then
+              TextWindow.WriteLine("Pobjeda")
+            Else
+              TextWindow.WriteLine("Poraz")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Then">
+            <summary>
+            Pogledajte If izjavu za informaciju o Then ključnoj riječi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Else">
+            <summary>
+            Pogledajte If izjavu za informaciju o Then ključnoj riječi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.ElseIf">
+            <summary>
+            ElseIf ključna riječ pruža alternativno stanje kod donošenja odluka koristeći If izjavu.
+            </summary>
+            <example>
+            U ovom ćemo primjeru ispisati pravi pozdrav ovisno o dobu dana.
+            <code>
+            If Clock.Hour &lt; 12 Then
+              TextWindow.WriteLine("Dobro jutro")
+            ElseIf Clock.Hour &lt; 16 Then
+              TextWindow.WriteLine("Dobar dan")
+            ElseIf Clock.Hour &lt; 20 Then
+              TextWindow.WriteLine("Dobra večer")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndIf">
+            <summary>
+            Pogledajte If izjavu za informaciju o Endl ključnoj riječi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Goto">
+            <summary>
+            Goto omogućuje grananje na novu lokaciju unutar programa.  
+            </summary>
+            <example>
+            Sljedeći program će neprestano po redu ispivati brojeve.
+            <code>
+            start:
+            TextWindow.WriteLine(i)
+            i = i + 1
+            Goto start
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Sub">
+            <summary>
+            Sub (Podprogram) izjava vam omogućuje radnju skupine stvari sa samo jednim pozivom.
+            </summary>
+            <example>
+            Sljedeći primjer definira potprogram koji reproducira zvonjenje i ispisuje "Pobjeda".
+            <code>
+            Sub Win
+              Sound.PlayBellRing()
+              TextWindow.WriteLine("Pobjeda!")
+            EndSub
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndSub">
+            <summary>
+            Pogledajte Sub izjavu za informacije o EndSub ključnoj riječi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.While">
+            <summary>
+            While izjava vam omogućuje ponavljanje nečega dok vi arhivirate željeni rezultat.
+            </summary>
+            <example>
+            Sljedeći kod će ispisati niz slučajnih brojeva sve dok se ne pojavi veći od 100.
+            <code>
+            While i &lt; 100
+              i = Math.GetRandomNumber(150)
+              TextWindow.WriteLine(i)
+            EndWhile
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndWhile">
+            <summary>
+            Pogledajte While izjavu za informacije o EndWhile ključnoj riječi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.And">
+            <summary>
+            Radi logičko računanje i vraća istinu ako su oba unosa istina.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Or">
+            <summary>
+            Radi logičko računanje i vraća istinu ako je jedan od ulaza istina.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Math">
+            <summary>
+            Math klasa pruža mnogo korisnih matematičkih metoda
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Abs(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva apsolutnu vrijednost danog broja.  Na primjer, -32.233 će vratiti 32.233.
+            </summary>
+            <param name="number">
+            Broj za koji se dobiva apsolutna vrijednost.
+            </param>
+            <returns>
+            Apsolutna vrijednost danog broja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Ceiling(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva integer koji je veći od ili jednak određenom decimalnom broju.  Na primjer,
+            32.233 će vratiti 33.
+            </summary>
+            <param name="number">
+            Broj čiji je strop potreban.
+            </param>
+            <returns>
+            Strop vrijednost upisanog broja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Floor(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva integer koji je manji od ili jednak određenom decimalnom broju.  Na primjer,
+            32.233 će vratiti 32.
+            </summary>
+            <param name="number">
+            Broj čija je vrijednost poda potrebna.
+            </param>
+            <returns>
+            Pod vrijednost upisanog broja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.NaturalLog(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva vrijednost prirodnog logaritma danog broja.
+            </summary>
+            <param name="number">
+            Broj čija je vrijednost prirodnog logaritma potrebna.
+            </param>
+            <returns>
+            Prirodni zapis vrijednosti danog broja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Log(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva vrijednost logaritma (baza 10) danog broja.
+            </summary>
+            <param name="number">
+            Broj čija je vrijednost logaritma potrebna
+            </param>
+            <returns>
+            Zapis vrijednosti danog broja
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Cos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva kosinus danog kuta u radijanima.
+            </summary>
+            <param name="angle">
+            Kut čiji je kosinus potreban (u radijanima).
+            </param>
+            <returns>
+            Kosinus danog kuta.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Sin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva sinus danog kuta u radijanima.
+            </summary>
+            <param name="angle">
+            Kut čiji je sinus potreban (u radijanima)
+            </param>
+            <returns>
+            Sinus danog kuta
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Tan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva tangens danog kuta u radijanima.
+            </summary>
+            <param name="angle">
+            Kut čiji je tangens potreban (u radijanima).
+            </param>
+            <returns>
+            Tangenta danog kuta.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcSin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva kut u radijanima, s obzirom na vrijednost sinusa.
+            </summary>
+            <param name="sinValue">
+            Vrijednost sinusa čiji je kut potreban.
+            </param>
+            <returns>
+            Kut (u radijanima) za danu sinusnu vrijednost.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcCos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva kut u radijanima, s obzirom na vrijednost kosinusa.
+            </summary>
+            <param name="cosValue">
+            Vrijednost kosinusa čiji je kut potreban.
+            </param>
+            <returns>
+            Kut (u radijanima) za danu kosinusnu vrijednost.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcTan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva kut u radijanima, s obzirom na vrijednost tangensa.
+            </summary>
+            <param name="tanValue">
+            Vrijednost tangensa čiji je kut potreban.
+            </param>
+            <returns>
+            Kut (u radijanima) za danu tangentnu vrijednost.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetDegrees(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pretvara dan kut u radijanima u stupnjeve.
+            </summary>
+            <param name="angle">
+            Kut u radijanima.
+            </param>
+            <returns>
+            Kut pretvoren u stupnjeve.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRadians(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pretvara dani kut u stupnjevima u radijane.
+            </summary>
+            <param name="angle">
+            Kut u stupnjevima.
+            </param>
+            <returns>
+            Kut pretvoren u radijane.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.SquareRoot(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva kvadratni korjen danog broja.
+            </summary>
+            <param name="number">
+            Broj čija je vrijednost kvadratnog korjena potrebna.
+            </param>
+            <returns>
+            Vrijednost kvadratnog korjena danog broja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Power(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Podiže baseNumber na određenu snagu.
+            </summary>
+            <param name="baseNumber">
+            Broj koji će se povećati do ekspnencijalne snage.
+            </param>
+            <param name="exponent">
+            Snaga za povećanje baznog broja.
+            </param>
+            <returns>
+            Bazni broj podignut do određenog eksponenta.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Round(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zaokružuje dan broj na najbliži integer.  Na primjer 32.233 će biti zaokružen na 32.0 dok će
+            32.566 biti zaokružen na 33.
+            </summary>
+            <param name="number">
+            Broj čija je aproksimacija potrebna.
+            </param>
+            <returns>
+            Zaokružena vrijednost upisanog broja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Max(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Uspoređuje dva broja i vraća veći.
+            </summary>
+            <param name="number1">
+            Prva dva broja za usporedbu.
+            </param>
+            <param name="number2">
+            Druga dva broja za usporedbu.
+            </param>
+            <returns>
+            Veća vrijednost od dva broja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Min(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Uspoređuje dva broja i vraća manji.
+            </summary>
+            <param name="number1">
+            Treća dva broja za usporedbu.
+            </param>
+            <param name="number2">
+            Druga od dva broja za usporedbu.
+            </param>
+            <returns>
+            Manja vrijednost od dva broja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Remainder(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dijeli prvi broj s drugim i vraća ostatak.
+            </summary>
+            <param name="dividend">
+            Broj za dijeliti.
+            </param>
+            <param name="divisor">
+            Broj koji dijeli.
+            </param>
+            <returns>
+            Ostatak nakon dijeljenja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRandomNumber(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Uzima nasumični broj između 1 i određenog maksimalnog broja (uključeno).
+            </summary>
+            <param name="maxNumber">
+            Maksimalan broj za zahtjevanu nasumičnu vrijednost.
+            </param>
+            <returns>
+            Nasumični broj koji je manji ili jednak određenom maksimumu.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Math.Pi">
+            <summary>
+            Dobiva Pi vrijednost
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Flickr">
+            <summary>
+            Ova klasa pruža pristup Flickr servisu za slike.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetPictureOfMoment">
+            <summary>
+            Dobiva URL za trenutačnu sliku.
+            </summary>
+            <returns>
+            URL datoteke za Flickr sliku trenutka
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetRandomPicture(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva URL za nasumičnu sliku označenu posebnom oznakom.
+            </summary>
+            <param name="tag">
+            Oznaka ("tag") za za željenu sliku.
+            </param>
+            <returns>
+            URL datoteke za Flickr nasumičnu sliku
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Network">
+            <summary>
+            Ova privatni pomagač klasa pruža metode pristupa mreži
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.DownloadFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Preuzima datoteku s mreže u lokalnu privremenu datoteku.
+            </summary>
+            <param name="url">
+            URL datoteke na mreži.
+            </param>
+            <returns>
+            Ime lokalne datoteke pod koje je udaljena datoteka preuzeta.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.GetWebPageContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva sadržaj određene web stranice.
+            </summary>
+            <param name="url">
+            URL web stranice
+            </param>
+            <returns>
+            Sadržaji navedene web stranice.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.OfficeResearch">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Query(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginQuery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndQuery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Registration(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginRegistration(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndRegistration(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Status">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginStatus(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndStatus(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Discovery(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginDiscovery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndDiscovery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Platform">
+            <summary>
+            Platform objekt pruža način za generičko pozivanje ostalih .Net biblioteka.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Dictionary">
+            <summary>
+            Ova klasa pruža pristup online Riječnik servisu.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinition(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva definiciju riječi, na Engleskom.
+            </summary>
+            <param name="word">
+            Riječ za definirati.
+            </param>
+            <returns>
+            Definicija(e) navedene riječi.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionInFrench(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva definiciju riječi, na Francuskom.
+            </summary>
+            <param name="word">
+            Riječ za definirati.
+            </param>
+            <returns>
+            Definicija(e) navedene riječi.
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RestHelper">
+            <summary>
+            Privatni statična pomoćnik za pozivanje Rest baziranih APIa
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.RestHelper.GetContents(System.String)">
+            <summary>
+            Dani Rest URL, dobiva sadržaje kao XML dokument.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Program">
+            <summary>
+            Program klasa pruža pomagateljima da kontroliraju izvršavanje programa.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.Delay(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Odgađa izvršavanje programa za određenu količinu milisekundi.
+            </summary>
+            <param name="milliSeconds">
+            Količina kašnjenja.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.End">
+            <summary>
+            Završava program.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.GetArgument(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vraća naveden argument proslijeđen ovom programu.
+            </summary>
+            <param name="index">
+            Indeks argumenta.
+            </param>
+            <returns>
+            Argument naredbenog retka na određenom indeksu.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.ArgumentCount">
+            <summary>
+            Dobiva argument broja naredbenih redaka proslijeđen ovom programu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.Directory">
+            <summary>
+            Dobiva the executing program's directory.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Array">
+            <summary>
+            Ovaj objekt pruža način pohrane više od jedne vrijednosti za dato ime. Ovim vrijednostima može biti pristupljeno drugim indeksom.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsIndex(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva svejedno sadržava li polje ili ne određeni indeks.  Ovo je vrlo korisno kod odlučivanja je li indeks polja inicijaliziran od strane neke vrijednosti ili ne.
+            </summary>
+            <param name="array">
+            Polje za provjeriti.
+            </param>
+            <param name="index">
+            Indeks za provjeriti.
+            </param>
+            <returns>
+            "Istina" ili "Laž" ovisno da li je indeks prisutan na određenom.
+            polju.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva svejedno sadržava li polje ili ne određenu vrijednost.  Ovo je vrlo korisno kod odlučivanja je li vrijednost polja pohranjena u nekom indeksu.
+            </summary>
+            <param name="array">
+            Polje za provjeriti.
+            </param>
+            <param name="value">
+            Vrijednost za provjeriti.
+            </param>
+            <returns>
+            "Istina" ili "Laž" ovisno da li je vrijednost prisutna na određenom.
+            polju.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetAllIndices(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva sve indekse za polje, kao drugi niz.
+            </summary>
+            <param name="array">
+            Polja čiji su indeksi traženi.
+            </param>
+            <returns>
+            Polje ispunjeno svim indeksima određenog polja. Indeks vraćenog polja počinje od 1.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetItemCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva broj stavki pohranjenih u polju.
+            </summary>
+            <param name="array">
+            Polja za koja su brojevi traženi.
+            </param>
+            <returns>
+            Broj stavki u određenom polju.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.IsArray(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva bila dana varijabla ili ne polje.
+            </summary>
+            <param name="array">
+            Varijabla za provjeriti.
+            </param>
+            <returns>
+            "Istina" ako je određena varijabla polje.  Inače "Laž".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.SetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Postavlja vrijednost za dano polje i indeks.
+            </summary>
+            <param name="arrayName">
+            Ime polja.
+            </param>
+            <param name="index">
+            Ime indeksa.
+            </param>
+            <param name="value">
+            Vrijednost za postaviti.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Postavlja vrijednost za dano polje i indeks.
+            </summary>
+            <param name="arrayName">
+            Ime polja.
+            </param>
+            <param name="index">
+            Ime indeksa.
+            </param>
+            <returns>
+            Vrijednost određenog indeksa određenog polja.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.RemoveValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Uklanja stavku polje na određenom indeksu.
+            </summary>
+            <param name="arrayName">
+            Ime polja.
+            </param>
+            <param name="index">
+            Indeks stavke za ukloniti.
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.TextWindow">
+            <summary>
+            TextWindow pruža teksualno vezane ulazne i izlazne funkcionalnosti.  Npr. korištenjem ove klase, moguće je pisati ili čitati neke tekstove ili brojeve u i iz tekstualno zasnovanih teksualnih prozora.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Show">
+            <summary>
+            Prikazuje Tekstualni prozor kako bi se omogućila interakcija s njim.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Hide">
+            <summary>
+            Saktiva tekstualni prozor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Clear">
+            <summary>
+            Čisti TextWindow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Pause">
+            <summary>
+            Čeka unos korisnika prje vraćanja.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseIfVisible">
+            <summary>
+            Čeka korisnikov unos samo kad je TextWindow već otvoren.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseWithoutMessage">
+            <summary>
+            Čeka unos korisnika prje vraćanja.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Read">
+            <summary>
+            Čita liniju teksta iz tekstualnog prozora.  Ova funkcija neće vratiti dok korisnik ne pritisne ENTER.
+            </summary>
+            <returns>
+            Tekst koji je pročitan iz prozora s tekstom
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.ReadNumber">
+            <summary>
+            Čita broj iz tekstualnog prozora.  Ova funkcija neće vratiti dok korisnik ne pritisne ENTER.
+            </summary>
+            <returns>
+            Broj koji je pročitan iz prozora s tekstom
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.WriteLine(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Piše tekst ili broj u tekstualni prozor.  Novi znak redka će biti dodan izlazu, kako bi sljedeći puta kad nešto bude bilo napisano u tekstualni prozor, ode u novi redak.
+            </summary>
+            <param name="data">
+            Tekst ili broj za upisati u prozor s tekstom.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Write(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Piše tekst ili broj u tekstualni prozor.  Za razliku od WriteLine, ovo neće dodati novi znak redka, što znači, bilo što napisano u tekstualni prozor nakon ovog poziva će biti na istom redku.
+            </summary>
+            <param name="data">
+            Tekst ili broj za upisati u prozor s tekstom
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.VerifyAccess">
+            <summary>
+            Provjerava je li pristup Tekstualnom prozoru već ostvaren
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.ForegroundColor">
+            <summary>
+            Dobiva ili postavlja boju prednje strane teksta koji će biti na izlazu u novom tekstualnom prozoru.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.BackgroundColor">
+            <summary>
+            Dobiva ili postavlja pozadinsku boju teksta koji će biti na izlazu u novom tekstualnom prozoru.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorLeft">
+            <summary>
+            Dobiva ili postavlja poziciju stupca kursora na tekstualnom prozoru.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorTop">
+            <summary>
+            Dobiva ili postavlja poziciju retka kursora na tekstualnom prozoru.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Left">
+            <summary>
+            Dobiva ili postavlja lijevu poziciju Tekstualnog prozora.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Title">
+            <summary>
+            Dobiva ili postavlja naslov za tekstualni prozor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Top">
+            <summary>
+            Dobiva ili postavlja godnju poziciju Tekstualnog prozora.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Shapes">
+            <summary>
+            Shape objekt vam dozvoljava da dodate, mičete i okrećete oblike  u Prozoru s grafikama.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            DoDobiva pravokutni oblik s određenom širinom i visinom.
+            </summary>
+            <param name="width">
+            Širina oblika pravokutnika.
+            </param>
+            <param name="height">
+            Visina oblika pravokutnika.
+            </param>
+            <returns>
+            Pravokutni oblik koji je upravo dodan u Prozor s Grafikama.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            DoDobiva elipsični oblik s određenom širinom i visinom.
+            </summary>
+            <param name="width">
+            Širina oblika elipse.
+            </param>
+            <param name="height">
+            Visina oblika elipse.
+            </param>
+            <returns>
+            Eliptični oblik koji je upravo dodan u Prozor s Grafikama.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            DoDobiva trokutasti oblik s određenom širinom i visinom.
+            </summary>
+            <param name="x1">
+            X-koordinata prve točke.
+            </param>
+            <param name="y1">
+            Y-koordinata prve točke.
+            </param>
+            <param name="x2">
+            X-koordinata druge točke.
+            </param>
+            <param name="y2">
+            Y-koordinata druge točke.
+            </param>
+            <param name="x3">
+            X-koordinata treće točke.
+            </param>
+            <param name="y3">
+            Y-koordinata treće točke.
+            </param>
+            <returns>
+            Trokutasti oblik koji je upravo dodan u Prozor s Grafikama.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            DoDobiva liniju između određenih točaka.
+            </summary>
+            <param name="x1">
+            X-koordinata prve točke.
+            </param>
+            <param name="y1">
+            Y-koordinata prve točke.
+            </param>
+            <param name="x2">
+            X-koordinata druge točke.
+            </param>
+            <param name="y2">
+            Y-koordinata druge točke.
+            </param>
+            <returns>
+            Linija koja je upravo dodana u Prozor s Grafikama.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            DoDobiva sliku kao oblik koji može biti pomican, animiran ili rotiran.
+            </summary>
+            <param name="imageName">
+            Ime slike za nacrtati.
+            </param>
+            <returns>
+            Slika koja je upravo dodana u Prozor s Grafikama.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dodaje nekakav tekst kao oblik koji se može micati, animirati ili rotirati.
+            </summary>
+            <param name="text">
+            Tekst za dodati.
+            </param>
+            <returns>
+            Tekst koji je upravo dodan u Prozor s Grafikama.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Postavlja tekst oblika teksta. 
+            </summary>
+            <param name="shapeName">
+            Ime oblika teksta.
+            </param>
+            <param name="text">
+            Nova vrijednost teksta za postaviti.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Uklanja oblik iz Prozora s grafikama.
+            </summary>
+            <param name="shapeName">
+            Ime oblika koji treba biti uklonjen.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Miče oblik s određenim imenom na novu poziciju.
+            </summary>
+            <param name="shapeName">
+            Ime oblika za pomicanje.
+            </param>
+            <param name="x">
+            X-koordinata nove pozicije.
+            </param>
+            <param name="y">
+            Y-koordinata nove pozicije.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Rotate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Okreće oblik s određenim imenom na određeni kut.
+            </summary>
+            <param name="shapeName">
+            Ime oblika za rotaciju.
+            </param>
+            <param name="angle">
+            Kut za rotaciju oblika.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Zoom(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Proporcionalno smanjuje ili povećava oblik korištenjem određenih razina zumiranja.  Minimalno je 0.1 a maksimalno 20.
+            </summary>
+            <param name="shapeName">
+            Ime oblika za rotaciju.
+            </param>
+            <param name="scaleX">
+            Razina približavanja x-osi.
+            </param>
+            <param name="scaleY">
+            Razina približavanja y-osi.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Animate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Animira oblik s određenim imenom na novoj poziciji.
+            </summary>
+            <param name="shapeName">
+            Ime oblika za pomaknuti.
+            </param>
+            <param name="x">
+            X-koordinata nove pozicije.
+            </param>
+            <param name="y">
+            Y-koordinata nove pozicije.
+            </param>
+            <param name="duration">
+            Vrijeme za animaciju, u milisekundama.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetLeft(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva lijevu koordinatu odreženog oblika.
+            </summary>
+            <param name="shapeName">
+            Ime oblika.
+            </param>
+            <returns>
+            Lijeva koordinata od oblika.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetTop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva gornju koordinatu odreženog oblika.
+            </summary>
+            <param name="shapeName">
+            Ime oblika.
+            </param>
+            <returns>
+            Gornja koordinata od oblika.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetOpacity(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dobiva neprozirnost oblika.
+            </summary>
+            <param name="shapeName">
+            Ime oblika.
+            </param>
+            <returns>
+            Neprozirnost objekta kao vrijednost između 0 i 100.  0 je potpuno prozirno a 100 je potpuno neprozirno.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetOpacity(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Određuje koliku bi neprozirnost oblik trebao pružiti.
+            </summary>
+            <param name="shapeName">
+            Ime oblika.
+            </param>
+            <param name="level">
+            Razina neprozirnosti u rasponu od 0 do 100.  0 je potpuno prozirno a 100 je potpuno neprozirno.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.HideShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Sakriva već dodan oblik.
+            </summary>
+            <param name="shapeName">
+            Ime oblika.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.ShowShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Prikazuje predhodno skriven oblik.
+            </summary>
+            <param name="shapeName">
+            Ime oblika.
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Controls">
+            <summary>
+            Controls predmet vam dozvoljava da dodate, pomičete ili imate interakciju s naredbama.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddButton(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dodaje dugme u prozor s grafikama s određenom širinom i visinom.
+            </summary>
+            <param name="caption">
+            Natpis za prikazati u dugmetu.
+            </param>
+            <param name="left">
+            X koordinata dugmeta.
+            </param>
+            <param name="top">
+            Y koordinata dugmeta.
+            </param>
+            <returns>
+            Dugme koje je upravo dodano Prozoru s grafikama.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetButtonCaption(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Uzima trenutni naslov određenog dugmeta.
+            </summary>
+            <param name="buttonName">
+            Dugme čiji se natpis zahtjeva.
+            </param>
+            <returns>
+            Trenutni natpis dugmeta.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetButtonCaption(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Postavlja naslov određenog dugmeta.
+            </summary>
+            <param name="buttonName">
+            Dugme čiji se natpis treba postaviti.
+            </param>
+            <param name="caption">
+            Nov natpis za dugme.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dodaje polje za unos teksta u grafički prozor s određenom širinom i visinom.
+            </summary>
+            <param name="left">
+            X koordinata kutije za tekst.
+            </param>
+            <param name="top">
+            Y koordinata kutije za tekst.
+            </param>
+            <returns>
+            Kutija za tekst koja je upravo dodana Prozoru s grafikama.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddMultiLineTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Dodaje polje za unos teksta s više redova u grafički prozor s određenom širinom i visinom.
+            </summary>
+            <param name="left">
+            X koordinata kutije za tekst.
+            </param>
+            <param name="top">
+            Y koordinata kutije za tekst.
+            </param>
+            <returns>
+            Kutija za tekst koja je upravo dodana Prozoru s grafikama.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetTextBoxText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Uzima trenutni tekst određenog polja za tekst.
+            </summary>
+            <param name="textBoxName">
+            Kutija za tekst čiji se tekst zahtjeva.
+            </param>
+            <returns>
+            Tekst u kutiji za tekst
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetTextBoxText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Postavlja tekst određenog polja za tekst.
+            </summary>
+            <param name="textBoxName">
+            Kutija za tekst čiji se tekst treba postaviti.
+            </param>
+            <param name="text">
+            Novi tekst za kutiju za tekst.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Uklanja naredbu iz određenog Grafičkog prozora.
+            </summary>
+            <param name="controlName">
+            Ime kontrole koju je potrebno ukloniti.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pomiče naredbu određenog imena na novu poziciju.
+            </summary>
+            <param name="control">
+            Naziv naredbe za pokretanje.
+            </param>
+            <param name="x">
+            X koordinata nove pozicije.
+            </param>
+            <param name="y">
+            Y koordinata nove pozicije.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetSize(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Postavlja veličinu naredbe.
+            </summary>
+            <param name="control">
+            Ime naredbe za promjenu veličine.
+            </param>
+            <param name="width">
+            Širina naredbe.
+            </param>
+            <param name="height">
+            Visina naredbe.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.HideControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Sakriva već dodanu naredbu.
+            </summary>
+            <param name="controlName">
+            Ime naredbe.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.ShowControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Prikazuje predhodno skrivenu naredbu.
+            </summary>
+            <param name="controlName">
+            Ime naredbe.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastClickedButton">
+            <summary>
+            Uzima zadnje dugme na koje je kliknuto u Grafičkom prozoru.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastTypedTextBox">
+            <summary>
+            Izima zadnje polje za tekst u koje je pisano.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.ButtonClicked">
+            <summary>
+            Podiže događaj kad se klikne na bilo koje dugme s naredbom.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.TextTyped">
+            <summary>
+            Podiže događaj kad se tekst upisuje u bilo koju TextBox naredbu.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Sound">
+            <summary>
+            Sound objekt pruža operaciju koje omogućuje reprodukciju zvukova.  Neki uzorci zvukova osigurani su zajedno s bibliotekom.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClick">
+            <summary>
+            Svira Click zvuk.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClickAndWait">
+            <summary>
+            Svira Click zvuk i čeka da završi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChime">
+            <summary>
+            Svira Chime zvuk.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimeAndWait">
+            <summary>
+            Svira Chime zvuk i čeka da završi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimes">
+            <summary>
+            Svira Chimes zvuk.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimesAndWait">
+            <summary>
+            Svira Chimes zvuk i čeka da završi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRing">
+            <summary>
+            Svira Bell Ring zvuk.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRingAndWait">
+            <summary>
+            Svira Bell Ring zvuk i čeka da završi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayMusic(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Reproducira glazbene note.
+            </summary>
+            <param name="notes">
+            Set glazbenih nota za svirati. Format je pod set Music Markup Languagea podržanog od QBasica.
+            </param>
+            <example>
+            <code>
+            Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4")
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Play(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Reproducira audio datoteku. Ovo može biti mp3, wav ili wma daoteka. Ostali datotečni formati se mogu, ali i ne moraju reproducirati, ovisno o audio kodecima instaliranim na korisnikovom računalu.
+            </para>
+            <para>
+            Ako je datoteka već pauzirana, ovaj zadatak će nastaviti s mjesta gdje je reprodukcija pauzirana.
+            </para>
+            </summary>
+            <param name="filePath">
+            Putanja do audio datoteke.  Može biti lokalna datoteka (npr.: c:\music\track1.mp3) ili datoteka na mreži (npr.: http://contoso.com/track01.wma).
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayAndWait(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Reproducira audio datoteku i čeka dok reprodukcija ne završi.  Ovo može biti mp3, wav ili wma daoteka. Ostali datotečni formati se mogu, ali i ne moraju reproducirati, ovisno o audio kodecima instaliranim na korisnikovom računalu.
+            </para>
+            <para>
+            Ako je datoteka već pauzirana, ovaj zadatak će nastaviti s mjesta gdje je reprodukcija pauzirana.
+            </para>
+            </summary>
+            <param name="filePath">
+            Putanja do audio datoteke.  Može biti lokalna datoteka (npr.: c:\music\track1.mp3) ili datoteka na mreži (npr.: http://contoso.com/track01.wma).
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Pause(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pauzira reprodikciju audio datoteke.  Ako datoteka nije svirala, ova operacija neće ništa raditi.
+            </summary>
+            <param name="filePath">
+            Putanja do audio datoteke.  Može biti lokalna datoteka (npr.: c:\music\track1.mp3) ili datoteka na mreži (npr.: http://contoso.com/track01.wma).
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Stop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zaustavlja reprodikciju audio datoteke.  Ako datoteka nije svirala, ova operacija neće ništa raditi.
+            </summary>
+            <param name="filePath">
+            Putanja do audio datoteke.  Može biti lokalna datoteka (npr.: c:\music\track1.mp3) ili datoteka na mreži (npr.: http://contoso.com/track01.wma).
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Turtle">
+            <summary>
+            Turtle pruža funkcionalnost sličnu Logo-u za crtanje oblika manipuliranjem svojstava kemijske i crtanjem primitivia.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Show">
+            <summary>
+            Prikazuje Kornjaču kako bi se omogućila interakcija s njim.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Hide">
+            <summary>
+            Sakriva Kornjalu kako bi se onemogućila interakcija s njim.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenDown">
+            <summary>
+            Postavlja kemijsku dolje kako bi se omogućilo kornjači crtanje dok se kreće.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenUp">
+            <summary>
+            Podiže kemijsku da bi se zaustavilo crtanje dok se kornjača kreće.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Move(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pomiče kornjaču na određenu udaljenost.  Ako je kemijska spuštena, crtat će linije dok se kreće.
+            </summary>
+            <param name="distance">
+            Udaljenost za pomicanje kornjače.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.MoveTo(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Okreće i pomiče kornjaču na određenoj lokaciji. Ako je kemijska spuštena, crtat će linije dok se kreće.
+            </summary>
+            <param name="x">
+            X-koodrinata odredišne točke.
+            </param>
+            <param name="y">
+            Y-koodrinata odredišne točke.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Turn(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Okreće kornjaču za određen kut.  Kut je u stupnjevima i može biti ili pozitivan ili negativan.  Ako je kut pozitivan, kornjača se okreće na desno.  Ako je negativan, Kornjača se okreće na svoje lijevo.
+            </summary>
+            <param name="angle">
+            Kut za okretanje kornjače.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnRight">
+            <summary>
+            Okreće kornjaču 90 stupnjeva na desno.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnLeft">
+            <summary>
+            Okreće kornjaču 90 stupnjeva na lijevo.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Speed">
+            <summary>
+            Određuje kako će se brzo kornjača kretati.  Ispravne vrijednosti su 1 do 10.  Ako je Brzina postavljena na 10, kornjača se kreće i vrti trenutno.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Angle">
+            <summary>
+            Dobiva ili postavlja trenutni kut kornjače.  Za vrijeme postavljanja će odmah okrenuti kornjaču na novi kut.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.X">
+            <summary>
+            Dobiva ili postavlja X lokaciju Kornjače.   Za vrijeme postavljanja će odmah pomaknuti kornjaču na novi kut.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Y">
+            <summary>
+            Dobiva ili postavlja Y lokaciju Kornjače.   Za vrijeme postavljanja će odmah pomaknuti kornjaču na novi kut.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<doc>
+  <assembly>
+    <name>SmallBasicLibrary</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SmallBasic.Library.Text">
+      <summary>Text hluturinn hefur gagnlegar aðgerðir fyrir vinnu með texta.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.Append(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Skeytir saman tveimur textum og skilar útkomunni sem texta.  Er sérstaklega gagnleg þegar um er að ræða tvær breytur með óþekktu innihaldi sem gæti óvart verið meðhöndlað sem tölur og lagt saman í stað þess að vera skeytt saman.</summary>
+      <param name="text1">Textinn sem á að skeyta framan við hinn.</param>
+      <param name="text2">Textinn sem á að skeyta aftan við.</param>
+      <returns>Texta sem er settur saman úr hinum tveimur.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetLength(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Mælir lengd tiltekins texta.</summary>
+      <param name="text">Textinn sem á að lengdarmæla.</param>
+      <returns>Lengd textans sem tölu (fjölda stafa, bila og tákna í textanum).</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.IsSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur út hvort tiltekinn textabútur finnst í öðrum texta.</summary>
+      <param name="text">Textinn sem á að leita í.</param>
+      <param name="subText">Textabúturinn sem á að leita að.</param>
+      <returns>"True" ef textabúturinn finnst í hinum textanum.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.EndsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur út hvort tiltekinn texti endar á tilteknum textabút.</summary>
+      <param name="text">Textinn sem á að leita í.</param>
+      <param name="subText">Textabúturinn sem á að leita að.</param>
+      <returns>True ef textinn endar á textabútnum.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.StartsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur út hvort tiltekinn texti byrjar á tilteknum textabút.</summary>
+      <param name="text">Textinn sem á að leita í.</param>
+      <param name="subText">Textabúturinn sem á að leita að.</param>
+      <returns>True ef textinn byrjar á textabútnum.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Les textabút af tiltekinni lengd frá og með tilteknum stað í texta.</summary>
+      <param name="text">Textinn sem á að lesa textabútinn úr.</param>
+      <param name="start">Tala sem tilgreinir staðinn þaðan sem á að byrja að lesa.</param>
+      <param name="length">Tala sem tilgreinir hve marga stafi á að lesa.</param>
+      <returns>Textabútnum sem beðið var um.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetSubTextToEnd(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Les textabút frá og með tilteknum stað í texta til enda textans.</summary>
+      <param name="text">Textinn sem á að lesa textabútinn úr.</param>
+      <param name="start">Tala sem tilgreinir staðinn þaðan sem á að byrja að lesa.</param>
+      <returns>Textabútnum sem beðið var um.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetIndexOf(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur út hvar textabútur byrjar innan í öðrum texta.</summary>
+      <param name="text">Textinn sem á að leita í.</param>
+      <param name="subText">Textabúturinn sem á að leita að.</param>
+      <returns>Tölu sem segir hvar textabúturinn byrjar í tiltekna textanum. Ef textabúturinn finnst ekki skilar aðgerðin 0.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToLowerCase(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Umbreytir texta í lágstafi.</summary>
+      <param name="text">Textinn sem á að umbreyta.</param>
+      <returns>Sama texta nema hvað öllum bókstöfum hefur verið breytt í lágstafi.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToUpperCase(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Umbreytir texta í hástafi.</summary>
+      <param name="text">Textinn sem á að umbreyta.</param>
+      <returns>Sama texta nema hvað öllum bókstöfum hefur verið breytt í hástafi.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacter(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Býr til táknið sem hefur tiltekinn Unicode kóða. Táknið er síðan hægt að nota eins og hvern annan staf með öðrum texta.</summary>
+      <param name="characterCode">Talnakóðinn (í Unicode táknamenginu) fyrir táknið sem á að búa til.</param>
+      <returns>Unicode tákni sem samsvarar tiltekna kóðanum.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacterCode(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur út talnakóðann fyrir tiltekið Unicode tákn.</summary>
+      <param name="character">Táknið sem á að finna talnakóðann fyrir.</param>
+      <returns>Talnakóða tiltekna táknsins í Unicode táknamenginu.</returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Mouse">
+      <summary>Með Mouse hlutnum gefst kostur á að lesa eða stilla eiginleika sem tengjast tölvumúsinni, svo sem stöðu músarhnappa og stað og sýnileika músarbendils.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Mouse.HideCursor">
+      <summary>Felur músarbendilinn á skjánum.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Mouse.ShowCursor">
+      <summary>Sýnir músarbendilinn á skjánum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseX">
+      <summary>Les eða stillir x-hnit músarbendilsins.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseY">
+      <summary>Les eða stillir y-hnit músarbendilsins.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Mouse.IsLeftButtonDown">
+      <summary>Les hvort þrýst er á vinstri músarhnapp.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Mouse.IsRightButtonDown">
+      <summary>Les hvort þrýst er á hægri músarhnapp.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Desktop">
+      <summary>Þessi hlutur gefur aðgang að nokkrum eiginleikum skjáborðsins.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Desktop.SetWallPaper(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Gerir tiltekna mynd að bakgrunni fyrir skjáborðið.  Skrárslóð myndarinnar gæti vísað á stað innan tölvunnar, á samnýttan stað á staðarneti eða jafnvel á stað á internetinu.</summary>
+      <param name="fileOrUrl">Skrárslóð myndarinnar.</param>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Desktop.Width">
+      <summary>Les breidd aðalskjáborðsins í dílum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Desktop.Height">
+      <summary>Les hæð aðalskjáborðsins í dílum.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication">
+      <summary>The Application class provides a Small Basic program with an application object.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication.Dispatcher">
+      <summary>Gets the dispatcher for the Small Basic application</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.ImageList">
+      <summary>Með þessum hlut er mynd hlaðið í minni og fengnar upplýsingar um hana.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.ImageList.LoadImage(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Hleður mynd úr skrá eða af internetinu inn í minni tölvunnar.</summary>
+      <param name="fileNameOrUrl">Heiti skrárinnar sem á að hlaða myndinni úr.  Slóð skrárinnar getur verið innan tölvunnar eða vefslóð út á internetið.</param>
+      <returns>Skilar heiti myndarinnar sem hlaðið var inn.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.ImageList.ClipImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Afmarkar rétthyrnt svæði úr tilteknu myndinni og skilar því sem nýrri mynd.</summary>
+      <param name="imageName">Upphaflega myndin.</param>
+      <param name="left">X-hnit vinstri brúnar á afmarkaða svæðinu.</param>
+      <param name="top">Y-hnit efri brúnar á afmarkaða svæðinu.</param>
+      <param name="width">Breidd afmarkaða svæðisins.</param>
+      <param name="height">Hæð afmarkaða svæðisins.</param>
+      <returns>Afmarkaða svæðinu sem mynd.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.ImageList.GetWidthOfImage(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Les breidd tiltekinnar myndar í minni.</summary>
+      <param name="imageName">Heiti myndar sem var hlaðið í minni.</param>
+      <returns>Breidd tilteknu myndarinnar.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.ImageList.GetHeightOfImage(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Les hæð tiltekinnar myndar í minni.</summary>
+      <param name="imageName">Heiti myndar sem var hlaðið í minni.</param>
+      <returns>Hæð tilteknu myndarinnar.</returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Timer">
+      <summary>Timer hluturinn tifar með tilteknu millibili og getur þannig talið tímann. Hentar þegar eitthvað á að endurtaka sig með föstu millibili.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Timer.Pause">
+      <summary>Lætur tímateljarann gera hlé svo hann tifar ekki og Tick atvik eiga sér ekki stað.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Timer.Resume">
+      <summary>Lætur tímateljarann halda áfram eftir hlé svo hann tifar aftur.  Tick atvik eiga sér nú stað.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Timer.Interval">
+      <summary>Les eða stillir tímabilið (í millisekúndum) sem stjórnar hve títt Tick atvik eiga sér stað.  Þetta gildi getur verið frá 10 til 100000000</summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Timer.Tick">
+      <summary>Lætur atvik eiga sér stað í hvert sinn sem tímateljarinn tifar.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.SmallBasicCallback">
+      <summary>Signature callback that will be used by all Small Basic library events</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Stack">
+      <summary>Með Stack hlutnum er mögulegt að geyma gildi í einskonar stafla. Til að taka gildi úr staflanum  verður að færa það efst í hann og það er aðeins hægt að taka eitt gildi út í einu. Gildið sem var sett (pushed) í staflann síðast er það fyrsta til að koma út (pop) úr staflanum.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Stack.PushValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Setur gildi í tiltekinn stafla og færir þau sem fyrir eru niður.</summary>
+      <param name="stackName">Heiti staflans.</param>
+      <param name="value">Gildið sem á að setja.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Stack.GetCount(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Telur fjölda atriða í tilteknum stafla.</summary>
+      <param name="stackName">Heiti staflans.</param>
+      <returns>Fjölda atriða í tiltekna staflanum.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Stack.PopValue(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Tekur efsta gildi úr tiltekna staflanum og færir hin upp.</summary>
+      <param name="stackName">Heiti staflans.</param>
+      <returns>Gildinu úr staflanum.</returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Primitive">
+      <summary>The primitive type representing either text or number.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.NativeHelper">
+      <summary>A private static helper for calling Native APIs</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.GraphicsWindow">
+      <summary>Með GraphicsWindow hlutnum er hægt að lesa og setja gögn fram á myndrænu formi.  Til dæmis er hægt að teikna og lita hringi og rétthyrninga.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Show">
+      <summary>Birtir teiknigluggann svo hægt sé að vinna með hann.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Hide">
+      <summary>Felur teiknigluggann.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Teiknar útlínur rétthyrnings á skjánum með völdum penna.</summary>
+      <param name="x">X-hnit vinstri brúnar á rétthyrningnum.</param>
+      <param name="y">Y-hnit efri brúnar á rétthyrningnum.</param>
+      <param name="width">Breidd rétthyrningsins.</param>
+      <param name="height">Hæð rétthyrningsins.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Málar fylltan rétthyrning með völdum pensli.</summary>
+      <param name="x">X-hnit vinstri brúnar á rétthyrningnum.</param>
+      <param name="y">Y-hnit efri brúnar á rétthyrningnum.</param>
+      <param name="width">Breidd rétthyrningsins.</param>
+      <param name="height">Hæð rétthyrningsins.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Teiknar útlínur baugs á skjánum með völdum penna.</summary>
+      <param name="x">X-hnit fyrir vinstri mörk baugsins.</param>
+      <param name="y">Y-hnit fyrir efri mörk baugsins.</param>
+      <param name="width">Breidd baugsins.</param>
+      <param name="height">Hæð baugsins.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Málar fylltan baug á skjáinn með völdum pensli.</summary>
+      <param name="x">X-hnit fyrir vinstri mörk baugsins.</param>
+      <param name="y">Y-hnit fyrir efri mörk baugsins.</param>
+      <param name="width">Breidd baugsins.</param>
+      <param name="height">Hæð baugsins.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Teiknar útlínur þríhyrnings á skjáinn með völdum penna.</summary>
+      <param name="x1">X-hnit fyrsta hornpunkts.</param>
+      <param name="y1">Y-hnit fyrsta hornpunkts.</param>
+      <param name="x2">X-hnit annars hornpunkts.</param>
+      <param name="y2">Y-hnit annars hornpunkts.</param>
+      <param name="x3">X-hnit þriðja hornpunkts.</param>
+      <param name="y3">Y-hnit þriðja hornpunkts.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Málar fylltan þríhyrning á skjáinn með völdum pensli.</summary>
+      <param name="x1">X-hnit fyrsta hornpunkts.</param>
+      <param name="y1">Y-hnit fyrsta hornpunkts.</param>
+      <param name="x2">X-hnit annars hornpunkts.</param>
+      <param name="y2">Y-hnit annars hornpunkts.</param>
+      <param name="x3">X-hnit þriðja hornpunkts.</param>
+      <param name="y3">Y-hnit þriðja hornpunkts.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Teiknar línu frá einum punkti til annars.</summary>
+      <param name="x1">X-hnit byrjunarpunkts.</param>
+      <param name="y1">Y-hnit byrjunarpunkts.</param>
+      <param name="x2">X-hnit endapunkts.</param>
+      <param name="y2">Y-hnit endapunkts.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Teiknar línu af texta á skjáinn út frá tiltekna staðnum.</summary>
+      <param name="x">X-hnit byrjunarpunkts textans.</param>
+      <param name="y">Y-hnit byrjunarpunkts textans.</param>
+      <param name="text">Textinn sem á að teikna.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawBoundText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Teiknar línu af texta á skjáinn út frá tiltekna staðnum.</summary>
+      <param name="x">X-hnit byrjunarpunkts textans.</param>
+      <param name="y">Y-hnit byrjunarpunkts textans.</param>
+      <param name="width">Breidd svæðis sem textinn má fylla. Stjórnar hvar textinn skiptist í línur.</param>
+      <param name="text">Textinn sem á að teikna.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawResizedImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir mynd sem er geymd í minni og teiknar hana á skjáinn í tiltekinni stærð.</summary>
+      <param name="imageName">Heiti myndarinnar sem á að teikna.</param>
+      <param name="x">X-hnit fyrir vinstri brún myndarinnar.</param>
+      <param name="y">Y-hnit fyrir efri brún myndarinnar.</param>
+      <param name="width">Breidd teiknuðu myndarinnar.</param>
+      <param name="height">Hæð teiknuðu myndarinnar.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir mynd sem er geymd í minni og teiknar hana á skjáinn í upprunalegri stærð.</summary>
+      <param name="imageName">Heiti myndarinnar sem á að teikna.</param>
+      <param name="x">X-hnit fyrir vinstri brún myndarinnar.</param>
+      <param name="y">Y-hnit fyrir efri brún myndarinnar.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.SetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Teiknar díl á stað sem er tiltekinn með x- og y-hnitum og í tilteknum lit.</summary>
+      <param name="x">X-hnit dílsins.</param>
+      <param name="y">Y-hnit dílsins.</param>
+      <param name="color">Liturinn sem díllinn á að hafa.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur út lit díls sem hefur tiltekin x- og y-hnit.</summary>
+      <param name="x">X-hnit dílsins.</param>
+      <param name="y">Y-hnit dílsins.</param>
+      <returns>Lit dílsins.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetRandomColor">
+      <summary>Velur nothæfan lit af handahófi.</summary>
+      <returns>Einhverjum nothæfum lit.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetColorFromRGB(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Blandar lit úr rauðum, grænum og bláum grunnlitum.</summary>
+      <param name="red">Styrkleiki rauða grunnlitarins (0-255).</param>
+      <param name="green">Styrkleiki græna grunnlitarins (0-255).</param>
+      <param name="blue">Styrkleiki bláa grunnlitarins (0-255).</param>
+      <returns>Skilar lit til að setja í pensil eða penna.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Clear">
+      <summary>Hreinsar gluggann.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.ShowMessage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Birtir glugga með skilaboðum til notandans.</summary>
+      <param name="text">Texti skilaboðanna.</param>
+      <param name="title">Titill skilboðagluggans.</param>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BackgroundColor">
+      <summary>Sækir eða setur bakgrunnslit í teiknigluggann.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BrushColor">
+      <summary>Sækir eða setur lit í pensilinn sem er notaður til að teikna fyllt form í teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.CanResize">
+      <summary>Sækir eða stillir hvort notandinn geti breytt stærð teiknigluggans.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenWidth">
+      <summary>Sækir eða stillir breidd pennans sem er notaður til að teikna útlínur forma í teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenColor">
+      <summary>Sækir eða setur lit í pennann sem er notaður til að teikna útlínur forma í teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontName">
+      <summary>Sækir eða stillir leturgerðina sem er notuð til að teikna texta í teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontSize">
+      <summary>Sækir eða stillir leturstærðina sem er notuð til að teikna texta í teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontBold">
+      <summary>Sækir eða stillir hvort feitt letur er notað þegar texti er skrifaður í teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontItalic">
+      <summary>Sækir eða stillir hvort skáletur er notað þegar texti er skrifaður í teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Title">
+      <summary>Sækir eða setur texta í titilrönd teiknigluggans.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Height">
+      <summary>Sækir eða stillir hæð teiknigluggans.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Width">
+      <summary>Sækir eða stillir breidd teiknigluggans.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Left">
+      <summary>Sækir eða stillir stöðu vinstri brúnar á teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Top">
+      <summary>Sækir eða stillir stöðu efri brúnar á teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastKey">
+      <summary>Sækir hvaða lykli var síðast ýtt niður eða sleppt.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastText">
+      <summary>Sækir síðasta textann sem var sleginn inn í teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseX">
+      <summary>Sækir x-hnit músar innan teiknigluggans.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseY">
+      <summary>Sækir y-hnit músar innan teiknigluggans.</summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyDown">
+      <summary>Lætur atvik eiga sér stað þegar lykli er ýtt niður á lyklaborðinu.</summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyUp">
+      <summary>Lætur atvik eiga sér stað þegar lykli er sleppt á lyklaborðinu.</summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseDown">
+      <summary>Lætur atvik eiga sér stað þegar músarhnappnum er ýtt niður.</summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseUp">
+      <summary>Lætur atvik eiga sér stað þegar músarhnappnum er sleppt.</summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseMove">
+      <summary>Lætur atvik eiga sér stað þegar músin er hreyfð.</summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.TextInput">
+      <summary>Lætur atvik eiga sér stað þegar texti er sleginn inn í teikniglugganum.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Clock">
+      <summary>Clock hluturinn gefur aðgang að kerfisklukkunni</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Time">
+      <summary>Sækir gildandi tíma kerfisins.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Date">
+      <summary>Sækir gildandi dagsetningu kerfisins.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Year">
+      <summary>Sækir gildandi ártal.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Month">
+      <summary>Sækir tölu gildandi mánaðar.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Day">
+      <summary>Sækir gildandi mánaðardag.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.WeekDay">
+      <summary>Sækir enskt heiti gildandi vikudags.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Hour">
+      <summary>Sækir gildandi klukkustund.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Minute">
+      <summary>Sækir gildandi mínútu.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Second">
+      <summary>Sækir gildandi sekúndu.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.Millisecond">
+      <summary>Sækir gildandi millisekúndu.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Clock.ElapsedMilliseconds">
+      <summary>Sækir fjölda millisekúndna sem eru liðnar frá byrjun ársins 1900.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.File">
+      <summary>Með File hlutnum fást aðferðir til að sækja, lesa og skrifa upplýsingar í skrá á diski. Með þessum hlut getum við t.d. vistað stillingar í einni keyrslu forrits og sótt þær aftur næst þegar forritið er keyrt.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.ReadContents(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>Opnar skrá og les allt innihald hennar.  Þessi aðferð er hraðvirk fyrir skrár sem eru undir 1 MB að stærð, en verður hægvirkari fyrir stærri skrár og áberandi hægvirk fyrir skrár stærri en 10 MB.</para>
+      </summary>
+      <param name="filePath">
+        <para>Full slóð að skránni sem á að lesa. Dæmi um fulla slóð mundi vera c:\temp\stillingar.txt</para>
+      </param>
+      <returns>Öllu innihaldi skrárinnar.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.WriteContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>Opnar aðgang að skrá og skrifar nýtt innihald í hana þannig að nýja innihaldið kemur í stað innihalds sem fyrir er í skránni.</para>
+      </summary>
+      <param name="filePath">
+        <para>Full slóð að skránni sem á að skrifa í. Dæmi um fulla slóð mundi vera c:\temp\stillingar.txt</para>
+      </param>
+      <param name="contents">Innihaldið sem á að skrifa í skrána.</param>
+      <returns>
+        <para>Ef aðgerðin tekst skilar hún "SUCCESS".  Annars skilar hún "FAILED".</para>
+      </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.ReadLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Opnar skrá og les innihaldið í tiltekinni línu.</summary>
+      <param name="filePath">
+        <para>Full slóð að skránni sem á að lesa. Dæmi um fulla slóð mundi vera c:\temp\stillingar.txt</para>
+      </param>
+      <param name="lineNumber">Númer línunnar sem á að lesa.</param>
+      <returns>Textanum sem er í hinni tilteknu línu.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.WriteLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>Opnar skrá og skrifar yfir tiltekna línu.</para>
+        <para>Þessi aðgerð skrifar yfir innihald sem fyrir er í línunni.</para>
+      </summary>
+      <param name="filePath">
+        <para>Full slóð að skránni sem á að skrifa í. Dæmi um fulla slóð mundi vera c:\temp\stillingar.txt.</para>
+      </param>
+      <param name="lineNumber">Númer línunnar sem á að skrifa yfir.</param>
+      <param name="contents">
+        <para>Innihaldið sem á að skrifa í línuna.</para>
+      </param>
+      <returns>
+        <para>Ef aðgerðin tekst skilar hún "SUCCESS".  Annars skilar hún "FAILED".</para>
+      </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.InsertLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>Opnar skrá og bætir innihaldi við tiltekna línu.</para>
+        <para>Þessi aðgerð skrifar ekki yfir innihald sem fyrir er í línunni.</para>
+      </summary>
+      <param name="filePath">
+        <para>Full slóð að skránni sem á að lesa. Dæmi um fulla slóð mundi vera c:\temp\stillingar.txt</para>
+      </param>
+      <param name="lineNumber">Númer línunnar sem á að bæta innihaldi í.</param>
+      <param name="contents">Innihaldið sem á að bæta við línuna.</param>
+      <returns>
+        <para>Ef aðgerðin tekst skilar hún "SUCCESS".  Annars skilar hún "FAILED".</para>
+      </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.AppendContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>Opnar skrá og bætir innihaldi aftast í skrána.</para>
+      </summary>
+      <param name="filePath">
+        <para>Full slóð að skránni sem á að skrifa í. Dæmi um fulla slóð mundi vera c:\temp\stillingar.txt</para>
+      </param>
+      <param name="contents">Innihaldið sem á að bæta aftast í skrána.</param>
+      <returns>
+        <para>Ef aðgerðin tekst skilar hún "SUCCESS".  Annars skilar hún "FAILED".</para>
+      </returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.CopyFile(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>Notar eina skrárslóð til að velja skrá og notar aðra slóð til að búa til afrit af skránni. Ef mappa í seinni slóðinni er ekki til, er hún búin til.</para>
+        <para>Ef seinni slóðin vísar í skrá sem er þegar til, er hún yfirskrifuð. Þess vegna getur þurft að athuga hvort skráin sé til áður en afritað er.</para>
+      </summary>
+      <param name="sourceFilePath">
+        <para>Full slóð að skránni sem á að taka afrit af. Dæmi um fulla slóð mundi vera c:\temp\stillingar.txt</para>
+      </param>
+      <param name="destinationFilePath">Full skrárslóð fyrir afritið sem verður búið til. Dæmi:  c:\afrit\stillingar.txt</param>
+      <returns>Ef aðgerðin tekst skilar hún textanum "SUCCESS".  Annars skilar hún "FAILED".</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.DeleteFile(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Eyðir tilteknu skránni.</summary>
+      <param name="filePath">
+        <para>Full slóð að skránni sem á að eyða. Dæmi um fulla slóð mundi vera c:\temp\stillingar.txt</para>
+      </param>
+      <returns>Ef aðgerðin tekst skilar hún "SUCCESS".  Annars skilar hún "FAILED".</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.CreateDirectory(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Býr til möppu.</summary>
+      <param name="directoryPath">Full slóð möppunnar sem á að búa til.</param>
+      <returns>Ef aðgerðin tekst skilar hún "SUCCESS".  Annars skilar hún "FAILED".</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.DeleteDirectory(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Eyðir möppu.</summary>
+      <param name="directoryPath">Full slóð möppunnar sem á að eyða.</param>
+      <returns>Ef aðgerðin tekst skilar hún "SUCCESS".  Annars skilar hún "FAILED".</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.GetFiles(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir slóð allra skráa í tiltekinni möppu.</summary>
+      <param name="directoryPath">Slóð möppunnar sem á að leita að skrám í.</param>
+      <returns>Ef aðgerðin tekst skilar hún fylki með heitum allra skránna.  Annars skilar hún "FAILED".</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.GetDirectories(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir slóð allra mappa í tiltekinni möppu.</summary>
+      <param name="directoryPath">Slóð möppunnar sem á að leita að undirmöppum í.</param>
+      <returns>Ef aðgerðin tekst skilar hún fylki með heitum undirmappanna.  Annars skilar hún "FAILED".</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.GetTemporaryFilePath">
+      <summary>
+        <para>Býr til nýja tímabundna skrá í tímabundinni möppu og skilar fullri slóð skrárinnar.</para>
+      </summary>
+      <returns>Fullri slóð tímabundnu skrárinnar.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.File.GetSettingsFilePath">
+      <summary>
+        <para>Sækir fulla slóð skrár sem geymir stillingar fyrir þetta forrit. Heiti stillingaskrárinnar byggist á heiti forritsins og skráin er geymd á sama stað og forritið.</para>
+      </summary>
+      <returns>Full slóð sérstakrar stillingaskrár fyrir þetta forrit.</returns>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.File.LastError">
+      <summary>
+        <para>Sækir eða setur skilaboð fyrir síðustu villu sem kom upp vegna aðgerðar með skrár. Með þessum eiginleika er hægt að finna út hvort aðgerð hafi mistekist.</para>
+      </summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Keywords">
+      <summary>Keywords object is a place holder for providing documentation for Small Basic Keywords</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.For">
+      <summary>For skipunin afmarkar lykkju sem endurtekur einhverjar skipanir í fyrirfram tiltekinn fjölda skipta.</summary>
+      <example>
+        Eftirfarandi dæmi skrifar tölurnar 1 til 10 í textagluggann<code>For i = 1 To 10                TextWindow.WriteLine(i)             EndFor</code>
+      </example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.EndFor">
+      <summary>EndFor: Sjá hjálpina fyrir For.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.To">
+      <summary>To: Sjá hjálpina fyrir For.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Step">
+      <summary>Með lykilorðiðinu Step er tilteknu gildi bætt við teljarann í hverri umferð For lykkju.</summary>
+      <example>
+        Eftirfarandi dæmi birtir aðeins oddatölur í tölunum 1 til 10<code>For i = 1 to 10 Step 2               TextWindow.WriteLine(i)             EndFor</code>
+      </example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.If">
+      <summary>Með If skipuninni er hægt að gera mismunandi hluti eftir hvort eitthvert skilyrði er uppfyllt eða ekki.</summary>
+      <example>
+        Eftirfarandi dæmi birtir annaðhvort "Rétt!" eða "Reyndu aftur" eftir því hvað innihald breytunnar Svar er.<code>If Svar = 500 Then               TextWindow.WriteLine("Rétt!")             Else                      TextWindow.WriteLine("Reyndu aftur")                EndIf</code>
+      </example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Then">
+      <summary>Then: Sjá hjálpina fyrir If.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Else">
+      <summary>Else: Sjá hjálpina fyrir If.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.ElseIf">
+      <summary>Með ElseIf lykilorðinu er líka hægt að setja skilyrði á hvað gerist annars ef If skilyrðið er ekki uppfyllt.</summary>
+      <example>
+        Eftirfarandi dæmi skrifar út orðið sem á við fyrir mismunandi tíma sólarhringsins.<code>If klst &gt; 18 Then               TextWindow.WriteLine("Kvöld")             ElseIf klst &gt; 12 Then               TextWindow.WriteLine("Síðdegi")             ElseIf klst &gt; 6 Then               TextWindow.WriteLine("Morgunn")             EndIf</code>
+      </example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.EndIf">
+      <summary>EndIf: Sjá hjálpina fyrir If.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Goto">
+      <summary>Með Goto skipuninni er sett grein í forrit, þ.e. lestur skipana er látinn færast á tiltekinn stað í forritinu.</summary>
+      <example>
+        Eftirfarandi skrifar út endalausa röð talna.<code>byrjun:             TextWindow.WriteLine(i)             i = i + 1             Goto byrjun</code>
+      </example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Sub">
+      <summary>Sub skipunin skilgreinir undirforrit (stefju) sem hægt er að kalla á með því að nota heiti stefjunnar sem skipun.</summary>
+      <example>
+        Eftirfarandi dæmi skilgreinir stefjuna RéttSvar sem spilar bjölluhljóm og skrifar út orðið "Rétt!".<code>Sub RéttSvar               Sound.PlayBellRing()               TextWindow.WriteLine("Rétt!")             EndSub</code>
+      </example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.EndSub">
+      <summary>EndSub: Sjá hjálpina fyrir Sub.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.While">
+      <summary>While skipunin afmarkar lykkju sem endurtekur einhverjar skipanir þar til tiltekið skilyrði er uppfyllt.</summary>
+      <example>
+        Eftirfarandi kóði skrifar út tölur valdar af handhófi þangað til talan sem er valin er 100 eða stærri.<code>While i &lt; 100               i = Math.GetRandomNumber(150)               TextWindow.WriteLine(i)             EndWhile</code>
+      </example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.EndWhile">
+      <summary>EndWhile: Sjá hjálpina fyrir While.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.And">
+      <summary>Athugar tvö eða fleiri skilyrði og skilar True ef öll skilyrðin eru uppfyllt.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Keywords.Or">
+      <summary>Athugar tvö eða fleiri skilyrði og skilar True ef eitthvert skilyrðið er uppfyllt.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Math">
+      <summary>Math hluturinn inniheldur margar gagnlegar aðferðir sem tengjast reikningi.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Abs(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur algildi tölu.  Dæmi: -32,233 mundi skila 32,233.</summary>
+      <param name="number">Talan sem á að finna algildið fyrir.</param>
+      <returns>Algildi tölu (tölunni sjálfri án formerkis).</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Ceiling(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Breytir tugabroti í þakgildi sitt þ.e. næstu heilu tölu sem er hærri, en skilar heilli tölu óbreyttri.  T.d. mundi 32 skila 32 en 32,1 skila 33 og -32,1 skila -32.</summary>
+      <param name="number">Talan sem á finna þakið fyrir.</param>
+      <returns>Þakgildi hinnar tilteknu tölu.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Floor(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Breytir tugabroti í gólfgildi sitt, þ.e. næstu heilu tölu sem er lægri, en skilar heilli tölu óbreyttri.  Til dæmis mundi 32 skila 32 en 32,1 skila 32 og -32,1 skila -33.</summary>
+      <param name="number">Talan sem á finna gólfið fyrir.</param>
+      <returns>Gólfgildi hinnar tilteknu tölu.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.NaturalLog(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Reiknar náttúrlegan lógaritma af tölu.</summary>
+      <param name="number">Talan sem á að finna náttúrulega lógaritmann af.</param>
+      <returns>Náttúrulegum lógaritma tölunnar.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Log(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Reiknar lógaritma (stofn 10) af tölu.</summary>
+      <param name="number">Talan sem á að finna lógaritmann af.</param>
+      <returns>Lógaritma tölunnar.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Cos(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Reiknar kósínus horns sem er tiltekið í radían einingum.</summary>
+      <param name="angle">Hornið sem á að finna kósínusinn af (í radían einingum).</param>
+      <returns>Kósínusi hornsins.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Sin(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Reiknar sínus horns sem er tiltekið í radían einingum.</summary>
+      <param name="angle">Hornið sem á að finna sínusinn af (í radían einingum).</param>
+      <returns>Sínusi hornsins.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Tan(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Reiknar tangens horns sem er tiltekið í radían einingum.</summary>
+      <param name="angle">Hornið sem á að finna tangensinn af (í radían einingum).</param>
+      <returns>Tangens hornsins.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.ArcSin(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Reiknar hornið í radían einingum fyrir tiltekið sínus gildi.</summary>
+      <param name="sinValue">Sínus gildið sem á að finna hornið fyrir.</param>
+      <returns>Horninu (í radían einingum) fyrir tiltekna sínus gildið.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.ArcCos(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Reiknar hornið í radían einingum fyrir tiltekið kósínus gildi.</summary>
+      <param name="cosValue">Kósínus gildið sem á að finna hornið fyrir.</param>
+      <returns>Horninu (í radían einingum) fyrir tiltekna kósínus gildið.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.ArcTan(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Reiknar hornið í radían einingum fyrir tiltekið tangens gildi.</summary>
+      <param name="tanValue">Tangens gildið sem á að finna hornið fyrir.</param>
+      <returns>Horninu (í radían einingum) fyrir tiltekna tangens gildið.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.GetDegrees(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Umreiknar gefnar radían einingar horns yfir í gráður.</summary>
+      <param name="angle">Hornið í radían einingum.</param>
+      <returns>Horninu umbreyttu í gráður.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.GetRadians(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Umreiknar gefnar gráður horns yfir í radían einingar.</summary>
+      <param name="angle">Hornið í gráðum.</param>
+      <returns>Horninu umbreyttu í radían einingar.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.SquareRoot(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Reiknar kvaðratrót tölu.</summary>
+      <param name="number">Talan sem á að finna kvaðratrót af.</param>
+      <returns>Kvaðratrót tölunnar.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Power(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Reiknar tiltekið veldi af tiltekinni stofntölu.</summary>
+      <param name="baseNumber">Stofntalan sem á að setja í tiltekna veldið.</param>
+      <param name="exponent">Veldið sem á að setja stofntöluna í.</param>
+      <returns>Stofntölunni í tiltekna veldinu.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Round(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Námundar tiltekna tölu að nálægustu heiltölu.  T.d. mundi 32,50 skila 32 en 32,51 skila 33.</summary>
+      <param name="number">Talan sem á að námunda.</param>
+      <returns>Heilu tölunni sem er næst námunduðu tölunni.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Max(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Ber saman tvær tölur og skilar hærri tölunni.</summary>
+      <param name="number1">Fyrri talan í samanburðinum.</param>
+      <param name="number2">Síðari talan í samanburðinum.</param>
+      <returns>Hærri tölunni af þeim tveimur sem eru bornar saman.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Min(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Ber saman tvær tölur og skilar lægri tölunni.</summary>
+      <param name="number1">Fyrri talan í samanburðinum.</param>
+      <param name="number2">Síðari talan í samanburðinum.</param>
+      <returns>Lægri tölunni af þeim tveimur sem eru bornar saman.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.Remainder(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Deilir fyrri tölunni með þeirri síðari og skilar afganginum.</summary>
+      <param name="dividend">Talan sem deilt er í.</param>
+      <param name="divisor">Talan sem deilt er með.</param>
+      <returns>Afgangi deilingarinnar.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Math.GetRandomNumber(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Velur tölu af handhófi frá 1 til tilteknu tölunnar maxNumber (að báðum meðtöldum).</summary>
+      <param name="maxNumber">Hæsta talan sem kemur til greina að velja.</param>
+      <returns>Handahófstölu sem er minni en eða jöfn tiltekna hámarkinu.</returns>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Math.Pi">
+      <summary>Gefur pí sem tölu</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Flickr">
+      <summary>Flickr hluturinn gefur aðgang að myndþjónustu Flickr á vefnum.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Flickr.GetPictureOfMoment">
+      <summary>Sækir vefslóðina fyrir Flickr mynd augnabliksins.</summary>
+      <returns>Vefslóð fyrir mynd augnabliksins á Flickr.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Flickr.GetRandomPicture(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir vefslóð myndar sem er valin af handahófi en er merkt með tilteknu merki.</summary>
+      <param name="tag">Merkið sem valin mynd verður að hafa.</param>
+      <returns>Vefslóð merktrar myndar sem var valin af handahófi á Flickr.</returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Network">
+      <summary>Network hluturinn hefur aðferðir til að nálgast efni á neti.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Network.DownloadFile(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir skrá af neti og vistar í tölvunni sem tímabundna skrá.</summary>
+      <param name="url">Slóð skrárinnar á netinu.</param>
+      <returns>Heitinu sem var notað til að vista skrána sem var sótt.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Network.GetWebPageContents(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir innihald tiltekinnar vefsíðu.</summary>
+      <param name="url">Vefslóð vefsíðunnar</param>
+      <returns>Innihaldi vefsíðunnar.</returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.OfficeResearch">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.#ctor">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Query(System.String)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginQuery(System.String,System.AsyncCallback,System.Object)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndQuery(System.IAsyncResult)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String,System.Object)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Registration(System.String)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginRegistration(System.String,System.AsyncCallback,System.Object)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndRegistration(System.IAsyncResult)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String,System.Object)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Status">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginStatus(System.AsyncCallback,System.Object)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndStatus(System.IAsyncResult)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync(System.Object)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Discovery(System.String)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginDiscovery(System.String,System.AsyncCallback,System.Object)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndDiscovery(System.IAsyncResult)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String,System.Object)">
+      <remarks></remarks>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.CancelAsync(System.Object)">
+      <remarks></remarks>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryCompleted">
+      <remarks></remarks>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationCompleted">
+      <remarks></remarks>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusCompleted">
+      <remarks></remarks>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryCompleted">
+      <remarks></remarks>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventHandler">
+      <remarks></remarks>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs">
+      <remarks></remarks>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs.Result">
+      <remarks></remarks>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventHandler">
+      <remarks></remarks>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs">
+      <remarks></remarks>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs.Result">
+      <remarks></remarks>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventHandler">
+      <remarks></remarks>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs">
+      <remarks></remarks>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs.Result">
+      <remarks></remarks>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventHandler">
+      <remarks></remarks>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs">
+      <remarks></remarks>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs.Result">
+      <remarks></remarks>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Platform">
+      <summary>The Platform object provides a way to generically invoke other .Net libraries.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Dictionary">
+      <summary>Dictionary hluturinn gefur aðgang að orðabókarþjónustu á netinu.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinition(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir enskar skýringar fyrir orð.</summary>
+      <param name="word">Orðið sem á að skýra.</param>
+      <returns>Enskum skýringum fyrir tiltekna orðið.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionInFrench(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir franskar skýringar fyrir orð.</summary>
+      <param name="word">Orðið sem á að skýra.</param>
+      <returns>Frönskum skýringum fyrir tiltekna orðið.</returns>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Internal.RestHelper">
+      <summary>A private static helper for calling Rest based APIs</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Internal.RestHelper.GetContents(System.String)">
+      <summary>Given a Rest URL, gets the contents as an XML Document.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Program">
+      <summary>Program hluturinn hefur aðferðir sem snerta keyrslu forritsins sjálfs.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Program.Delay(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Lætur forritið gera hlé á keyrslunni í tiltekinn fjölda millisekúndna.</summary>
+      <param name="milliSeconds">Lengd hlésins.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Program.End">
+      <summary>Lætur forritið enda.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Program.GetArgument(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur út tiltekna færibreytu sem var höfð með þegar forritið (sem .EXE skrá á þýddu formi) var keyrt af skipanalínu.</summary>
+      <param name="index">Tala sem tiltekur hvar færibreytan var í röðinni.</param>
+      <returns>Færibreytunni sem var á tiltekna staðnum fyrir aftan heiti forritsins þegar það var keyrt af skipanalínu.</returns>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Program.ArgumentCount">
+      <summary>Finnur út hve margar færibreytur fylgdu með þegar forritið var keyrt á skipanalínunni.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Program.Directory">
+      <summary>Sækir möppuslóð forritsins sem keyrir.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Array">
+      <summary>Með Array hlutnum er hægt að vinna með fylki. Þau eru lík breytum en geta innihaldið fleiri en eitt gildi. Hvert gildi í fylkinu er merkt með vísi til að auðkenna það.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.ContainsIndex(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur út hvort tiltekinn vísir hefur verið notaður til að auðkenna gildi í fylki.</summary>
+      <param name="array">Fylkið sem á að athuga.</param>
+      <param name="index">Vísirinn sem á að finna.</param>
+      <returns>"True" ef vísirinn hefur verið notaður í fylkinu, annars "False".</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.ContainsValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur út hvort fylki inniheldur tiltekið gildi.</summary>
+      <param name="array">Fylkið sem á að athuga.</param>
+      <param name="value">Gildið sem á að finna.</param>
+      <returns>"True" ef gildið er til staðar í fylkinu, annars "False".</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.GetAllIndices(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Les alla vísa úr fylki og setur þá sem gildi í nýtt fylki.</summary>
+      <param name="array">Fylkið sem á að lesa vísana úr.</param>
+      <returns>Fylki sem inniheldur alla vísa tiltekna fylkisins sem gildi. Vísar nýja fylkisins eru tölur frá 1.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.GetItemCount(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Telur hve mörg gildi eru geymd í fylki.</summary>
+      <param name="array">Fylkið sem á að telja í.</param>
+      <returns>Fjölda gilda í tiltekna fylkinu.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.IsArray(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Finnur út hvort tiltekin breyta sé fylki.</summary>
+      <param name="array">Breytan sem á að athuga.</param>
+      <returns>"True" ef tiltekna breytan er fylki, annars "False".</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.SetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Setur gildi í fylki þannig að það hafi tiltekinn vísi.</summary>
+      <param name="arrayName">Heiti fylkisins.</param>
+      <param name="index">Heiti vísisins.</param>
+      <param name="value">Gildið sem á að setja í fylkið og á að hafa tiltekna vísinn.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.GetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Les úr fylki gildi með tiltekinn vísi.</summary>
+      <param name="arrayName">Heiti fylkisins.</param>
+      <param name="index">Heiti vísisins.</param>
+      <returns>Gildinu sem hefur tiltekna vísinn í tiltekna fylkinu.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Array.RemoveValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Fjarlægir úr fylkinu gildið sem hefur tiltekna vísinn.</summary>
+      <param name="arrayName">Heiti fylkisins.</param>
+      <param name="index">Vísir gildisins sem á að fjarlægja.</param>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.TextWindow">
+      <summary>TextWindow hluturinn gerir mögulegt að slá inn og skrifa út stafi og önnur rittákn. Til dæmis getum við skrifað tölur og látið textagluggann taka við þeim. Forritið getur síðan unnið með tölurnar og skrifað útkomu út í textagluggann.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Show">
+      <summary>Gerir textagluggann sýnilegan.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Hide">
+      <summary>Felur textagluggann.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Clear">
+      <summary>Hreinsar textagluggann.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Pause">
+      <summary>Bíður eftir að notandi slái á lykil.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseIfVisible">
+      <summary>Bíður eftir að notandi slái á lykil en aðeins ef textaglugginn er opinn.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseWithoutMessage">
+      <summary>Bíður án skilaboða eftir að notandi slái á lykil.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Read">
+      <summary>Les línu af texta sem er skrifaður í textagluggann.  Bíður og les þar til notandinn slær á ENTER lykil.</summary>
+      <returns>Textanum sem lesinn var úr textaglugganum.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.ReadNumber">
+      <summary>Les aðeins tölustafi úr því sem er skrifað í textagluggann.  Bíður og les þar til notandinn slær á ENTER lykil.</summary>
+      <returns>Tölu sem lesin var úr innslættinum í textaglugganum.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.WriteLine(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Skrifar texta út í textagluggann og skeytir línuskilum aftan við svo að næstu skrif munu koma í línu fyrir neðan.</summary>
+      <param name="data">Textinn sem á að birtast í textaglugganum.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.Write(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Skrifar texta út í textagluggann.  Ólíkt WriteLine er línuskilum ekki skeytt aftan við svo að næstu skrif munu koma í beinu framhaldi aftan við þennan texta.</summary>
+      <param name="data">Textinn sem á að birtast í textaglugganum.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.TextWindow.VerifyAccess">
+      <summary>Verifies if the access to text Window has been made yet</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.ForegroundColor">
+      <summary>Sækir eða stillir forgrunnslit texta sem er skrifaður út í textagluggann.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.BackgroundColor">
+      <summary>Sækir eða stillir bakgrunnslit texta sem er skrifaður út í textagluggann.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorLeft">
+      <summary>Sækir eða stillir hve mörg stafabil frá vinstri ritbendillinn er innan textagluggans.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorTop">
+      <summary>Sækir eða stillir hve margar línur niður ritbendillinn er innan textagluggans.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.Left">
+      <summary>Sækir eða stillir hvar vinstri brún textagluggans er á tölvuskjánum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.Title">
+      <summary>Sækir eða setur titil í gluggarönd textagluggans.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.TextWindow.Top">
+      <summary>Sækir eða stillir hvar efri brún textagluggans er á tölvuskjánum.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Shapes">
+      <summary>Shape hluturinn er með aðferðir til að búa til, færa og snúa formum í teikniglugganum.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Býr til rétthyrnt form með tiltekna hæð og breidd.</summary>
+      <param name="width">Breidd rétthyrningsins.</param>
+      <param name="height">Hæð rétthyrningsins.</param>
+      <returns>Rétthyrningsforminu sem var sett í teiknigluggann.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Býr til bauglaga form með tiltekna hæð og breidd.</summary>
+      <param name="width">Breidd baugsins.</param>
+      <param name="height">Hæð baugsins.</param>
+      <returns>Baugforminu sem var sett í teiknigluggann.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Býr til þríhyrnt form með hornpunktana á tilteknum stöðum.</summary>
+      <param name="x1">X-hnit fyrsta hornpunkts.</param>
+      <param name="y1">Y-hnit fyrsta hornpunkts.</param>
+      <param name="x2">X-hnit annars hornpunkts.</param>
+      <param name="y2">Y-hnit annars hornpunkts.</param>
+      <param name="x3">X-hnit þriðja hornpunkts.</param>
+      <param name="y3">Y-hnit þriðja hornpunkts.</param>
+      <returns>Þríhyrningsforminu sem var sett í teiknigluggann.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Býr til beina línu milli tveggja punkta.</summary>
+      <param name="x1">X-hnit byrjunarpunkts.</param>
+      <param name="y1">Y-hnit byrjunarpunkts.</param>
+      <param name="x2">X-hnit endapunkts.</param>
+      <param name="y2">Y-hnit endapunkts.</param>
+      <returns>Línuforminu sem var sett í teiknigluggann.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddImage(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Setur inn mynd sem form sem hægt er að færa, hreyfa eða snúa.</summary>
+      <param name="imageName">Heiti myndarinnar sem á að teikna.</param>
+      <returns>Myndforminu sem var sett í teiknigluggann.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.AddText(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Setur inn texta sem form sem hægt er að færa, hreyfa eða snúa.</summary>
+      <param name="text">Textinn sem á að setja inn.</param>
+      <returns>Textaforminu sem var sett í teiknigluggann.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.SetText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Setur texta í textaform.</summary>
+      <param name="shapeName">Heiti textaformsins.</param>
+      <param name="text">Nýi textinn sem á að setja.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.Remove(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Fjarlægir form úr teikniglugganum.</summary>
+      <param name="shapeName">Heiti formsins sem á að fjarlægja.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Færir áður teiknað form, þ.e. lætur það birtast á nýjum stað.</summary>
+      <param name="shapeName">Heiti formsins sem á að færa.</param>
+      <param name="x">X-hnit nýja staðarins.</param>
+      <param name="y">Y-hnit nýja staðarins.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.Rotate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Snýr tilteknu formi um tiltekið horn.</summary>
+      <param name="shapeName">Heiti formsins sem á að snúa.</param>
+      <param name="angle">Hornið sem á að snúa því um.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.Zoom(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Stillir aðdrátt forms á tiltekið stig miðað við upphaflega stærð formsins.  Minnsta aðdráttarstig er 0.1 og mesta er 20.</summary>
+      <param name="shapeName">Heiti formsins sem á að snúa.</param>
+      <param name="scaleX">Aðdráttarstig á x-ás (lárétt).</param>
+      <param name="scaleY">Aðdráttarstig á y-ás (lóðrétt).</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.Animate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Lætur tiltekið form hreyfast á nýjan stað.</summary>
+      <param name="shapeName">Heiti formsins sem á að hreyfa.</param>
+      <param name="x">X-hnit nýja staðarins.</param>
+      <param name="y">Y-hnit nýja staðarins.</param>
+      <param name="duration">Tíminn, í millisekúndum, sem hreyfingin á að taka.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.GetLeft(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir x-hnit fyrir vinstri mörk tiltekins forms.</summary>
+      <param name="shapeName">Heiti formsins.</param>
+      <returns>X-hniti punkts sem er lengst til vinstri á forminu.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.GetTop(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir y-hnit fyrir efri mörk tiltekins forms.</summary>
+      <param name="shapeName">Heiti formsins.</param>
+      <returns>Y-hniti punkts sem er efst á forminu.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.GetOpacity(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir ógegnsæi forms.</summary>
+      <param name="shapeName">Heiti formsins.</param>
+      <returns>Ógegnsæi formsins sem gildi á bilinu 0 til 100.  0 er alveg gegnsætt og 100 er alveg ógegnsætt.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.SetOpacity(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Stillir ógegnsæi forms, þ.e. hve illa sést í gegnum það.</summary>
+      <param name="shapeName">Heiti formsins.</param>
+      <param name="level">Ógegnsæi formsins sem gildi á bilinu 0 til 100.  0 er alveg gegnsætt og 100 er alveg ógegnsætt.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.HideShape(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Felur áður teiknað form.</summary>
+      <param name="shapeName">Heiti formsins.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Shapes.ShowShape(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sýnir áður falið form.</summary>
+      <param name="shapeName">Heiti formsins.</param>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Controls">
+      <summary>Með Controls hlutnum er hægt að setja inn, færa og vinna með stýringar.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.AddButton(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Setur hnapp með texta á tiltekinn stað í teikniglugganum.</summary>
+      <param name="caption">Textinn sem á að sjást á hnappnum.</param>
+      <param name="left">X-hnit vinstri hliðar á hnappnum.</param>
+      <param name="top">Y-hnit efri brúnar á hnappnum.</param>
+      <returns>Hnappnum sem var settur í teiknigluggann.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.GetButtonCaption(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir textann á tilteknum hnappi.</summary>
+      <param name="buttonName">Hnappurinn sem textinn er á.</param>
+      <returns>Textanum sem er á hnappnum.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.SetButtonCaption(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Setur texta á tiltekinn hnapp.</summary>
+      <param name="buttonName">Hnappurinn sem textinn er settur á.</param>
+      <param name="caption">Nýi textinn fyrir hnappinn.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.AddTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Setur textareit á tiltekinn stað í teikniglugganum.</summary>
+      <param name="left">X-hnit vinstri hliðar á textareitnum.</param>
+      <param name="top">Y-hnit efri brúnar á textareitnum.</param>
+      <returns>Textareitnum sem var settur í teiknigluggann.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.AddMultiLineTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Setur textareit fyrir margar línur á tiltekinn stað í teikniglugganum.</summary>
+      <param name="left">X-hnit vinstri hliðar á textareitnum.</param>
+      <param name="top">Y-hnit efri brúnar á textareitnum.</param>
+      <returns>Textareitnum sem var settur í teiknigluggann.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.GetTextBoxText(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sækir textann sem er í tilteknum textareit.</summary>
+      <param name="textBoxName">Textareiturinn sem á að sækja textann úr.</param>
+      <returns>Textanum í textareitnum.</returns>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.SetTextBoxText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Setur texta í tiltekinn textareit.</summary>
+      <param name="textBoxName">Textareiturinn sem á að setja textann í.</param>
+      <param name="text">Nýi textinn sem á að fara í textareitinn.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.Remove(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Fjarlægir stýringu úr textaglugganum.</summary>
+      <param name="controlName">Heiti stýringarinnar sem á að fjarlægja.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Færir tiltekna stýringu á nýjan stað.</summary>
+      <param name="control">Heiti stýringarinnar sem á að færa.</param>
+      <param name="x">X-hnit nýja staðarins.</param>
+      <param name="y">Y-hnit nýja staðarins.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.SetSize(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Stillir stærð stýringar.</summary>
+      <param name="control">Heiti stýringarinnar sem á breyta um stærð á.</param>
+      <param name="width">Breidd stýringarinnar.</param>
+      <param name="height">Hæð stýringarinnar.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.HideControl(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Felur stýringu sem var sett inn áður.</summary>
+      <param name="controlName">Heiti stýringarinnar.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Controls.ShowControl(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Sýnir áður falda stýringu.</summary>
+      <param name="controlName">Heiti stýringarinnar.</param>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Controls.LastClickedButton">
+      <summary>Finnur út á hvaða hnapp var síðast smellt í teikniglugganum.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Controls.LastTypedTextBox">
+      <summary>Finnur út í hvaða textareit var síðast skrifað.</summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Controls.ButtonClicked">
+      <summary>Lætur atvik eiga sér stað þegar smellt er á einhvern hnapp.</summary>
+    </member>
+    <member name="E:Microsoft.SmallBasic.Library.Controls.TextTyped">
+      <summary>Lætur atvik eiga sér stað þegar texti er skrifaður í einhvern textareit.</summary>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Sound">
+      <summary>Sound hluturinn hefur aðferðir til að spila hljóð.  Nokkur sýnishorn af hljóðum fylgja með safninu.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClick">
+      <summary>Spilar smell.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClickAndWait">
+      <summary>Spilar smell og bíður þar til spilunin endar.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChime">
+      <summary>Spilar hljóm klukkuspils.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimeAndWait">
+      <summary>Spilar hljóm klukkuspils og bíður þar til spilunin endar.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimes">
+      <summary>Spilar hljóm vindhörpu.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimesAndWait">
+      <summary>Spilar hljóm vindhörpu og bíður þar til spilunin endar.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRing">
+      <summary>Spilar bjölluhljóm.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRingAndWait">
+      <summary>Spilar bjölluhljóm og bíður þar til spilunin endar.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayMusic(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Spilar nótur.</summary>
+      <param name="notes">Röð nótna til að spila.  Notað er smækkað sett tákna úr Music Markup Language sem stutt er af QBasic.</param>
+      <example>
+        <code>Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4")</code>
+      </example>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.Play(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>Spilar hljóðskrá, sem gæti verið með mp3, wav eða wma sniði.  Það er ef til vill hægt að spila önnur skráasnið ef hljóðkóðarar (audio codecs) fyrir þau hafa verið settir inn á tölvu notandans.</para>
+        <para>Ef spiluð er hljóðskrá sem er þegar í hléi mun spilunin byrja frá þeim stað sem hlé var gert á henni.</para>
+      </summary>
+      <param name="filePath">Slóð hljóðskrárinnar.  Þetta gæti verið slóð innan tölvunnar (t.d.: c:\tonlist\lag01.mp3) eða skrá á neti (t.d.: http://contoso.com/track01.wma).</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.PlayAndWait(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>
+        <para>Spilar hljóðskrá og bíður þar til spilunin endar. Skráin gæti verið með mp3, wav eða wma sniði.  Það er ef til vill hægt að spila önnur skráasnið ef hljóðkóðarar fyrir þau hafa verið settir inn á tölvu notandans.</para>
+        <para>Ef spiluð er hljóðskrá sem er þegar í hléi mun spilunin byrja frá þeim stað sem hlé var gert á henni.</para>
+      </summary>
+      <param name="filePath">Slóð hljóðskrárinnar.  Þetta gæti verið slóð innan tölvunnar (t.d.: c:\tonlist\lag01.mp3) eða skrá á neti (t.d.: http://contoso.com/track01.wma).</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.Pause(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Gerir hlé á spilun hljóðskrár. Ef tiltekna skráin er ekki í spilun hefur aðgerðin engin áhrif.</summary>
+      <param name="filePath">Slóð hljóðskrárinnar.  Þetta gæti verið slóð innan tölvunnar (t.d.: c:\tonlist\lag01.mp3) eða skrá á neti (t.d.: http://contoso.com/track01.wma).</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Sound.Stop(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Stöðvar spilun hljóðskrár.  Ef tiltekna skráin er ekki í spilun hefur aðgerðin engin áhrif.</summary>
+      <param name="filePath">Slóð hljóðskrárinnar.  Þetta gæti verið slóð innan tölvunnar (t.d.: c:\tonlist\lag01.mp3) eða skrá á neti (t.d.: http://contoso.com/track01.wma).</param>
+    </member>
+    <member name="T:Microsoft.SmallBasic.Library.Turtle">
+      <summary>Turtle hluturinn teiknar form líkt og skjaldbakan í Logo með því að stjórna eiginleikum penna og nota grunnaðferðir teikningar. Hér er skjaldbökunni gefið nafnið Trítla.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.Show">
+      <summary>Gerir Trítlu sýnilega og gerir aðgerðir með hana virkar.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.Hide">
+      <summary>Gerir Trítlu ósýnilega og gerir aðgerðir með hana óvirkar.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.PenDown">
+      <summary>Setur pennann niður svo að Trítla skilji eftir sig slóð þegar hún hreyfist.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.PenUp">
+      <summary>Lyftir pennanum svo að Trítla geti hreyfst án þess að skilja eftir sig slóð.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.Move(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Færir Trítlu tiltekna vegalengd.  Ef penninn er niðri, teiknar hún línu um leið og hún færist.</summary>
+      <param name="distance">Vegalengdin sem Trítla á að færast.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.MoveTo(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Snýr og færir Trítlu á tiltekinn stað.  Ef penninn er niðri, teiknar hún línu um leið og hún færist.</summary>
+      <param name="x">X-hnit áfangastaðarins.</param>
+      <param name="y">Y-hnit áfangastaðarins.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.Turn(Microsoft.SmallBasic.Library.Primitive)">
+      <summary>Snýr Trítlu um tiltekið horn. Ef hornið er stærra en 0 snýst Trítla til hægri, en ef hornið er minna en 0 snýst Trítla til vinstri.</summary>
+      <param name="angle">Hornið sem Trítla á að snúast um.</param>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnRight">
+      <summary>Snýr Trítlu um 90 gráður til hægri.</summary>
+    </member>
+    <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnLeft">
+      <summary>Snýr Trítlu um 90 gráður til vinstri.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Turtle.Speed">
+      <summary>Stjórnar hve hratt Trítla hreyfist.  Gildar tölur eru 1 til 10.  Ef hraðinn er 10, færist og snýst Trítla samstundis.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Turtle.Angle">
+      <summary>Sækir eða stillir stefnuna (hornið) á Trítlu.  Þegar hornið er stillt, snýr Trítla samstundis í þá stefnu.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Turtle.X">
+      <summary>Sækir eða stillir X-hnit staðarins sem Trítla er á.  Þegar hnitið er stillt, færist Trítla samstundis í nýja staðinn.</summary>
+    </member>
+    <member name="P:Microsoft.SmallBasic.Library.Turtle.Y">
+      <summary>Sækir eða stillir Y-hnit staðarins sem Trítla er á.  Þegar hnitið er stillt, færist Trítla samstundis í nýja staðinn.</summary>
+    </member>
+  </members>
+</doc>

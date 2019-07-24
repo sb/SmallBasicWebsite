@@ -1,0 +1,2508 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmallBasicLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SmallBasic.Library.Text">
+            <summary>
+            Objekt Text obsahuje užitečné funkce pro práci s textem.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.Append(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Spojí dva texty a jako výsledek vrátí jiný text. Tato operace se obvykle používá, když pracujeme s neznámým textem v proměnných, který by mohl být vyhodnocen jako čísla a sečten místo toho, aby byl spojen.  
+            </summary>
+            <param name="text1">
+            První text
+            </param>
+            <param name="text2">
+            Druhý text
+            </param>
+            <returns>
+            Spojený text obsahující oba zadané texty.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetLength(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací délku (počet znaků) zadaného textu.
+            </summary>
+            <param name="text">
+            Text, jehož délku chceme zjistit.
+            </param>
+            <returns>
+            Počet znaků zadaného textu
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.IsSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zjistí, zda zadaný text je obsažen v jiném textu.
+            </summary>
+            <param name="text">
+            Delší text, ve kterém se bude hledat.
+            </param>
+            <param name="subText">
+            Hledaný text
+            </param>
+            <returns>
+            "True" (pravda) nebo "False" (nepravda) podle toho, zda byl nebo nebyl subtext nalezen v textu.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.EndsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zjistí, zda zadaný text končí zadaným subtextem.
+            </summary>
+            <param name="text">
+            Text, jehož konec chceme otestovat.
+            </param>
+            <param name="subText">
+            Jaké znaky budeme hledat na konci zadaného textu.
+            </param>
+            <returns>
+            "True" (pravda) nebo "False" (nepravda) podle toho, zda byl nebo nebyl subtext nalezen na konci textu.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.StartsWith(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zjistí, zda zadaný text začíná zadaným subtextem.
+            </summary>
+            <param name="text">
+            Text, jehož začátek chceme otestovat.
+            </param>
+            <param name="subText">
+            Jaké znaky budeme hledat na začátku zadaného textu.
+            </param>
+            <returns>
+            "True" (pravda) nebo "False" (nepravda) podle toho, zda byl nebo nebyl subtext nalezen na začátku textu.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací část ze zadaného textu. 
+            </summary>
+            <param name="text">
+            Původní text, ze kterého chceme získat část.
+            </param>
+            <param name="start">
+            Číslo prvního znaku, který chceme získat.
+            </param>
+            <param name="length">
+            Počet znaků, které chceme získat.
+            </param>
+            <returns>
+            Vrací požadovanou část textu.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetSubTextToEnd(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací část textu od zadané pozice do konce zadaného textu.
+            </summary>
+            <param name="text">
+            Původní text, ze kterého chceme získat část.
+            </param>
+            <param name="start">
+            Číslo pozice prvního znaku požadované části textu.
+            </param>
+            <returns>
+            Vrací požadovanou část textu.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetIndexOf(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zjistí, na jaké pozici se nachází subtext v zadaném textu.
+            </summary>
+            <param name="text">
+            Text, který chceme prohledávat.
+            </param>
+            <param name="subText">
+            Text, který chceme vyhledat.
+            </param>
+            <returns>
+            Pozice, na které byl zadaný subtext nalezen v textu. Pokud nalezen nebyl, je vrácena 0.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToLowerCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nahradí v zadaném textu velká písmena malými písmeny.
+            </summary>
+            <param name="text">
+            Text, který chceme změnit.
+            </param>
+            <returns>
+            Změněný text
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.ConvertToUpperCase(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nahradí v zadaném textu malá písmena velkými písmeny.
+            </summary>
+            <param name="text">
+            Text, který chceme změnit.
+            </param>
+            <returns>
+            Změněný text
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacter(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací znak, který má v kódu UNICODE zadané číslo.
+            </summary>
+            <param name="characterCode">
+            Číslo v kódu UNICODE
+            </param>
+            <returns>
+            Odpovídající znak
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Text.GetCharacterCode(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací číslo v kódu UNICODE, které odpovídá zadanému znaku.
+            </summary>
+            <param name="character">
+            Znak, jehož kód chceme zjistit.
+            </param>
+            <returns>
+            Kód znaku
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Mouse">
+            <summary>
+            Třída Mouse poskytuje vlastnosti a metody pro práci s myší, jako je například pozice kurzoru, stav tlačítek atd.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.HideCursor">
+            <summary>
+           Skryje na obrazovce kurzor myši.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Mouse.ShowCursor">
+            <summary>
+            Zobrazí na obrazovce kurzor myši.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseX">
+            <summary>
+            Vrací nebo nastaví x-ovou hodnotu pozice kurzoru myši.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.MouseY">
+            <summary>
+            Vrací nebo nastaví x-ovou hodnotu pozice kurzoru myši.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsLeftButtonDown">
+            <summary>
+            "True" (pravda) nebo "False" (nepravda) podle toho, jestli je stisknuto levé tlačítko myši.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Mouse.IsRightButtonDown">
+            <summary>
+            "True" (pravda) nebo "False" (nepravda) podle toho, jestli je stisknuto pravé tlačítko myši.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Desktop">
+            <summary>
+            Třída Desktop (pracovní plocha) nabízí metody pro práci s pracovní plochou.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Desktop.SetWallPaper(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Změní tapetu na pracovní ploše podle zadaného obrázku.
+            </summary>
+            <param name="fileOrUrl">
+            Odkaz na obrázek, který se má objevit na ploše. Může to být obrázek uložený v počítači (například c:\obrazky\foto1.jpg) nebo obrázek na internetu (například http://www.server.cz/obraz01.jpg)
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Width">
+            <summary>
+            Vrací šířku pracovní plochy v pixelech.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Desktop.Height">
+            <summary>
+            Vrací výšku pracovní plochy v pixelech.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication">
+            <summary>
+            Třída Application poskytuje programu Small Basic objekt aplikace.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.SmallBasicApplication.Dispatcher">
+            <summary>
+            Poskytuje dispatcher pro aplikaci Small Basic.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.ImageList">
+            <summary>
+            Třída ImageList (seznam obrázků) umožňuje  nahrávat a uchovávat obrázky v paměti.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.LoadImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nahraje do paměti obrázek z disku nebo webu.
+            </summary>
+            <param name="fileNameOrUrl">
+            Odkaz na obrázek, který se má nahrát. Může to být obrázek uložený na počítači (například c:\obrazky\foto1.jpg) nebo obrázek na internetu (například http://www.server.cz/obraz01.jpg)
+            </param>
+            <returns>
+            Název obrázku, který byl nahrán.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.ClipImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vyřízne část ze zadaného obrázku.
+            </summary>
+            <param name="imageName">
+            Název obrázku, ze kterého se má vyřezávat.
+            </param>
+            <param name="left">
+            Vzdálenost levého okraje vyřezávané části od levého okraje grafického okna.
+            </param>
+            <param name="top">
+            Vzdálenost horního okraje vyřezávaného objektu od horního okraje grafického okna.
+            </param>
+            <param name="width">
+            Šířka vyřezávané části
+            </param>
+            <param name="height">
+            Výška vyřezávané části
+            </param>
+            <returns>
+            Vyříznutá část obrázku
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetWidthOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací šířku obrázku v paměti.
+            </summary>
+            <param name="imageName">
+            Název obrázku v paměti
+            </param>
+            <returns>
+            Šířka obrázku
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.ImageList.GetHeightOfImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací výšku zadaného obrázku.
+            </summary>
+            <param name="imageName">
+            Název obrázku v paměti
+            </param>
+            <returns>
+            Výška obrázku
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Timer">
+            <summary>
+            Třída Timer (časovač) umožňuje provádět nějakou činnost opakovaně se zadaným intervalem opakování.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Pause">
+            <summary>
+            Pozastaví časovač. Událost Tick nebude vyvolávána.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Timer.Resume">
+            <summary>
+            Znovu spustí časovač. Událost Tick bude opět vyvolávána.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Timer.Interval">
+            <summary>
+            Vrací nebo nastavuje interval (v milisekundách) vyvolávání události Tick. Povolené hodnoty jsou od 10 do 100 000 000. Poznámka: 1s = 1000 ms
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Timer.Tick">
+            <summary>
+            Vyvolá událost, když uběhne zadaný interval.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.SmallBasicCallback">
+            <summary>
+            Zajišťuje Callback, který bude využit všemi událostmi knihovny Small Basic.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Stack">
+            <summary>
+            Třída Stack (zásobník) umožňuje uchovávat hodnoty podobně, jako když odkládáme například knihy na sebe. Hodnoty můžete uložit jen po jedné a poslední je vždy uložena na vrcholu "komínku". Odebírat hodnoty lze také pouze z vrcholu "komínku". Vrácena je tedy vždy hodnota, která byla vložena jako poslední.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PushValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Ukládá hodnotu do zadaného zásobníku.
+            </summary>
+            <param name="stackName">
+            Název zásobníku
+            </param>
+            <param name="value">
+            Hodnota, která má být vložena.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.GetCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací počet hodnot uložených v zásobníku.
+            </summary>
+            <param name="stackName">
+            Název zásobníku
+            </param>
+            <returns>
+            Počet uložených hodnot
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Stack.PopValue(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací hodnotu ze zásobníku. Vrácena je vždy hodnota, která byla vložena jako poslední.
+            </summary>
+            <param name="stackName">
+            Název zásobníku
+            </param>
+            <returns>
+            Hodnota na vrcholu zásobníku
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Primitive">
+            <summary>
+            Základní datový typ používaný pro text nebo čísla
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.NativeHelper">
+            <summary>
+            Pomocná třída pro vyvolání nativních API funkcí
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.GraphicsWindow">
+            <summary>
+            Třída GraphicsWindow (grafické okno) umožňuje pracovat s grafikou. Zobrazí okno, do kterého je možné například kreslit různé grafické objekty. Poskytuje také možnost interakce s uživatelem pomocí grafických prvků. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Show">
+            <summary>
+            Zobrazí grafické okno a umožní s ním pracovat.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Hide">
+            <summary>
+            Skryje grafické okno.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nakreslí obdélník o zadané velikosti na zadanou pozici aktuální barvou pera.
+            </summary>
+            <param name="x">
+            X-ová souřadnice levého kraje objektu
+            </param>
+            <param name="y">
+            Y-ová souřadnice horního kraje objektu
+            </param>
+            <param name="width">
+            Šířka objektu
+            </param>
+            <param name="height">
+            Výška objektu
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nakreslí vyplněný obdélník o zadané pozici na zadané umístění nastavenou barvou štětce.
+            </summary>
+            <param name="x">
+            X-ová souřadnice levého kraje objektu
+            </param>
+            <param name="y">
+            Y-ová souřadnice horního kraje objektu
+            </param>
+            <param name="width">
+            Šířka objektu
+            </param>
+            <param name="height">
+            Výška objektu
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nakreslí elipsu o zadané pozici na zadané umístění nastavenou barvou pera.
+            </summary>
+            <param name="x">
+            X-ová souřadnice levého kraje objektu
+            </param>
+            <param name="y">
+            Y-ová souřadnice horního kraje objektu
+            </param>
+            <param name="width">
+            Šířka objektu
+            </param>
+            <param name="height">
+            Výška objektu
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nakreslí vyplněnou elipsu o zadané pozici na zadané umístění nastavenou barvou štětce.
+            </summary>
+            <param name="x">
+            X-ová souřadnice levého kraje objektu
+            </param>
+            <param name="y">
+            Y-ová souřadnice horního kraje objektu
+            </param>
+            <param name="width">
+            Šířka objektu
+            </param>
+            <param name="height">
+            Výška objektu
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nakreslí trojúhelník pomocí aktuální barvy pera.
+            </summary>
+            <param name="x1">
+            X-ová souřadnice prvního vrcholu trojúhelníka
+            </param>
+            <param name="y1">
+            Y-ová souřadnice prvního vrcholu trojúhelníka
+            </param>
+            <param name="x2">
+            X-ová souřadnice druhého vrcholu trojúhelníka
+            </param>
+            <param name="y2">
+            Y-ová souřadnice druhého vrcholu trojúhelníka
+            </param>
+            <param name="x3">
+            X-ová souřadnice třetího vrcholu trojúhelníka
+            </param>
+            <param name="y3">
+            Y-ová souřadnice třetího vrcholu trojúhelníka
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.FillTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nakreslí vyplněný trojúhelník pomocí aktuální barvy štětce.
+            </summary>
+            <param name="x1">
+            X-ová souřadnice prvního vrcholu trojúhelníka
+            </param>
+            <param name="y1">
+            Y-ová souřadnice prvního vrcholu trojúhelníka
+            </param>
+            <param name="x2">
+            X-ová souřadnice druhého vrcholu trojúhelníka
+            </param>
+            <param name="y2">
+            Y-ová souřadnice druhého vrcholu trojúhelníka
+            </param>
+            <param name="x3">
+            X-ová souřadnice třetího vrcholu trojúhelníka
+            </param>
+            <param name="y3">
+            Y-ová souřadnice třetího vrcholu trojúhelníka
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nakreslí čáru mezi dvěma body pomocí aktuálního pera.
+            </summary>
+            <param name="x1">
+            X-ová souřadnice prvního bodu
+            </param>
+            <param name="y1">
+            Y-ová souřadnice prvního bodu
+            </param>
+            <param name="x2">
+            X-ová souřadnice druhého bodu
+            </param>
+            <param name="y2">
+            Y-ová souřadnice druhého bodu
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Na zadanou pozici napíše zadaný text.
+            </summary>
+            <param name="x">
+            X-ová souřadnice začátku textu
+            </param>
+            <param name="y">
+            Y-ová souřadnice začátku textu
+            </param>
+            <param name="text">
+            Text, který se má napsat na grafické okno.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawBoundText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Na zadanou pozici napíše zadaný text.
+            </summary>
+            <param name="x">
+            X-ová souřadnice začátku textu
+            </param>
+            <param name="y">
+            Y-ová souřadnice začátku textu
+            </param>
+            <param name="width">
+            Maximální povolená šířka textu. Pokud text šířku překročí, bude text zalomen na více řádků.
+            </param>
+            <param name="text">
+            Text, který se má napsat na grafické okno.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawResizedImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Na zadané místo grafického okna nakreslí obrázek z paměti nahraný v objektu ImageList nebo nahraný přímo z disku či webu. Je možné zadat i velikost obrázku.
+            </summary>
+            <param name="imageName">
+            Název obrázku. Může to být název v objektu ImageList nebo odkaz na lokální soubor nebo odkaz na obrázek na webu.
+            </param>
+            <param name="x">
+            X-ová souřadnice levého kraje objektu
+            </param>
+            <param name="y">
+            Y-ová souřadnice horního kraje objektu
+            </param>
+            <param name="width">
+            Šířka obrázku
+            </param>
+            <param name="height">
+            Výška obrázku
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.DrawImage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Na zadané místo grafického okna nakreslí obrázek z paměti nahraný v objektu ImageList nebo nahraný přímo z disku či webu. Obrázek se nakreslí v původní velikosti.
+            </summary>
+            <param name="imageName">
+            Název obrázku. Může to být název v objektu ImageList nebo odkaz na lokální soubor nebo odkaz na obrázek na webu.
+            </param>
+            <param name="x">
+            X-ová souřadnice levého kraje objektu
+            </param>
+            <param name="y">
+            Y-ová souřadnice horního kraje objektu
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.SetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nakreslí na zadaných souřadnicích bod.
+            </summary>
+            <param name="x">
+            X-ová souřadnice bodu
+            </param>
+            <param name="y">
+            Y-ová souřadnice bodu
+            </param>
+            <param name="color">
+            Barva bodu
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetPixel(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací barvu bodu na zadaných souřadnicích.
+            </summary>
+            <param name="x">
+            X-ová souřadnice bodu
+            </param>
+            <param name="y">
+            Y-ová souřadnice bodu
+            </param>
+            <returns>
+            Barva bodu na zadaných souřadnicích
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetRandomColor">
+            <summary>
+            Vrátí náhodnou barvu.
+            </summary>
+            <returns>
+            Náhodně vybraná barva
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.GetColorFromRGB(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vytvoří barvu namícháním červené, zelené a modré barvy. 
+            </summary>
+            <param name="red">
+            Množství červené barvy (0-255)
+            </param>
+            <param name="green">
+            Množství zelené barvy (0-255)
+            </param>
+            <param name="blue">
+            Množství modré barvy (0-255)
+            </param>
+            <returns>
+            Výsledná barva. Může být použita například pro nastavení barvy pera nebo štětce.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.Clear">
+            <summary>
+            Vymaže grafické okno.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.GraphicsWindow.ShowMessage(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zobrazí informační okno.
+            </summary>
+            <param name="text">
+            Text, který se má objevit v informačním okně.
+            </param>
+            <param name="title">
+            Záhlaví informačního okna
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BackgroundColor">
+            <summary>
+            Vrátí nebo nastaví barvu pozadí grafického okna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.BrushColor">
+            <summary>
+            Vrátí nebo nastaví barvu aktuálního štětce.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.CanResize">
+            <summary>
+            Zjistí nebo nastaví možnost zvětšení grafického okna uživatelem. Pokud je nastaveno na False (Ne), nemůže uživatel měnit velikost okna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenWidth">
+            <summary>
+            Vrátí nebo nastaví šířku používaného pera. Pero se používá pro kreslení čar nebo okrajů různých tvarů jako například obdélníků, elips atd.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.PenColor">
+            <summary>
+            Vrátí nebo nastaví barvu aktuálního pera.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontName">
+            <summary>
+            Vrátí nebo nastaví písmo používané pro psaní textů na grafické okno. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontSize">
+            <summary>
+            Vrátí nebo nastaví velikost písma používaného pro psaní textů na grafické okno.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontBold">
+            <summary>
+            Vrátí nebo nastaví, zda se bude používat tučné písmo či ne.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.FontItalic">
+            <summary>
+            Vrátí nebo nastaví, zda se bude používat skloněné písmo (kurzíva) či ne.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Title">
+            <summary>
+            Záhlaví grafického okna
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Height">
+            <summary>
+            Vrátí nebo nastaví výšku grafického okna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Width">
+            <summary>
+             Vrátí nebo nastaví výšku grafického okna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Left">
+            <summary>
+            Vrátí nebo nastaví, jak daleko od levého okraje obrazovky je levý okraj grafického okna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.Top">
+            <summary>
+            Vrátí nebo nastaví, jak daleko od horního okraje obrazovky je horní okraj grafického okna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastKey">
+            <summary>
+            Vrací naposled stisknutou klávesu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.LastText">
+            <summary>
+            Vrátí naposled zadaný text do grafického okna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseX">
+            <summary>
+            Vrátí nebo nastaví x-ovou pozici kurzoru myši vzhledem k okrajům grafického okna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.GraphicsWindow.MouseY">
+            <summary>
+            Vrátí nebo nastaví y-ovou pozici kurzoru myši vzhledem k okrajům grafického okna.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyDown">
+            <summary>
+            Nastaví proceduru, která se má vykonat, pokud uživatel stiskne klávesu.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.KeyUp">
+            <summary>
+            Nastaví proceduru, která se má vykonat, pokud uživatel pustí klávesu.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseDown">
+            <summary>
+            Vyvolá událost pokud uživatel stiskne tlačítko myši.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseUp">
+            <summary>
+            Vyvolá událost pokud uživatel pustí tlačítko myši.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.MouseMove">
+            <summary>
+            Vyvolá událost pokud uživatel pohne kurzorem myši.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.GraphicsWindow.TextInput">
+            <summary>
+            Vyvolá událost pokud uživatel zadá text do grafického okna.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Clock">
+            <summary>
+            Třída Clock (hodiny) umožňuje pracovat s časem a datem.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Time">
+            <summary>
+            Vrátí aktuální čas. Čas je určován podle vnitřních hodin počítače.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Date">
+            <summary>
+            Vrátí aktuální datum. Datum je určováno podle vnitřních hodin počítače.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Year">
+            <summary>
+            Vrací aktuální rok.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Month">
+            <summary>
+            Vrací aktuální měsíc. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Day">
+            <summary>
+            Vrací aktuální den v měsíci.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.WeekDay">
+            <summary>
+            Vrací název aktuálního dne v týdnu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Hour">
+            <summary>
+            Vrací aktuální hodinu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Minute">
+            <summary>
+            Vrací aktuální minutu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Second">
+            <summary>
+            Vrací aktuální sekundu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.Millisecond">
+            <summary>
+            Vrací aktuální počet milisekund, které uplynuly od začátku poslední sekundy.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Clock.ElapsedMilliseconds">
+            <summary>
+            Vrací počet milisekund, které uplynuly od začátku roku 1900.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.File">
+            <summary>
+            Třída File (soubor) umožňuje práci se soubory na disku.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Načte do paměti celý obsah souboru na disku. Funkce je velmi rychlá pro soubory menší než 1 MB, ale pro soubory větší než 10 MB může být naopak velmi pomalá.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Plná cesta k souboru na disku, například c:\MojeData\soubor.txt
+            </para>
+            </param>
+            <returns>
+            Celý obsah souboru
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Zapíše obsah do souboru na disku. Přitom přepíše původní obsah souboru novým obsahem.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Plná cesta k souboru na disku. Například c:\MojeData\soubor.txt.
+            </para>
+            </param>
+            <param name="contents">
+            Obsah, který má být zapsán do souboru.
+            </param>
+            <returns>
+            <para>
+            Vrátí "SUCCESS" (úspěšně uloženo), pokud se uložení zdařilo, nebo "FAILED" (nepovedlo se uložit), pokud se ukládání nezdařilo. Například pokud nemá program práva pro zápis do zadaného souboru nebo pokud není místo na disku.
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.ReadLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Otevře soubor a načte z něho zadaný řádek.
+            </summary>
+            <param name="filePath">
+            <para>
+            Plná cesta k souboru na disku. Například c:\MojeData\soubor.txt.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Číslo řádku, který má být načten.
+            </param>
+            <returns>
+            Text na zadaném řádku v souboru
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.WriteLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Do zadaného souboru na zadaný řádek zapíše zadaný text.
+            </para>
+            <para>
+            Přitom přepíše existující text na zadaném řádku.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Plná cesta k souboru na disku. Například c:\MojeData\soubor.txt.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Číslo řádku, na který se má obsah zapsat.
+            </param>
+            <param name="contents">
+            <para>
+            Obsah, který má být zapsán.
+            </para>
+            </param>
+            <returns>
+            <para>
+            Vrátí "SUCCESS" (úspěšně uloženo), pokud se uložení zdařilo, nebo "FAILED" (nepovedlo se uložit), pokud se ukládání nezdařilo. Například pokud nemá program práva pro zápis do zadaného souboru nebo pokud není místo na disku.
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.InsertLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Do zadaného souboru vloží nový řádek na zadanou pozici a zapíše na něj zadaný obsah.
+            </para>
+            <para>
+            Operace nepřepisuje žádná data.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Plná cesta k souboru na disku. Například c:\MojeData\soubor.txt.
+            </para>
+            </param>
+            <param name="lineNumber">
+            Číslo řádku, na který se má obsah zapsat.
+            </param>
+            <param name="contents">
+            Obsah, který má být zapsán.
+            </param>
+            <returns>
+            <para>
+            Vrátí "SUCCESS" (úspěšně uloženo), pokud se uložení zdařilo, nebo "FAILED" (nepovedlo se uložit), pokud se ukládání nezdařilo. Například pokud nemá program práva pro zápis do zadaného souboru nebo pokud není místo na disku.
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.AppendContents(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Na konec zadaného souboru přidá zadaný obsah.
+            </para>
+            </summary>
+            <param name="filePath">
+            <para>
+            Plná cesta k souboru na disku. Například c:\MojeData\soubor.txt.
+            </para>
+            </param>
+            <param name="contents">
+            Obsah, který má být zapsán.
+            </param>
+            <returns>
+            <para>
+            Vrátí "SUCCESS" (úspěšně uloženo), pokud se uložení zdařilo, nebo "FAILED" (nepovedlo se uložit), pokud se ukládání nezdařilo. Například pokud nemá program práva pro zápis do zadaného souboru nebo pokud není místo na disku.
+            </para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CopyFile(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Kopíruje soubor ze zdrojového místa na cílové místo.
+            </para>
+            <para>
+            Pokud cílové místo leží ve složce, která neexistuje, bude automaticky vytvořena. Pokud na cílovém místě existuje soubor se stejným jménem, bude přepsán. Pokud nechcete přepsat případně existující soubor, nejprve se přesvědčte, že cílový soubor neexistuje pomocí funkce GetFiles.
+            </para>
+            </summary>
+            <param name="sourceFilePath">
+            <para>
+            Zdrojový soubor. Soubor, který má být zkopírován.
+            </para>
+            </param>
+            <param name="destinationFilePath">
+            Cílové místo, kam má být soubor zkopírován.  
+            </param>
+            <returns>
+            Vrátí "SUCCESS" (úspěšně uloženo), pokud se uložení zdařilo, nebo "FAILED" (nepovedlo se uložit), pokud se ukládání nezdařilo. Například pokud nemá program práva pro zápis do zadaného souboru nebo pokud není místo na disku.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Smaže soubor na disku. Pozor, operace je nevratná.
+            </summary>
+            <param name="filePath">
+            <para>
+            Plná cesta k souboru na disku. Například c:\MojeData\soubor.txt.
+            </para>
+            </param>
+            <returns>
+            Vrátí "SUCCESS" (úspěšně smazáno), pokud se smazání zdařilo, nebo "FAILED" (nepovedlo se smazat), pokud se smazání nezdařilo. 
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.CreateDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vytvoří adresář na zadaném místě.
+            </summary>
+            <param name="directoryPath">
+            Plná cesta k adresáři, který má být vytvořen.
+            </param>
+            <returns>
+            Vrátí "SUCCESS" (úspěšně vytvořeno), pokud se vytvoření zdařilo, nebo "FAILED" (nepovedlo se vytvořit), pokud se vytváření nezdařilo. Například pokud nemá program práva pro zápis do zadaného místa.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.DeleteDirectory(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Smaže adresář. Pozor, operace je nevratná.
+            </summary>
+            <param name="directoryPath">
+            Plná cesta k adresáři, který má být smazán.
+            </param>
+            <returns>
+            Vrátí "SUCCESS" (úspěšně smazáno), pokud se smazání zdařilo, nebo "FAILED" (nepovedlo se smazat), pokud se smazání nezdařilo. 
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetFiles(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací seznam souborů, které existují v zadaném adresáři.
+            </summary>
+            <param name="directoryPath">
+            Adresář, ze kterého chceme získat seznam souborů.
+            </param>
+            <returns>
+            Pokud bude operace úspěšná, vrátí seznam souborů jako pole (Array). Jinak vrátí "FAILED".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetDirectories(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací seznam adresářů, které existují v zadaném adresáři.
+            </summary>
+            <param name="directoryPath">
+            Adresář, ze kterého chceme získat seznam adresářů.
+            </param>
+            <returns>
+            Pokud bude operace úspěšná, vrátí seznam adresářů jako pole (Array). Jinak vrátí "FAILED".
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetTemporaryFilePath">
+            <summary>
+            <para>
+            Vytvoří nový soubor v dočasném adresáři Windows a vrátí cestu k němu.
+            </para>
+            </summary>
+            <returns>
+            Plná cesta k souboru v dočasném adresáři.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.File.GetSettingsFilePath">
+            <summary>
+            <para>
+            Vrací plnou cestu k souboru s nastavením programu. Soubor se nachází ve stejném adresáři jako program, má stejné jméno jako program a příponu settings. Soubor s nastavením je možné použít například pro uchování nejvyššího skóre mezi jednotlivými spuštěními hry. 
+            </para>
+            </summary>
+            <returns>
+            Vrací plnou cestu k souboru s nastavením.
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.File.LastError">
+            <summary>
+            <para>
+            Vrací popis poslední chyby, která nastala při práci se souborem nebo adresářem. Je užitečný například při hledání příčiny, proč došlo k chybě. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Keywords">
+            <summary>
+            Zástupný symbol pro klíčová slova.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.For">
+            <summary>
+            Příkaz jazyka Small Basic, který umožňuje provést nějakou část programu opakovaně. Používá se, pokud známe počet opakování nebo jsme schopni ho určit.
+            </summary>
+            <example>
+            Následující příklad vypíše čísla od jedné do deseti.
+            <code>
+            For i = 1 To 10 
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndFor">
+            <summary>
+            Označuje konec části programu, která se má opakovat. Více viz příkaz For.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.To">
+            <summary>
+            Klíčové slovo jazyka Small Basic. Více viz příkaz For.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Step">
+            <summary>
+            Nastavuje, o kolik se zvyšuje hodnota počítadla při použití cyklu For.
+            </summary>
+            <example>
+            Následující příklad vypíše lichá čísla od 1 do 11.
+            <code>
+            For i = 1 to 11 Step 2
+              TextWindow.WriteLine(i)
+            EndFor
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.If">
+            <summary>
+            Klíčové slovo jazyka Small Basic. Umožňuje podmíněné vykonání části programu.
+            </summary>
+            <example>
+            Následující příklad vypíše různý text podle zadaných hodnot A a B.
+            <code>
+            If A &gt; B Then
+              TextWindow.WriteLine("A je větší než B")
+            Else
+              TextWindow.WriteLine("A je menší nebo rovno B")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Then">
+            <summary>
+            Klíčové slovo jazyka Small Basic. Více viz If.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Else">
+            <summary>
+            Klíčové slovo jazyka Small Basic. Více viz If.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.ElseIf">
+            <summary>
+            Klíčové slovo ElseIf umožňuje zadat další podmínku v příkazu IF.
+            </summary>
+            <example>
+            Následující příklad vypíše různé pozdravy podle denní doby.
+            <code>
+            If Clock.Hour &lt; 12 Then
+              TextWindow.WriteLine("Dobré ráno")
+            ElseIf Clock.Hour &lt; 16 Then
+              TextWindow.WriteLine("Dobré odpoledne")
+            ElseIf Clock.Hour &lt; 20 Then
+              TextWindow.WriteLine("Dobrý večer")
+            EndIf
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndIf">
+            <summary>
+            Ukončuje podmíněnou část programu. Více viz příkaz If. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Goto">
+            <summary>
+            Klíčové slovo Goto umožňuje při zpracování programu skočit na jinou část programu. Je třeba zadat tzv. návěští, pomocí kterého se odkazuje místo, na které program "skočí".  
+            </summary>
+            <example>
+            Následující příklad donekonečna vypisuje čísla.
+            <code>
+            start:
+            TextWindow.WriteLine(i)
+            i = i + 1
+            Goto start
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Sub">
+            <summary>
+            Klíčové slovo Sub označuje začátek podprogramu. Podprogram se ukončuje slovem EndSub. Podprogramy se definují na konci základního programu.
+            </summary>
+            <example>
+            Následující příklad zakládá podprogram s názvem Win.
+            <code>
+            Sub Win
+              Sound.PlayBellRing()
+              TextWindow.WriteLine("Vyhrál jsi!")
+            EndSub
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndSub">
+            <summary>
+            Ukončuje podprogram. Více viz Sub.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.While">
+            <summary>
+            Klíčové slovo jazyka Small Basic. Pomocí While se zapisuje cyklus (opakovaná část programu), o které nevíme dopředu, kolikrát se má opakovat, a počet opakování je závislý na platnosti nějaké podmínky.
+            </summary>
+            <example>
+            Následující příklad vypisuje náhodná čísla tak dlouho, dokud i je menší než 100.
+            <code>
+            While i &lt; 100
+              i = Math.GetRandomNumber(150)
+              TextWindow.WriteLine(i)
+            EndWhile
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.EndWhile">
+            <summary>
+            Ukončuje cyklus While. Více viz While.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.And">
+            <summary>
+            Spojuje logické podmínky. Výsledná podmínka je splněna tehdy, pokud jsou splněny obě dílčí podmínky zároveň.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Keywords.Or">
+            <summary>
+            Spojuje logické podmínky. Výsledná podmínka je splněna tehdy, pokud je splněna alespoň jedna z dílčích podmínek.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Math">
+            <summary>
+            Třída Math (Matematická knihovna) poskytuje mnoho matematických funkcí.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Abs(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Absolutní hodnota čísla
+            </summary>
+            <param name="number">
+            Zadané číslo
+            </param>
+            <returns>
+            Absolutní hodnotu čísla
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Ceiling(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zaokrouhlení nahoru. Vrací nejbližší celé číslo, které je větší nebo stejné jako zadané desetinné číslo. 
+            </summary>
+            <param name="number">
+            Zadané desetinné číslo
+            </param>
+            <returns>
+            Výsledné nahoru zaokrouhlené číslo
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Floor(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zaokrouhlení dolů. Vrací nejbližší celé číslo, které je menší nebo stejné jako zadané desetinné číslo. 
+            </summary>
+            <param name="number">
+            Zadané desetinné číslo
+            </param>
+            <returns>
+            Výsledné dolů zaokrouhlené číslo
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.NaturalLog(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Přirozený logaritmus  čísla
+            </summary>
+            <param name="number">
+            Číslo, jehož přirozený logaritmus chceme spočítat.
+            </param>
+            <returns>
+            Přirozený logaritmus  čísla
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Log(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Logaritmus  čísla
+            </summary>
+            <param name="number">
+            Číslo, jehož logaritmus chceme spočítat.
+            </param>
+            <returns>
+            Logaritmus čísla
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Cos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Funkce kosinus
+            </summary>
+            <param name="angle">
+            Úhel (v radiánech)
+            </param>
+            <returns>
+            Kosinus zadaného úhlu
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Sin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Funkce sinus
+            </summary>
+            <param name="angle">
+            Úhel (v radiánech)
+            </param>
+            <returns>
+            Sinus zadaného úhlu
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Tan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Funkce tangens
+            </summary>
+            <param name="angle">
+            Úhel (v radiánech)
+            </param>
+            <returns>
+            Tangens zadaného úhlu
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcSin(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Funkce arcsinus
+            </summary>
+            <param name="sinValue">
+            Úhel (v radiánech)
+            </param>
+            <returns>
+            Arcsinus zadaného úhlu
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcCos(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Funkce Arckosinus
+            </summary>
+            <param name="cosValue">
+            Úhel (v radiánech)
+            </param>
+            <returns>
+            Arckosinus zadaného úhlu
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.ArcTan(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Funkce ArcTangens
+            </summary>
+            <param name="tanValue">
+            Úhel (v radiánech)
+            </param>
+            <returns>
+            Arctangens zadaného úhlu
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetDegrees(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Převádí radiány na stupně.
+            </summary>
+            <param name="angle">
+            Úhel v radiánech
+            </param>
+            <returns>
+            Odpovídající úhel ve stupních
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRadians(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Převádí stupně na radiány.
+            </summary>
+            <param name="angle">
+            Úhel ve stupních
+            </param>
+            <returns>
+            Odpovídající úhel v radiánech
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.SquareRoot(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Druhá mocnina čísla
+            </summary>
+            <param name="number">
+            Číslo, jehož druhou mocninu chceme spočítat.
+            </param>
+            <returns>
+            Druhá mocnina zadaného čísla
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Power(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Mocnina čísla
+            </summary>
+            <param name="baseNumber">
+            Základ mocniny
+            </param>
+            <param name="exponent">
+            Exponent
+            </param>
+            <returns>
+            Číslo se základem umocněným na exponent
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Round(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zaokrouhlí desetinné číslo na nejbližší celé číslo.
+            </summary>
+            <param name="number">
+            Číslo, které má být zaokrouhleno.
+            </param>
+            <returns>
+            Výsledek zaokrouhlení čísla
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Max(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Porovná dvě čísla a vrátí větší z nich.
+            </summary>
+            <param name="number1">
+            První číslo k porovnání
+            </param>
+            <param name="number2">
+            Druhé číslo k porovnání
+            </param>
+            <returns>
+            Větší ze dvou zadaných čísel
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Min(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Porovná dvě čísla a vrátí menší z nich.
+            </summary>
+            <param name="number1">
+            První číslo k porovnání
+            </param>
+            <param name="number2">
+            Druhé číslo k porovnání
+            </param>
+            <returns>
+            Menší ze dvou zadaných čísel
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.Remainder(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zbytek po dělení dvou čísel
+            </summary>
+            <param name="dividend">
+            Dělenec (číslo, které se má vydělit)
+            </param>
+            <param name="divisor">
+            Dělitel (číslo, kterým dělíme)
+            </param>
+            <returns>
+            Zbytek po dělení
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Math.GetRandomNumber(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací náhodné číslo z intervalu od 1 do zadaného maxima.
+            </summary>
+            <param name="maxNumber">
+            Jak velké může být vymyšlené náhodné číslo.
+            </param>
+            <returns>
+            Náhodné číslo ze zadaného intervalu
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Math.Pi">
+            <summary>
+            Hodnota čísla Pi
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Flickr">
+            <summary>
+            Objekt Flickr umožňuje přistupovat na server internetové fotogalerie Flickr (www.flickr.com).
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetPictureOfMoment">
+            <summary>
+            Získá adresu URL pro aktuální obrázek.
+            </summary>
+            <returns>
+            Adresa URL aktuálního obrázku ze serveru Flickr.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Flickr.GetRandomPicture(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací adresu náhodného obrázku označkovaného zadaným tagem ze serveru Flickr.
+            </summary>
+            <param name="tag">
+            Značka (tag)
+            </param>
+            <returns>
+            URL adresa náhodného obrázku
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Network">
+            <summary>
+            Třída Network (síť) umožňuje přistupovat na web.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.DownloadFile(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stáhne soubor z webu a uloží ho do dočasného adresáře.
+            </summary>
+            <param name="url">
+            WWW adresa souboru na webu
+            </param>
+            <returns>
+            Název souboru v dočasném adresáři, do kterého byl soubor stažen.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Network.GetWebPageContents(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Stáhne obsah zadané webové stránky.
+            </summary>
+            <param name="url">
+            WWW adresa stránky, jejíž obsah chceme stáhnout.
+            </param>
+            <returns>
+            Obsah (zdrojový kód HTML) stažené webové stránky
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.OfficeResearch">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Query(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginQuery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndQuery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Registration(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginRegistration(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndRegistration(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Status">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginStatus(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndStatus(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.Discovery(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.BeginDiscovery(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.EndDiscovery(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.OfficeResearch.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.QueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.RegistrationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.StatusCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Internal.OfficeResearch.DiscoveryCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.QueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.RegistrationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.StatusCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Internal.DiscoveryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Platform">
+            <summary>
+            Třída Platform se používá na volání jiných knihoven .NET.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Dictionary">
+            <summary>
+            Třída Dictionary (slovník) umožňuje přistupovat na online slovník.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinition(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací definici pojmu v angličtině.
+            </summary>
+            <param name="word">
+            Pojem, jehož definici chceme najít.
+            </param>
+            <returns>
+            Definice zadaného pojmu v angličtině
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Dictionary.GetDefinitionInFrench(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací definici pojmu ve francouzštině.
+            </summary>
+            <param name="word">
+            Pojem, jehož definici chceme najít.
+            </param>
+            <returns>
+            Definice zadaného pojmu ve francouzštině
+            </returns>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Internal.RestHelper">
+            <summary>
+            Privátní statická třída pro volání API založených na technologii Rest.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Internal.RestHelper.GetContents(System.String)">
+            <summary>
+            Po poskytnutí adresy URL získá obsah ve formátu XML.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Program">
+            <summary>
+            Třída Program nabízí funkce pro řízení běhu programu.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.Delay(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pozastaví vykonávání programu na zadanou dobu. Doba se zadává v milisekundách.
+            </summary>
+            <param name="milliSeconds">
+            Doba v milisekundách. 1 s = 1000 ms 
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.End">
+            <summary>
+            Ukončí provádění programu.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Program.GetArgument(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pokud byl program spuštěn s nějakými parametry, umožní jejich zpracování. Vrátí argument na zadané pozici.
+            </summary>
+            <param name="index">
+            Číslo parametru, který chceme vrátit.
+            </param>
+            <returns>
+            Parametr na zadané pozici
+            </returns>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.ArgumentCount">
+            <summary>
+            Vrací počet spouštěcích parametrů.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Program.Directory">
+            <summary>
+            Vrací adresář, ve kterém je uložen exe soubor spuštěného programu.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Array">
+            <summary>
+            Pole (array) umožňuje uchovávat více hodnot v jedné proměnné. Jednotlivé hodnoty mají svůj index a pomocí něj je možné k nim přistupovat.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsIndex(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací Ano nebo Ne podle toho, zda zadané pole obsahuje hodnotu se zadaným indexem.
+            </summary>
+            <param name="array">
+            Název pole
+            </param>
+            <param name="index">
+            Index hodnoty
+            </param>
+            <returns>
+            "True" (pravda) nebo "False" (nepravda) podle toho, zda daný index existuje v daném poli.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.ContainsValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zjistí, zda zadané pole obsahuje zadanou hodnotu. 
+            </summary>
+            <param name="array">
+            Název pole
+            </param>
+            <param name="value">
+            Hledaná hodnota
+            </param>
+            <returns>
+            "True" (pravda) nebo "False" (nepravda) podle toho, zda byla daná hodnota v poli nalezena nebo ne.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetAllIndices(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací všechny hodnoty zadaného pole jako nové pole.
+            </summary>
+            <param name="array">
+            Pole, jehož hodnoty chceme získat.
+            </param>
+            <returns>
+            Nové pole obsahující hodnoty z původního pole. Indexy nového pole začínají od 1.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetItemCount(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací počet hodnot uložených v zadaném poli.
+            </summary>
+            <param name="array">
+            Název pole
+            </param>
+            <returns>
+            Počet hodnot v poli
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.IsArray(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zjistí, zda zadaná proměnná je pole.
+            </summary>
+            <param name="array">
+            Proměnná, kterou chceme otestovat.
+            </param>
+            <returns>
+            "True" (pravda) nebo "False" (nepravda) podle toho, jestli je zadaná proměnná pole.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.SetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zapíše zadanou hodnotu do pole na zadaný index.
+            </summary>
+            <param name="arrayName">
+            Název pole
+            </param>
+            <param name="index">
+            Index
+            </param>
+            <param name="value">
+            Hodnota k zapsání
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.GetValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací hodnotu z pole a daného indexu.
+            </summary>
+            <param name="arrayName">
+            Název pole
+            </param>
+            <param name="index">
+            Index
+            </param>
+            <returns>
+            Hodnota z pole a indexu
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Array.RemoveValue(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Odebere z pole hodnotu o zadaném indexu.
+            </summary>
+            <param name="arrayName">
+            Název pole
+            </param>
+            <param name="index">
+            Index hodnoty k vymazání
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.TextWindow">
+            <summary>
+            Třída TextWindow (Textové okno) poskytuje možnosti pro výpis textu do konzole a pro zadávání hodnot uživatelem.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Show">
+            <summary>
+            Zobrazí textové okno.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Hide">
+            <summary>
+            Skryje textové okno.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Clear">
+            <summary>
+            Vymaže obsah textového okna.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Pause">
+            <summary>
+            Pozastaví provádění programu a zobrazí hlášku, že má uživatel něco stisknout (anglicky).
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseIfVisible">
+            <summary>
+            Pozastaví provádění programu a zobrazí hlášku, že má uživatel něco stisknout (anglicky), ale pouze pokud je okno viditelné. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.PauseWithoutMessage">
+            <summary>
+            Počká na stisk klávesy, ale nezobrazí žádné upozornění.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Read">
+            <summary>
+            Přečte zadaný text z klávesnice až do konce řádku. Zadávání se ukončí klávesou ENTER.
+            </summary>
+            <returns>
+            Text zadaný v textovém okně
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.ReadNumber">
+            <summary>
+            Přečte z textového okna zadané číslo. Zadávání se ukončí klávesou ENTER.
+            </summary>
+            <returns>
+            Číslo zadané do textového okna
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.WriteLine(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vypíše do textového okna text nebo číslo. Na konci skočí automaticky na nový řádek.
+            </summary>
+            <param name="data">
+            Text nebo číslo k vypsání
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.Write(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vypíše do textového okna text nebo číslo. Na konci neskočí automaticky na nový řádek a kurzor zůstane na stejném řádku.
+            </summary>
+            <param name="data">
+            Text nebo číslo k vypsání
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.TextWindow.VerifyAccess">
+            <summary>
+            Ověřuje, zda byl již proveden přístup k textovému oknu.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.ForegroundColor">
+            <summary>
+            Vrátí nebo nastaví barvu písma.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.BackgroundColor">
+            <summary>
+            Vrátí nebo nastaví barvu pozadí.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorLeft">
+            <summary>
+            Vrátí nebo nastaví, v jakém sloupci je nebo má být kurzor. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.CursorTop">
+            <summary>
+            Vrátí nebo nastaví, v jakém řádku je nebo má být kurzor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Left">
+            <summary>
+            Vrátí nebo nastaví, jak daleko od levého okraje monitoru je levý okraj textového okna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Title">
+            <summary>
+            Vrátí nebo nastaví záhlaví textového okna.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.TextWindow.Top">
+            <summary>
+            Vrátí nebo nastaví, jak daleko od horního okraje monitoru je horní okraj textového okna.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Shapes">
+            <summary>
+            Objekt Shapes (Tvary) umožňuje zobrazovat, přesouvat a zvětšovat základní tvary v grafickém okně.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddRectangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vytvoří tvar obdélník o zadané výšce a šířce.
+            </summary>
+            <param name="width">
+            Šířka objektu
+            </param>
+            <param name="height">
+            Výška objektu
+            </param>
+            <returns>
+            Tvar obdélníku, který byl vytvořen.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddEllipse(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vytvoří tvar elipsy o zadané výšce a šířce.
+            </summary>
+            <param name="width">
+            Šířka objektu
+            </param>
+            <param name="height">
+            Výška objektu
+            </param>
+            <returns>
+            Tvar elipsa
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddTriangle(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vytvoří tvar trojúhelník o zadaných vrcholech.
+            </summary>
+            <param name="x1">
+            X-ová souřadnice prvního vrcholu
+            </param>
+            <param name="y1">
+            Y-ová souřadnice prvního vrcholu
+            </param>
+            <param name="x2">
+            X-ová souřadnice druhého vrcholu
+            </param>
+            <param name="y2">
+            Y-ová souřadnice druhého vrcholu
+            </param>
+            <param name="x3">
+            X-ová souřadnice třetího vrcholu
+            </param>
+            <param name="y3">
+            Y-ová souřadnice třetího vrcholu
+            </param>
+            <returns>
+            Vytvořený tvar trojúhelník
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddLine(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vytvoří čáru ze zadaného bodu do zadaného bodu.
+            </summary>
+            <param name="x1">
+            X-ová souřadnice prvního bodu
+            </param>
+            <param name="y1">
+            Y-ová souřadnice prvního bodu
+            </param>
+            <param name="x2">
+            X-ová souřadnice druhého bodu
+            </param>
+            <param name="y2">
+            Y-ová souřadnice druhého bodu
+            </param>
+            <returns>
+            Vytvořený tvar čára
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddImage(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Přidá na grafické okno obrázek, který může být posouvaný, zvětšovaný a otáčený.
+            </summary>
+            <param name="imageName">
+            Odkaz na obrázek, který má být přidán. Může to být obrázek uložený na počítači (například c:\obrazky\foto1.jpg) nebo obrázek na internetu (například http://www.server.cz/obraz01.jpg)
+            </param>
+            <returns>
+            Obrázek, který byl přidán na grafické okno.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.AddText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Přidá tvar Text, který může být přesouván, zvětšován a otáčen.
+            </summary>
+            <param name="text">
+            Text, který má být přidán.
+            </param>
+            <returns>
+            Tvar text, který byl přidán.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Změní text v existujícím tvaru Text. 
+            </summary>
+            <param name="shapeName">
+            Název měněného tvaru Text
+            </param>
+            <param name="text">
+            Nová hodnota textu
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Odstraní tvar z grafického okna.
+            </summary>
+            <param name="shapeName">
+            Název tvaru k odstranění
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Přesune zadaný tvar na nové místo.
+            </summary>
+            <param name="shapeName">
+            Název tvaru k přesunutí
+            </param>
+            <param name="x">
+            X-ová souřadnice nové polohy tvaru
+            </param>
+            <param name="y">
+            Y-ová souřadnice nové polohy tvaru
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Rotate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Rotace (otočení) tvaru
+            </summary>
+            <param name="shapeName">
+            Název tvaru k otočení
+            </param>
+            <param name="angle">
+            Úhel ve stupních, o který má být tvar otočen. Kladné číslo znamená otáčení po směru hodinových ručiček.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Zoom(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Mění rozměry zadaného tvaru podle zadaného koeficientu.
+            </summary>
+            <param name="shapeName">
+            Název tvaru, který má být zvětšen nebo zmenšen.
+            </param>
+            <param name="scaleX">
+            Koeficient změny velikosti ve směru osy x
+            </param>
+            <param name="scaleY">
+            Koeficient změny velikosti ve směru osy y
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.Animate(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Plynule přesouvá tvar na nové místo.
+            </summary>
+            <param name="shapeName">
+            Název tvaru k přesunutí
+            </param>
+            <param name="x">
+            X-ová souřadnice nové polohy tvaru
+            </param>
+            <param name="y">
+            Y-ová souřadnice nové polohy tvaru
+            </param>
+            <param name="duration">
+            Čas v milisekundách, jak dlouho má trvat přesunutí.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetLeft(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací vzdálenost levého okraje zadaného tvaru od levého okraje grafického okna.
+            </summary>
+            <param name="shapeName">
+            Název tvaru
+            </param>
+            <returns>
+            Vzdálenost levého okraje zadaného tvaru od levého okraje grafického okna
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetTop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací vzdálenost horního okraje zadaného tvaru od horního okraje grafického okna.
+            </summary>
+            <param name="shapeName">
+            Název tvaru
+            </param>
+            <returns>
+            Vzdálenost horního okraje zadaného tvaru od horního okraje grafického okna.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.GetOpacity(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací úroveň průhlednosti tvaru v procentech.
+            </summary>
+            <param name="shapeName">
+            Název tvaru
+            </param>
+            <returns>
+            Úroveň průhlednosti tvaru v procentech. 0 znamená zcela průhledný tvar, 100 zcela neprůhledný.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.SetOpacity(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nastaví úroveň průhlednosti tvaru v procentech.
+            </summary>
+            <param name="shapeName">
+            Název tvaru
+            </param>
+            <param name="level">
+            Úroveň průhlednosti tvaru v procentech. 0 znamená zcela průhledný tvar, 100 zcela neprůhledný.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.HideShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Skryje zadaný tvar.
+            </summary>
+            <param name="shapeName">
+            Název tvaru
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Shapes.ShowShape(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zobrazí na grafickém okně tvar.
+            </summary>
+            <param name="shapeName">
+            Název tvaru
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Controls">
+            <summary>
+            Objekt Controls (Ovládací prvky) umožňuje práci s ovládacími prvky jako tlačítka, textová pole atp.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddButton(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Přidá tlačítko na zadané místo v grafickém okně.
+            </summary>
+            <param name="caption">
+            Nápis na tlačítku
+            </param>
+            <param name="left">
+            X-ová souřadnice levého okraje tlačítka
+            </param>
+            <param name="top">
+            Y-ová souřadnice horního kraje tlačítka
+            </param>
+            <returns>
+            Tlačítko, které bylo přidáno.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetButtonCaption(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrátí text napsaný na zadaném tlačítku.
+            </summary>
+            <param name="buttonName">
+            Název tlačítka
+            </param>
+            <returns>
+            Aktuální text na tlačítku
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetButtonCaption(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nastaví text, který má být napsaný na tlačítku.
+            </summary>
+            <param name="buttonName">
+            Název tlačítka
+            </param>
+            <param name="caption">
+            Nový nápis na tlačítku
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Přidá do grafického okna nové pole pro zadávání textu.
+            </summary>
+            <param name="left">
+            Vzdálenost levého okraje textového pole od levého kraje grafického okna
+            </param>
+            <param name="top">
+            Vzdálenost horního okraje textového pole od horního okraje grafického okna
+            </param>
+            <returns>
+            Textové pole, které bylo přidáno.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.AddMultiLineTextBox(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Přidá do grafického okna nové pole pro zadávání víceřádkového textu.
+            </summary>
+            <param name="left">
+            Vzdálenost levého okraje textového pole od levého kraje grafického okna
+            </param>
+            <param name="top">
+            Vzdálenost horního okraje textového pole od horního okraje grafického okna
+            </param>
+            <returns>
+            Víceřádkové textové pole, které bylo přidáno.
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.GetTextBoxText(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Vrací text zadaný v textovém poli.
+            </summary>
+            <param name="textBoxName">
+            Název textového pole, jehož hodnotu chceme získat.
+            </param>
+            <returns>
+            Text zadaný v textovém poli
+            </returns>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetTextBoxText(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Napíše do textového pole zadaný text.
+            </summary>
+            <param name="textBoxName">
+            Název textového pole, do kterého chceme zadat text.
+            </param>
+            <param name="text">
+            Nový text, který se má napsat do textového pole.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Remove(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Odstraní ovládací prvek z grafického okna. 
+            </summary>
+            <param name="controlName">
+            Název ovládacího prvku, který má být odstraněn.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.Move(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Přesune ovládací prvek na nové místo.
+            </summary>
+            <param name="control">
+            Název ovládacího prvku, který má být přesunut.
+            </param>
+            <param name="x">
+            X-ová souřadnice nového místa
+            </param>
+            <param name="y">
+            Y-ová souřadnice nového místa
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.SetSize(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Nastaví velikost zadaného ovládacího prvku.
+            </summary>
+            <param name="control">
+            Název ovládacího prvku, který má být zvětšen nebo zmenšen.
+            </param>
+            <param name="width">
+            Nová šířka ovládacího prvku
+            </param>
+            <param name="height">
+            Nová výška ovládacího prvku
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.HideControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Skryje ovládací prvek.
+            </summary>
+            <param name="controlName">
+            Název ovládacího prvku, který má být skrytý.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Controls.ShowControl(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zobrazí v grafickém okně zadaný ovládací prvek.
+            </summary>
+            <param name="controlName">
+            Název ovládacího prvku, který má být zobrazen.
+            </param>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastClickedButton">
+            <summary>
+            Vrací název tlačítka, které bylo naposled stisknuto.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Controls.LastTypedTextBox">
+            <summary>
+            Vrací název textového pole, do kterého bylo zapisováno.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.ButtonClicked">
+            <summary>
+            Nastaví podprogram, který se má vykonat, pokud bylo stisknuto tlačítko.
+            </summary>
+        </member>
+        <member name="E:Microsoft.SmallBasic.Library.Controls.TextTyped">
+            <summary>
+            Nastaví podprogram, který se má vykonat, pokud byl zadán text do textového pole.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Sound">
+            <summary>
+            Třída Sound (Zvuk) umožňuje přehrávat zvuky.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClick">
+            <summary>
+            Přehraje zvuk stisknutí tlačítka.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayClickAndWait">
+            <summary>
+            Přehraje zvuk stisknutí tlačítka a pozastaví provádění programu, dokud zvuk nedohraje.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChime">
+            <summary>
+            Přehraje zvuk zvonkohry.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimeAndWait">
+            <summary>
+            Přehraje zvuk zvonkohry a pozastaví provádění programu, dokud zvuk nedohraje.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimes">
+            <summary>
+            Přehraje zvuk krátké zvonkohry.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayChimesAndWait">
+            <summary>
+            Přehraje zvuk krátké zvonkohry a pozastaví provádění programu, dokud zvuk nedohraje.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRing">
+            <summary>
+            Přehraje zvuk domovního zvonku.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayBellRingAndWait">
+            <summary>
+            Přehraje zvuk domovního zvonku a pozastaví provádění programu, dokud zvuk nedohraje.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayMusic(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zahraje melodii podle not.
+            </summary>
+            <param name="notes">
+            Melodie, která se má přehrát. Formát not je podmnožinou jazyka Music Markup Language jazyka QBasic. Více viz: http://www.ask.com/wiki/Music_Macro_Language
+            </param>
+            <example>
+            <code>
+            Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4")
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Play(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Přehrává zvukový soubor. Může to být soubor mp3, wav nebo wma. Přehrávání jiných formátů závisí na tom, jaké zvukové kodeky jsou instalovány na počítači.
+            </para>
+            <para>
+            Pokud bylo přehrávání pozastaveno, bude pokračovat od místa zastavení.
+            </para>
+            </summary>
+            <param name="filePath">
+            Plná cesta k souboru. Může to být cesta k lokálnímu souboru (například c:\hudba\zvuk1.mp3) nebo souboru na webu (například http://www.server.cz/zvuky/zvuk1.wav).
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.PlayAndWait(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            <para>
+            Přehrává zvukový soubor a pozastaví provádění programu, dokud zvuk nedohraje. Může to být soubor mp3, wav nebo wma. Přehrávání jiných formátů závisí na tom, jaké zvukové kodeky jsou instalovány na počítači.
+            </para>
+            <para>
+            Pokud bylo přehrávání pozastaveno, bude pokračovat od místa zastavení.
+            </para>
+            </summary>
+            <param name="filePath">
+            Plná cesta k souboru. Může to být cesta k lokálnímu souboru (například c:\hudba\zvuk1.mp3) nebo souboru na webu (například http://www.server.cz/zvuky/zvuk1.wav).
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Pause(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Pozastaví přehrávání zvukového souboru. Pokud zvuk není přehráván, nestane se nic.
+            </summary>
+            <param name="filePath">
+            Plná cesta k souboru. Může to být cesta k lokálnímu souboru (například c:\hudba\zvuk1.mp3) nebo souboru na webu (například http://www.server.cz/zvuky/zvuk1.wav).
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Sound.Stop(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Zastaví přehrávání zvukového souboru. Pokud zvuk nehraje, nic se nestane.
+            </summary>
+            <param name="filePath">
+            Plná cesta k souboru. Může to být cesta k lokálnímu souboru (například c:\hudba\zvuk1.mp3) nebo souboru na webu (například http://www.server.cz/zvuky/zvuk1.wav).
+            </param>
+        </member>
+        <member name="T:Microsoft.SmallBasic.Library.Turtle">
+            <summary>
+            Třída Turtle (želva) zobrazuje malou želvičku a nabízí funkce pro kreslení tzv. želví grafiky. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Show">
+            <summary>
+            Zobrazí želvu v grafickém okně.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Hide">
+            <summary>
+            Skryje želvu.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenDown">
+            <summary>
+            Želva spustí ocásek do písku a při pohybu za sebou bude zanechávat stopu. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.PenUp">
+            <summary>
+            Želva zvedne ocásek a při pohybu nebude zanechávat stopu.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Move(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Přesune želvu o zadanou vzdálenost ve směru, ve kterém je natočena. Pokud je ocásek dole (PenDown), bude želva při pohybu kreslit čáru. Pokud je ocásek nahoře (PenUp), želva kreslit nebude.
+            </summary>
+            <param name="distance">
+            Vzdálenost, o jakou se má želva posunout.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.MoveTo(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Přesune želvu na novou pozici zadanou pomocí souřadnic. Pokud je ocásek dole (PenDown), bude želva při pohybu kreslit čáru. Pokud je ocásek nahoře (PenUp), želva kreslit nebude.
+            </summary>
+            <param name="x">
+            X-ová souřadnice nové pozice želvy
+            </param>
+            <param name="y">
+            Y-ová souřadnice nové pozice želvy
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.Turn(Microsoft.SmallBasic.Library.Primitive)">
+            <summary>
+            Otočí želvu o zadaný úhel.  
+            </summary>
+            <param name="angle">
+            Úhel, o jaký se má želva otočit. Úhel se zadává ve stupních a může to být kladné i záporné číslo. Pokud je číslo kladné, bude se želva otáčet doprava.
+            </param>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnRight">
+            <summary>
+            Otočí želvu o 90 stupňů doprava.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SmallBasic.Library.Turtle.TurnLeft">
+            <summary>
+            Otočí želvu o 90 stupňů doleva.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Speed">
+            <summary>
+            Nastavuje, jak rychle se bude želva pohybovat a otáčet. Povolené hodnoty jsou od 1 do 10. Při nastavení rychlosti na 10 se pohyby provádějí okamžitě.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Angle">
+            <summary>
+            Vrací nebo nastavuje úhel želvy. Při nastavení se želva otočí do nového směru okamžitě. Úhel se bere vzhledem k poloze, kdy je želva orientována přímo nahoru.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.X">
+            <summary>
+            Vrací nebo nastavuje x-ovou souřadnici želvy. Při nastavení se želva okamžitě přesune na novou pozici.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SmallBasic.Library.Turtle.Y">
+            <summary>
+            Vrací nebo nastavuje y-ovou souřadnici želvy. Při nastavení se želva okamžitě přesune na novou pozici.
+            </summary>
+        </member>
+    </members>
+</doc>
