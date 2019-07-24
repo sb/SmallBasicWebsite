@@ -2,3 +2,24 @@
   color: #527700;
   margin-top: 10px;
 }
+
+#tutorialsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+mat-card-title h1, h2, h3, h4 {
+  margin: 0;
+}
+
+mat-card {
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+mat-card-title, mat-card-subtitle, mat-card-content {
+  background-color: #ffffffa3;
+  margin: 0 !important;
+  padding: 0 5px 5px 0;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tutorial',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tutorial.component.css']
 })
 export class TutorialComponent implements OnInit {
+  public isOnBasePage = true;
+  private routeSubscription: Subscription;
+
   public chapters = [
     { link: "chapter1", title: "Chapter 1" },
     { link: "chapter2", title: "Chapter 2: Getting Started" },
@@ -107,7 +112,33 @@ export class TutorialComponent implements OnInit {
       ] },
   ];
 
-  constructor() {}
+  public tutorialList = [
+    {
+      title: "Comprehensive tutorial",
+      subtitle: "Estimated time to complete: 3 hours",
+      link: this.chapters[0].link,
+      image: "/assets/shelly.png",
+    },
+    {
+      title: "Self-directed tutorial",
+      subtitle: "Estimated time to complete: forever",
+      link: "https://www.google.com"
+    },
+  ];
 
-  ngOnInit() {}
+  constructor(private router: Router, private route: ActivatedRoute) {
+  }
+
+  ngOnInit() {
+    // Listen to route changes to see if we're on the base page or not
+    this.routeSubscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.isOnBasePage = this.route.children.length == 0;
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.routeSubscription.unsubscribe();
+  }
 }

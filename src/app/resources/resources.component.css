@@ -3,15 +3,6 @@
   flex-wrap: wrap;
 }
 
-.mat-card {
-  flex: 1;
-  min-height: 10em;
-  min-width: 10em;
-  margin: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 #featuredPrograms {
   flex-basis: 100%;
 }

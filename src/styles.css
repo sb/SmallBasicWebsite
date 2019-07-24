@@ -94,3 +94,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 50%;
   flex-grow: 1;
 }
+
+mat-card {
+  flex: 1;
+  min-height: 10em;
+  min-width: 10em;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
