@@ -13,14 +13,15 @@ export class DocumentationComponent implements OnInit {
   public currentDocIndex: number;
   public selectedLanguage: string;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,
+    public docService: DocumentationService) {
   }
 
   ngOnInit() {
     // Get the language options and all the documentation for the default language
-    this.languages = DocumentationService.getLanguages();
+    this.languages = this.docService.getLanguages();
     this.selectedLanguage = this.languages[0];
-    this.docs = DocumentationService.getDocumentation(this.selectedLanguage);
+    this.docs = this.docService.getDocumentation(this.selectedLanguage);
 
     // Subscribe to route changes to get the current item being viewed
     this.route.params.subscribe(() => {
@@ -33,7 +34,7 @@ export class DocumentationComponent implements OnInit {
   // Language selection has changed, get new documentation
   languageChanged() {
     console.log(this.selectedLanguage);
-    this.docs = DocumentationService.getDocumentation(this.selectedLanguage);
+    this.docs = this.docService.getDocumentation(this.selectedLanguage);
   }
 
   public enumToClass(enumVal: DocType): string {

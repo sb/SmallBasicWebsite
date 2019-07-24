@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import * as parser from 'fast-xml-parser';
 
 export enum DocType {
   Object,
@@ -45,16 +47,66 @@ export class Property {
   providedIn: 'root'
 })
 export class DocumentationService {
+  private parserOptions = { 
+    localeRange: "", //To support non english character in tag/attribute values.
+    parseTrueNumberOnly: false,
+    ignoreAttributes: false
+  };
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   // Gets the supported languages for documentation
-  public static getLanguages(): string[] {
+  public getLanguages(): string[] {
     return ["english", "other language", "idk"];
   }
 
   // Gets the small basic documentation for a given language
-  public static getDocumentation(language: string): ParentDoc[] {
+  public getDocumentation(language: string): ParentDoc[] {
+    this.http.get('/assets/documentation/xml/SmallBasicLibrary.xml', { responseType: 'text' })
+      .subscribe((data) => {
+        if (parser.validate(data) === true) {
+          var jsonObj = parser.parse(data, this.parserOptions);
+          var parentDocs: ParentDoc[] = [];
+          jsonObj.doc.members.member.forEach((member) => {
+            var usage = member["@_name"];
+            usage = usage.replace(":Microsoft.SmallBasic.Library.", "");
+            usage = usage.replace(/Microsoft.SmallBasic.Library.Primitive/g, "param");
+            var type = usage[0];
+            usage = usage.substring(1);
+            switch (type) {
+              case "T":
+                parentDocs.push({
+                  name: usage,
+                  type: type,
+                  summary: member.summary,
+                  events: [],
+                  operations: [],
+                  properties: []
+                });
+                break;
+              case "M":
+                console.log(member);
+                //type = DocType.Operation;
+                break;
+              case "P":
+                //type = DocType.Property;
+                break;
+              case "E":
+                //type = DocType.Event;
+                break;
+              default:
+                //type = DocType.Keyword;
+                console.log(usage[0]);
+                console.log(member.summary);
+                console.log(member);
+            }
+          });
+        } else {
+          console.log("Invalid library contents");
+        }
+        return parentDocs;
+      });
+    
     return [{
       name: "Turtle",
       type: DocType.Object,
@@ -111,5 +163,6 @@ export class DocumentationService {
           summary: "Raises an event when a key is pressed down on the keyboard."
         }]
       }];
+    
   }
 }
