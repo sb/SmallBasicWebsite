@@ -93,8 +93,6 @@ export class TutorialComponent implements OnInit {
     {
       link: "appendixA", title: "Appendix A: Fun Samples", sections: [
         { link: "Turtle_Fractal", title: "Turtle Fractal" },
-        { link: "Photos_from_Flickr", title: "Photos from Flickr" },
-        { link: "Dynamic_Desktop_Wallpaper", title: "Dynamic Desktop Wallpaper" },
         { link: "Paddle_Game", title: "Paddle Game" },
       ] },
     {
