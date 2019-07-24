@@ -8,6 +8,17 @@
   flex-wrap: wrap;
 }
 
+.background {
+  position: absolute;
+  font-size: 800%;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  font-weight: 900;
+  z-index: -1;
+  opacity: .5;
+}
+
 mat-card-title h1, h2, h3, h4 {
   margin: 0;
 }
@@ -16,6 +27,7 @@ mat-card {
   background-position: bottom right;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 mat-card-title, mat-card-subtitle, mat-card-content {
