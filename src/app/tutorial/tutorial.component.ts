@@ -110,6 +110,80 @@ export class TutorialComponent implements OnInit {
       ] },
   ];
 
+  public curriculumColors = ["orangered", "green", "lightseagreen", "dodgerblue", "mediumpurple" ];
+  public curriculumList = [
+    {
+      title: "Practice 1",
+      subtitle: "Introduction & Displaying Text",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice01.pdf",
+    },
+    {
+      title: "Practice 2",
+      subtitle: "Graphics and Coordinates",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice02.pdf",
+    },
+    {
+      title: "Practice 3",
+      subtitle: "Variables",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice03.pdf",
+    },
+    {
+      title: "Practice 4",
+      subtitle: "More Variables",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice04.pdf",
+    },
+    {
+      title: "Practice 5",
+      subtitle: "Condtitionals",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice05.pdf",
+    },
+    {
+      title: "Practice 6",
+      subtitle: "While Loops",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice06.pdf",
+    },
+    {
+      title: "Practice 7",
+      subtitle: "For Loops",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice07.pdf",
+    },
+    {
+      title: "Practice 8",
+      subtitle: "Subroutines",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice08.pdf",
+    },
+    {
+      title: "Practice 9",
+      subtitle: "Events",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice09.pdf",
+    },
+    {
+      title: "Practice 10",
+      subtitle: "Arrays",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice10.pdf",
+    },
+    {
+      title: "Practice 11",
+      subtitle: "Math",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice11.pdf",
+    },
+    {
+      title: "Practice 12",
+      subtitle: "Advanced Math",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice12.pdf",
+    },
+    {
+      title: "Practice 13",
+      subtitle: "Images",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice13.pdf",
+    },
+    {
+      title: "Practice 14",
+      subtitle: "Turtle Graphics",
+      downloadLink: "/assets/tutorial-downloads/CodingClub_Practice14.pdf",
+    }
+  ];
+
   public tutorialList = [
     {
       title: "Level 1 Tutorial",
