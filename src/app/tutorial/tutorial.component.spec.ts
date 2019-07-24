@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { TutorialComponent } from './tutorial.component';
@@ -15,7 +16,8 @@ describe('TutorialComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes),
+        MatCardModule
       ],
       declarations: [
         TutorialComponent,
