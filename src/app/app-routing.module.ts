@@ -22,6 +22,8 @@ import { Chapter11Component } from './tutorial/chapters/chapter11/chapter11.comp
 import { AppendixAComponent } from './tutorial/chapters/appendixA/appendixA.component';
 import { AppendixBComponent } from './tutorial/chapters/appendixB/appendixB.component';
 
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 const routes: Routes = [
     { path: "", component: HomeComponent },
     { path: "contact", component: ContactComponent },
@@ -29,24 +31,25 @@ const routes: Routes = [
     { path: "resources", component: ResourcesComponent },
     { path: "docs", redirectTo: "docs/Turtle" },
     { path: "docs/:id", component: DocumentationComponent },
-  {
-    path: "tutorials", component: TutorialComponent, children: [
-      { path: '', pathMatch: 'full', redirectTo: 'chapter1' },
-      { path: 'chapter1', component: Chapter1Component },
-      { path: 'chapter1', component: Chapter1Component },
-      { path: 'chapter2', component: Chapter2Component },
-      { path: 'chapter3', component: Chapter3Component },
-      { path: 'chapter4', component: Chapter4Component },
-      { path: 'chapter5', component: Chapter5Component },
-      { path: 'chapter6', component: Chapter6Component },
-      { path: 'chapter7', component: Chapter7Component },
-      { path: 'chapter8', component: Chapter8Component },
-      { path: 'chapter9', component: Chapter9Component },
-      { path: 'chapter10', component: Chapter10Component },
-      { path: 'chapter11', component: Chapter11Component },
-      { path: 'appendixA', component: AppendixAComponent },
-      { path: 'appendixB', component: AppendixBComponent },
-    ]}
+    {
+      path: "tutorials", component: TutorialComponent, children: [
+        { path: 'chapter1', component: Chapter1Component },
+        { path: 'chapter1', component: Chapter1Component },
+        { path: 'chapter2', component: Chapter2Component },
+        { path: 'chapter3', component: Chapter3Component },
+        { path: 'chapter4', component: Chapter4Component },
+        { path: 'chapter5', component: Chapter5Component },
+        { path: 'chapter6', component: Chapter6Component },
+        { path: 'chapter7', component: Chapter7Component },
+        { path: 'chapter8', component: Chapter8Component },
+        { path: 'chapter9', component: Chapter9Component },
+        { path: 'chapter10', component: Chapter10Component },
+        { path: 'chapter11', component: Chapter11Component },
+        { path: 'appendixA', component: AppendixAComponent },
+        { path: 'appendixB', component: AppendixBComponent },
+      ]
+    },
+    { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

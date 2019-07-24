@@ -18,8 +18,30 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm ci
-    ng build --prod
+    ng build --prod    
   displayName: 'npm install and build'
+
+- script: |
+    ng test --browsers ChromeHeadless --watch=false --code-coverage  
+  displayName: 'Run unit test'
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish code coverage Angular results'
+  condition: succeededOrFailed()
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: 'coverage/cobertura-coverage.xml'
+    reportDirectory: coverage
+    failIfCoverageEmpty: true
+
+- task: PublishTestResults@2
+  displayName: 'Publish Angular test results'
+  condition: succeededOrFailed()
+  inputs:
+    searchFolder: $(System.DefaultWorkingDirectory)
+    testRunTitle: Angular
+    testResultsFormat: JUnit
+    testResultsFiles: "junit/**/TESTS*.xml"
 
 - task: CopyFiles@2
   inputs:

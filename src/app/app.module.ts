@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ import { Chapter11Component } from './tutorial/chapters/chapter11/chapter11.comp
 import { AppendixAComponent } from './tutorial/chapters/appendixA/appendixA.component';
 import { AppendixBComponent } from './tutorial/chapters/appendixB/appendixB.component';
 import { DocumentationComponent } from './documentation/documentation.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ import { DocumentationComponent } from './documentation/documentation.component'
     AppendixAComponent,
     AppendixBComponent,
     DocumentationComponent,
+    PageNotFoundComponent,
   ],
   imports: [
       BrowserModule,
@@ -64,6 +67,7 @@ import { DocumentationComponent } from './documentation/documentation.component'
       AppRoutingModule,
       MatExpansionModule,
       MatButtonModule,
+      MatCardModule,
       FormsModule
   ],
   providers: [],

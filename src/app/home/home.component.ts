@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnouncementsService, FeedItem } from './announcements.service';
-import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-home',

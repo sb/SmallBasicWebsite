@@ -1,6 +1,29 @@
 <!--Show the basic tutorial structure on all /tutorials pages-->
 <div id="contentWrapper">
-  <div class="left-nav-and-right-content">
+  <div *ngIf="isOnBasePage">
+    Try out small basic with these tutorials!
+    <div id="tutorialsWrapper">
+      <mat-card *ngFor="let tutorial of tutorialList"
+                [ngStyle]="tutorial.image?{'background-image': 'url('+ tutorial.image + ')'} : {}">
+        <mat-card-title><h4>{{tutorial.title}}</h4></mat-card-title>
+        <mat-card-subtitle>{{tutorial.subtitle}}</mat-card-subtitle>
+        <mat-card-content>
+          <div *ngIf="tutorial.link">
+            <ng-container *ngIf="tutorial.link.startsWith('http'); else internal">
+              <a href="{{tutorial.link}}" target="_blank">Start {{tutorial.title | lowercase }}</a>
+            </ng-container>
+            <ng-template #internal>
+              <a routerLink="{{tutorial.link}}">Start {{tutorial.title | lowercase }}</a>
+            </ng-template>
+          </div>
+          <div *ngIf="tutorial.downloadLink">
+            <a href="{{tutorial.downloadLink}}" download="{{tutorial.title}}.pdf">Download {{tutorial.title | lowercase }}</a>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="left-nav-and-right-content" *ngIf="!isOnBasePage">
     <div class="left-nav">
       <h3>Table of Contents</h3>
       <ul>
@@ -14,7 +37,7 @@
         </li>
         <li id="api-link">
           <a routerLink="/docs">API Reference</a>
-        </li> 
+        </li>
       </ul>
     </div>
     <div class="right-content">
