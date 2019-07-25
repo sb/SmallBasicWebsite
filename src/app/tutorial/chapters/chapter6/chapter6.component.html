@@ -1,5 +1,5 @@
 <div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
-  <h2>Chapter 6: Beginning Graphics</h2>
+  <h2 id="top">Chapter 6: Beginning Graphics</h2>
   <p>
     So far in all our examples, we’ve used the TextWindow to explain the
     fundamentals of the Small Basic language. However, Small Basic comes with a
@@ -324,10 +324,18 @@ GraphicsWindow.FillEllipse(100, 100, 100, 100)</code></pre>
   </div>
 
   <div>
-    <a style="float: left;" routerLink="../chapter5" title="Previous Chapter"
+    <a
+      style="float: left;"
+      [routerLink]="['/tutorials/chapter5']"
+      fragment="top"
+      title="Previous Chapter"
       >Previous Chapter: Loops</a
     >
-    <a style="float: right;" routerLink="../chapter7" title="Next Chapter"
+    <a
+      style="float: right;"
+      [routerLink]="['/tutorials/chapter7']"
+      fragment="top"
+      title="Next Chapter"
       >Next Chapter: Shapes</a
     >
   </div>

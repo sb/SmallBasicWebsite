@@ -1,5 +1,5 @@
 <div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
-  <h2>Chapter 8: Turtle Graphics</h2>
+  <h2 id="top">Chapter 8: Turtle Graphics</h2>
   <div class="BostonPostCard">
     <h3><a name="Logo"></a>Logo</h3>
     <p>
@@ -298,10 +298,18 @@ EndFor</code></pre>
     </p>
   </div>
   <div>
-    <a style="float: left;" routerLink="../chapter7" title="Previous Chapter"
+    <a
+      style="float: left;"
+      [routerLink]="['/tutorials/chapter7']"
+      fragment="top"
+      title="Previous Chapter"
       >Previous Chapter: Shapes</a
     >
-    <a style="float: right;" routerLink="../chapter9" title="Next Chapter"
+    <a
+      style="float: right;"
+      [routerLink]="['/tutorials/chapter9']"
+      fragment="top"
+      title="Next Chapter"
       >Next Chapter: Subroutines</a
     >
   </div>
