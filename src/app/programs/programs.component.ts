@@ -44,7 +44,6 @@ export class ProgramsComponent {
   ];
 
   public programs: ProgramItem[] = [];
-  isDataLoaded: boolean = false;
 
   constructor(public projectsService: FeedsService) { }
 
@@ -57,7 +56,6 @@ export class ProgramsComponent {
         }
       });
       this.programs = list;
-      this.isDataLoaded = true;
     });
   }
 
