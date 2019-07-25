@@ -1,8 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
 import { RouterModule, Routes, ActivatedRoute } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from '../home/home.component';
 import { DocumentationComponent } from './documentation.component';
+import { SbcodePipe } from '../sbcode.pipe';
 import { FormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
@@ -16,11 +18,13 @@ describe('DocumentationComponent', () => {
       imports: [
         RouterModule.forRoot(routes),
         FormsModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        MatCardModule
       ],
       declarations: [
         HomeComponent,
-        DocumentationComponent
+        DocumentationComponent,
+        SbcodePipe
       ]
     })
     .compileComponents();
