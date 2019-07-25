@@ -1,5 +1,5 @@
 <div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
-  <h2>Chapter 5: Loops</h2>
+  <h2 id="top">Chapter 5: Loops</h2>
   <div class="BostonPostCard">
     <h3><a name="For_Loop"></a>For Loop</h3>
     <p style="margin-bottom: 20px;">
@@ -176,10 +176,18 @@ EndIf</code></pre>
     </p>
   </div>
   <div>
-    <a style="float: left;" routerLink="../chapter4" title="Previous Chapter"
+    <a
+      style="float: left;"
+      [routerLink]="['/tutorials/chapter4']"
+      fragment="top"
+      title="Previous Chapter"
       >Previous Chapter: Conditions</a
     >
-    <a style="float: right;" routerLink="../chapter6" title="Next Chapter"
+    <a
+      style="float: right;"
+      [routerLink]="['/tutorials/chapter6']"
+      fragment="top"
+      title="Next Chapter"
       >Next Chapter: Graphics</a
     >
   </div>

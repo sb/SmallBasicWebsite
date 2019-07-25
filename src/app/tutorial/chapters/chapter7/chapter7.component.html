@@ -1,5 +1,5 @@
 <div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
-  <h2>Chapter 7: Fun With Shapes</h2>
+  <h2 id="top">Chapter 7: Fun With Shapes</h2>
   <p>
     We’re going to have some fun in this chapter with whatever we’ve learned so
     far. This chapter contains samples that show some interesting ways of
@@ -202,10 +202,18 @@ GraphicsWindow.SetPixel(x, y, color)</code></pre>
   </div>
 
   <div>
-    <a style="float: left;" routerLink="../chapter6" title="Previous Chapter"
+    <a
+      style="float: left;"
+      [routerLink]="['/tutorials/chapter6']"
+      fragment="top"
+      title="Previous Chapter"
       >Previous Chapter: Graphics</a
     >
-    <a style="float: right;" routerLink="../chapter8" title="Next Chapter"
+    <a
+      style="float: right;"
+      [routerLink]="['/tutorials/chapter8']"
+      fragment="top"
+      title="Next Chapter"
       >Next Chapter: Turtle</a
     >
   </div>

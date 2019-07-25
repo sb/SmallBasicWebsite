@@ -1,5 +1,5 @@
 <div class="container mrg-top20 sb-main-container" style="margin-bottom: 50px">
-  <h2>Appendix A: Fun Samples</h2>
+  <h2 id="top">Appendix A: Fun Samples</h2>
   <table class="multicol">
     <tbody>
       <tr>
@@ -116,10 +116,18 @@ EndSub</code></pre>
     &nbsp;
   </p>
   <div>
-    <a style="float: left;" routerLink="../chapter11" title="Previous Chapter"
+    <a
+      style="float: left;"
+      [routerLink]="['/tutorials/chapter11']"
+      fragment="top"
+      title="Previous Chapter"
       >Previous Chapter: Events</a
     >
-    <a style="float: right;" routerLink="../appendixB" title="Appendix"
+    <a
+      style="float: right;"
+      [routerLink]="['/tutorials/appendixB']"
+      fragment="top"
+      title="Appendix"
       >Appendix B: Colors</a
     >
   </div>

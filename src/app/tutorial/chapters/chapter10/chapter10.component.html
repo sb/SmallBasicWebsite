@@ -1,5 +1,5 @@
 <div class="container mrg-top20 sb-main-container" style="margin-bottom:50px">
-  <h2 class="title">Chapter 10. Arrays</h2>
+  <h2 class="title" id="top">Chapter 10. Arrays</h2>
   <h3><a name="Review_Variables"></a>Review Variables</h3>
   <p>
     By now you must be well versed with how to use variables – after all you
@@ -367,10 +367,18 @@ EndFor</code></pre>
     <strong>Figure 10.8 - Keeping track of boxes in the grid</strong>
   </p>
   <div>
-    <a style="float:left;" routerLink="../chapter9" title="Previous Chapter"
+    <a
+      style="float:left;"
+      [routerLink]="['/tutorials/chapter9']"
+      fragment="top"
+      title="Previous Chapter"
       >Previous Chapter: Subroutines</a
     >
-    <a style="float:right;" routerLink="../chapter11" title="Next Chapter"
+    <a
+      style="float:right;"
+      [routerLink]="['/tutorials/chapter11']"
+      fragment="top"
+      title="Next Chapter"
       >Next Chapter: Events</a
     >
   </div>
