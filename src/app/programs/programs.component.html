@@ -1,12 +1,29 @@
-<div *ngFor="let topic of topics; index as i">
-  <h3>{{topic.subject}}</h3>
-  <div class="prog-grid">
-    <div *ngFor="let program of topic.programs" class="prog-cell">
-      <h4>{{program.name}}</h4>
-      <img src={{program.src}} alt={{program.alt}} title={{program.title}}>
-      <p>{{program.description}}</p>
-      <a href={{program.link}} class="prog-btn">Check it out</a>
-      <p>Import ID = <strong>{{program.importID}}</strong></p>
+<div>
+  <h3>Featured Programs</h3>
+  <div *ngIf="programs.length">
+    <div class="prog-grid">
+      <div *ngFor="let program of programs | slice: 0:3" class="prog-cell">
+        <h4>{{ program.title }}</h4>
+        <p>{{ program.description }}</p>
+        <a href="{{ program.link }}" class="prog-btn">Check it out</a>
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let topic of topics; index as i">
+    <div class="prog-grid">
+      <div *ngFor="let program of topic.programs" class="prog-cell">
+        <h4>{{ program.name }}</h4>
+        <img
+          src="{{ program.src }}"
+          alt="{{ program.alt }}"
+          title="{{ program.title }}"
+        />
+        <p>{{ program.description }}</p>
+        <a href="{{ program.link }}" class="prog-btn">Check it out</a>
+        <p>
+          Import ID = <strong>{{ program.importID }}</strong>
+        </p>
+      </div>
     </div>
   </div>
 </div>
