@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProjectsService, ProgramItem } from './projects.service';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-programs',
@@ -41,6 +43,22 @@ export class ProgramsComponent {
     },
   ];
 
-  constructor() { }
+  public programs: ProgramItem[] = [];
+  isDataLoaded: boolean = false;
+
+  constructor(public projectsService: ProjectsService) { }
+
+  ngOnInit() {
+    this.projectsService.getPrograms().then((programs) => {
+      let list: Array<{ title: string, link: string, description: string, }> = [];
+      programs.forEach((program) => {
+        if (program.title.toLowerCase().includes('small basic featured program')) {
+          list.push(program);
+        }
+      });
+      this.programs = list;
+      this.isDataLoaded = true;
+    });
+  }
 
 }
