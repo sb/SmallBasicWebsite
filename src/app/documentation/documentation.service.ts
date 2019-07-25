@@ -155,6 +155,8 @@ export class DocumentationService {
                         name: params["@_name"],
                         summary: params["#text"]
                       }];
+                    } else {
+                      usage += "()";
                     }
 
                     // Replace the usage signature with param names

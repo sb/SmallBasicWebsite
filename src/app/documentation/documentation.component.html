@@ -36,25 +36,25 @@
     </div>
     <div class="right-content">
       <div *ngIf="currentDocIndex >= 0; else notFound">
-        <h3 class="{{enumToClass(docs[currentDocIndex].type)}}">{{docs[currentDocIndex].name}}</h3>
+        <h1 class="{{enumToClass(docs[currentDocIndex].type)}} sb-object">{{docs[currentDocIndex].name}}</h1>
         <div class="description">
           {{docs[currentDocIndex].summary}}
         </div>
 
-        <div class="docSubtype" *ngIf="docs[currentDocIndex].properties.length > 0">
+        <mat-card class="docSubtype mat-elevation-z10" *ngIf="docs[currentDocIndex].properties.length > 0">
           <h3 class="property">Properties</h3>
-          <div *ngFor="let property of docs[currentDocIndex].properties" id="{{property.name}}" class="docChild">
-            <h4 class="property">{{docs[currentDocIndex].name}}.{{property.name}}</h4>
+          <mat-card *ngFor="let property of docs[currentDocIndex].properties" id="{{property.name}}" class="docChild mat-elevation-z10">
+            <h4 class="property" [innerHtml]="docs[currentDocIndex].name + '.' + property.name | sbcode"></h4>
             <div class="description">{{property.summary}}
               <ng-container *ngIf="property.isReadOnly">(read-only)</ng-container>
             </div>
-          </div>
-        </div>
+          </mat-card>
+        </mat-card>
           
-        <div class="docSubtype" *ngIf="docs[currentDocIndex].operations.length > 0">
+        <mat-card class="docSubtype mat-elevation-z10" *ngIf="docs[currentDocIndex].operations.length > 0">
           <h3 class="operation">Operations</h3>
-          <div *ngFor="let operation of docs[currentDocIndex].operations" id="{{operation.name}}" class="docChild">
-            <h4 class="operation">{{operation.operationSignature}}</h4>
+          <mat-card *ngFor="let operation of docs[currentDocIndex].operations" id="{{operation.name}}" class="docChild mat-elevation-z10">
+            <h4 class="operation" [innerHtml]="operation.operationSignature | sbcode"></h4>
             <div class="description">
               {{operation.summary}}
               <ng-container *ngIf="operation.parameters.length > 0">
@@ -68,23 +68,23 @@
                 {{operation.returnType}}
               </div>
             </div>
-          </div>
-        </div>
+          </mat-card>
+        </mat-card>
 
-        <div class="docSubtype" *ngIf="docs[currentDocIndex].events.length > 0">
+        <mat-card class="docSubtype mat-elevation-z10" *ngIf="docs[currentDocIndex].events.length > 0">
           <h3 class="event">Events</h3>
-          <div *ngFor="let event of docs[currentDocIndex].events" id="{{event.name}}" class="docChild">
-            <h4 class="event">{{docs[currentDocIndex].name}}.{{event.name}}</h4>
+          <mat-card *ngFor="let event of docs[currentDocIndex].events" id="{{event.name}}" class="docChild mat-elevation-z10">
+            <h4 class="event" [innerHtml]="docs[currentDocIndex].name + '.' + event.name | sbcode"></h4>
             <div class="description">{{event.summary}}</div>
-          </div>
-        </div>
+          </mat-card>
+        </mat-card>
 
-        <div class="docSubtype" *ngIf="docs[currentDocIndex].keywords.length > 0">
-          <div *ngFor="let keyword of docs[currentDocIndex].keywords" id="{{keyword.name}}" class="docChild">
-            <h4 class="keyword">{{docs[currentDocIndex].name}}.{{keyword.name}}</h4>
+        <mat-card class="docSubtype mat-elevation-z10" *ngIf="docs[currentDocIndex].keywords.length > 0">
+          <mat-card *ngFor="let keyword of docs[currentDocIndex].keywords" id="{{keyword.name}}" class="docChild mat-elevation-z10">
+            <h4 class="keyword" [innerHtml]="keyword.name | sbcode"></h4>
             <div class="description">{{keyword.summary}}</div>
-          </div>
-        </div>
+          </mat-card>
+        </mat-card>
       </div>
       <ng-template #notFound>Documentation not found</ng-template>
     </div>
