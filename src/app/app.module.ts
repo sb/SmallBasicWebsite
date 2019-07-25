@@ -33,6 +33,7 @@ import { AppendixAComponent } from './tutorial/chapters/appendixA/appendixA.comp
 import { AppendixBComponent } from './tutorial/chapters/appendixB/appendixB.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SbcodePipe } from './sbcode.pipe';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppendixBComponent,
     DocumentationComponent,
     PageNotFoundComponent,
+    SbcodePipe,
   ],
   imports: [
       BrowserModule,

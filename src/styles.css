@@ -103,3 +103,27 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+/*Styles for sbcode pipe output*/
+.sb-code {
+  font-family: monospace;
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+.sb-keyword {
+  font-weight: bold;
+  color: mediumpurple !important;
+}
+
+.sb-object {
+  color: seagreen !important;
+}
+
+.sb-propertyOrEvent {
+  color: darkred !important;
+}
+
+.sb-param {
+  color: orangered !important;
+}

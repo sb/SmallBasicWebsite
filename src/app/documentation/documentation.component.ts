@@ -33,7 +33,6 @@ export class DocumentationComponent implements OnInit {
 
   // Language selection has changed, get new documentation
   languageChanged() {
-    console.log(this.selectedLanguage);
     this.docService.getDocumentation(this.selectedLanguage).then((docs) => {
       this.docs = docs;
       this.currentDocIndex = this.docs.findIndex((doc) => {
