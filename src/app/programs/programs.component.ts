@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectsService, ProgramItem } from './projects.service';
+import { FeedsService, ProgramItem } from '../commonservices/feeds.service';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -46,7 +46,7 @@ export class ProgramsComponent {
   public programs: ProgramItem[] = [];
   isDataLoaded: boolean = false;
 
-  constructor(public projectsService: ProjectsService) { }
+  constructor(public projectsService: FeedsService) { }
 
   ngOnInit() {
     this.projectsService.getPrograms().then((programs) => {

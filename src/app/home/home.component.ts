@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AnnouncementsService, FeedItem } from './announcements.service';
+import { FeedsService, FeedItem } from '../commonservices/feeds.service';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +10,14 @@ export class HomeComponent implements OnInit {
     public announcements: FeedItem[] = [];
     public forumPosts: FeedItem[] = [];
 
-    constructor(public announcementService: AnnouncementsService) { }
+    constructor(public feedService: FeedsService) { }
 
     ngOnInit() {
-        this.announcementService.getAnnouncements().then((announcements) => {
+        this.feedService.getAnnouncements().then((announcements) => {
             this.announcements = announcements;
         });
 
-        this.announcementService.getForumPosts().then((forumPosts) => {
+        this.feedService.getForumPosts().then((forumPosts) => {
             this.forumPosts = forumPosts;
         });
     }
