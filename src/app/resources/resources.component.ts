@@ -11,6 +11,10 @@ export class ResourcesComponent implements OnInit {
             subject: "Introduction to Small Basic",
             resources: [
                 {
+                    description: "Introduction Whitepaper",
+                    link: "http://download.microsoft.com/download/9/0/6/90616372-C4BF-4628-BC82-BD709635220D/Introducing%20Small%20Basic.pdf"
+                },
+                {
                      description: "Wiki",
                      link: "http://social.technet.microsoft.com/wiki/contents/articles/17553.wiki-small-basic-portal.aspx"
                 },
@@ -29,8 +33,8 @@ export class ResourcesComponent implements OnInit {
            subject: "Learning & Community",
            resources: [
                 {
-                    description: "Tutorial",
-                    link: "http://download.microsoft.com/download/9/0/6/90616372-C4BF-4628-BC82-BD709635220D/Introducing%20Small%20Basic.pdf"
+                    description: "Tutorials",
+                    link: "/tutorials"
                 },
                 {
                      description: "API reference",
@@ -45,7 +49,7 @@ export class ResourcesComponent implements OnInit {
                      link: "http://blogs.msdn.com/b/smallbasic/archive/2012/10/12/small-basic-extensions-gallery.aspx"
                 },
                 {
-                     description: "Curriculum",
+                     description: "Teacher Curriculum",
                      link: "http://social.technet.microsoft.com/wiki/contents/articles/16299.small-basic-curriculum.aspx"
                 },
                 {
@@ -55,11 +59,15 @@ export class ResourcesComponent implements OnInit {
             ]
       },
       {
-            subject: "Building Small Basic applications for other platforms",
+            subject: "Small Basic on other platforms",
             resources: [
                 {
                     description: "Lego Mindstorms",
                     link: "https://blogs.msdn.microsoft.com/smallbasic/2015/10/18/lego-mindstorms-ev3-extension-for-small-basic-ev3-basic"
+                },
+                {
+                    description: "micro:bit",
+                    link: "https://blogs.msdn.microsoft.com/smallbasic/2017/09/13/small-basic-microbit/"
                 },
                 {
                     description: "Oculus Rift",
