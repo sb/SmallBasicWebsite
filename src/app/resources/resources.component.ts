@@ -66,6 +66,10 @@ export class ResourcesComponent implements OnInit {
                     link: "https://blogs.msdn.microsoft.com/smallbasic/2017/09/13/small-basic-microbit/"
                 },
                 {
+                    description: "QR Code & Barcode",
+                    link: "https://blogs.msdn.microsoft.com/smallbasic/2013/06/02/barcode-extension-for-small-basic/"
+                },
+                {
                     description: "Oculus Rift",
                     link: "https://blogs.msdn.microsoft.com/smallbasic/2016/03/26/new-oculus-rift-extension-for-small-basic-oculus-sb/"
                 },
