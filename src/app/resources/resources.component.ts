@@ -11,6 +11,10 @@ export class ResourcesComponent implements OnInit {
             subject: "Introduction to Small Basic",
             resources: [
                 {
+                     description: "Comprehensive Tutorial",
+                     link: "/tutorials/chapter1"
+                },
+                {
                      description: "Wiki",
                      link: "http://social.technet.microsoft.com/wiki/contents/articles/17553.wiki-small-basic-portal.aspx"
                 },
