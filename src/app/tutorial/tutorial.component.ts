@@ -193,7 +193,7 @@ export class TutorialComponent implements OnInit {
     },
     {
       title: "Level 2 Tutorial",
-      subtitle: "Estimated time to complete: 1 hour",
+      subtitle: "Builds on the code from the Level 1 tutorial. Estimated time to complete: 1 hour",
       downloadLink: "/assets/tutorial-downloads/Level2.pdf",
       image: "/assets/turtle2.png"
     },
