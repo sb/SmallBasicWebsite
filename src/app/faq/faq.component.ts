@@ -124,14 +124,6 @@ export class FaqComponent implements OnInit {
                     "The code for this website, as well as the online editor, is open source. The source code that powers the online editor will eventually replace "+ 
                     "the desktop version as well.</p>",
                     isExpanded: false
-                },
-                {
-                    question: "What legal information do I need to know about contributing the Small Basic open source project?",
-                    answer: "<p>Bug fixes and new features are always welcome as contributions and the public may contribute in any way desired. " +
-                    " All developer contributions must follow and will be covered by Small Basic's Contributor" +
-                    "<a href=\"https://github.com/Microsoft/SmallBasic/blob/master/LICENSE\" title=\"License Agreement\">License Agreement</a> which validates that the contributor(s) have the " +
-                    "right to contribute the content and that Microsoft has the right to use, distribute and relicense the contribution.</p>",
-                    isExpanded: false
                 }
             ]
         }
