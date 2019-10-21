@@ -120,11 +120,9 @@ export class FaqComponent implements OnInit {
                 },
                 {
                     question: "How can I contribute to Small Basic through open source?",
-                    answer: "<p>To join the project, click here to <a href=\"https://github.com/Microsoft/SmallBasic/\" title=\"git hub\">view the code</a> and clone the repo on GitHub. Create a branch with " +
-                    "the following naming convention: username/descriptive_branch_name. When you are ready to submit, pull the most recent code down from origin into your branch and test once more, " +
-                    "push to your remote branch (you will not be able to push to master) and submit a pull request. In the request, provide a description of your work along with limitations and future" +
-                    " considerations. Request feedback/approval from the owner of the code and/or someone else that regularly develops on those files. If you commit to the branch and push again " +
-                    " before the pull request is approved, it will be canceled and you will need to create another pull request.</p>",
+                    answer: "<p>To join the project, click here to <a href=\"https://github.com/sb/\" title=\"view the code on git hub\">view the code</a> and clone the repo on GitHub." +
+                    "The code for this website, as well as the online editor, is open source. The source code that powers the online editor will eventually replace "+ 
+                    "the desktop version as well.</p>",
                     isExpanded: false
                 },
                 {
