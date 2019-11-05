@@ -21,6 +21,8 @@ export class ProgramItem {
 })
 export class FeedsService {
   public smallBasicUrl =
+    "https://techcommunity.microsoft.com/t5/Small-Basic-Blog/bg-p/SmallBasic";
+  public smallBasicUrlRss =
     "https://techcommunity.microsoft.com/gxcuf89792/rss/board?board.id=SmallBasic";
   public forumUrl =
     "https://social.msdn.microsoft.com/Forums/en-US/smallbasic/threads";
@@ -39,7 +41,7 @@ export class FeedsService {
     if (!this.smallBasicFeed) {
       this.smallBasicFeed = new Promise((resolve, reject) => {
         this.http
-          .get(this.corsUrl + this.smallBasicUrl, { responseType: "text" })
+          .get(this.corsUrl + this.smallBasicUrlRss, { responseType: "text" })
           .subscribe(rawFeed => {
             parseString(rawFeed, (err, result) => {
               if (err) {
