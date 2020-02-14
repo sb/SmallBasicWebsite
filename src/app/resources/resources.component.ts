@@ -15,6 +15,10 @@ export class ResourcesComponent implements OnInit {
                      link: "/tutorials/chapter1"
                 },
                 {
+                     description: "Unique Features",
+                     link: "http://aka.ms/unique"
+                },
+                {
                      description: "Wiki",
                      link: "http://social.technet.microsoft.com/wiki/contents/articles/17553.wiki-small-basic-portal.aspx"
                 },
