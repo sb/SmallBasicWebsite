@@ -1,0 +1,37 @@
+'Lesson 2: Hello, Turtle
+Turtle.Show()
+
+'Lesson 3: Let's Give Turtle Something to Do
+GraphicsWindow.DrawImage("https://aka.ms/mz1", 0, 0)
+Turtle.X = 50
+Turtle.Y = 50
+
+'Lesson 6: Winner, Winner! (part 1 of 2)
+' These two lines can be anywhere AFTER the image is drawn
+' but BEFORE the you set the PenColor for the Turtle
+GraphicsWindow.PenColor = "yellow"
+GraphicsWindow.DrawRectangle(20, 240, 50, 40)
+
+'Challenges from Lesson 4 would go here
+'You have to set these BEFORE the turtle starts moving
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+Turtle.Speed = 7
+
+'Lesson 4: Get Moving! code is replaced by Lesson 5: We're Smarter than a Turtle
+GraphicsWindow.KeyDown = WhenKeyPressed
+Sub WhenKeyPressed
+  If GraphicsWindow.LastKey = "Up" Then
+    Turtle.Move(25)
+  EndIf
+  If GraphicsWindow.LastKey = "Right" Then
+    Turtle.TurnRight()
+ EndIf
+ If GraphicsWindow.LastKey = "Left" Then
+  Turtle.TurnLeft()
+  EndIf
+
+  'Lesson 6: Winner, Winner! (part 2 of 2)
+  If Turtle.X > 20 And Turtle.X < 20+50 And Turtle.Y > 240 And Turtle.Y < 240+40 Then
+    GraphicsWindow.ShowMessage("You won!", "Congrats!")
+  EndIf
+EndSub

@@ -1,0 +1,29 @@
+'Challenges from the end of the tutorial would go here
+'You have to set these BEFORE the turtle starts moving
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+Turtle.Speed = 7
+
+'Lesson 2: Hello, Turtle
+Turtle.Show()
+
+'Lesson 3: Let's Give Turtle Something to Do
+GraphicsWindow.DrawImage("https://aka.ms/mz1", 0, 0)
+Turtle.X = 50
+Turtle.Y = 50
+
+'Lesson 4: Get Moving!
+Turtle.TurnRight()
+Turtle.Move(200)
+Turtle.TurnRight()
+
+Turtle.Move(150)
+Turtle.TurnRight()
+Turtle.Move(200)
+Turtle.TurnLeft()
+Turtle.Move(50)
+
+' Challenge: Celebration dance (this is my dance, what's yours?)
+Turtle.TurnLeft()
+Turtle.TurnRight()
+Turtle.TurnRight()
+Turtle.TurnLeft()

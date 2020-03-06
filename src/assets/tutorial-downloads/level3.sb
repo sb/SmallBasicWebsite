@@ -1,0 +1,46 @@
+' Lesson 3: getting set up
+GraphicsWindow.BrushColor = "Red"
+GraphicsWindow.PenColor = "White"
+paddle = Shapes.AddRectangle(120, 12)
+Shapes.Move(paddle, 0, GraphicsWindow.Height - 12)
+
+GraphicsWindow.BrushColor = GraphicsWindow.GetRandomColor()
+ball = Shapes.AddEllipse(16, 16)
+GraphicsWindow.BackgroundColor = GraphicsWindow.GetRandomColor()
+ 
+' Lesson 4: let's get moving
+GraphicsWindow.MouseMove = WhenMouseMoves
+Sub WhenMouseMoves
+  mouseX= GraphicsWindow.MouseX
+  Shapes.Move(paddle, mouseX-60, GraphicsWindow.Height-12)
+EndSub
+ 
+' Lesson 5&6: making the ball move
+moveX = 1
+moveY = 1
+stillPlaying = "True"
+While stillPlaying = "True"
+  x= x + moveX
+  y= y + moveY
+  Shapes.Move(ball, x, y)
+  Program.Delay(5) 'Make this number bigger to make the ball move slower
+ 
+  If(y > GraphicsWindow.Height) Then
+    GraphicsWindow.ShowMessage("You Lose", "Paddle")
+    stillPlaying= "False"
+  EndIf
+ 
+  ' Lesson 6: make it bounce
+  paddleX= Shapes.GetLeft(paddle)
+  If(y >= GraphicsWindow.Height - 26 and x >= paddleX and x <= paddleX + 120) Then
+    moveY= -moveY
+  EndIf
+ 
+  If(y < 0) Then
+    moveY= -moveY
+  EndIf
+ 
+  If(x >= GraphicsWindow.Width - 16 or x < 0) Then
+    moveX= -moveX
+  EndIf
+EndWhile
