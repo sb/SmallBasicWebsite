@@ -48,6 +48,9 @@
           <div *ngIf="tutorial.downloadLink">
             <a href="{{tutorial.downloadLink}}" download="{{tutorial.title}}.pdf">Download {{tutorial.title | lowercase }}</a>
           </div>
+          <div *ngIf="tutorial.finalCode">
+            <a href="{{tutorial.finalCode}}" download="{{tutorial.title}}.sb">Download final code for {{tutorial.title | lowercase }}</a>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>
