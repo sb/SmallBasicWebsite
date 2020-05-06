@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
+import { RedirectComponent } from './redirect/redirect.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { HeaderComponent } from './header/header.component';
 import { ProgramsComponent } from './programs/programs.component';
@@ -41,6 +42,7 @@ import { SbcodePipe } from './sbcode.pipe';
     HomeComponent,
     FaqComponent,
     ContactComponent,
+    RedirectComponent,
     ResourcesComponent,
     HeaderComponent,
     ProgramsComponent,

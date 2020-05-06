@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { RedirectComponent } from './redirect/redirect.component';
 import { FaqComponent } from './faq/faq.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { DocumentationComponent } from './documentation/documentation.component';
@@ -27,6 +28,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes = [
     { path: "", component: HomeComponent },
     { path: "contact", component: ContactComponent },
+    { path: "redirect", component: RedirectComponent },
     { path: "faq", component: FaqComponent },
     { path: "resources", component: ResourcesComponent },
     { path: "docs", pathMatch: "full", redirectTo: "docs/Turtle" },
