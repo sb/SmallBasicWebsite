@@ -94,10 +94,9 @@
 
 #sidebar {
     background-color: #f3f3f3;
-    max-width: 20vw;
+    width: 20vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 #sidebar ul {
