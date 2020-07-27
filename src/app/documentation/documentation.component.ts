@@ -11,7 +11,9 @@ export class DocumentationComponent implements OnInit {
   public docs: ParentDoc[] = [];
   public languages: SimplePair[] = [];
   public currentDocIndex: number;
+  private fragment: string;
   public selectedLanguage: string;
+  public searchText: string;
 
   constructor(private route: ActivatedRoute,
     public docService: DocumentationService) {
@@ -29,6 +31,13 @@ export class DocumentationComponent implements OnInit {
         return doc.name == this.route.snapshot.params['id'];
       });
     });
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    }, 100);
   }
 
   // Language selection has changed, get new documentation
