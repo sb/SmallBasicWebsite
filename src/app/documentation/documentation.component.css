@@ -27,9 +27,18 @@
   background-image: url(/assets/documentation/keyword.png);
 }
 
-.left-nav li.active-link .left-nav-submenu {
+.input {
+  margin: 5px 0;
+}
+
+.left-nav li .left-nav-submenu {
   list-style: none;
   padding-left: 25px;
+}
+
+.left-nav li.searching .left-nav-submenu {
+  visibility: visible;
+  height: auto;
 }
 
 h3,h4 {

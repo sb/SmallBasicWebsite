@@ -15,6 +15,10 @@ export class ResourcesComponent implements OnInit {
                      link: "/tutorials/chapter1"
                 },
                 {
+                     description: "Commands",
+                     link: "/docs"
+                },
+                {
                      description: "Unique Features",
                      link: "http://aka.ms/unique"
                 },
@@ -39,10 +43,6 @@ export class ResourcesComponent implements OnInit {
                 {
                     description: "Tutorials",
                     link: "/tutorials"
-                },
-                {
-                     description: "API reference",
-                     link: "/docs"
                 },
                 {
                      description: "eBooks",

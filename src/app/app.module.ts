@@ -36,6 +36,7 @@ import { DocumentationComponent } from './documentation/documentation.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SbcodePipe } from './sbcode.pipe';
 import { MatProgressSpinnerModule } from '@angular/material';
+import { SearchDocsPipe } from './documentation/search/search-docs.pipe';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { MatProgressSpinnerModule } from '@angular/material';
     DocumentationComponent,
     PageNotFoundComponent,
     SbcodePipe,
+    SearchDocsPipe,
   ],
   imports: [
       BrowserModule,

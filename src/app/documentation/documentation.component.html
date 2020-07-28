@@ -3,29 +3,31 @@
     <div class="left-nav">
       <h3>Documentation</h3>
       <label for="languageSelect">Language</label>
-      <select name="language" id="languageSelect" (change)="languageChanged()" [(ngModel)]="selectedLanguage">
+      <select name="language" id="languageSelect" (change)="languageChanged()" [(ngModel)]="selectedLanguage" class="input">
         <option *ngFor="let language of languages">{{language.summary}}</option>
       </select>
+      <label for="search">Search</label>
+      <input name="search" id="search" [(ngModel)]="searchText" placeholder="search" class="input" />
       <ul>
-        <li *ngFor="let doc of docs" routerLinkActive="active-link">
+        <li *ngFor="let doc of docs | searchDocs : searchText" routerLinkActive="active-link" [ngClass]="{'searching': searchText}">
           <a routerLink="/docs/{{doc.name}}" class="{{enumToClass(doc.type)}}">{{doc.name}}</a>
           <ul class="left-nav-submenu">
-            <li *ngFor="let property of doc.properties">
+            <li *ngFor="let property of doc.properties | searchDocs : searchText">
               <a href="docs/{{doc.name}}#{{property.name}}" class="property">
                 {{property.name}}
               </a>
             </li>
-            <li *ngFor="let operation of doc.operations">
+            <li *ngFor="let operation of doc.operations | searchDocs : searchText">
               <a href="docs/{{doc.name}}#{{operation.name}}" class="operation">
                 {{operation.name}}
               </a>
             </li>
-            <li *ngFor="let event of doc.events">
+            <li *ngFor="let event of doc.events | searchDocs : searchText">
               <a href="docs/{{doc.name}}#{{event.name}}" class="event">
                 {{event.name}}
               </a>
             </li>
-            <li *ngFor="let keyword of doc.keywords">
+            <li *ngFor="let keyword of doc.keywords | searchDocs : searchText">
               <a href="docs/{{doc.name}}#{{keyword.name}}" class="keyword">
                 {{keyword.name}}
               </a>
