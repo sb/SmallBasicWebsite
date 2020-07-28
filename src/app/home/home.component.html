@@ -132,11 +132,10 @@
     </div>
     <div>
       <h2>Announcements</h2>
-      <ul>
+      <mat-spinner *ngIf="announcements.length == 0" diameter="20" style="margin:auto"></mat-spinner>
+      <ul *ngIf="announcements.length > 1">
         <li *ngFor="let announcement of announcements | slice: 0:3">
-          <a href="{{ announcement.link }}"
-            ><b>{{ announcement.title }}</b></a
-          >
+          <a href="{{ announcement.link }}"><b>{{ announcement.title }}</b></a>
           <div class="indent">
             <div class="byline">
               <div>{{ announcement.author }}</div>
@@ -146,15 +145,14 @@
           </div>
         </li>
       </ul>
-      <a href="{{ feedService.smallBasicUrl }}" target="_blank">More</a>
+      <a *ngIf="announcements.length > 3" href="{{ feedService.smallBasicUrl }}" target="_blank">More</a>
     </div>
     <div>
       <h2>Forum Posts</h2>
-      <ul>
+      <mat-spinner *ngIf="forumPosts.length == 0" diameter="20" style="margin:auto"></mat-spinner>
+      <ul *ngIf="forumPosts.length > 1">
         <li *ngFor="let post of forumPosts | slice: 0:3">
-          <a href="{{ post.link }}"
-            ><b>{{ post.title }}</b></a
-          >
+          <a href="{{ post.link }}"><b>{{ post.title }}</b></a>
           <div class="indent">
             <div class="byline">
               <div>{{ post.author }}</div>
@@ -164,7 +162,7 @@
           </div>
         </li>
       </ul>
-      <a href="{{ feedService.forumUrl }}" target="_blank">More</a>
+      <a *ngIf="forumPosts.length > 3" href="{{ feedService.forumUrl }}" target="_blank">More</a>
     </div>
   </div>
 </div>

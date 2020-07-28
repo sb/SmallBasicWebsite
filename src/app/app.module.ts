@@ -35,6 +35,7 @@ import { AppendixBComponent } from './tutorial/chapters/appendixB/appendixB.comp
 import { DocumentationComponent } from './documentation/documentation.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SbcodePipe } from './sbcode.pipe';
+import { MatProgressSpinnerModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { SbcodePipe } from './sbcode.pipe';
       MatExpansionModule,
       MatButtonModule,
       MatCardModule,
+      MatProgressSpinnerModule,
       FormsModule
   ],
   providers: [],
