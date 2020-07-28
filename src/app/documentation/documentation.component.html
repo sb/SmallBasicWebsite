@@ -2,12 +2,16 @@
   <div class="left-nav-and-right-content">
     <div class="left-nav">
       <h3>Documentation</h3>
-      <label for="languageSelect">Language</label>
-      <select name="language" id="languageSelect" (change)="languageChanged()" [(ngModel)]="selectedLanguage" class="input">
-        <option *ngFor="let language of languages">{{language.summary}}</option>
-      </select>
-      <label for="search">Search</label>
-      <input name="search" id="search" [(ngModel)]="searchText" placeholder="search" class="input" />
+      <div class="input">
+        <label for="languageSelect">Language</label>
+        <select name="language" id="languageSelect" (change)="languageChanged()" [(ngModel)]="selectedLanguage" >
+          <option *ngFor="let language of languages">{{language.summary}}</option>
+        </select>
+      </div>
+      <div class="input">
+        <label for="search">Search</label>
+        <input name="search" id="search" [(ngModel)]="searchText" placeholder="search" />
+      </div>
       <ul>
         <li *ngFor="let doc of docs | searchDocs : searchText" routerLinkActive="active-link" [ngClass]="{'searching': searchText}">
           <a routerLink="/docs/{{doc.name}}" class="{{enumToClass(doc.type)}}">{{doc.name}}</a>
