@@ -91,7 +91,7 @@ export class ResourcesComponent implements OnInit {
                 },
                 {
                     description: "Raspberry Pi",
-                    link: "https://blogs.msdn.microsoft.com/smallbasic/2016/07/03/small-basic-talking-to-raspberry-pi/"
+                    link: "https://techcommunity.microsoft.com/t5/small-basic-blog/small-basic-talking-to-raspberry-pi/ba-p/337844"
                 },
             ]
       }
