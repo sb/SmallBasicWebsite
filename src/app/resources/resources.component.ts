@@ -32,7 +32,7 @@ export class ResourcesComponent implements OnInit {
                 },
                 {
                     description: "Student Testimonies",
-                    link: "http://blogs.msdn.com/b/smallbasic/archive/2012/10/25/small-basic-elementary-student-testimonials.aspx"
+                    link: "https://techcommunity.microsoft.com/t5/small-basic-blog/small-basic-elementary-amp-middle-student-testimonials/ba-p/335508"
                 },
             ]
       },
@@ -50,7 +50,7 @@ export class ResourcesComponent implements OnInit {
                 },
                 {
                      description: "Extensions",
-                     link: "http://blogs.msdn.com/b/smallbasic/archive/2012/10/12/small-basic-extensions-gallery.aspx"
+                     link: "https://techcommunity.microsoft.com/t5/small-basic-blog/small-basic-extensions-gallery/ba-p/335478"
                 },
                 {
                      description: "Teacher Curriculum",
@@ -67,27 +67,27 @@ export class ResourcesComponent implements OnInit {
             resources: [
                 {
                     description: "Lego Mindstorms",
-                    link: "https://blogs.msdn.microsoft.com/smallbasic/2015/10/18/lego-mindstorms-ev3-extension-for-small-basic-ev3-basic"
+                    link: "https://techcommunity.microsoft.com/t5/small-basic-blog/lego-mindstorms-ev3-extension-for-small-basic-ev3-basic/ba-p/337553"
                 },
                 {
                     description: "micro:bit",
-                    link: "https://blogs.msdn.microsoft.com/smallbasic/2017/09/13/small-basic-microbit/"
+                    link: "https://techcommunity.microsoft.com/t5/small-basic-blog/small-basic-micro-bit/ba-p/1968424"
                 },
                 {
                     description: "QR Code & Barcode",
-                    link: "https://blogs.msdn.microsoft.com/smallbasic/2013/06/02/barcode-extension-for-small-basic/"
+                    link: "https://techcommunity.microsoft.com/t5/small-basic-blog/qr-code-barcode-extension-for-small-basic/ba-p/335765"
                 },
                 {
                     description: "Oculus Rift",
-                    link: "https://blogs.msdn.microsoft.com/smallbasic/2016/03/26/new-oculus-rift-extension-for-small-basic-oculus-sb/"
+                    link: "https://techcommunity.microsoft.com/t5/small-basic-blog/new-oculus-rift-extension-for-small-basic-oculus-sb/ba-p/337766"
                 },
                 {
                     description: "Arduino",
-                    link: "https://blogs.msdn.microsoft.com/smallbasic/2016/03/22/small-basic-arduino/"
+                    link: "https://techcommunity.microsoft.com/t5/small-basic-blog/small-basic-arduino/ba-p/337762"
                 },
                 {
                     description: "Kinect",
-                    link: "https://blogs.msdn.microsoft.com/smallbasic/2015/10/01/small-basic-1-2-released-with-kinect-support-and-bug-fixes/"
+                    link: "https://techcommunity.microsoft.com/t5/small-basic-blog/small-basic-1-2-released-with-kinect-support-and-bug-fixes/ba-p/337523"
                 },
                 {
                     description: "Raspberry Pi",
