@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - smallbasic-publicwebsite
+name: Build and deploy to Caseysc`s Azure Web App - smallbasic-publicwebsite
 
 on:
   push:
@@ -10,22 +10,33 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Set up .NET Core
-      uses: actions/setup-dotnet@v1
+    
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v3.5.1
       with:
-        dotnet-version: '5.0.x'
-
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
-
-    - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
-
+        node-version: 12.x
+    
+    - name: npm install angular cli
+      run: npm install -g @angular/cli@13.3.9
+      
+    - name: npm install packages
+      run: npm ci
+      
+    - name: build site
+      run: ng build --prod
+    
+    - name: Copy Web.config=
+      uses: canastro/copy-action@0.0.2
+      with:
+        # Source file
+        source: Web.config
+        # Target file
+        target: dist/small-basic-website/Web.config
+      
     - name: Deploy to Azure Web App
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
@@ -33,4 +44,4 @@ jobs:
         app-name: 'smallbasic-publicwebsite'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_fd8c42b7353d4def8619bba50d8d257a }}
-        package: ${{env.DOTNET_ROOT}}/myapp 
+        package: dist/small-basic-website 
