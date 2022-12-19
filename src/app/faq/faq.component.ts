@@ -126,6 +126,17 @@ export class FaqComponent implements OnInit {
                     isExpanded: false
                 }
             ]
+        },
+        {
+            topic: "Support",
+            questions: [
+                {
+                    question: "Who supports Small Basic?",
+                    answer: "<p>Small Basic is supported by volunteers like you! You can see all of the code, even for this website, on " +
+                    "<a href=\"https://github.com/sb\">our Github</a>.</p>",
+                    isExpanded: false
+                }
+            ]
         }
     ];
 
